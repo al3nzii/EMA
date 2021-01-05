@@ -2283,7 +2283,7 @@ end
 
 if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس 🔂') then
 if not msg.SudoBase then return "♦️*│*هذا الامر يخص {المطور الاساسي} فقط  \n💥" end
-local GetVerison = https.request('https://github.com/MasSource/MAS.github.io/GetVersion.txt') or 0
+local GetVerison = https.request('https://github.com/EMASource/MAS.github.io/GetVersion.txt') or 0
 if GetVerison > version then
 UpdateSourceStart = true
 sendMsg(msg.chat_id_,msg.id_,'🔛*│* يوجد تحديث جديد الان \n📡*│* جاري تنزيل وتثبيت التحديث  ...')
@@ -2348,8 +2348,8 @@ end
 if (MsgText[1]== "ايدي" or MsgText[1]=="ايديي🆔") and msg.type == "pv" then return  "\n👨🏻‍💻│اهلن عزيزي المطور ايديك هوه ⏬\n\n🧟‍♂│"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس 📡" and msg.type == "pv" then
-local inline = {{{text="⚜│قناه السـورس ضـغـط هنا ",url="t.me/MasSource"}}}
-send_key(msg.sender_user_id_,'  [⚜│قناة سورس : ماس](t.me/MasSource)',nil,inline,msg.id_)
+local inline = {{{text="⚜│قناه السـورس ضـغـط هنا ",url="t.me/EMASource"}}}
+send_key(msg.sender_user_id_,'  [⚜│قناة سورس : ماس](t.me/EMASource)',nil,inline,msg.id_)
 return false
 end
 
@@ -2813,7 +2813,7 @@ return [[
 
 ⁦🙋🏻‍♂️⁩ | مطور السورس : @MASx92
 
-📡 | القناة الخاصة بالسورس : @MasSource
+📡 | القناة الخاصة بالسورس : @EMASource
 
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 
