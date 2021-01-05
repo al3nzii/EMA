@@ -70,7 +70,7 @@ end
 
 function KaraJoinChannel(msg)
 if redis:get(max..'4DaySleep') then
-local url  = https.request('https://api.telegram.org/bot940044754:AAGY1zvFOrPoYdIUnAgHtHHpI-quJP5QTQM/getchatmember?chat_id=@a_l3nzi&user_id='..msg.sender_user_id_)
+local url  = https.request('https://api.telegram.org/bot940044754:AAGY1zvFOrPoYdIUnAgHtHHpI-quJP5QTQM/getchatmember?chat_id=@uop70&user_id='..msg.sender_user_id_)
 if res ~= 200 then
 end
 Joinchanel = json:decode(url)
@@ -81,7 +81,7 @@ USERNAME = '@'..data.username_
 else 
 USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or ""),20) 
 end
-bd = '??????ÇáÚÖæ ['..USERNAME..'](tg://user?id='..msg.sender_user_id_..') \n???áÃÓÊÎÏÇã ÇáÈæÊ Úáíß ÇáÇÔÊÑÇß È ŞäÇÉ ÇáÓæÑÓ @a_l3nzi'
+bd = 'ğŸ™‹ğŸ»â€â™‚â•¿Ø§Ù„Ø¹Ø¶Ùˆ ['..USERNAME..'](tg://user?id='..msg.sender_user_id_..') \nğŸ“Œâ•½Ù„Ø£Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„Ø¨ÙˆØª Ø¹Ù„ÙŠÙƒ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø¨ Ù‚Ù†Ø§Ø© Ø§Ù„Ø³ÙˆØ±Ø³ @uop70'
 sendMsg(msg.chat_id_,msg.id_,bd)
 end,nil)
 return false
@@ -95,92 +95,92 @@ end
 
 function lock_photos(msg)
 if not msg.Director then 
-return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶"
 end
 redis:set(max.."getidstatus"..msg.chat_id_, "Simple")
-return  "??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊÚØíá ÇáÇíÏí ÈÇáÕæÑå  \n?" 
+return  "ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* ØªÙ… ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡  \nâœ“" 
 end 
 function unlock_photos(msg)
 if not msg.Director then
-return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶"
 end
 redis:set(max.."getidstatus"..msg.chat_id_, "Photo")
-return  "??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊİÚíá ÇáÇíÏí ÈÇáÕæÑå \n?" 
+return  "ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡ \nâœ“" 
 end
 function cmds_on(msg)
-if not msg.Creator then return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+if not msg.Creator then return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶"
 end
 redis:set(max..'lock:kara:'..msg.chat_id_,'on')
-return "??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊÚØíá ÇáÑİÚ İí ÇáãÌãæÚå \n?"
+return "ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* ØªÙ… ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø±ÙØ¹ ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ \nâœ“"
 end
 function cmds_off(msg)
-if not msg.Creator then return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+if not msg.Creator then return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶"
 end
 redis:set(max..'lock:kara:'..msg.chat_id_,'off')
-return "??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊİÚíá ÇáÑİÚ İí ÇáãÌãæÚå \n?"
+return "ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø±ÙØ¹ ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ \nâœ“"
 end
 function cmdss_on(msg)
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥"
 end
 redis:set(max..'lock:karaa:'..msg.chat_id_,'on')
-return "??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊÚØíá ÇáÊÓáíå \n?"
+return "ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* ØªÙ… ØªØ¹Ø·ÙŠÙ„ Ø§Ù„ØªØ³Ù„ÙŠÙ‡ \nâœ“"
 end
 function cmdss_off(msg)
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥"
 end
 redis:set(max..'lock:karaa:'..msg.chat_id_,'off')
-return "??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊİÚíá ÇáÊÓáíå\n?"
+return "ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„ØªØ³Ù„ÙŠÙ‡\nâœ“"
 end
 
 function lockjoin(msg)
-if not msg.Admin then return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+if not msg.Admin then return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶"
 end
 redis:set(max..'lock:join:'..msg.chat_id_,true)
-return "*??????*?* ÃåáÇ ÚÒíÒí *"..msg.TheRankCmd.."*\n??*?* Êã Şİá ÇáÏÎæá ÈÇáÑÇÈØ \n?*" 
+return "*ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ *"..msg.TheRankCmd.."*\nğŸ“¡*â•½* ØªÙ… Ù‚ÙÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ø§Ù„Ø±Ø§Ø¨Ø· \nâœ“*" 
 
 end
 function unlockjoin(msg)
-if not msg.Admin then return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??"
+if not msg.Admin then return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶"
 end
 redis:del(max..'lock:join:'..msg.chat_id_)
-return "*??????*?* ÃåáÇ ÚÒíÒí *"..msg.TheRankCmd.."*\n??*?* Êã İÊÍ ÇáÏÎæá ÈÇáÑÇÈØ \n?*" 
+return "*ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ *"..msg.TheRankCmd.."*\nğŸ“¡*â•½* ØªÙ… ÙØªØ­ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ø§Ù„Ø±Ø§Ø¨Ø· \nâœ“*" 
 end
 
 
 local function imax(msg,MsgText)
 if msg.type ~= 'pv' then
 
-if MsgText[1] == "ÊİÚíá" and not MsgText[2] then
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„" and not MsgText[2] then
 redis:set(max.."getidstatus"..msg.chat_id_, "Photo")
 redis:set(max..'lock:kara:'..msg.chat_id_,'off')
 return modadd(msg)  
 end
-if MsgText[1] == "ÊÚØíá" and not MsgText[2] then
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„" and not MsgText[2] then
 return modrem(msg) 
 end
-if MsgText[1] == "ÊİÚíá ÇáÇíÏí ÈÇáÕæÑå" and not MsgText[2] then
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡" and not MsgText[2] then
 return unlock_photos(msg)  
 end
-if MsgText[1] == "ÊÚØíá ÇáÇíÏí ÈÇáÕæÑå" and not MsgText[2] then
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡" and not MsgText[2] then
 return lock_photos(msg) 
 end
-if MsgText[1] == "ÊÚØíá ÇáÑİÚ" and not MsgText[2] then
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø±ÙØ¹" and not MsgText[2] then
 return cmds_on(msg)  
 end
-if MsgText[1] == "ÊİÚíá ÇáÑİÚ" and not MsgText[2] then
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø±ÙØ¹" and not MsgText[2] then
 return cmds_off(msg) 
 end
-if MsgText[1] == "ÊÚØíá ÇáÊÓáíå" and not MsgText[2] then
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„ Ø§Ù„ØªØ³Ù„ÙŠÙ‡" and not MsgText[2] then
 return cmdss_on(msg)  
 end
-if MsgText[1] == "ÊİÚíá ÇáÊÓáíå" and not MsgText[2] then
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„ Ø§Ù„ØªØ³Ù„ÙŠÙ‡" and not MsgText[2] then
 return cmdss_off(msg) 
 end
 
-if MsgText[1] == "Şİá ÇáÏÎæá ÈÇáÑÇÈØ" and not MsgText[2] then
+if MsgText[1] == "Ù‚ÙÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ø§Ù„Ø±Ø§Ø¨Ø·" and not MsgText[2] then
 return lockjoin(msg)  
 end
-if MsgText[1] == "İÊÍ ÇáÏÎæá ÈÇáÑÇÈØ" and not MsgText[2] then
+if MsgText[1] == "ÙØªØ­ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ø§Ù„Ø±Ø§Ø¨Ø·" and not MsgText[2] then
 return unlockjoin(msg) 
 end
 
@@ -189,54 +189,54 @@ end
 
 if msg.type ~= 'pv' and msg.GroupActive then 
 
-if MsgText[1] == 'ÔÍä' and MsgText[2] then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == 'Ø´Ø­Ù†' and MsgText[2] then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if tonumber(MsgText[2]) > 0 and tonumber(MsgText[2]) < 1001 then
 local extime = (tonumber(MsgText[2]) * 86400)
 redis:setex(max..'ExpireDate:'..msg.chat_id_, extime, true)
 if not redis:get(max..'CheckExpire::'..msg.chat_id_) then 
 redis:set(max..'CheckExpire::'..msg.chat_id_,true) end
-sendMsg(msg.chat_id_,msg.id_,'???????Êã ÔÍä ÇáÇÔÊÑÇß Çáì `'..MsgText[2]..'` íæã   ... ????')
-sendMsg(SUDO_ID,0,'???????Êã ÔÍä ÇáÇÔÊÑÇß Çáì `'..MsgText[2]..'` íæã   ... ????\n????????İí ãÌãæÚå  » »  '..redis:get(max..'group:name'..msg.chat_id_))
+sendMsg(msg.chat_id_,msg.id_,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… Ø´Ø­Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ù‰ `'..MsgText[2]..'` ÙŠÙˆÙ…   ... ğŸ‘ğŸ¿')
+sendMsg(SUDO_ID,0,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… Ø´Ø­Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ù‰ `'..MsgText[2]..'` ÙŠÙˆÙ…   ... ğŸ‘ğŸ¿\nğŸ•µğŸ¼ï¸â€â™€ï¸â”‚ÙÙŠ Ù…Ø¬Ù…ÙˆØ¹Ù‡  Â» Â»  '..redis:get(max..'group:name'..msg.chat_id_))
 else
-sendMsg(msg.chat_id_,msg.id_,'???????ÚÒíÒí ÇáãØæÑ ???\n???????ÔÍä ÇáÇÔÊÑÇß íßæä ãÇ Èíä íæã Çáì 1000 íæã İŞØ ??')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ’‚ğŸ»â€â™€ï¸â”‚Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± âœ‹ğŸ¿\nğŸ‘¨ğŸ»â€ğŸ”§â”‚Ø´Ø­Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ÙŠÙƒÙˆÙ† Ù…Ø§ Ø¨ÙŠÙ† ÙŠÙˆÙ… Ø§Ù„Ù‰ 1000 ÙŠÙˆÙ… ÙÙ‚Ø· ğŸƒ')
 end 
 return false
 end
 
-if MsgText[1] == 'ÇáÇÔÊÑÇß' and MsgText[2] then 
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == 'Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ' and MsgText[2] then 
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if MsgText[2] == '1' then
 redis:setex(max..'ExpireDate:'..msg.chat_id_, 2592000, true)
 if not redis:get(max..'CheckExpire::'..msg.chat_id_) then 
 redis:set(max..'CheckExpire::'..msg.chat_id_,true) 
 end
-sendMsg(msg.chat_id_,msg.id_,'???????Êã ÊİÚíá ÇáÇÔÊÑÇß   ????\n??? ÇáÇÔÊÑÇß » `30 íæã`  *(ÔåÑ)*')
-sendMsg(SUDO_ID,0,'???????Êã ÊİÚíá ÇáÇÔÊÑÇß  ????\n??? ÇáÇÔÊÑÇß » `30 íæã`  *(ÔåÑ)*')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ   ğŸ‘ğŸ¿\nğŸ“†â”‚ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Â» `30 ÙŠÙˆÙ…`  *(Ø´Ù‡Ø±)*')
+sendMsg(SUDO_ID,0,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ  ğŸ‘ğŸ¿\nğŸ“†â”‚ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Â» `30 ÙŠÙˆÙ…`  *(Ø´Ù‡Ø±)*')
 end
 if MsgText[2] == '2' then
 redis:setex(max..'ExpireDate:'..msg.chat_id_,7776000,true)
 if not redis:get(max..'CheckExpire::'..msg.chat_id_) then 
 redis:set(max..'CheckExpire::'..msg.chat_id_,true) 
 end
-sendMsg(msg.chat_id_,msg.id_,'???????Êã ÊİÚíá ÇáÇÔÊÑÇß   ????\n??? ÇáÇÔÊÑÇß » `90 íæã`  *(3 ÇÔåÑ)*')
-sendMsg(SUDO_ID,0,'???????Êã ÊİÚíá ÇáÇÔÊÑÇß   ????\n??? ÇáÇÔÊÑÇß » `90 íæã`  *(3 ÇÔåÑ)*')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ   ğŸ‘ğŸ¿\nğŸ“†â”‚ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Â» `90 ÙŠÙˆÙ…`  *(3 Ø§Ø´Ù‡Ø±)*')
+sendMsg(SUDO_ID,0,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ   ğŸ‘ğŸ¿\nğŸ“†â”‚ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Â» `90 ÙŠÙˆÙ…`  *(3 Ø§Ø´Ù‡Ø±)*')
 end
 if MsgText[2] == '3' then
 redis:set(max..'ExpireDate:'..msg.chat_id_,true)
 if not redis:get(max..'CheckExpire::'..msg.chat_id_) then 
 redis:set(max..'CheckExpire::'..msg.chat_id_,true) end
-sendMsg(msg.chat_id_,msg.id_,'???????Êã ÊİÚíá ÇáÇÔÊÑÇß   ????\n??? ÇáÇÔÊÑÇß » `ãİÊæÍ`  *(ãÏì ÇáÍíÇÉ)*')
-sendMsg(SUDO_ID,0,'???????Êã ÊİÚíá ÇáÇÔÊÑÇß   ????\n??? ÇáÇÔÊÑÇß » `ãİÊæÍ`  *(ãÏì ÇáÍíÇÉ)*')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ   ğŸ‘ğŸ¿\nğŸ“†â”‚ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Â» `Ù…ÙØªÙˆØ­`  *(Ù…Ø¯Ù‰ Ø§Ù„Ø­ÙŠØ§Ø©)*')
+sendMsg(SUDO_ID,0,'ğŸ’‚ğŸ»â€â™€ï¸â”‚ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ   ğŸ‘ğŸ¿\nğŸ“†â”‚ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Â» `Ù…ÙØªÙˆØ­`  *(Ù…Ø¯Ù‰ Ø§Ù„Ø­ÙŠØ§Ø©)*')
 end 
 return false
 end
 
 
-if MsgText[1] == 'ÇáÇÔÊÑÇß' and not MsgText[2] and msg.Admin then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == 'Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ' and not MsgText[2] and msg.Admin then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local check_time = redis:ttl(max..'ExpireDate:'..msg.chat_id_)
-if check_time < 0 then return '*ãÜİÜÊÜæÍ *??\n?' end
+if check_time < 0 then return '*Ù…Ù€ÙÙ€ØªÙ€ÙˆØ­ *ğŸ–\nâœ“' end
 year = math.floor(check_time / 31536000)
 byear = check_time % 31536000 
 month = math.floor(byear / 2592000)
@@ -248,39 +248,39 @@ bhours = bday % 3600
 min = math.floor(bhours / 60)
 sec = math.floor(bhours % 60)
 if tonumber(check_time) > 1 and check_time < 60 then
-remained_expire = '???`ÈÇŞí ãä ÇáÇÔÊÑÇß ` » » * \n ??? '..sec..'* ËÇäíå'
+remained_expire = 'ğŸ’³â”‚`Ø¨Ø§Ù‚ÙŠ Ù…Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ` Â» Â» * \n ğŸ“†â”‚ '..sec..'* Ø«Ø§Ù†ÙŠÙ‡'
 elseif tonumber(check_time) > 60 and check_time < 3600 then
-remained_expire = '???`ÈÇŞí ãä ÇáÇÔÊÑÇß ` » » '..min..' *ÏŞíŞå æ * *'..sec..'* ËÇäíå'
+remained_expire = 'ğŸ’³â”‚`Ø¨Ø§Ù‚ÙŠ Ù…Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ` Â» Â» '..min..' *Ø¯Ù‚ÙŠÙ‚Ù‡ Ùˆ * *'..sec..'* Ø«Ø§Ù†ÙŠÙ‡'
 elseif tonumber(check_time) > 3600 and tonumber(check_time) < 86400 then
-remained_expire = '???`ÈÇŞí ãä ÇáÇÔÊÑÇß ` » » * \n ??? '..hours..'* ÓÇÚå æ *'..min..'* ÏŞíŞå æ *'..sec..'* ËÇäíå'
+remained_expire = 'ğŸ’³â”‚`Ø¨Ø§Ù‚ÙŠ Ù…Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ` Â» Â» * \n ğŸ“†â”‚ '..hours..'* Ø³Ø§Ø¹Ù‡ Ùˆ *'..min..'* Ø¯Ù‚ÙŠÙ‚Ù‡ Ùˆ *'..sec..'* Ø«Ø§Ù†ÙŠÙ‡'
 elseif tonumber(check_time) > 86400 and tonumber(check_time) < 2592000 then
-remained_expire = '???`ÈÇŞí ãä ÇáÇÔÊÑÇß ` » » * \n ??? '..day..'* íæã æ *'..hours..'* ÓÇÚå æ *'..min..'* ÏŞíŞå æ *'..sec..'* ËÇäíå'
+remained_expire = 'ğŸ’³â”‚`Ø¨Ø§Ù‚ÙŠ Ù…Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ` Â» Â» * \n ğŸ“†â”‚ '..day..'* ÙŠÙˆÙ… Ùˆ *'..hours..'* Ø³Ø§Ø¹Ù‡ Ùˆ *'..min..'* Ø¯Ù‚ÙŠÙ‚Ù‡ Ùˆ *'..sec..'* Ø«Ø§Ù†ÙŠÙ‡'
 elseif tonumber(check_time) > 2592000 and tonumber(check_time) < 31536000 then
-remained_expire = '???`ÈÇŞí ãä ÇáÇÔÊÑÇß ` » » * \n ??? '..month..'* ÔåÑ æ *'..day..'* íæã æ *'..hours..'* ÓÇÚå æ *'..min..'* ÏŞíŞå æ *'..sec..'* ËÇäíå'
+remained_expire = 'ğŸ’³â”‚`Ø¨Ø§Ù‚ÙŠ Ù…Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ` Â» Â» * \n ğŸ“†â”‚ '..month..'* Ø´Ù‡Ø± Ùˆ *'..day..'* ÙŠÙˆÙ… Ùˆ *'..hours..'* Ø³Ø§Ø¹Ù‡ Ùˆ *'..min..'* Ø¯Ù‚ÙŠÙ‚Ù‡ Ùˆ *'..sec..'* Ø«Ø§Ù†ÙŠÙ‡'
 elseif tonumber(check_time) > 31536000 then
-remained_expire = '???`ÈÇŞí ãä ÇáÇÔÊÑÇß ` » » * \n ??? '..year..'* Óäå æ *'..month..'* ÔåÑ æ *'..day..'* íæã æ *'..hours..'* ÓÇÚå æ *'..min..'* ÏŞíŞå æ *'..sec..'* ËÇäíå' end
+remained_expire = 'ğŸ’³â”‚`Ø¨Ø§Ù‚ÙŠ Ù…Ù† Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ` Â» Â» * \n ğŸ“†â”‚ '..year..'* Ø³Ù†Ù‡ Ùˆ *'..month..'* Ø´Ù‡Ø± Ùˆ *'..day..'* ÙŠÙˆÙ… Ùˆ *'..hours..'* Ø³Ø§Ø¹Ù‡ Ùˆ *'..min..'* Ø¯Ù‚ÙŠÙ‚Ù‡ Ùˆ *'..sec..'* Ø«Ø§Ù†ÙŠÙ‡' end
 return remained_expire
 end
 
 
-if MsgText[1] == "ÇáãÌãæÚå" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 GetFullChat(msg.chat_id_,function(arg,data)
 local GroupName = (redis:get(max..'group:name'..msg.chat_id_) or '')
 redis:set(max..'linkGroup'..msg.chat_id_,(data.invite_link_ or ""))
 return sendMsg(msg.chat_id_,msg.id_,
-"??????? ? ãÜÚÜáæãÜÇÊ ÇáÜãÜÌÜãæÚÜå ?\n\n"
-.."*???* ÚÏÏ ÇáÇÚÜÖÜÇÁ ? ? *"..data.member_count_.."* ?"
-.."\n*???* ÚÏÏ ÇáãÍÙÜæÑíÜä ? ? *"..data.kicked_count_.."* ?"
-.."\n*???????* ÚÏÏ ÇáÇÏãÜäÜíÜå ? ? *"..data.administrator_count_.."* ?"
-.."\n*??* ÇíÏí ÇáãÌãæÚå ? ?"..msg.chat_id_.."?"
-.."\n\n??ÇáÇÓã ? ?  ["..FlterName(GroupName).."]("..(data.invite_link_ or "")..")  ?\n"
+"ğŸ‘¨ğŸ»â€ğŸ’»â•¿ âª Ù…Ù€Ø¹Ù€Ù„ÙˆÙ…Ù€Ø§Øª Ø§Ù„Ù€Ù…Ù€Ø¬Ù€Ù…ÙˆØ¹Ù€Ù‡ â«\n\n"
+.."*ğŸ‘¥â”‚* Ø¹Ø¯Ø¯ Ø§Ù„Ø§Ø¹Ù€Ø¶Ù€Ø§Ø¡ â‡œ âª *"..data.member_count_.."* â«"
+.."\n*ğŸ“›â”‚* Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø­Ø¸Ù€ÙˆØ±ÙŠÙ€Ù† â‡œ âª *"..data.kicked_count_.."* â«"
+.."\n*ğŸ‘¨ğŸ»â€ğŸ”§â”‚* Ø¹Ø¯Ø¯ Ø§Ù„Ø§Ø¯Ù…Ù€Ù†Ù€ÙŠÙ€Ù‡ â‡œ âª *"..data.administrator_count_.."* â«"
+.."\n*âšœâ”‚* Ø§ÙŠØ¯ÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ â‡œ âª"..msg.chat_id_.."â«"
+.."\n\nâšœâ•½Ø§Ù„Ø§Ø³Ù… â‡œ âª  ["..FlterName(GroupName).."]("..(data.invite_link_ or "")..")  â«\n"
 )
 end,nil) 
 return false
 end
 
-if MsgText[1] == "ÇáÊİÇÚá" then
+if MsgText[1] == "Ø§Ù„ØªÙØ§Ø¹Ù„" then
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="active"})
 end
@@ -290,46 +290,46 @@ end
 return false
 end
 
-if MsgText[1] == "ãäÚ" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ù…Ù†Ø¹" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return AddFilter(msg, MsgText[2]) 
 end
 
-if MsgText[1] == "ÇáÛÇÁ ãäÚ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ù…Ù†Ø¹" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return RemFilter(msg, MsgText[2]) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáãäÚ" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù…Ù†Ø¹" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return FilterXList(msg) 
 end
 
-if MsgText[1] == "ÇáÍãÇíå" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ø­Ù…Ø§ÙŠÙ‡" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return settingsall(msg) 
 end
 
-if MsgText[1] == "ÇáÇÚÏÇÏÇÊ" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return settings(msg) 
 end
 
-if MsgText[1] == "ÇáæÓÇÆØ" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„ÙˆØ³Ø§Ø¦Ø·" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return media(msg) 
 end
 
-if MsgText[1] == "ÇáÇÏãäíå" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return GetListAdmin(msg) 
 end
 
-if MsgText[1] == "ÊÇß" then
-if not msg.Admin then return "??*¦* åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªØ§Ùƒ" then
+if not msg.Admin then return "ğŸ“›*Â¦* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶" end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
 },function(ta,taha)
-local t = "\n?| ŞÇÆãÉ ÇáÇÚÖÇÁ \n?????????????\n"
+local t = "\nâ›”| Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§Ø¹Ø¶Ø§Ø¡ \nâ”â”â”â”â”â”â”â”â”â”â”â”â”\n"
 x = 0
 local list = taha.members_
 for k, v in pairs(list) do
@@ -340,104 +340,104 @@ send_msg(msg.chat_id_,t,msg.id_)
 end,nil)
 end
 
-if MsgText[1] == "äĞÇÑ" then 
-if not msg.Admin then return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ù†Ø°Ø§Ø±" then 
+if not msg.Admin then return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶" end
 return ownerlist(msg) .. GetListAdmin(msg) .. whitelist(msg)
 end
 
-if MsgText[1] == "ÊÇß ááßá" then 
-if not msg.Admin then return "??*?* åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªØ§Ùƒ Ù„Ù„ÙƒÙ„" then 
+if not msg.Admin then return "ğŸ“›*â”‚* Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸš¶" end
 return ownerlist(msg) .. GetListAdmin(msg) .. whitelist(msg)
 end
 
-if MsgText[1] == "ÇáãäÔì ÇáÇÓÇÓí" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…Ù†Ø´Ù‰ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return MONSEBOT(msg) 
 end
 
-if MsgText[1] == "ÇáãÏÑÇÁ" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return ownerlist(msg) 
 end
 
-if MsgText[1] == "ÇáãäÔÆ ÇáÇÓÇÓí" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return Hussainlist(msg) 
 end
 
-if MsgText[1] == "ÇáããíÒíä" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ†" then 
+if not msg.Admin then return "â™¦ï¸*â”‡*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return whitelist(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáÒŞ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø²Ù‚" then 
 if not msg.Rank then end
 return zzzkkk(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáÏÌÇÌ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¯Ø¬Ø§Ø¬" then 
 if not msg.Rank then end
 return zzkk(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáÍãÇÑ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ù…Ø§Ø±" then 
 if not msg.Rank then end
 return hhaa(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáŞÑæÏ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù‚Ø±ÙˆØ¯" then 
 if not msg.Rank then end
 return aahh(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáÈŞÑ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¨Ù‚Ø±" then 
 if not msg.Rank then end
 return ggoo(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáÊíÓ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ØªÙŠØ³" then 
 if not msg.Rank then end
 return yyoo(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáßáÇÈ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙ„Ø§Ø¨" then 
 if not msg.Rank then end
 return klaa(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáÒæÇÍİ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø²ÙˆØ§Ø­Ù" then 
 if not msg.Rank then end
 return ssee(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ Çáßíß" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙŠÙƒ" then 
 if not msg.Rank then end
 return kakaa(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáÈÕá" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¨ØµÙ„" then 
 if not msg.Rank then end
 return bass(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáĞÈÇä" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø°Ø¨Ø§Ù†" then 
 if not msg.Rank then end
 return trrr(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáßáíÌå" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙ„ÙŠØ¬Ù‡" then 
 if not msg.Rank then end
 return kll(msg) 
 end
 
-if MsgText[1] == "ŞÇÆãÉ ÇáËæÑ" then 
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø«ÙˆØ±" then 
 if not msg.Rank then end
 return vorr(msg) 
 end
 
 
-if MsgText[1] == "ÕáÇÍíÇÊå" then 
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1] == "ØµÙ„Ø§Ø­ÙŠØ§ØªÙ‡" then 
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if tonumber(msg.reply_to_message_id_) ~= 0 then 
 function prom_reply(extra, result, success) 
 Get_Info(msg,msg.chat_id_,result.sender_user_id_)
@@ -445,55 +445,55 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(msg.reply_to_message_id_)},prom_reply, nil)
 end
 end
-if MsgText[1] == "ÕáÇÍíÇÊí" then 
+if MsgText[1] == "ØµÙ„Ø§Ø­ÙŠØ§ØªÙŠ" then 
 if tonumber(msg.reply_to_message_id_) == 0 then 
 Get_Info(msg,msg.chat_id_,msg.sender_user_id_)
 end  
 end
-if MsgText[1] == "ÕáÇÍíÇÊå" and MsgText[2] and MsgText[2]:match('@[%a%d_]+') then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1] == "ØµÙ„Ø§Ø­ÙŠØ§ØªÙ‡" and MsgText[2] and MsgText[2]:match('@[%a%d_]+') then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if tonumber(msg.reply_to_message_id_) == 0 then 
 local username = MsgText[2]
 function prom_username(extra, result, success) 
 if (result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED") then
-return sendMsg(msg.chat_id_,msg.id_,'???ÇáãÚÑİ ÛíÑ ÕÍíÍ \n??????')   
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“®â”‚Ø§Ù„Ù…Ø¹Ø±Ù ØºÙŠØ± ØµØ­ÙŠØ­ \nğŸ‘¨ğŸ»â€âœˆï¸')   
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-return sendMsg(msg.chat_id_,msg.id_,'???åÇĞÇ ãÚÑİ ŞäÇÉ \n??????')   
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“®â”‚Ù‡Ø§Ø°Ø§ Ù…Ø¹Ø±Ù Ù‚Ù†Ø§Ø© \nğŸ‘¨ğŸ»â€âœˆï¸')   
 end      
 Get_Info(msg,msg.chat_id_,result.id_)
 end  
 tdcli_function ({ID = "SearchPublicChat",username_ = username},prom_username,nil) 
 end 
 end
-if MsgText[1] == "İÍÕ ÇáÈæÊ" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1] == "ÙØ­Øµ Ø§Ù„Ø¨ÙˆØª" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local Chek_Info = https.request('https://api.telegram.org/bot'..Token..'/getChatMember?chat_id='.. msg.chat_id_ ..'&user_id='.. max..'')
 local Json_Info = JSON.decode(Chek_Info)
 if Json_Info.ok == true then
 if Json_Info.result.status == "administrator" then
 if Json_Info.result.can_change_info == true then
-info = '?' else info = '?' end
+info = 'êªœ' else info = 'âœ˜' end
 if Json_Info.result.can_delete_messages == true then
-delete = '?' else delete = '?' end
+delete = 'êªœ' else delete = 'âœ˜' end
 if Json_Info.result.can_invite_users == true then
-invite = '?' else invite = '?' end
+invite = 'êªœ' else invite = 'âœ˜' end
 if Json_Info.result.can_pin_messages == true then
-pin = '?' else pin = '?' end
+pin = 'êªœ' else pin = 'âœ˜' end
 if Json_Info.result.can_restrict_members == true then
-restrict = '?' else restrict = '?' end
+restrict = 'êªœ' else restrict = 'âœ˜' end
 if Json_Info.result.can_promote_members == true then
-promote = '?' else promote = '?' end 
-return sendMsg(msg.chat_id_,msg.id_,'\n???ÇåáÇ ÚÒíÒí ÇáÈæÊ åäÇ ÇÏãä ÈÇáßÑæÈ \n???æÕáÇÍíÇÊå åí ? \nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\n???ÊÛíÑ ãÚáæãÇÊ ÇáãÌãæÚå ? ? '..info..' ?\n???ÍĞİ ÇáÑÓÇÆá ? ? '..delete..' ?\n???ÍÙÑ ÇáãÓÊÎÏãíä ? ? '..restrict..' ?\n??ÏÚæÉ ãÓÊÎÏãíä ? ? '..invite..' ?\n???ÊËÈíÊ ÇáÑÓÇÆá ? ? '..pin..' ?\n???ÇÖÇİÉ ãÔÑİíä ÌÏÏ ? ? '..promote..' ?\n\n???ãáÇÍÖå » ÚáÇãÉ ?  ? ? ÊÚäí áÏíå ÇáÕáÇÍíÉ æÚáÇãÉ ? ? ? ÊÚäí áíÓ áíÏíå ÇáÕáÇÍíå')   
+promote = 'êªœ' else promote = 'âœ˜' end 
+return sendMsg(msg.chat_id_,msg.id_,'\nğŸ“Œâ•¿Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ø¨ÙˆØª Ù‡Ù†Ø§ Ø§Ø¯Ù…Ù† Ø¨Ø§Ù„ÙƒØ±ÙˆØ¨ \nğŸ’¢â•½ÙˆØµÙ„Ø§Ø­ÙŠØ§ØªÙ‡ Ù‡ÙŠ â‡“ \nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nğŸ“â•¿ØªØºÙŠØ± Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ â† âª '..info..' â«\nğŸ“¨â”‚Ø­Ø°Ù Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ â† âª '..delete..' â«\nğŸš·â”‚Ø­Ø¸Ø± Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† â† âª '..restrict..' â«\nâ™»â”‚Ø¯Ø¹ÙˆØ© Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† â† âª '..invite..' â«\nğŸ”˜â”‚ØªØ«Ø¨ÙŠØª Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ â† âª '..pin..' â«\nğŸš¸â”‚Ø§Ø¶Ø§ÙØ© Ù…Ø´Ø±ÙÙŠÙ† Ø¬Ø¯Ø¯ â† âª '..promote..' â«\n\nğŸ’ â•½Ù…Ù„Ø§Ø­Ø¶Ù‡ Â» Ø¹Ù„Ø§Ù…Ø© âª  êªœ â« ØªØ¹Ù†ÙŠ Ù„Ø¯ÙŠÙ‡ Ø§Ù„ØµÙ„Ø§Ø­ÙŠØ© ÙˆØ¹Ù„Ø§Ù…Ø© âª âœ˜ â« ØªØ¹Ù†ÙŠ Ù„ÙŠØ³ Ù„ÙŠØ¯ÙŠÙ‡ Ø§Ù„ØµÙ„Ø§Ø­ÙŠÙ‡')   
 end
 end
 end
 
-if MsgText[1] == "ÊËÈíÊ" and msg.reply_id then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªØ«Ø¨ÙŠØª" and msg.reply_id then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local GroupID = msg.chat_id_:gsub('-100','')
 if not msg.Director and redis:get(max..'lock_pin'..msg.chat_id_) then
-return "áÇ íãßäß ÇáÊËÈíÊ ÇáÇãÑ ãŞİæá ãä ŞÈá ÇáÇÏÇÑå"
+return "Ù„Ø§ ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„ØªØ«Ø¨ÙŠØª Ø§Ù„Ø§Ù…Ø± Ù…Ù‚ÙÙˆÙ„ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ø§Ø¯Ø§Ø±Ù‡"
 else
 tdcli_function({
 ID="PinChannelMessage",
@@ -503,29 +503,29 @@ disable_notification_ = 1},
 function(arg,data)
 if data.ID == "Ok" then
 redis:set(max..":MsgIDPin:"..msg.chat_id_,msg.reply_id)
-return sendMsg(msg.chat_id_,msg.id_,"?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.." \n??*?* Êã ÊËÈíÊ ÇáÑÓÇáå \n?")
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.." \nğŸ“Œ*â•½* ØªÙ… ØªØ«Ø¨ÙŠØª Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ \nâœ“")
 elseif data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* ÚĞÑÇ áÇ íãßääí ÇáÊËÈíÊ .\n??*?* áÓÊ ãÔÑİ Çæ áÇ Çãáß ÕáÇÍíå ÇáÊËÈíÊ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ø§Ù„ØªØ«Ø¨ÙŠØª .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„Ø§ Ø§Ù…Ù„Ùƒ ØµÙ„Ø§Ø­ÙŠÙ‡ Ø§Ù„ØªØ«Ø¨ÙŠØª \n ğŸ’¥')    
 end
 end,nil)
 end
 return false
 end
 
-if MsgText[1] == "ÇáÛÇÁ ÇáÊËÈíÊ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ø§Ù„ØªØ«Ø¨ÙŠØª" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not msg.Director and redis:get(max..'lock_pin'..msg.chat_id_) then
-return "áÇ íãßäß ÇáÛÇÁ ÇáÊËÈíÊ ÇáÇãÑ ãŞİæá ãä ŞÈá ÇáÇÏÇÑå"
+return "Ù„Ø§ ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„ØºØ§Ø¡ Ø§Ù„ØªØ«Ø¨ÙŠØª Ø§Ù„Ø§Ù…Ø± Ù…Ù‚ÙÙˆÙ„ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ø§Ø¯Ø§Ø±Ù‡"
 else
 local GroupID = msg.chat_id_:gsub('-100','')
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = GroupID},
 function(arg,data) 
 if data.ID == "Ok" then
-return sendMsg(msg.chat_id_,msg.id_,"?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."  \n??*?* Êã ÇáÛÇÁ ÊËÈíÊ ÇáÑÓÇáå \n?")    
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."  \nğŸ’¬*â•½* ØªÙ… Ø§Ù„ØºØ§Ø¡ ØªØ«Ø¨ÙŠØª Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ \nâœ“")    
 elseif data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* ÚĞÑÇ áÇ íãßääí ÇáÛÇÁ ÇáÊËÈíÊ .\n??*?* áÓÊ ãÔÑİ Çæ áÇ Çãáß ÕáÇÍíå ÇáÊËÈíÊ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ø§Ù„ØºØ§Ø¡ Ø§Ù„ØªØ«Ø¨ÙŠØª .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„Ø§ Ø§Ù…Ù„Ùƒ ØµÙ„Ø§Ø­ÙŠÙ‡ Ø§Ù„ØªØ«Ø¨ÙŠØª \n ğŸ’¥')    
 elseif data.ID == "Error" and data.code_ == 400 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* ÚĞÑÇ ÚÒíÒí '..msg.TheRankCmd..' .\n??*?* áÇ ÊæÌÏ ÑÓÇáå ãËÈÊå áÇŞæã ÈÇÒÇáÊåÇ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ø¹Ø°Ø±Ø§ Ø¹Ø²ÙŠØ²ÙŠ '..msg.TheRankCmd..' .\nğŸŸ*â•½* Ù„Ø§ ØªÙˆØ¬Ø¯ Ø±Ø³Ø§Ù„Ù‡ Ù…Ø«Ø¨ØªÙ‡ Ù„Ø§Ù‚ÙˆÙ… Ø¨Ø§Ø²Ø§Ù„ØªÙ‡Ø§ \n ğŸ’¥')    
 end
 end,nil)
 end
@@ -533,8 +533,8 @@ return false
 end
 
 
-if MsgText[1] == "ÊŞííÏ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªÙ‚ÙŠÙŠØ¯" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="tqeed"}) 
 end
@@ -547,8 +547,8 @@ end
 return false
 end
 
-if MsgText[1] == "İß ÇáÊŞííÏ" or MsgText[1] == "İß ÊŞííÏ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ÙÙƒ Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" or MsgText[1] == "ÙÙƒ ØªÙ‚ÙŠÙŠØ¯" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="fktqeed"}) 
 end
@@ -562,8 +562,8 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ããíÒ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø±ÙØ¹ Ù…Ù…ÙŠØ²" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:kara:'..msg.chat_id_) == 'off' then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="setwhitelist"})
@@ -580,14 +580,14 @@ GetUserName(MsgText[2],action_by_username,{msg=msg,cmd="setwhitelist"})
 end
 end
 if redis:get(max..'lock:kara:'..msg.chat_id_) == 'on' then
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇáÑİÚ ãÚØá \n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§Ù„Ø±ÙØ¹ Ù…Ø¹Ø·Ù„ \nâœ“")
 end
 return false
 end
 
 
-if MsgText[1] == "ÊäÒíá ããíÒ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù…Ù…ÙŠØ²" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="remwhitelist"})
 end
@@ -601,8 +601,8 @@ return false
 end
 
 
-if (MsgText[1] == "ÑİÚ ÇáãÏíÑ"  or MsgText[1] == "ÑİÚ ãÏíÑ" ) then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if (MsgText[1] == "Ø±ÙØ¹ Ø§Ù„Ù…Ø¯ÙŠØ±"  or MsgText[1] == "Ø±ÙØ¹ Ù…Ø¯ÙŠØ±" ) then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:kara:'..msg.chat_id_) == 'off' then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="setowner"})
@@ -619,14 +619,14 @@ GetUserName(MsgText[2],action_by_username,{msg=msg,cmd="setowner"})
 end
 end
 if redis:get(max..'lock:kara:'..msg.chat_id_) == 'on' then
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇáÑİÚ ãÚØá \n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§Ù„Ø±ÙØ¹ Ù…Ø¹Ø·Ù„ \nâœ“")
 end
 return false
 end
 
 
-if (MsgText[1] == "ÊäÒíá ÇáãÏíÑ" or MsgText[1] == "ÊäÒíá ãÏíÑ" ) then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if (MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ù…Ø¯ÙŠØ±" or MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù…Ø¯ÙŠØ±" ) then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="remowner"})
 end
@@ -640,8 +640,8 @@ return false
 end
 
 
-if (MsgText[1] == "ÑİÚ ãäÔì ÇÓÇÓí" or MsgText[1] == "ÑİÚ ãäÔÆ ÇÓÇÓí") then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if (MsgText[1] == "Ø±ÙØ¹ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ" or MsgText[1] == "Ø±ÙØ¹ Ù…Ù†Ø´Ø¦ Ø§Ø³Ø§Ø³ÙŠ") then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="setkara"}) 
 return false
@@ -656,8 +656,8 @@ return false
 end 
 end
 
-if (MsgText[1] == "ÊäÒíá ãäÔì ÇÓÇÓí" or MsgText[1] == "ÊäÒíá ãäÔì ÇÓÇÓí") then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if (MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ" or MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ") then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="remkara"}) 
 return false
@@ -673,8 +673,8 @@ end
 end
 
 
-if (MsgText[1] == "ÑİÚ ãäÔì" or MsgText[1] == "ÑİÚ ãäÔÆ") then
-if not msg.Kara then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãäÔÆ ÇáÇÓÇÓí,ÇáãØæÑ,ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if (MsgText[1] == "Ø±ÙØ¹ Ù…Ù†Ø´Ù‰" or MsgText[1] == "Ø±ÙØ¹ Ù…Ù†Ø´Ø¦") then
+if not msg.Kara then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ,Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="setmnsha"})
 end
@@ -688,8 +688,8 @@ return false
 end
 
 
-if (MsgText[1] == "ÊäÒíá ãäÔì" or MsgText[1] == "ÊäÒíá ãäÔÆ" ) then
-if not msg.Kara then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔì ÇáÇÓÇÓí İŞØ} İŞØ  \n??" end
+if (MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰" or MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ø¦" ) then
+if not msg.Kara then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ù‰ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ ÙÙ‚Ø·} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="remmnsha"})
 end
@@ -703,8 +703,8 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ÇÏãä" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø±ÙØ¹ Ø§Ø¯Ù…Ù†" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:kara:'..msg.chat_id_) == 'off' then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="promote"})
@@ -721,15 +721,15 @@ GetUserName(MsgText[2],action_by_username,{msg=msg,cmd="promote"})
 end
 end
 if redis:get(max..'lock:kara:'..msg.chat_id_) == 'on' then
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇáÑİÚ ãÚØá \n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§Ù„Ø±ÙØ¹ Ù…Ø¹Ø·Ù„ \nâœ“")
 end
 return false
 end
 
 
 
-if MsgText[1] == "ÊäÒíá ÇÏãä" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø§Ø¯Ù…Ù†" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="demote"})
 end
@@ -744,8 +744,8 @@ end
 
 
 
-if MsgText[1] == "ÊäÒíá Çáßá" then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø§Ù„ÙƒÙ„" then
+if not msg.Creator then return "â™¦ï¸*â”‡*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 
 local Admins = redis:scard(max..'admins:'..msg.chat_id_)
 redis:del(max..'admins:'..msg.chat_id_)
@@ -754,11 +754,11 @@ redis:del(max..'owners:'..msg.chat_id_)
 local MMEZEN = redis:scard(max..'whitelist:'..msg.chat_id_)
 redis:del(max..'whitelist:'..msg.chat_id_)
 
-return "??????ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.." ?\n??????ÊÜÜ?ÜÜã ÊäÒíá ? "..Admins.." ? ãä ÇáÇÏãäíå\n???????ÊÜÜ?ÜÜã ÊäÒíá ? "..NumMDER.." ? ãä ÇáãÏÑÇÁ\n??????ÊÜÜ?ÜÜã ÊäÒíá ? "..MMEZEN.." ? ãä ÇáããíÒíä\n\n???ÊÜÜ?ÜÜã ÊÜäÜÒíÜá ÇáÜßÜá ÈÜäÜÌÜÇÍ\n?" 
+return "ğŸ™‹ğŸ»â€â™‚â”‡Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.." â‡“\nğŸ‘¨ğŸ»â€âš–â”‡ØªÙ€Ù€âœ“Ù€Ù€Ù… ØªÙ†Ø²ÙŠÙ„ â´ "..Admins.." âµ Ù…Ù† Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡\nğŸ‘¨ğŸ»â€ğŸ”§â”‡ØªÙ€Ù€âœ“Ù€Ù€Ù… ØªÙ†Ø²ÙŠÙ„ â´ "..NumMDER.." âµ Ù…Ù† Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡\nğŸ™ğŸ»â€â™‚â”‡ØªÙ€Ù€âœ“Ù€Ù€Ù… ØªÙ†Ø²ÙŠÙ„ â´ "..MMEZEN.." âµ Ù…Ù† Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ†\n\nğŸ’ â”‡ØªÙ€Ù€âœ“Ù€Ù€Ù… ØªÙ€Ù†Ù€Ø²ÙŠÙ€Ù„ Ø§Ù„Ù€ÙƒÙ€Ù„ Ø¨Ù€Ù†Ù€Ø¬Ù€Ø§Ø­\nâœ“" 
 end
 
 
-if MsgText[1] == "ÑİÚ ÒŞ" then
+if MsgText[1] == "Ø±ÙØ¹ Ø²Ù‚" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -766,11 +766,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zkzk"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ÒŞ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø²Ù‚" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zkzkk"})
@@ -779,7 +779,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ÏÌÇÌå" then
+if MsgText[1] == "Ø±ÙØ¹ Ø¯Ø¬Ø§Ø¬Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -787,11 +787,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="dadaa"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ÏÌÇÌå" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø¯Ø¬Ø§Ø¬Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="dadaaa"})
@@ -800,7 +800,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ÍãÇÑ" then
+if MsgText[1] == "Ø±ÙØ¹ Ø­Ù…Ø§Ø±" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -808,11 +808,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="motee"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ÍãÇÑ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø­Ù…Ø§Ø±" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="moteee"})
@@ -821,7 +821,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ŞÑÏ" then
+if MsgText[1] == "Ø±ÙØ¹ Ù‚Ø±Ø¯" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -829,11 +829,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="yyuu"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ŞÑÏ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù‚Ø±Ø¯" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="yyuuu"})
@@ -842,7 +842,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ÈŞÑå" then
+if MsgText[1] == "Ø±ÙØ¹ Ø¨Ù‚Ø±Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -850,11 +850,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bakki"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ÈŞÑå" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø¨Ù‚Ø±Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bakkii"})
@@ -863,7 +863,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ÊíÓ" then
+if MsgText[1] == "Ø±ÙØ¹ ØªÙŠØ³" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -871,11 +871,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="hamee"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ÊíÓ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ ØªÙŠØ³" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="hamee"})
@@ -884,7 +884,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ßáÈ" then
+if MsgText[1] == "Ø±ÙØ¹ ÙƒÙ„Ø¨" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -892,11 +892,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kalb"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ßáÈ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ ÙƒÙ„Ø¨" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kalbb"})
@@ -905,7 +905,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ÒÇÍİ" then
+if MsgText[1] == "Ø±ÙØ¹ Ø²Ø§Ø­Ù" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -913,11 +913,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zaahf"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ÒÇÍİ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø²Ø§Ø­Ù" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="zaahff"})
@@ -925,7 +925,7 @@ end
 return false
 end
 
-if MsgText[1] == "ÑİÚ ßíßå" then
+if MsgText[1] == "Ø±ÙØ¹ ÙƒÙŠÙƒÙ‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -933,11 +933,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkaak"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ßíßå" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ ÙƒÙŠÙƒÙ‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkaakk"})
@@ -945,7 +945,7 @@ end
 return false
 end
 
-if MsgText[1] == "ÑİÚ ÈÕáå" then
+if MsgText[1] == "Ø±ÙØ¹ Ø¨ØµÙ„Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -953,11 +953,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bbaa"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ÈÕáå" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø¨ØµÙ„Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="bbaaa"})
@@ -965,7 +965,7 @@ end
 return false
 end
 
-if MsgText[1] == "ÑİÚ ĞÈÇäå" then
+if MsgText[1] == "Ø±ÙØ¹ Ø°Ø¨Ø§Ù†Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -973,11 +973,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="ttaa"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ĞÈÇäå" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø°Ø¨Ø§Ù†Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="ttaaa"})
@@ -985,7 +985,7 @@ end
 return false
 end
 
-if MsgText[1] == "ÑİÚ ßáíÌå" then
+if MsgText[1] == "Ø±ÙØ¹ ÙƒÙ„ÙŠØ¬Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -993,11 +993,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkw"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ßáíÌå" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ ÙƒÙ„ÙŠØ¬Ù‡" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kkww"})
@@ -1006,7 +1006,7 @@ return false
 end
 
 
-if MsgText[1] == "ÑİÚ ËæÑ" then
+if MsgText[1] == "Ø±ÙØ¹ Ø«ÙˆØ±" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'off' then
@@ -1014,11 +1014,11 @@ GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="voo"})
 end
 end
 if redis:get(max..'lock:karaa:'..msg.chat_id_) == 'on' then  
-sendMsg(msg.chat_id_,msg.id_,"??????*?* ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇæÇãÑ ÇáÊÓáíå ãÚØáå\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ¼â€â™‚ï¸*â•¿* Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â•½* Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ Ù…Ø¹Ø·Ù„Ù‡\nâœ“")
 end
 return false
 end
-if MsgText[1] == "ÊäÒíá ËæÑ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ø«ÙˆØ±" then
 if not msg.Rank then end
 if not MsgText[2] and msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="vooo"})
@@ -1029,167 +1029,167 @@ end
 
 --{ Commands For locks }
 
-if MsgText[1] == "Şİá" then
+if MsgText[1] == "Ù‚ÙÙ„" then
 
-if MsgText[2] == "Çáßá"		 then return lock_All(msg) end
-if MsgText[2] == "ÇáæÓÇÆØ" 	 then return lock_Media(msg) end
-if MsgText[2] == "ÇáÕæÑ ÈÇáÊŞííÏ" 	 then return tqeed_photo(msg) end
-if MsgText[2] == "ÇáİíÏíæ ÈÇáÊŞííÏ"  then return tqeed_video(msg) end
-if MsgText[2] == "ÇáãÊÍÑßå ÈÇáÊŞííÏ" then return tqeed_gif(msg) end
-if MsgText[2] == "ÇáÊæÌíå ÈÇáÊŞííÏ"  then return tqeed_fwd(msg) end
-if MsgText[2] == "ÇáÑæÇÈØ ÈÇáÊŞííÏ"  then return tqeed_link(msg) end
-if MsgText[2] == "ÇáÏÑÏÔå"    	     then return mute_text(msg) end
-if MsgText[2] == "ÇáãÊÍÑßå" 		 then return mute_gif(msg) end
-if MsgText[2] == "ÇáÕæÑ" 			 then return mute_photo(msg) end
-if MsgText[2] == "ÇáİíÏíæ"			 then return mute_video(msg) end
-if MsgText[2] == "ÇáÈÕãÇÊ" 		then  return mute_audio(msg) end
-if MsgText[2] == "ÇáÕæÊ" 		then return mute_voice(msg) end
-if MsgText[2] == "ÇáãáÕŞÇÊ" 	then return mute_sticker(msg) end
-if MsgText[2] == "ÇáÌåÇÊ" 		then return mute_contact(msg) end
-if MsgText[2] == "ÇáÊæÌíå" 		then return mute_forward(msg) end
-if MsgText[2] == "ÇáãæŞÚ"	 	then return mute_location(msg) end
-if MsgText[2] == "ÇáãáİÇÊ" 		then return mute_document(msg) end
-if MsgText[2] == "ÇáÇÔÚÇÑÇÊ" 	then return mute_tgservice(msg) end
-if MsgText[2] == "ÇáÇäáÇíä" 		then return mute_inline(msg) end
-if MsgText[2] == "ÇáßíÈæÑÏ" 	then return mute_keyboard(msg) end
-if MsgText[2] == "ÇáÑæÇÈØ" 		then return lock_link(msg) end
-if MsgText[2] == "ÇáÊÇß" 		then return lock_tag(msg) end
-if MsgText[2] == "ÇáãÚÑİÇÊ" 	then return lock_username(msg) end
-if MsgText[2] == "ÇáÊÚÏíá" 		then return lock_edit(msg) end
-if MsgText[2] == "ÇáßáÇíÔ" 		then return lock_spam(msg) end
-if MsgText[2] == "ÇáÊßÑÇÑ" 		then return lock_flood(msg) end
-if MsgText[2] == "ÇáÈæÊÇÊ" 		then return lock_bots(msg) end
-if MsgText[2] == "ÇáÈæÊÇÊ ÈÇáØÑÏ" 	then return lock_bots_by_kick(msg) end
-if MsgText[2] == "ÇáãÇÑßÏæÇä" 	then return lock_markdown(msg) end
-if MsgText[2] == "ÇáæíÈ" 		then return lock_webpage(msg) end 
-if MsgText[2] == "ÇáÊËÈíÊ" 		then return lock_pin(msg) end 
+if MsgText[2] == "Ø§Ù„ÙƒÙ„"		 then return lock_All(msg) end
+if MsgText[2] == "Ø§Ù„ÙˆØ³Ø§Ø¦Ø·" 	 then return lock_Media(msg) end
+if MsgText[2] == "Ø§Ù„ØµÙˆØ± Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" 	 then return tqeed_photo(msg) end
+if MsgText[2] == "Ø§Ù„ÙÙŠØ¯ÙŠÙˆ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯"  then return tqeed_video(msg) end
+if MsgText[2] == "Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" then return tqeed_gif(msg) end
+if MsgText[2] == "Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯"  then return tqeed_fwd(msg) end
+if MsgText[2] == "Ø§Ù„Ø±ÙˆØ§Ø¨Ø· Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯"  then return tqeed_link(msg) end
+if MsgText[2] == "Ø§Ù„Ø¯Ø±Ø¯Ø´Ù‡"    	     then return mute_text(msg) end
+if MsgText[2] == "Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡" 		 then return mute_gif(msg) end
+if MsgText[2] == "Ø§Ù„ØµÙˆØ±" 			 then return mute_photo(msg) end
+if MsgText[2] == "Ø§Ù„ÙÙŠØ¯ÙŠÙˆ"			 then return mute_video(msg) end
+if MsgText[2] == "Ø§Ù„Ø¨ØµÙ…Ø§Øª" 		then  return mute_audio(msg) end
+if MsgText[2] == "Ø§Ù„ØµÙˆØª" 		then return mute_voice(msg) end
+if MsgText[2] == "Ø§Ù„Ù…Ù„ØµÙ‚Ø§Øª" 	then return mute_sticker(msg) end
+if MsgText[2] == "Ø§Ù„Ø¬Ù‡Ø§Øª" 		then return mute_contact(msg) end
+if MsgText[2] == "Ø§Ù„ØªÙˆØ¬ÙŠÙ‡" 		then return mute_forward(msg) end
+if MsgText[2] == "Ø§Ù„Ù…ÙˆÙ‚Ø¹"	 	then return mute_location(msg) end
+if MsgText[2] == "Ø§Ù„Ù…Ù„ÙØ§Øª" 		then return mute_document(msg) end
+if MsgText[2] == "Ø§Ù„Ø§Ø´Ø¹Ø§Ø±Ø§Øª" 	then return mute_tgservice(msg) end
+if MsgText[2] == "Ø§Ù„Ø§Ù†Ù„Ø§ÙŠÙ†" 		then return mute_inline(msg) end
+if MsgText[2] == "Ø§Ù„ÙƒÙŠØ¨ÙˆØ±Ø¯" 	then return mute_keyboard(msg) end
+if MsgText[2] == "Ø§Ù„Ø±ÙˆØ§Ø¨Ø·" 		then return lock_link(msg) end
+if MsgText[2] == "Ø§Ù„ØªØ§Ùƒ" 		then return lock_tag(msg) end
+if MsgText[2] == "Ø§Ù„Ù…Ø¹Ø±ÙØ§Øª" 	then return lock_username(msg) end
+if MsgText[2] == "Ø§Ù„ØªØ¹Ø¯ÙŠÙ„" 		then return lock_edit(msg) end
+if MsgText[2] == "Ø§Ù„ÙƒÙ„Ø§ÙŠØ´" 		then return lock_spam(msg) end
+if MsgText[2] == "Ø§Ù„ØªÙƒØ±Ø§Ø±" 		then return lock_flood(msg) end
+if MsgText[2] == "Ø§Ù„Ø¨ÙˆØªØ§Øª" 		then return lock_bots(msg) end
+if MsgText[2] == "Ø§Ù„Ø¨ÙˆØªØ§Øª Ø¨Ø§Ù„Ø·Ø±Ø¯" 	then return lock_bots_by_kick(msg) end
+if MsgText[2] == "Ø§Ù„Ù…Ø§Ø±ÙƒØ¯ÙˆØ§Ù†" 	then return lock_markdown(msg) end
+if MsgText[2] == "Ø§Ù„ÙˆÙŠØ¨" 		then return lock_webpage(msg) end 
+if MsgText[2] == "Ø§Ù„ØªØ«Ø¨ÙŠØª" 		then return lock_pin(msg) end 
 end
 
 --{ Commands For Unlocks }
-if MsgText[1] == "İÊÍ" 		then 
-if MsgText[2] == "Çáßá" then return Unlock_All(msg) end
-if MsgText[2] == "ÇáæÓÇÆØ" then return Unlock_Media(msg) end
-if MsgText[2] == "ÇáÕæÑ ÈÇáÊŞííÏ" 		then return fktqeed_photo(msg) 	end
-if MsgText[2] == "ÇáİíÏíæ ÈÇáÊŞííÏ" 	then return fktqeed_video(msg) 	end
-if MsgText[2] == "ÇáãÊÍÑßå ÈÇáÊŞííÏ" 	then return fktqeed_gif(msg) 	end
-if MsgText[2] == "ÇáÊæÌíå ÈÇáÊŞííÏ" 	then return fktqeed_fwd(msg) 	end
-if MsgText[2] == "ÇáÑæÇÈØ ÈÇáÊŞííÏ" 	then return fktqeed_link(msg) 	end
-if MsgText[2] == "ÇáãÊÍÑßå" 	then return unmute_gif(msg) 	end
-if MsgText[2] == "ÇáÏÑÏÔå" 		then return unmute_text(msg) 	end
-if MsgText[2] == "ÇáÕæÑ" 		then return unmute_photo(msg) 	end
-if MsgText[2] == "ÇáİíÏíæ" 		then return unmute_video(msg) 	end
-if MsgText[2] == "ÇáÈÕãÇÊ" 		then return unmute_audio(msg) 	end
-if MsgText[2] == "ÇáÕæÊ" 		then return unmute_voice(msg) 	end
-if MsgText[2] == "ÇáãáÕŞÇÊ" 	then return unmute_sticker(msg) end
-if MsgText[2] == "ÇáÌåÇÊ" 		then return unmute_contact(msg) end
-if MsgText[2] == "ÇáÊæÌíå" 		then return unmute_forward(msg) end
-if MsgText[2] == "ÇáãæŞÚ" 		then return unmute_location(msg) end
-if MsgText[2] == "ÇáãáİÇÊ" 		then return unmute_document(msg) end
-if MsgText[2] == "ÇáÇÔÚÇÑÇÊ" 	then return unmute_tgservice(msg) end
-if MsgText[2] == "ÇáÇäáÇíä" 		then return unmute_inline(msg) 	end
-if MsgText[2] == "ÇáßíÈæÑÏ" 	then return unmute_keyboard(msg) end
-if MsgText[2] == "ÇáÑæÇÈØ" 		then return unlock_link(msg) 	end
-if MsgText[2] == "ÇáÊÇß" 		then return unlock_tag(msg) 	end
-if MsgText[2] == "ÇáãÚÑİÇÊ" 	then return unlock_username(msg) end
-if MsgText[2] == "ÇáÊÚÏíá" 		then return unlock_edit(msg) 	end
-if MsgText[2] == "ÇáßáÇíÔ" 		then return unlock_spam(msg) 	end
-if MsgText[2] == "ÇáÊßÑÇÑ" 		then return unlock_flood(msg) 	end
-if MsgText[2] == "ÇáÈæÊÇÊ" 		then return unlock_bots(msg) 	end
-if MsgText[2] == "ÇáÈæÊÇÊ ÈÇáØÑÏ" 	then return unlock_bots_by_kick(msg) end
-if MsgText[2] == "ÇáãÇÑßÏæÇä" 	then return unlock_markdown(msg) end
-if MsgText[2] == "ÇáæíÈ" 		then return unlock_webpage(msg) 	end
-if MsgText[2] == "ÇáÊËÈíÊ" 		then return unlock_pin(msg) end 
+if MsgText[1] == "ÙØªØ­" 		then 
+if MsgText[2] == "Ø§Ù„ÙƒÙ„" then return Unlock_All(msg) end
+if MsgText[2] == "Ø§Ù„ÙˆØ³Ø§Ø¦Ø·" then return Unlock_Media(msg) end
+if MsgText[2] == "Ø§Ù„ØµÙˆØ± Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" 		then return fktqeed_photo(msg) 	end
+if MsgText[2] == "Ø§Ù„ÙÙŠØ¯ÙŠÙˆ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" 	then return fktqeed_video(msg) 	end
+if MsgText[2] == "Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" 	then return fktqeed_gif(msg) 	end
+if MsgText[2] == "Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" 	then return fktqeed_fwd(msg) 	end
+if MsgText[2] == "Ø§Ù„Ø±ÙˆØ§Ø¨Ø· Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯" 	then return fktqeed_link(msg) 	end
+if MsgText[2] == "Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡" 	then return unmute_gif(msg) 	end
+if MsgText[2] == "Ø§Ù„Ø¯Ø±Ø¯Ø´Ù‡" 		then return unmute_text(msg) 	end
+if MsgText[2] == "Ø§Ù„ØµÙˆØ±" 		then return unmute_photo(msg) 	end
+if MsgText[2] == "Ø§Ù„ÙÙŠØ¯ÙŠÙˆ" 		then return unmute_video(msg) 	end
+if MsgText[2] == "Ø§Ù„Ø¨ØµÙ…Ø§Øª" 		then return unmute_audio(msg) 	end
+if MsgText[2] == "Ø§Ù„ØµÙˆØª" 		then return unmute_voice(msg) 	end
+if MsgText[2] == "Ø§Ù„Ù…Ù„ØµÙ‚Ø§Øª" 	then return unmute_sticker(msg) end
+if MsgText[2] == "Ø§Ù„Ø¬Ù‡Ø§Øª" 		then return unmute_contact(msg) end
+if MsgText[2] == "Ø§Ù„ØªÙˆØ¬ÙŠÙ‡" 		then return unmute_forward(msg) end
+if MsgText[2] == "Ø§Ù„Ù…ÙˆÙ‚Ø¹" 		then return unmute_location(msg) end
+if MsgText[2] == "Ø§Ù„Ù…Ù„ÙØ§Øª" 		then return unmute_document(msg) end
+if MsgText[2] == "Ø§Ù„Ø§Ø´Ø¹Ø§Ø±Ø§Øª" 	then return unmute_tgservice(msg) end
+if MsgText[2] == "Ø§Ù„Ø§Ù†Ù„Ø§ÙŠÙ†" 		then return unmute_inline(msg) 	end
+if MsgText[2] == "Ø§Ù„ÙƒÙŠØ¨ÙˆØ±Ø¯" 	then return unmute_keyboard(msg) end
+if MsgText[2] == "Ø§Ù„Ø±ÙˆØ§Ø¨Ø·" 		then return unlock_link(msg) 	end
+if MsgText[2] == "Ø§Ù„ØªØ§Ùƒ" 		then return unlock_tag(msg) 	end
+if MsgText[2] == "Ø§Ù„Ù…Ø¹Ø±ÙØ§Øª" 	then return unlock_username(msg) end
+if MsgText[2] == "Ø§Ù„ØªØ¹Ø¯ÙŠÙ„" 		then return unlock_edit(msg) 	end
+if MsgText[2] == "Ø§Ù„ÙƒÙ„Ø§ÙŠØ´" 		then return unlock_spam(msg) 	end
+if MsgText[2] == "Ø§Ù„ØªÙƒØ±Ø§Ø±" 		then return unlock_flood(msg) 	end
+if MsgText[2] == "Ø§Ù„Ø¨ÙˆØªØ§Øª" 		then return unlock_bots(msg) 	end
+if MsgText[2] == "Ø§Ù„Ø¨ÙˆØªØ§Øª Ø¨Ø§Ù„Ø·Ø±Ø¯" 	then return unlock_bots_by_kick(msg) end
+if MsgText[2] == "Ø§Ù„Ù…Ø§Ø±ÙƒØ¯ÙˆØ§Ù†" 	then return unlock_markdown(msg) end
+if MsgText[2] == "Ø§Ù„ÙˆÙŠØ¨" 		then return unlock_webpage(msg) 	end
+if MsgText[2] == "Ø§Ù„ØªØ«Ø¨ÙŠØª" 		then return unlock_pin(msg) end 
 end
  
-if MsgText[1] == "ÇäÔÇÁ ÑÇÈØ" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù†Ø´Ø§Ø¡ Ø±Ø§Ø¨Ø·" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not redis:get(max..'ExCmdLink'..msg.chat_id_) then
 local LinkGp = ExportLink(msg.chat_id_)
 if LinkGp then
 LinkGp = LinkGp.result
 redis:set(max..'linkGroup'..msg.chat_id_,LinkGp)
 redis:setex(max..'ExCmdLink'..msg.chat_id_,120,true)
-return sendMsg(msg.chat_id_,msg.id_,"?????*?*Êã ÇäÔÇÁ ÑÇÈØ ÌÏíÏ \n???["..LinkGp.."]\n???áÚÑÖ ÇáÑÇÈØ ÇÑÓá { ÇáÑÇÈØ } \n")
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚*â•¿*ØªÙ… Ø§Ù†Ø´Ø§Ø¡ Ø±Ø§Ø¨Ø· Ø¬Ø¯ÙŠØ¯ \nğŸ”–â”‚["..LinkGp.."]\nğŸ”–â•½Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø±Ø§Ø¨Ø· Ø§Ø±Ø³Ù„ { Ø§Ù„Ø±Ø§Ø¨Ø· } \n")
 else
-return sendMsg(msg.chat_id_,msg.id_,"???áÇ íãßääí ÇäÔÇÁ ÑÇÈØ ááãÌãæÚå .\n???áÇääí áÓÊ ãÔÑİ İí ÇáãÌãæÚå \n ??")
+return sendMsg(msg.chat_id_,msg.id_,"â™¦ï¸â•¿Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ø§Ù†Ø´Ø§Ø¡ Ø±Ø§Ø¨Ø· Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ .\nğŸŸâ•½Ù„Ø§Ù†Ù†ÙŠ Ù„Ø³Øª Ù…Ø´Ø±Ù ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ \n ğŸ’¥")
 end
 else
-return sendMsg(msg.chat_id_,msg.id_,"???áŞÏ ŞãÊ ÈÇäÔÇÁ ÇáÑÇÈØ ÓÇÈŞÇ .\n???ÇÑÓá { ÇáÑÇÈØ } áÑÄíå ÇáÑÇÈØ  \n ??")
+return sendMsg(msg.chat_id_,msg.id_,"â™¦ï¸â•¿Ù„Ù‚Ø¯ Ù‚Ù…Øª Ø¨Ø§Ù†Ø´Ø§Ø¡ Ø§Ù„Ø±Ø§Ø¨Ø· Ø³Ø§Ø¨Ù‚Ø§ .\nğŸŸâ•½Ø§Ø±Ø³Ù„ { Ø§Ù„Ø±Ø§Ø¨Ø· } Ù„Ø±Ø¤ÙŠÙ‡ Ø§Ù„Ø±Ø§Ø¨Ø·  \n ğŸ’¥")
 end
 return false
 end 
 
-if MsgText[1] == "ÖÚ ÑÇÈØ" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ Ø±Ø§Ø¨Ø·" then
+if not msg.Director then return "â™¦ï¸*â”‡*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..'linkGroup'..msg.sender_user_id_,300,true)
-return '???ÚÒíÒí Şã ÈÑÓÇá ÇáÑÇÈØ ÇáÌÏíÏ ...??'
+return 'ğŸ”—â”‚Ø¹Ø²ÙŠØ²ÙŠ Ù‚Ù… Ø¨Ø±Ø³Ø§Ù„ Ø§Ù„Ø±Ø§Ø¨Ø· Ø§Ù„Ø¬Ø¯ÙŠØ¯ ...ğŸ‚'
 end
 
-if MsgText[1] == "ÇáÑÇÈØ" then
+if MsgText[1] == "Ø§Ù„Ø±Ø§Ø¨Ø·" then
 if not redis:get(max..'linkGroup'..msg.chat_id_) then 
-return "??*?*   áÇ íæÌÏ ÑÇÈØ \n??*?*áÇäÔÇÁ ÑÇÈØ ÇÑÓá { `ÇäÔÇÁ ÑÇÈØ` }\n??" 
+return "ğŸ“¡*â•¿*   Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø±Ø§Ø¨Ø· \nğŸ”–*â•½*Ù„Ø§Ù†Ø´Ø§Ø¡ Ø±Ø§Ø¨Ø· Ø§Ø±Ø³Ù„ { `Ø§Ù†Ø´Ø§Ø¡ Ø±Ø§Ø¨Ø·` }\nğŸ“¡" 
 end
 local GroupName = redis:get(max..'group:name'..msg.chat_id_)
 local GroupLink = redis:get(max..'linkGroup'..msg.chat_id_)
-return "???ÑÇÈÜØ ÇáÜãÜÌÜãÜæÚå ??\n???"..Flter_Markdown(GroupName).." :\n\n["..GroupLink.."]\n"
+return "ğŸ”–â•¿Ø±Ø§Ø¨Ù€Ø· Ø§Ù„Ù€Ù…Ù€Ø¬Ù€Ù…Ù€ÙˆØ¹Ù‡ ğŸ’¯\nğŸŒ¿â•½"..Flter_Markdown(GroupName).." :\n\n["..GroupLink.."]\n"
 end
   
 
-if MsgText[1] == "ÇáÑÇÈØ ÎÇÕ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ø±Ø§Ø¨Ø· Ø®Ø§Øµ" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local GroupLink = redis:get(max..'linkGroup'..msg.chat_id_)
-if not GroupLink then return "??*?*    áÇíæÌÏ åäÇ ÑÇÈØ\n???*ÑÌÇÆÇ ÇßÊÈ [ÖÚ ÑÇÈØ]*??" end
-local Text = "???ÑÇÈÜØ ÇáÜãÜÌÜãÜæÚå ??\n???"..Flter_Markdown(redis:get(max..'group:name'..msg.chat_id_)).." :\n\n["..GroupLink.."]\n"
+if not GroupLink then return "ğŸ“¡*â•¿*    Ù„Ø§ÙŠÙˆØ¬Ø¯ Ù‡Ù†Ø§ Ø±Ø§Ø¨Ø·\nğŸ”–â•½*Ø±Ø¬Ø§Ø¦Ø§ Ø§ÙƒØªØ¨ [Ø¶Ø¹ Ø±Ø§Ø¨Ø·]*ğŸ”ƒ" end
+local Text = "ğŸ”–â•¿Ø±Ø§Ø¨Ù€Ø· Ø§Ù„Ù€Ù…Ù€Ø¬Ù€Ù…Ù€ÙˆØ¹Ù‡ ğŸ’¯\nğŸŒ¿â•½"..Flter_Markdown(redis:get(max..'group:name'..msg.chat_id_)).." :\n\n["..GroupLink.."]\n"
 local info, res = https.request(ApiToken..'/sendMessage?chat_id='..msg.sender_user_id_..'&text='..URL.escape(Text)..'&disable_web_page_preview=true&parse_mode=Markdown')
 if res == 403 then
-return "?????*?*ÚĞÑÇ ÚÒíÒí \n???áã ÇÓÊØíÚ ÇÑÓÇáß ÇáÑÇÈØ áÇäß ŞãÊ ÈÍÙÑ ÇáÈæÊ\n!"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø¹Ø°Ø±Ø§ Ø¹Ø²ÙŠØ²ÙŠ \nğŸŒ¿â•½Ù„Ù… Ø§Ø³ØªØ·ÙŠØ¹ Ø§Ø±Ø³Ø§Ù„Ùƒ Ø§Ù„Ø±Ø§Ø¨Ø· Ù„Ø§Ù†Ùƒ Ù‚Ù…Øª Ø¨Ø­Ø¸Ø± Ø§Ù„Ø¨ÙˆØª\n!"
 elseif res == 400 then
-return "?????*?*ÚĞÑÇ ÚÒíÒí \n??? áã ÇÓÊØíÚ ÇÑÓÇáß ÇáÑÇÈØ íÌÈ Úáíß ãÑÇÓáå ÇáÈæÊ ÇæáÇ \n!"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø¹Ø°Ø±Ø§ Ø¹Ø²ÙŠØ²ÙŠ \nğŸŒ¿â•½ Ù„Ù… Ø§Ø³ØªØ·ÙŠØ¹ Ø§Ø±Ø³Ø§Ù„Ùƒ Ø§Ù„Ø±Ø§Ø¨Ø· ÙŠØ¬Ø¨ Ø¹Ù„ÙŠÙƒ Ù…Ø±Ø§Ø³Ù„Ù‡ Ø§Ù„Ø¨ÙˆØª Ø§ÙˆÙ„Ø§ \n!"
 end
 if res == 200 then 
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."  \n???Êã ÇÑÓÇá ÇáÑÇÈØ ÎÇÕ áß ??"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."  \nğŸŒ¿â•½ØªÙ… Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ø±Ø§Ø¨Ø· Ø®Ø§Øµ Ù„Ùƒ ğŸ”ƒ"
 end
 end
 
 
-if MsgText[1] == "ÖÚ ÇáŞæÇäíä" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..'rulse:witting'..msg.sender_user_id_,300,true)
-return '???ÍÓääÇ ÚÒíÒí  ???\n???ÇáÇä ÇÑÓá ÇáŞæÇäíä  ááãÌãæÚå ??'
+return 'ğŸ“­â•¿Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ  âœ‹ğŸ¿\nğŸ—¯â•½Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†  Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ğŸƒ'
 end
 
-if MsgText[1] == "ÇáŞæÇäíä" then
+if MsgText[1] == "Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†" then
 if not redis:get(max..'rulse:msg'..msg.chat_id_) then 
-return "\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\nÇáŞæÇäíä :\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\n? | ÅÍÊÑÇã ãÏÑÇÁ æÃÏãäíÉ ÇáãÌãæÚÉ.\n? | ÇáÚäÕÑíÉ ÈÌãíÚ ÃÔßÇáåÇ ããäæÚÉ.\n? | íãäÚ äÔÑ ÇáãÍÊæì ÇáÅÈÇÍí Èßá ÃäæÇÚå.\n? | íãäÚ ÇáÊßáã ÈÇáÃÏíÇä Ãæ ÇáãĞÇåÈ Ãæ ÇáÓíÇÓÉ.\n? | íãäÚ äÔÑ ÇáÍÓÇÈÇÊ ÇáÔÎÕíÉ Ïæä ÃÎĞ ÇáãæÇİŞÉ.\n? | íãäÚ äÔÑ ÇáÅÚáÇäÇÊ Èßá ÃäæÇÚåÇ Ïæä ÃÎĞ ÇáãæÇİŞÉ.\n? | íãäÚ ÇáÓÈ Ãæ ÇáÊáİÙ ÈÃáİÇÙ äÇÈíÉ Çæ ÎÇÏÔÉ ááÍíÇÁ.\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ"
+return "\nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nØ§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† :\nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nâš” | Ø¥Ø­ØªØ±Ø§Ù… Ù…Ø¯Ø±Ø§Ø¡ ÙˆØ£Ø¯Ù…Ù†ÙŠØ© Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.\nâš” | Ø§Ù„Ø¹Ù†ØµØ±ÙŠØ© Ø¨Ø¬Ù…ÙŠØ¹ Ø£Ø´ÙƒØ§Ù„Ù‡Ø§ Ù…Ù…Ù†ÙˆØ¹Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ù†Ø´Ø± Ø§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø¥Ø¨Ø§Ø­ÙŠ Ø¨ÙƒÙ„ Ø£Ù†ÙˆØ§Ø¹Ù‡.\nâš” | ÙŠÙ…Ù†Ø¹ Ø§Ù„ØªÙƒÙ„Ù… Ø¨Ø§Ù„Ø£Ø¯ÙŠØ§Ù†Â Ø£Ùˆ Ø§Ù„Ù…Ø°Ø§Ù‡Ø¨ Ø£Ùˆ Ø§Ù„Ø³ÙŠØ§Ø³Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ù†Ø´Ø± Ø§Ù„Ø­Ø³Ø§Ø¨Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ© Ø¯ÙˆÙ† Ø£Ø®Ø° Ø§Ù„Ù…ÙˆØ§ÙÙ‚Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ù†Ø´Ø± Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø¨ÙƒÙ„ Ø£Ù†ÙˆØ§Ø¹Ù‡Ø§ Ø¯ÙˆÙ† Ø£Ø®Ø° Ø§Ù„Ù…ÙˆØ§ÙÙ‚Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ø§Ù„Ø³Ø¨ Ø£Ùˆ Ø§Ù„ØªÙ„ÙØ¸ Ø¨Ø£Ù„ÙØ§Ø¸ Ù†Ø§Ø¨ÙŠØ© Ø§Ùˆ Ø®Ø§Ø¯Ø´Ø© Ù„Ù„Ø­ÙŠØ§Ø¡.\nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€"
 else 
-return "*???ÇáŞæÇäíä :*\n"..redis:get(max..'rulse:msg'..msg.chat_id_) 
+return "*ğŸ”–â”‚Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† :*\n"..redis:get(max..'rulse:msg'..msg.chat_id_) 
 end 
 end
 
 
-if MsgText[1] == "ÖÚ ÊßÑÇÑ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ ØªÙƒØ±Ø§Ø±" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local NumLoop = tonumber(MsgText[2])
 if NumLoop < 1 or NumLoop > 50 then 
-return "??*?* ÍÏæÏ ÇáÊßÑÇÑ ,  íÌÈ Çä Êßæä ãÇ Èíä  *[2-50]*" 
+return "ğŸ“¡*â”‚* Ø­Ø¯ÙˆØ¯ Ø§Ù„ØªÙƒØ±Ø§Ø± ,  ÙŠØ¬Ø¨ Ø§Ù† ØªÙƒÙˆÙ† Ù…Ø§ Ø¨ÙŠÙ†  *[2-50]*" 
 end
 redis:set(max..'flood'..msg.chat_id_,MsgText[2]) 
-return "??*?* Êã æÖÚ ÇáÊßÑÇÑ » { *"..MsgText[2].."* }"
+return "ğŸ“¡*â”‚* ØªÙ… ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø± Â» { *"..MsgText[2].."* }"
 end
 
 
 
-if MsgText[1] == "ãÓÍ" then
+if MsgText[1] == "Ù…Ø³Ø­" then
 if not MsgText[2] and msg.reply_id then 
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 Del_msg(msg.chat_id_, msg.reply_id) 
 Del_msg(msg.chat_id_, msg.id_) 
 return false
 end
 
 if MsgText[2] and MsgText[2]:match('^%d+$') then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
-if 500 < tonumber(MsgText[2]) then return "??*?* ÍÏæÏ ÇáãÓÍ ,  íÌÈ Çä Êßæä ãÇ Èíä  *[2-100]*" end
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
+if 500 < tonumber(MsgText[2]) then return "ğŸ“›*â”‚* Ø­Ø¯ÙˆØ¯ Ø§Ù„Ù…Ø³Ø­ ,  ÙŠØ¬Ø¨ Ø§Ù† ØªÙƒÙˆÙ† Ù…Ø§ Ø¨ÙŠÙ†  *[2-100]*" end
 local DelMsg = MsgText[2] + 1
 GetHistory(msg.chat_id_,DelMsg,function(arg,data)
 All_Msgs = {}
@@ -1204,285 +1204,285 @@ end
 end 
 if tonumber(DelMsg) == data.total_count_ then
 pcall(tdcli_function({ID="DeleteMessages",chat_id_=msg.chat_id_,message_ids_=All_Msgs},function() 
-sendMsg(msg.chat_id_,msg.id_,"*??* ÊÜã ãÓÍ ~? { *"..MsgText[2].."* } ãä ÇáÑÓÇÆá  \n?")
+sendMsg(msg.chat_id_,msg.id_,"*â›‘â”‚* ØªÙ€Ù… Ù…Ø³Ø­ ~âª¼ { *"..MsgText[2].."* } Ù…Ù† Ø§Ù„Ø±Ø³Ø§Ø¦Ù„  \nâœ“")
 end,nil))
 else
 pcall(tdcli_function({ID="DeleteMessages",chat_id_=msg.chat_id_,message_ids_=All_Msgs},function() 
-sendMsg(msg.chat_id_,msg.id_,"*??* ÊÜã ãÓÍ ~? { *"..MsgText[2].."* } ãä ÇáÑÓÇÆá  \n?")
+sendMsg(msg.chat_id_,msg.id_,"*â›‘â”‚* ØªÙ€Ù… Ù…Ø³Ø­ ~âª¼ { *"..MsgText[2].."* } Ù…Ù† Ø§Ù„Ø±Ø³Ø§Ø¦Ù„  \nâœ“")
 end,nil))
 end
 end)
 return false
 end
 
-if MsgText[2] == "ÇáÇÏãäíå" then 
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == "Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡" then 
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 
 local Admins = redis:scard(max..'admins:'..msg.chat_id_)
 if Admins ==0 then  
-return "??*?* Çæå ? åäÇáß ÎØÃ ??\n???ÚĞÑÇ áÇ íæÌÏ ÇÏãäíå áíÊã ãÓÍåã ?" 
+return "ğŸ“¡*â•¿* Ø§ÙˆÙ‡ â˜¢ Ù‡Ù†Ø§Ù„Ùƒ Ø®Ø·Ø£ ğŸš¸\nâ™¦ï¸â•½Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø§Ø¯Ù…Ù†ÙŠÙ‡ Ù„ÙŠØªÙ… Ù…Ø³Ø­Ù‡Ù… âœ“" 
 end
 redis:del(max..'admins:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n???Êã ãÓÍ {"..Admins.."} ãä ÇáÇÏãäíå İí ÇáÈæÊ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ØªÙ… Ù…Ø³Ø­ {"..Admins.."} Ù…Ù† Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡ ÙÙŠ Ø§Ù„Ø¨ÙˆØª \nâœ“"
 end
 
 
-if MsgText[2] == "ŞÇÆãÉ ÇáãäÚ" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù…Ù†Ø¹" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local Mn3Word = redis:scard(max..':Filter_Word:'..msg.chat_id_)
 if Mn3Word == 0 then 
-return "??*?* ÚĞÑÇ áÇ ÊæÌÏ ßáãÇÊ ããäæÚå áíÊã ÍĞİåÇ ?" 
+return "ğŸ“¡*â”‚* Ø¹Ø°Ø±Ø§ Ù„Ø§ ØªÙˆØ¬Ø¯ ÙƒÙ„Ù…Ø§Øª Ù…Ù…Ù†ÙˆØ¹Ù‡ Ù„ÙŠØªÙ… Ø­Ø°ÙÙ‡Ø§ âœ“" 
 end
 redis:del(max..':Filter_Word:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n???Êã ãÓÍ {*"..Mn3Word.."*} ßáãÇÊ ãä ÇáãäÚ ?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nğŸ”–â•½ØªÙ… Ù…Ø³Ø­ {*"..Mn3Word.."*} ÙƒÙ„Ù…Ø§Øª Ù…Ù† Ø§Ù„Ù…Ù†Ø¹ âœ“"
 end
 
 
-if MsgText[2] == "ÇáŞæÇäíä" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == "Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not redis:get(max..'rulse:msg'..msg.chat_id_) then 
-return "???ÚĞÑÇ áÇ íæÌÏ ŞæÇäíä áíÊã ãÓÍå \n!" 
+return "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù‚ÙˆØ§Ù†ÙŠÙ† Ù„ÙŠØªÙ… Ù…Ø³Ø­Ù‡ \n!" 
 end
 redis:del(max..'rulse:msg'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n???Êã ÍĞİ ÇáŞæÇäíä ÈäÌÇÍ ?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ØªÙ… Ø­Ø°Ù Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† Ø¨Ù†Ø¬Ø§Ø­ âœ“"
 end
 
 
-if MsgText[2] == "ÇáÊÑÍíÈ"  then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == "Ø§Ù„ØªØ±Ø­ÙŠØ¨"  then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not redis:get(max..'welcome:msg'..msg.chat_id_) then 
-return "??*?* Çæå ? åäÇáß ÎØÃ ??\n???ÚĞÑÇ áÇ íæÌÏ ÊÑÍíÈ áíÊã ãÓÍå ?" 
+return "ğŸ“¡*â•¿* Ø§ÙˆÙ‡ â˜¢ Ù‡Ù†Ø§Ù„Ùƒ Ø®Ø·Ø£ ğŸš¸\nâ™¦ï¸â•½Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ ØªØ±Ø­ÙŠØ¨ Ù„ÙŠØªÙ… Ù…Ø³Ø­Ù‡ âœ“" 
 end
 redis:del(max..'welcome:msg'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n???Êã ÍĞİ ÇáÊÑÍíÈ ÈäÌÇÍ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ØªÙ… Ø­Ø°Ù Ø§Ù„ØªØ±Ø­ÙŠØ¨ Ø¨Ù†Ø¬Ø§Ø­ \nâœ“"
 end
 
 
-if MsgText[2] == "ÇáãäÔì ÇáÇÓÇÓí" then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[2] == "Ø§Ù„Ù…Ù†Ø´Ù‰ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ" then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local NumMnsha = redis:scard(max..':Hussain:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "???ÚĞÑÇ áÇ íæÌÏ ãäÔì ÇÓÇÓí \n!" 
+return "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ \n!" 
 end
 redis:del(max..':Hussain:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ÇáãäÔì ÇáÇÓÇÓí \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ø§Ù„Ù…Ù†Ø´Ù‰ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ \nâœ“"
 end
 
 
-if MsgText[2] == "ÇáãäÔÆííä" then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[2] == "Ø§Ù„Ù…Ù†Ø´Ø¦ÙŠÙŠÙ†" then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local NumMnsha = redis:scard(max..':MONSHA_BOT:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "???ÚĞÑÇ áÇ íæÌÏ ãäÔÆííä áíÊã ãÓÍåã \n!" 
+return "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ù†Ø´Ø¦ÙŠÙŠÙ† Ù„ÙŠØªÙ… Ù…Ø³Ø­Ù‡Ù… \n!" 
 end
 redis:del(max..':MONSHA_BOT:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáãäÔÆííä\n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ù…Ù†Ø´Ø¦ÙŠÙŠÙ†\nâœ“"
 end
 
 
-if MsgText[2] == "ÇáãÏÑÇÁ" then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == "Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡" then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸš¶" end
 local NumMDER = redis:scard(max..'owners:'..msg.chat_id_)
 if NumMDER ==0 then 
-return "???ÚĞÑÇ áÇ íæÌÏ ãÏÑÇÁ áíÊã ãÓÍåã \n!" 
+return "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø¯Ø±Ø§Ø¡ Ù„ÙŠØªÙ… Ù…Ø³Ø­Ù‡Ù… \n!" 
 end
 redis:del(max..'owners:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMDER.." *} ãä ÇáãÏÑÇÁ  \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ ØªÙ… Ù…Ø³Ø­ {* "..NumMDER.." *} Ù…Ù† Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡  \nâœ“"
 end
 
-if MsgText[2] == 'ÇáãÍÙæÑíä' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == 'Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 
 local list = redis:smembers(max..'banned:'..msg.chat_id_)
-if #list == 0 then return "*???áÇ íæÌÏ ãÓÊÎÏãíä ãÍÙæÑíä  *" end
-message = '??*?* ŞÇÆãÉ ÇáÇÚÖÇÁ ÇáãÍÙæÑíä :\n'
+if #list == 0 then return "*ğŸ“Œâ”‚Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†  *" end
+message = 'ğŸ“‹*â”‚* Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§Ø¹Ø¶Ø§Ø¡ Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ† :\n'
 for k,v in pairs(list) do
 StatusLeft(msg.chat_id_,v)
 end 
 redis:del(max..'banned:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..#list.." *} ãä ÇáãÍÙæÑíä  \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‚*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‚ ØªÙ… Ù…Ø³Ø­ {* "..#list.." *} Ù…Ù† Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†  \nâœ“"
 end
 
-if MsgText[2] == 'ÇáãßÊæãíä' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == 'Ø§Ù„Ù…ÙƒØªÙˆÙ…ÙŠÙ†' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local MKTOMEN = redis:scard(max..'is_silent_users:'..msg.chat_id_)
 if MKTOMEN ==0 then 
-return "??*?* áÇ íæÌÏ ãÓÊÎÏãíä ãßÊæãíä İí ÇáãÌãæÚå " 
+return "ğŸ“¡*â”‚* Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ù…ÙƒØªÙˆÙ…ÙŠÙ† ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ " 
 end
 redis:del(max..'is_silent_users:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..MKTOMEN.." *} ãä ÇáãßÊæãíä  \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ ØªÙ… Ù…Ø³Ø­ {* "..MKTOMEN.." *} Ù…Ù† Ø§Ù„Ù…ÙƒØªÙˆÙ…ÙŠÙ†  \nâœ“"
 end
 
-if MsgText[2] == 'ÇáããíÒíä' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == 'Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ†' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local MMEZEN = redis:scard(max..'whitelist:'..msg.chat_id_)
 if MMEZEN ==0 then 
-return "*??*?áÇ íæÌÏ ãÓÊÎÏãíä ããíÒíä İí ÇáãÌãæÚå " 
+return "*âš™ï¸*â”‚Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ù…Ù…ÙŠØ²ÙŠÙ† ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ " 
 end
 redis:del(max..'whitelist:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..MMEZEN.." *} ãä ÇáããíÒíä  \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ ØªÙ… Ù…Ø³Ø­ {* "..MMEZEN.." *} Ù…Ù† Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ†  \nâœ“"
 end
 
 
-if MsgText[2] == "ŞÇÆãÉ Çáßíß" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙŠÙƒ" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':kaka:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':kaka:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä Çáßíß \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„ÙƒÙŠÙƒ \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáÒæÇÍİ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø²ÙˆØ§Ø­Ù" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':zahaf:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':zahaf:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÒæÇÍİ\n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø²ÙˆØ§Ø­Ù\nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáßáÇÈ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙ„Ø§Ø¨" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':kka:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':kka:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáßáÇÈ\n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„ÙƒÙ„Ø§Ø¨\nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáÊíÓ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ØªÙŠØ³" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':yoo:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':yoo:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÊíÓ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„ØªÙŠØ³ \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáÈŞÑ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¨Ù‚Ø±" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':baa:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':baa:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÈŞÑ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø¨Ù‚Ø± \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáÍãÇÑ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ù…Ø§Ø±" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':mote:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':mote:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÍãÇÑ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø­Ù…Ø§Ø± \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáŞÑæÏ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù‚Ø±ÙˆØ¯" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':ggyy:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':ggyy:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÍãÇÑ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø­Ù…Ø§Ø± \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáÏÌÇÌ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¯Ø¬Ø§Ø¬" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':zmm:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':zmm:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÏÌÇÌ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø¯Ø¬Ø§Ø¬ \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáÒŞ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø²Ù‚" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':zzkm:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':zzkm:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÒŞ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø²Ù‚ \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáÈÕá" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¨ØµÙ„" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':bba:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':zzkm:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáÈÕá \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø¨ØµÙ„ \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáĞÈÇä" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø°Ø¨Ø§Ù†" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':tta:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':zzkm:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáĞÈÇä \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø°Ø¨Ø§Ù† \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáßáíÌå" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙ„ÙŠØ¬Ù‡" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':kww:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':zzkm:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáßáíÌå \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„ÙƒÙ„ÙŠØ¬Ù‡ \nâœ“"
 end
 
-if MsgText[2] == "ŞÇÆãÉ ÇáËæÑ" then
+if MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø«ÙˆØ±" then
 if not msg.Rank then end
 local NumMnsha = redis:scard(max..':vor:'..msg.chat_id_)
 if NumMnsha ==0 then 
-return "??*?*áÇíæÌÏ ÇÍÏ ãÑİæÚ İí ÇáÈæÊ áíÊã ãÓÍÉ \n!" 
+return "â™¦ï¸*â”‡*Ù„Ø§ÙŠÙˆØ¬Ø¯ Ø§Ø­Ø¯ Ù…Ø±ÙÙˆØ¹ ÙÙŠ Ø§Ù„Ø¨ÙˆØª Ù„ÙŠØªÙ… Ù…Ø³Ø­Ø© \n!" 
 end
 redis:del(max..':zzkm:'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n??? Êã ãÓÍ {* "..NumMnsha.." *} ãä ÇáËæÑ \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â”‡*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â”‡ ØªÙ… Ù…Ø³Ø­ {* "..NumMnsha.." *} Ù…Ù† Ø§Ù„Ø«ÙˆØ± \nâœ“"
 end
 
-if MsgText[2] == 'ÇáÑÇÈØ' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[2] == 'Ø§Ù„Ø±Ø§Ø¨Ø·' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not redis:get(max..'linkGroup'..msg.chat_id_) then 
-return "*??*?áÇ íæÌÏ ÑÇÈØ ãÖÇİ ÇÕáÇ " 
+return "*âš™ï¸*â”‚Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø±Ø§Ø¨Ø· Ù…Ø¶Ø§Ù Ø§ØµÙ„Ø§ " 
 end
 redis:del(max..'linkGroup'..msg.chat_id_)
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."   \n???Êã ãÓÍ ÑÇÈØ ÇáãÌãæÚå \n?"
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."   \nâ™¦ï¸â•½ØªÙ… Ù…Ø³Ø­ Ø±Ø§Ø¨Ø· Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ \nâœ“"
 end
 
 end 
 --End del 
 
 
-if MsgText[1] == "ÖÚ ÇÓã" then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ Ø§Ø³Ù…" then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..'name:witting'..msg.sender_user_id_,300,true)
-return "???ÍÓääÇ ÚÒíÒí  ???\n???ÇáÇä ÇÑÓá ÇáÇÓã  ááãÌãæÚå \n??"
+return "ğŸ“­â•¿Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ  âœ‹ğŸ¿\nğŸ—¯â•½Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„Ø§Ø³Ù…  Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ \nğŸ› "
 end
 
 
-if MsgText[1] == "ãÓÍ ÇáÕæÑå" then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "Ù…Ø³Ø­ Ø§Ù„ØµÙˆØ±Ù‡" then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \n??" end
 https.request(ApiToken.."/deleteChatPhoto?chat_id="..msg.chat_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ãÓÍ ÇáÕæÑå ÂáãÜÌãÜæÚåÀ ??\n?')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸš¸â”‚ØªÙ… Ù…Ø³Ø­ Ø§Ù„ØµÙˆØ±Ù‡ Ø¢Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ù‡Û ğŸŒ¿\nâœ“')
 end
 
 
-if MsgText[1] == "ÖÚ ÕæÑå" then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ ØµÙˆØ±Ù‡" then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 if msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,function(arg, data)
 if data.content_.ID == 'MessagePhoto' then
@@ -1494,9 +1494,9 @@ end
 tdcli_function({ID="ChangeChatPhoto",chat_id_ = msg.chat_id_,photo_ = GetInputFile(photo_id)},
 function(arg,data)
 if data.ID == "Ok" then
---return sendMsg(msg.chat_id_,msg.id_,'???Êã ÊÛííÑ ÕæÑå ÂáãÜÌãÜæÚåÀ ?\n?')
+--return sendMsg(msg.chat_id_,msg.id_,'ğŸš¸â”‚ØªÙ… ØªØºÙŠÙŠØ± ØµÙˆØ±Ù‡ Ø¢Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ù‡Û â €\nâœ“')
 elseif  data.code_ == 3 then
-return sendMsg(msg.chat_id_,msg.id_,'???áíÓ áÏí ÕáÇÍíå ÊÛííÑ ÇáÕæÑå \n?? ?íÌÈ ÇÚØÇÆí ÕáÇÍíå `ÊÛííÑ ãÚáæãÇÊ ÇáãÌãæÚå ` ?\n?')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸš¸â•¿Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡ ØªØºÙŠÙŠØ± Ø§Ù„ØµÙˆØ±Ù‡ \nğŸ¤– â•½ÙŠØ¬Ø¨ Ø§Ø¹Ø·Ø§Ø¦ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡ `ØªØºÙŠÙŠØ± Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ` â €\nâœ“')
 end
 end, nil)
 end
@@ -1505,25 +1505,25 @@ end ,nil)
 return false
 else 
 redis:setex(max..'photo:group'..msg.chat_id_..msg.sender_user_id_,300,true)
-return '???ÍÓääÇ ÚÒíÒí ??\n?? ?ÇáÇä Şã ÈÇÑÓÇá ÇáÕæÑå\n??' 
+return 'ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ ğŸ\nğŸŒ„ â”‚Ø§Ù„Ø§Ù† Ù‚Ù… Ø¨Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ØµÙˆØ±Ù‡\nğŸ› ' 
 end 
 end
 
 
-if MsgText[1] == "ÖÚ æÕİ" then 
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ ÙˆØµÙ" then 
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..'about:witting'..msg.sender_user_id_,300,true) 
-return "???ÍÓääÇ ÚÒíÒí  ???\n???ÇáÇä ÇÑÓá ÇáæÕİ  ááãÌãæÚå\n??" 
+return "ğŸ“­â•¿Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ  âœ‹ğŸ¿\nğŸ—¯â•½Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„ÙˆØµÙ  Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡\nğŸ› " 
 end
 
 
-if MsgText[1] == "ØÑÏ ÇáÈæÊÇÊ" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "Ø·Ø±Ø¯ Ø§Ù„Ø¨ÙˆØªØ§Øª" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 tdcli_function({ID="GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''),
 filter_ ={ID="ChannelMembersBots"},offset_ = 0,limit_ = 50},function(arg,data)
 local Total = data.total_count_ or 0
 if Total == 1 then
-return sendMsg(msg.chat_id_,msg.id_,"??| áÇ íÜæÌÜÏ ÈÜæÊÜÇÊ İí ÇáÜãÜÌÜãÜæÚÜå .") 
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ”–| Ù„Ø§ ÙŠÙ€ÙˆØ¬Ù€Ø¯ Ø¨Ù€ÙˆØªÙ€Ø§Øª ÙÙŠ Ø§Ù„Ù€Ù…Ù€Ø¬Ù€Ù…Ù€ÙˆØ¹Ù€Ù‡ .") 
 else
 local NumBot = 0
 local NumBotAdmin = 0
@@ -1537,14 +1537,14 @@ NumBotAdmin = NumBotAdmin + 1
 end
 local TotalBots = NumBot + NumBotAdmin  
 if TotalBots  == Total - 1 then
-local TextR  = "??| ÚÜÏÏ ÇáÜÈÜæÊÇÊ •? {* "..(Total - 1).." *} ?•\n\n"
+local TextR  = "ğŸ“Œ| Ø¹Ù€Ø¯Ø¯ Ø§Ù„Ù€Ø¨Ù€ÙˆØªØ§Øª â€¢âŠ± {* "..(Total - 1).." *} âŠ°â€¢\n\n"
 if NumBot == 0 then 
-TextR = TextR.."??| áÇ íÜãÜßÜä ØÑÏåã áÇäÜåÜã ãÔÜÑİÜíä .\n"
+TextR = TextR.."ğŸ“®| Ù„Ø§ ÙŠÙ€Ù…Ù€ÙƒÙ€Ù† Ø·Ø±Ø¯Ù‡Ù… Ù„Ø§Ù†Ù€Ù‡Ù€Ù… Ù…Ø´Ù€Ø±ÙÙ€ÙŠÙ† .\n"
 else
 if NumBotAdmin >= 1 then
-TextR = TextR.."??| áã íÊã ØÜÑÏ {* "..NumBotAdmin.." *} ÈæÊ áÂäåÀşã ãÜÔÜÑİíä."
+TextR = TextR.."ğŸ”–| Ù„Ù… ÙŠØªÙ… Ø·Ù€Ø±Ø¯ {* "..NumBotAdmin.." *} Ø¨ÙˆØª Ù„Ø¢Ù†Ù‡Ûâ€Œâ€Ù… Ù…Ù€Ø´Ù€Ø±ÙÙŠÙ†."
 else
-TextR = TextR.."??| Êã ØÜÑÏ ßÜÜá ÇáÈæÊÂÊ ÈäÌÂÍ .\n"
+TextR = TextR.."ğŸ“®| ØªÙ… Ø·Ù€Ø±Ø¯ ÙƒÙ€Ù€Ù„ Ø§Ù„Ø¨ÙˆØªØ¢Øª Ø¨Ù†Ø¬Ø¢Ø­ .\n"
 end
 end
 return sendMsg(msg.chat_id_,msg.id_,TextR) 
@@ -1560,17 +1560,17 @@ return false
 end
 
 
-if MsgText[1] == "ßÔİ ÇáÈæÊÇÊ" then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "ÙƒØ´Ù Ø§Ù„Ø¨ÙˆØªØ§Øª" then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 tdcli_function({ID="GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''),
 filter_ ={ID= "ChannelMembersBots"},offset_ = 0,limit_ = 50},function(arg,data)
 local total = data.total_count_ or 0
-AllBots = '??| ŞÜÇÆãå ÇáÈæÊÇÊ ÇáÜÍÇáíÉ\n\n'
+AllBots = 'ğŸ¤–| Ù‚Ù€Ø§Ø¦Ù…Ù‡ Ø§Ù„Ø¨ÙˆØªØ§Øª Ø§Ù„Ù€Ø­Ø§Ù„ÙŠØ©\n\n'
 local NumBot = 0
 for k, v in pairs(data.members_) do
 GetUserID(v.user_id_,function(arg,data)
 if v.status_.ID == "ChatMemberStatusEditor" then
-BotAdmin = "» *?*"
+BotAdmin = "Â» *â˜…*"
 else
 BotAdmin = ""
 end
@@ -1580,8 +1580,8 @@ AllBots = AllBots..NumBot..'- @['..data.username_..'] '..BotAdmin..'\n'
 if NumBot == total then
 AllBots = AllBots..[[
 
-??| áÜÏíÜ˜ {]]..total..[[} ÈÜæÊÜÂÊ
-??| ãáÇÍÙÉ : ÇáÜ ? ÊÚäÜí Çä ÇáÈæÊ ãÔÑİ İí ÇáãÌãæÚÜÉ.]]
+ğŸ“®| Ù„Ù€Ø¯ÙŠÙ€Ú© {]]..total..[[} Ø¨Ù€ÙˆØªÙ€Ø¢Øª
+ğŸ”–| Ù…Ù„Ø§Ø­Ø¸Ø© : Ø§Ù„Ù€ â˜… ØªØ¹Ù†Ù€ÙŠ Ø§Ù† Ø§Ù„Ø¨ÙˆØª Ù…Ø´Ø±Ù ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù€Ø©.]]
 sendMsg(msg.chat_id_,msg.id_,AllBots) 
 end
 
@@ -1593,9 +1593,9 @@ return false
 end
 
 
-if MsgText[1] == 'ØÑÏ ÇáãÍĞæİíä' then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
-sendMsg(msg.chat_id_,msg.id_,'??| ÌÇÑí ÇáÈÍË ÚÜä ÇáÜÍÜÓÜÇÈÜÇÊ ÇáãÜÍĞæİÜÉ ...')
+if MsgText[1] == 'Ø·Ø±Ø¯ Ø§Ù„Ù…Ø­Ø°ÙˆÙÙŠÙ†' then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
+sendMsg(msg.chat_id_,msg.id_,'ğŸ”›| Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø« Ø¹Ù€Ù† Ø§Ù„Ù€Ø­Ù€Ø³Ù€Ø§Ø¨Ù€Ø§Øª Ø§Ù„Ù…Ù€Ø­Ø°ÙˆÙÙ€Ø© ...')
 tdcli_function({ID="GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100','')
 ,offset_ = 0,limit_ = 200},function(arg,data)
 if data.total_count_ and data.total_count_ <= 200 then
@@ -1619,9 +1619,9 @@ end
 NumMem = NumMem + 1
 if NumMem == Total then
 if NumMemDone >= 1 then
-sendMsg(msg.chat_id_,msg.id_,"???Êã ØÜÑÏ {* "..NumMemDone.." *} ãä ÂáÍÓÜÂÈÂÊ ÂáãÜÍĞæİåÀşş ??")
+sendMsg(msg.chat_id_,msg.id_,"ğŸš¸â”‚ØªÙ… Ø·Ù€Ø±Ø¯ {* "..NumMemDone.." *} Ù…Ù† Ø¢Ù„Ø­Ø³Ù€Ø¢Ø¨Ø¢Øª Ø¢Ù„Ù…Ù€Ø­Ø°ÙˆÙÙ‡Ûâ€â€ ğŸŒ¿")
 else
-sendMsg(msg.chat_id_,msg.id_,'???áÇ íæÌÏ ÍÓÇÈÇÊ ãÍĞæİå İí ÇáãÌãæÚå ??')
+sendMsg(msg.chat_id_,msg.id_,'ğŸš¸â”‚Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø­Ø³Ø§Ø¨Ø§Øª Ù…Ø­Ø°ÙˆÙÙ‡ ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ğŸŒ¿')
 end
 end
 end,nil)
@@ -1630,7 +1630,7 @@ end,nil)
 return false
 end  
 
-if MsgText[1] == "ÇíÏí" or MsgText[1]:lower() == "id" then
+if MsgText[1] == "Ø§ÙŠØ¯ÙŠ" or MsgText[1]:lower() == "id" then
 
 if not MsgText[2] and not msg.reply_id then
 if redis:get(max..'lock_id'..msg.chat_id_) then
@@ -1652,7 +1652,7 @@ if redis:get(max.."getidstatus"..msg.chat_id_) == "Photo" then
 		ali = {' 		'}
 		ssssys = ali[math.random(#ali)]
 		if not redis:get("KLISH:ID") then
-		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'???ãÚÑİÜß ['..UserNameID..']\n???ÇíÏíÜß ? '..msg.sender_user_id_..' ?\n???ÑÊÈÊÜß ? '..msg.TheRank..' ?\n?????ÊİÇÚáß ? '..Get_Ttl(msgs)..' ?\n???ÑÓÇÆáß ? '..msgs..' ?\n???äŞÇØß ? '..nko..' ?\n?')
+		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'ğŸ«â”‚Ù…Ø¹Ø±ÙÙ€Ùƒ ['..UserNameID..']\nğŸŸâ”‚Ø§ÙŠØ¯ÙŠÙ€Ùƒ âª '..msg.sender_user_id_..' â«\nğŸ“¡â”‚Ø±ØªØ¨ØªÙ€Ùƒ âª '..msg.TheRank..' â«\nğŸ‘â€ğŸ—¨â”‚ØªÙØ§Ø¹Ù„Ùƒ âª '..Get_Ttl(msgs)..' â«\nğŸ’¬â”‚Ø±Ø³Ø§Ø¦Ù„Ùƒ âª '..msgs..' â«\nğŸ“â”‚Ù†Ù‚Ø§Ø·Ùƒ âª '..nko..' â«\nâ–')
 		else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
@@ -1663,11 +1663,11 @@ if redis:get(max.."getidstatus"..msg.chat_id_) == "Photo" then
 		Text = Text:gsub('edited',rfih)
 		Text = Text:gsub('adduser',NumGha)
 		Text = Text:gsub('User_Points',nko)
-		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,"???"..ssssys.."\n"..Text.."",dl_cb,nil)
+		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,"ğŸ‡â”‚"..ssssys.."\n"..Text.."",dl_cb,nil)
 		end
 	else
 		if not redis:get("KLISH:ID") then
-		sendMsg(msg.chat_id_,msg.id_,'???áíÓ áÏíß ÕæÑÉ Çæ Çäß ÍÙÑÊ ÇáÈæÊ ...!\n???ãÚÑİÜß ['..UserNameID..']\n???ÇíÏíÜß ? '..msg.sender_user_id_..' ?\n???ÑÊÈÊÜß ? '..msg.TheRank..' ?\n?????ÊİÇÚáß ? '..Get_Ttl(msgs)..' ?\n???ÑÓÇÆáß ? '..msgs..' ?\n???äŞÇØß ? '..nko..' ?\n?')
+		sendMsg(msg.chat_id_,msg.id_,'ğŸ“¬â”‚Ù„ÙŠØ³ Ù„Ø¯ÙŠÙƒ ØµÙˆØ±Ø© Ø§Ùˆ Ø§Ù†Ùƒ Ø­Ø¸Ø±Øª Ø§Ù„Ø¨ÙˆØª ...!\nğŸ«â”‚Ù…Ø¹Ø±ÙÙ€Ùƒ ['..UserNameID..']\nğŸŸâ”‚Ø§ÙŠØ¯ÙŠÙ€Ùƒ âª '..msg.sender_user_id_..' â«\nğŸ“¡â”‚Ø±ØªØ¨ØªÙ€Ùƒ âª '..msg.TheRank..' â«\nğŸ‘â€ğŸ—¨â”‚ØªÙØ§Ø¹Ù„Ùƒ âª '..Get_Ttl(msgs)..' â«\nğŸ’¬â”‚Ø±Ø³Ø§Ø¦Ù„Ùƒ âª '..msgs..' â«\nğŸ“â”‚Ù†Ù‚Ø§Ø·Ùƒ âª '..nko..' â«\nâ–')
 		else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
@@ -1694,7 +1694,7 @@ else
 		Text = Text:gsub('User_Points',nko)
 		sendMsg(msg.chat_id_,msg.id_,Flter_Markdown(Text))
 		else
-		sendMsg(msg.chat_id_,msg.id_,'???ÇáÇíÏí ÈÇáÕæÑå ãÚØá \n???ãÚÑİÜß ['..UserNameID..']\n???ÇíÏíÜß ? '..msg.sender_user_id_..' ?\n???ÑÊÈÊÜß ? '..msg.TheRank..' ?\n?????ÊİÇÚáß ? '..Get_Ttl(msgs)..' ?\n???ÑÓÇÆáß ? '..msgs..' ?\n???äŞÇØß ? '..nko..' ?\n?')
+		sendMsg(msg.chat_id_,msg.id_,'ğŸ“¬â”‚Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡ Ù…Ø¹Ø·Ù„ \nğŸ«â”‚Ù…Ø¹Ø±ÙÙ€Ùƒ ['..UserNameID..']\nğŸŸâ”‚Ø§ÙŠØ¯ÙŠÙ€Ùƒ âª '..msg.sender_user_id_..' â«\nğŸ“¡â”‚Ø±ØªØ¨ØªÙ€Ùƒ âª '..msg.TheRank..' â«\nğŸ‘â€ğŸ—¨â”‚ØªÙØ§Ø¹Ù„Ùƒ âª '..Get_Ttl(msgs)..' â«\nğŸ’¬â”‚Ø±Ø³Ø§Ø¦Ù„Ùƒ âª '..msgs..' â«\nğŸ“â”‚Ù†Ù‚Ø§Ø·Ùƒ âª '..nko..' â«\nâ–')
 		end
 end
 
@@ -1713,12 +1713,12 @@ end
 return false
 end
 
-if MsgText[1] == "ÇáÑÊÈå" and not MsgText[2] and msg.reply_id then 
+if MsgText[1] == "Ø§Ù„Ø±ØªØ¨Ù‡" and not MsgText[2] and msg.reply_id then 
 return GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="rtba"})
 end
 
 
-if MsgText[1]== 'ÑÓÇÆáí' or MsgText[1] == 'ÑÓÇíáí' or MsgText[1] == 'ÇÍÕÇÆíÇÊí'  then
+if MsgText[1]== 'Ø±Ø³Ø§Ø¦Ù„ÙŠ' or MsgText[1] == 'Ø±Ø³Ø§ÙŠÙ„ÙŠ' or MsgText[1] == 'Ø§Ø­ØµØ§Ø¦ÙŠØ§ØªÙŠ'  then
 GetUserID(msg.sender_user_id_,function(arg,data)
 local msgs = (redis:get(max..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_) or 0)
 local NumGha = (redis:get(max..':adduser:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
@@ -1730,48 +1730,48 @@ local animation = (redis:get(max..':animation:'..msg.chat_id_..':'..msg.sender_u
 local edited = (redis:get(max..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 local video = (redis:get(max..':video:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 
-local Get_info =  " \n???? ÇáÇÍÜÕÜÇÆÜíÜÇÊ ÇáÜÑÓÜÇÆÜáß ?\n \n"
-.."???ÇáÜÑÓÜÇÆÜá ? "..msgs.." ?\n"
-.."???ÇáÜÌÜåÜÇÊ ? "..NumGha.." ?\n"
-.."???ÇáÜÕÜæÑ ? "..photo.." ?\n"
-.."???ÇáÜãÜÊÜÍÜÑßÜå ? "..animation.." ?\n"
-.."???ÇáÜãÜáÜÕÜŞÇÊ ? "..sticker.." ?\n"
-.."???ÇáÜÈÜÕÜãÜÇÊ ? "..voice.." ?\n"
-.."???ÇáÜÕÜæÊ ? "..audio.." ?\n"
-.."???ÇáÜİÜíÜÏíÜæ ? "..video.." ?\n"
-.."???ÇáÜÊÜÚÜÏíÜá ? "..edited.." ?\n"
-.."???ÊÜİÜÇÚÜáÜß ? "..Get_Ttl(msgs).." ?\n"
+local Get_info =  " \nâœ”ï¸â”‚âª Ø§Ù„Ø§Ø­Ù€ØµÙ€Ø§Ø¦Ù€ÙŠÙ€Ø§Øª Ø§Ù„Ù€Ø±Ø³Ù€Ø§Ø¦Ù€Ù„Ùƒ â«\n \n"
+.."ğŸ’¬â•¿Ø§Ù„Ù€Ø±Ø³Ù€Ø§Ø¦Ù€Ù„ âª "..msgs.." â«\n"
+.."ğŸ“â”‚Ø§Ù„Ù€Ø¬Ù€Ù‡Ù€Ø§Øª âª "..NumGha.." â«\n"
+.."ğŸ“¸â”‚Ø§Ù„Ù€ØµÙ€ÙˆØ± âª "..photo.." â«\n"
+.."ğŸ“½â”‚Ø§Ù„Ù€Ù…Ù€ØªÙ€Ø­Ù€Ø±ÙƒÙ€Ù‡ âª "..animation.." â«\n"
+.."ğŸ”–â”‚Ø§Ù„Ù€Ù…Ù€Ù„Ù€ØµÙ€Ù‚Ø§Øª âª "..sticker.." â«\n"
+.."ğŸ™â”‚Ø§Ù„Ù€Ø¨Ù€ØµÙ€Ù…Ù€Ø§Øª âª "..voice.." â«\n"
+.."ğŸ”Šâ”‚Ø§Ù„Ù€ØµÙ€ÙˆØª âª "..audio.." â«\n"
+.."ğŸâ”‚Ø§Ù„Ù€ÙÙ€ÙŠÙ€Ø¯ÙŠÙ€Ùˆ âª "..video.." â«\n"
+.."ğŸ“¬â”‚Ø§Ù„Ù€ØªÙ€Ø¹Ù€Ø¯ÙŠÙ€Ù„ âª "..edited.." â«\n"
+.."ğŸ“Šâ•½ØªÙ€ÙÙ€Ø§Ø¹Ù€Ù„Ù€Ùƒ âª "..Get_Ttl(msgs).." â«\n"
 return sendMsg(msg.chat_id_,msg.id_,Get_info)    
 end,nil)
 return false
 end
 
-if MsgText[1] == 'ãÓÍ' and MsgText[2] == 'ÑÓÇÆáí'  then
+if MsgText[1] == 'Ù…Ø³Ø­' and MsgText[2] == 'Ø±Ø³Ø§Ø¦Ù„ÙŠ'  then
 local msgs = redis:get(max..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_) or 1
-if rfih == 0 then  return "??*?*ÚĞÑÇ áÇ íæÌÏ ÑÓÇÆá áß İí ÇáÈæÊ  ??" end
+if rfih == 0 then  return "âš ï¸*â”‚*Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø±Ø³Ø§Ø¦Ù„ Ù„Ùƒ ÙÙŠ Ø§Ù„Ø¨ÙˆØª  âœ–ï¸" end
 redis:del(max..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_)
-return "??*?*Êã ãÓÍ {* "..msgs.." *} ãä ÑÓÇÆáß ??\n?"
+return "â™¦ï¸*â”‚*ØªÙ… Ù…Ø³Ø­ {* "..msgs.." *} Ù…Ù† Ø±Ø³Ø§Ø¦Ù„Ùƒ â˜”ï¸\nâœ“"
 end
 
-if MsgText[1]== 'ÌåÇÊí' then
-return '???*?*  ÚÏÏ ÌåÇÊß ÇáããÖÇİå ? ? '..(redis:get(max..':adduser:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)..' ? \n??'
+if MsgText[1]== 'Ø¬Ù‡Ø§ØªÙŠ' then
+return 'ğŸ§Ÿâ€â™‚*â”‚*  Ø¹Ø¯Ø¯ Ø¬Ù‡Ø§ØªÙƒ Ø§Ù„Ù…Ù…Ø¶Ø§ÙÙ‡ â‡œ âª '..(redis:get(max..':adduser:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)..' â« \nğŸ¾'
 end
 
-if MsgText[1] == 'ãÓÍ' and MsgText[2] == 'ÌåÇÊí'  then
+if MsgText[1] == 'Ù…Ø³Ø­' and MsgText[2] == 'Ø¬Ù‡Ø§ØªÙŠ'  then
 local adduser = redis:get(max..':adduser:'..msg.chat_id_..':'..msg.sender_user_id_) or 0
-if adduser == 0 then  return "??*?*ÚĞÑÇ áíÓ áÏíß ÌåÇÊ áßí íÊã ãÓÍåÇ" end
+if adduser == 0 then  return "âš ï¸*â”‚*Ø¹Ø°Ø±Ø§ Ù„ÙŠØ³ Ù„Ø¯ÙŠÙƒ Ø¬Ù‡Ø§Øª Ù„ÙƒÙŠ ÙŠØªÙ… Ù…Ø³Ø­Ù‡Ø§" end
 redis:del(max..':adduser:'..msg.chat_id_..':'..msg.sender_user_id_) 
-return "??*?*Êã ãÓÍ {* "..adduser.." *} ãä ÌåÇÊß\n?"
+return "â™¦ï¸*â”‚*ØªÙ… Ù…Ø³Ø­ {* "..adduser.." *} Ù…Ù† Ø¬Ù‡Ø§ØªÙƒ\nâœ“"
 end
 
-if MsgText[1] == 'ãÓÍ' and MsgText[2] == 'äŞÇØí'  then
+if MsgText[1] == 'Ù…Ø³Ø­' and MsgText[2] == 'Ù†Ù‚Ø§Ø·ÙŠ'  then
 local points = redis:get(max..':User_Points:'..msg.chat_id_..msg.sender_user_id_) or 0
-if nko == 0 then  return "??*?*ÚĞÑÇ áíÓ áÏíß äŞÇØ áßí íÊã ãÓÍåÇ" end
+if nko == 0 then  return "âš ï¸*â”‚*Ø¹Ø°Ø±Ø§ Ù„ÙŠØ³ Ù„Ø¯ÙŠÙƒ Ù†Ù‚Ø§Ø· Ù„ÙƒÙŠ ÙŠØªÙ… Ù…Ø³Ø­Ù‡Ø§" end
 redis:del(max..':User_Points:'..msg.chat_id_..msg.sender_user_id_)
-return "??*?*Êã ãÓÍ {* "..points.." *} ãä äŞÇØß\n?"
+return "â™¦ï¸*â”‚*ØªÙ… Ù…Ø³Ø­ {* "..points.." *} Ù…Ù† Ù†Ù‚Ø§Ø·Ùƒ\nâœ“"
 end
 
-if MsgText[1] == 'ãÚáæãÇÊí' or MsgText[1] == 'ãæŞÚí' then
+if MsgText[1] == 'Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ' or MsgText[1] == 'Ù…ÙˆÙ‚Ø¹ÙŠ' then
 GetUserID(msg.sender_user_id_,function(arg,data)
 local msgs = (redis:get(max..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_) or 0)
 local NumGha = (redis:get(max..':adduser:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
@@ -1783,31 +1783,31 @@ local animation = (redis:get(max..':animation:'..msg.chat_id_..':'..msg.sender_u
 local edited = (redis:get(max..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 local video = (redis:get(max..':video:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 
-local Get_info ="???????ÇåÜáÇ ÈÜß ÚÒíÒí İí ãÚáæãÇÊß ?? \n"
-.."Ü.——————————\n"
-.."???ÇáÇÓÜÜã ? "..FlterName(data.first_name_..' '..(data.last_name_ or ""),25).." ?\n"
-.."???ÇáãÚÑİ ? "..ResolveUser(data).." ?\n"
-.."???ÇáÇíÜÏí ? `"..msg.sender_user_id_.."` ?\n"
-.."???ÑÊÈÊÜÜß ? "..msg.TheRank.." ?\n"
-.."???Ü ? `"..msg.chat_id_.."` ?\n"
-.."Ü.——————————\n"
-.." ? ÇáÇÍÜÕÜÇÆÜíÜÇÊ ÇáÜÑÓÜÇÆÜá ?\n"
-.."???ÇáÜÑÓÜÇÆÜá ? `"..msgs.."` ?\n"
-.."???ÇáÜÌÜåÜÇÊ ? `"..NumGha.."` ?\n"
-.."???ÇáÜÕÜæÑ ? `"..photo.."` ?\n"
-.."???ÇáÜãÜÊÜÍÜÑßÜå ? `"..animation.."` ?\n"
-.."???ÇáÜãÜáÜÕÜŞÇÊ ? `"..sticker.."` ?\n"
-.."???ÇáÜÈÜÕÜãÜÇÊ ? `"..voice.."` ?\n"
-.."???ÇáÜÕÜæÊ ? `"..audio.."` ?\n"
-.."???ÇáÜİÜíÜÏíÜæ ? `"..video.."` ?\n"
-.."???ÇáÜÊÜÚÜÏíÜá ?`"..edited.."` ?\n"
-.."???ÊÜİÜÇÚÜáÜß ? "..Get_Ttl(msgs).." ?\n"
+local Get_info ="ğŸ‘¨ğŸ½â€ğŸ”§â”‚Ø§Ù‡Ù€Ù„Ø§ Ø¨Ù€Ùƒ Ø¹Ø²ÙŠØ²ÙŠ ÙÙŠ Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙƒ ğŸ¥€ \n"
+.."Ù€.â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”\n"
+.."ğŸ—¯â•¿Ø§Ù„Ø§Ø³Ù€Ù€Ù… âª "..FlterName(data.first_name_..' '..(data.last_name_ or ""),25).." â«\n"
+.."ğŸ’ â”‚Ø§Ù„Ù…Ø¹Ø±Ù âª "..ResolveUser(data).." â«\n"
+.."âšœï¸â”‚Ø§Ù„Ø§ÙŠÙ€Ø¯ÙŠ âª `"..msg.sender_user_id_.."` â«\n"
+.."ğŸš¸â”‚Ø±ØªØ¨ØªÙ€Ù€Ùƒ âª "..msg.TheRank.." â«\n"
+.."ğŸ”°â•½Ù€ âª `"..msg.chat_id_.."` â«\n"
+.."Ù€.â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”\n"
+.." âª Ø§Ù„Ø§Ø­Ù€ØµÙ€Ø§Ø¦Ù€ÙŠÙ€Ø§Øª Ø§Ù„Ù€Ø±Ø³Ù€Ø§Ø¦Ù€Ù„ â«\n"
+.."ğŸ’¬â•¿Ø§Ù„Ù€Ø±Ø³Ù€Ø§Ø¦Ù€Ù„ âª `"..msgs.."` â«\n"
+.."ğŸ“â”‚Ø§Ù„Ù€Ø¬Ù€Ù‡Ù€Ø§Øª âª `"..NumGha.."` â«\n"
+.."ğŸ“¸â”‚Ø§Ù„Ù€ØµÙ€ÙˆØ± âª `"..photo.."` â«\n"
+.."ğŸ“½â”‚Ø§Ù„Ù€Ù…Ù€ØªÙ€Ø­Ù€Ø±ÙƒÙ€Ù‡ âª `"..animation.."` â«\n"
+.."ğŸ”–â”‚Ø§Ù„Ù€Ù…Ù€Ù„Ù€ØµÙ€Ù‚Ø§Øª âª `"..sticker.."` â«\n"
+.."ğŸ™â”‚Ø§Ù„Ù€Ø¨Ù€ØµÙ€Ù…Ù€Ø§Øª âª `"..voice.."` â«\n"
+.."ğŸ”Šâ”‚Ø§Ù„Ù€ØµÙ€ÙˆØª âª `"..audio.."` â«\n"
+.."ğŸâ”‚Ø§Ù„Ù€ÙÙ€ÙŠÙ€Ø¯ÙŠÙ€Ùˆ âª `"..video.."` â«\n"
+.."ğŸ“¬â”‚Ø§Ù„Ù€ØªÙ€Ø¹Ù€Ø¯ÙŠÙ€Ù„ âª`"..edited.."` â«\n"
+.."ğŸ“Šâ•½ØªÙ€ÙÙ€Ø§Ø¹Ù€Ù„Ù€Ùƒ âª "..Get_Ttl(msgs).." â«\n"
 return sendMsg(msg.chat_id_,msg.id_,Get_info)    
 end,nil)
 return false
 end
 
-if MsgText[1] == "ãÓÍ ãÚáæãÇÊí" then
+if MsgText[1] == "Ù…Ø³Ø­ Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ" then
 GetUserID(msg.sender_user_id_,function(arg,data)
 local msgs = (redis:del(max..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_) or 0)
 local NumGha = (redis:del(max..':adduser:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
@@ -1819,52 +1819,52 @@ local animation = (redis:del(max..':animation:'..msg.chat_id_..':'..msg.sender_u
 local edited = (redis:del(max..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 local video = (redis:del(max..':video:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
 
-local Get_info ="??????Çåáä ÚÒíÒí Êã ÍĞİ ÌãíÚ ãÚáæãÇÊß "
+local Get_info ="ğŸ™‹ğŸ»â€â™‚â”‚Ø§Ù‡Ù„Ù† Ø¹Ø²ÙŠØ²ÙŠ ØªÙ… Ø­Ø°Ù Ø¬Ù…ÙŠØ¹ Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙƒ "
 return sendMsg(msg.chat_id_,msg.id_,Get_info)    
 end,nil)
 return false
 end
 
-if MsgText[1] == "ÊİÚíá" then
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„" then
 
-if MsgText[2] == "ÇáÑÏæÏ" 	then return unlock_replay(msg) end
-if MsgText[2] == "ÇáÇĞÇÚå" 	then return unlock_brod(msg) end
-if MsgText[2] == "ÇáÇíÏí" 	then return unlock_ID(msg) end
-if MsgText[2] == "ÇáÊÑÍíÈ" 	then return unlock_Welcome(msg) end
-if MsgText[2] == "ÇáÊÍĞíÑ" 	then return unlock_waring(msg) end 
+if MsgText[2] == "Ø§Ù„Ø±Ø¯ÙˆØ¯" 	then return unlock_replay(msg) end
+if MsgText[2] == "Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡" 	then return unlock_brod(msg) end
+if MsgText[2] == "Ø§Ù„Ø§ÙŠØ¯ÙŠ" 	then return unlock_ID(msg) end
+if MsgText[2] == "Ø§Ù„ØªØ±Ø­ÙŠØ¨" 	then return unlock_Welcome(msg) end
+if MsgText[2] == "Ø§Ù„ØªØ­Ø°ÙŠØ±" 	then return unlock_waring(msg) end 
 end
 
 
 
 
-if MsgText[1] == "ÊÚØíá" then
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„" then
 
-if MsgText[2] == "ÇáÑÏæÏ" 	then return lock_replay(msg) end
-if MsgText[2] == "ÇáÇĞÇÚå" 	then return lock_brod(msg) end
-if MsgText[2] == "ÇáÇíÏí" 	then return lock_ID(msg) end
-if MsgText[2] == "ÇáÊÑÍíÈ" 	then return lock_Welcome(msg) end
-if MsgText[2] == "ÇáÊÍĞíÑ" 	then return lock_waring(msg) end
+if MsgText[2] == "Ø§Ù„Ø±Ø¯ÙˆØ¯" 	then return lock_replay(msg) end
+if MsgText[2] == "Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡" 	then return lock_brod(msg) end
+if MsgText[2] == "Ø§Ù„Ø§ÙŠØ¯ÙŠ" 	then return lock_ID(msg) end
+if MsgText[2] == "Ø§Ù„ØªØ±Ø­ÙŠØ¨" 	then return lock_Welcome(msg) end
+if MsgText[2] == "Ø§Ù„ØªØ­Ø°ÙŠØ±" 	then return lock_waring(msg) end
 end
 
 
-if MsgText[1] == "ÖÚ ÇáÊÑÍíÈ" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ Ø§Ù„ØªØ±Ø­ÙŠØ¨" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:set(max..'welcom:witting'..msg.sender_user_id_,true) 
-return "???ÍÓääÇ ÚÒíÒí  ???\n???ÇÑÓá ßáíÔå ÇáÊÑÍíÈ ÇáÇä\n\n -ãáÇÍÙå ÊÓÊØíÚ ÇÖÇİå ÏæÇá ááÊÑÍíÈ ãËáÇ :\n 1- ŞæÇäíä ÇáãÌãæÚå  » *{ÇáŞæÇäíä}*  \n 2- ÇÖåÇÑ ÇÓã ÇáÚÖæ » *{ÇáÇÓã}*\n 3-ÇÖåÇÑ ãÚÑİ ÇáÚÖæ » *{ÇáãÚÑİ}*\n 4-ÇÖåÇÑ ÇÓã ãÌãæÚå » *{ÇáãÌãæÚå}*" 
+return "ğŸ“­â”‡Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ  âœ‹ğŸ¿\nğŸ—¯â”‡Ø§Ø±Ø³Ù„ ÙƒÙ„ÙŠØ´Ù‡ Ø§Ù„ØªØ±Ø­ÙŠØ¨ Ø§Ù„Ø§Ù†\n\n -Ù…Ù„Ø§Ø­Ø¸Ù‡ ØªØ³ØªØ·ÙŠØ¹ Ø§Ø¶Ø§ÙÙ‡ Ø¯ÙˆØ§Ù„ Ù„Ù„ØªØ±Ø­ÙŠØ¨ Ù…Ø«Ù„Ø§ :\n 1- Ù‚ÙˆØ§Ù†ÙŠÙ† Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡  Â» *{Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†}*  \n 2- Ø§Ø¶Ù‡Ø§Ø± Ø§Ø³Ù… Ø§Ù„Ø¹Ø¶Ùˆ Â» *{Ø§Ù„Ø§Ø³Ù…}*\n 3-Ø§Ø¶Ù‡Ø§Ø± Ù…Ø¹Ø±Ù Ø§Ù„Ø¹Ø¶Ùˆ Â» *{Ø§Ù„Ù…Ø¹Ø±Ù}*\n 4-Ø§Ø¶Ù‡Ø§Ø± Ø§Ø³Ù… Ù…Ø¬Ù…ÙˆØ¹Ù‡ Â» *{Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡}*" 
 end
 
 
-if MsgText[1] == "ÇáÊÑÍíÈ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„ØªØ±Ø­ÙŠØ¨" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if redis:get(max..'welcome:msg'..msg.chat_id_)  then
 return Flter_Markdown(redis:get(max..'welcome:msg'..msg.chat_id_))
 else 
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."  \n???äæÑÊ ÇáãÌãæÚå \n??????" 
+return "ğŸ™‹ğŸ»â€â™‚*â•¿*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."  \nğŸŒ¿â•½Ù†ÙˆØ±Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ \nğŸ’‚ğŸ¼â€â™€ï¸" 
 end 
 end
 
 
-if MsgText[1] == "ßÔİ"  then
+if MsgText[1] == "ÙƒØ´Ù"  then
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="whois"})
 return false
@@ -1880,8 +1880,8 @@ end
 end
 
 
-if MsgText[1] == "ØÑÏ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø·Ø±Ø¯" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="kick"})  
 return false
@@ -1897,8 +1897,8 @@ end
 end
 
 
-if MsgText[1] == "ÍÙÑ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø­Ø¸Ø±" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="ban"}) 
 return false
@@ -1914,8 +1914,8 @@ end
 end
 
 
-if (MsgText[1] == "ÇáÛÇÁ ÇáÍÙÑ" or MsgText[1] == "ÇáÛÇÁ ÍÙÑ") and msg.Admin then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if (MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø­Ø¸Ø±" or MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ø­Ø¸Ø±") and msg.Admin then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="unban"}) 
 return false
@@ -1931,8 +1931,8 @@ end
 end
 
 
-if MsgText[1] == "ßÊã" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ÙƒØªÙ…" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="silent"}) 
 return false
@@ -1948,8 +1948,8 @@ end
 end
 
 
-if MsgText[1] == "ÇáÛÇÁ ÇáßÊã" or MsgText[1] == "ÇáÛÇÁ ßÊã" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ø§Ù„ÙƒØªÙ…" or MsgText[1] == "Ø§Ù„ØºØ§Ø¡ ÙƒØªÙ…" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="unsilent"}) 
 return false
@@ -1964,46 +1964,46 @@ return false
 end 
 end
 
-if MsgText[1] == "ÇáãßÊæãíä" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…ÙƒØªÙˆÙ…ÙŠÙ†" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return MuteUser_list(msg) 
 end
 
-if MsgText[1] == "ÇáãÍÙæÑíä" then 
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†" then 
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return GetListBanned(msg) 
 end
 
-if MsgText[1] == "ÑİÚ ÇáÇÏãäíå" then
-if not msg.Creator then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ} İŞØ  \n??" end
+if MsgText[1] == "Ø±ÙØ¹ Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡" then
+if not msg.Creator then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦} ÙÙ‚Ø·  \nğŸ’¥" end
 return set_admins(msg) 
 end
 
 end -- end of insert group 
 
 
-if MsgText[1] == 'ãÓÍ' and MsgText[2] == 'ÇáãØæÑíä'  then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == 'Ù…Ø³Ø­' and MsgText[2] == 'Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ†'  then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 local mtwren = redis:scard(max..':SUDO_BOT:')
-if mtwren == 0 then  return "??*?* ÚĞÑÇ áÇ íæÌÏ ãØæÑíä İí ÇáÈæÊ  ??" end
+if mtwren == 0 then  return "âš™ï¸*â”‚* Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø·ÙˆØ±ÙŠÙ† ÙÙŠ Ø§Ù„Ø¨ÙˆØª  âœ–ï¸" end
 redis:del(max..':SUDO_BOT:') 
-return "??*?* Êã ãÓÍ {* "..mtwren.." *} ãä ÇáãØæÑíä ??\n?"
+return "ğŸ“›*â”‚* ØªÙ… Ù…Ø³Ø­ {* "..mtwren.." *} Ù…Ù† Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ† â˜”ï¸\nâœ“"
 end
 
-if MsgText[1] == 'ãÓÍ' and MsgText[2] == "ŞÇÆãÉ ÇáÚÇã"  then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == 'Ù…Ø³Ø­' and MsgText[2] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¹Ø§Ù…"  then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 local addbannds = redis:scard(max..'gban_users')
 if addbannds ==0 then 
-return "*???ŞÇÆãÉ ÇáÍÙÑ İÇÑÛå .*" 
+return "*âš™ï¸â”‚Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø± ÙØ§Ø±ØºÙ‡ .*" 
 end
 redis:del(max..'gban_users') 
-return "??*?* ÊÜã ãÜÓÜÍ { *"..addbannds.." *} ãä ŞÇÆãÉ ÇáÚÇã\n?" 
+return "âš™ï¸*â”‚* ØªÙ€Ù… Ù…Ù€Ø³Ù€Ø­ { *"..addbannds.." *} Ù…Ù† Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¹Ø§Ù…\nâœ“" 
 end 
 
 if msg.SudoBase then
 
-if MsgText[1] == "ÑİÚ ãØæÑ" then
-if not msg.SudoBase then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí ????} İŞØ  \n??" end
+if MsgText[1] == "Ø±ÙØ¹ Ù…Ø·ÙˆØ±" then
+if not msg.SudoBase then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ ğŸ‘¨â€ğŸ’»} ÙÙ‚Ø·  \nğŸ’¥" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="up_sudo"}) 
 return false
@@ -2018,7 +2018,7 @@ return false
 end 
 end
 
-if MsgText[1] == "ÊäÒíá ãØæÑ" then
+if MsgText[1] == "ØªÙ†Ø²ÙŠÙ„ Ù…Ø·ÙˆØ±" then
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="dn_sudo"}) 
 return false
@@ -2033,7 +2033,7 @@ return false
 end 
 end
 
-if MsgText[1] == "ÊäÙíİ ÇáãÌãæÚÇÊ" or MsgText[1] == "ÊäÙíİ ÇáãÌãæÚÇÊ ??" then
+if MsgText[1] == "ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª" or MsgText[1] == "ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸ—‘" then
 local groups = redis:smembers(max..'group:ids')
 local GroupsIsFound = 0
 for i = 1, #groups do 
@@ -2049,16 +2049,16 @@ print(GroupsIsFound..' : '..#groups..' : '..i)
 if #groups == i then
 local GroupDel = #groups - GroupsIsFound 
 if GroupDel == 0 then
-sendMsg(msg.chat_id_,msg.id_,'??*?* ÌÜíÜÏ , áÇ ÊæÌÏ ãÌãæÚÇÊ æåãíå \n?')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ’¯*â”‚* Ø¬Ù€ÙŠÙ€Ø¯ , Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ÙˆÙ‡Ù…ÙŠÙ‡ \nâœ“')
 else
-sendMsg(msg.chat_id_,msg.id_,'??*?* ÚÏÏ ÇáãÌãæÚÇÊ •? { *'..#groups..'*  } ?•\n??*?* ÊÜã ÊäÙíİ  •? { *'..GroupDel..'*  } ?• ãÌãæÚå \n??*?* ÇÕÈÍ ÇáÚÏÏ ÇáÍŞíŞí ÇáÇä •? { *'..GroupsIsFound..'*  } ?• ãÌãæÚå')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“‘*â•¿* Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª â€¢âŠ± { *'..#groups..'*  } âŠ°â€¢\nğŸš¸*â”‚* ØªÙ€Ù… ØªÙ†Ø¸ÙŠÙ  â€¢âŠ± { *'..GroupDel..'*  } âŠ°â€¢ Ù…Ø¬Ù…ÙˆØ¹Ù‡ \nğŸ“‰*â•½* Ø§ØµØ¨Ø­ Ø§Ù„Ø¹Ø¯Ø¯ Ø§Ù„Ø­Ù‚ÙŠÙ‚ÙŠ Ø§Ù„Ø§Ù† â€¢âŠ± { *'..GroupsIsFound..'*  } âŠ°â€¢ Ù…Ø¬Ù…ÙˆØ¹Ù‡')
 end
 end
 end)
 end
 return false
 end
-if MsgText[1] == "ÊäÙíİ ÇáãÔÊÑßíä ??" or MsgText[1] == "ÊäÙíİ ÇáãÔÊÑßíä ??" then
+if MsgText[1] == "ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ğŸ—‘" or MsgText[1] == "ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ğŸ—‘" then
 local pv = redis:smembers(max..'users')
 local NumPvDel = 0
 for i = 1, #pv do
@@ -2073,10 +2073,10 @@ NumPvDel = NumPvDel + 1
 end
 if #pv == i then 
 if NumPvDel == 0 then
-sendMsg(msg.chat_id_,msg.id_,'?| ÌÜíÜÏ , áÇ íæÌÏ ãÔÊÑßíä æåãí')
+sendMsg(msg.chat_id_,msg.id_,'âšœ| Ø¬Ù€ÙŠÙ€Ø¯ , Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø´ØªØ±ÙƒÙŠÙ† ÙˆÙ‡Ù…ÙŠ')
 else
 local SenderOk = #pv - NumPvDel
-sendMsg(msg.chat_id_,msg.id_,'??*?* ÚÏÏ ÇáãÔÊÑßíä •? { *'..#pv..'*  } ?•\n??*?* ÊÜã ÊäÙíİ  •? { *'..NumPvDel..'*  } ?• ãÔÊÑß \n??*?* ÇÕÈÍ ÇáÚÏÏ ÇáÍŞíŞí ÇáÇä •? { *'..SenderOk..'*  } ?• ãä ÇáãÔÊÑßíä') 
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“‘*â•¿* Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† â€¢âŠ± { *'..#pv..'*  } âŠ°â€¢\nğŸš¸*â”‚* ØªÙ€Ù… ØªÙ†Ø¸ÙŠÙ  â€¢âŠ± { *'..NumPvDel..'*  } âŠ°â€¢ Ù…Ø´ØªØ±Ùƒ \nğŸ“‰*â•½* Ø§ØµØ¨Ø­ Ø§Ù„Ø¹Ø¯Ø¯ Ø§Ù„Ø­Ù‚ÙŠÙ‚ÙŠ Ø§Ù„Ø§Ù† â€¢âŠ± { *'..SenderOk..'*  } âŠ°â€¢ Ù…Ù† Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ†') 
 end
 end
 end)
@@ -2084,141 +2084,141 @@ end)
 end
 return false
 end
-if MsgText[1] == "ÖÚ ÕæÑå ááÊÑÍíÈ" or MsgText[1]=="ÖÚ ÕæÑå ááÊÑÍíÈ ??" then
+if MsgText[1] == "Ø¶Ø¹ ØµÙˆØ±Ù‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨" or MsgText[1]=="Ø¶Ø¹ ØµÙˆØ±Ù‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨ ğŸŒ„" then
 redis:setex(max..'welcom_ph:witting'..msg.sender_user_id_,300,true) 
-return'???ÍÓääÇ ÚÒíÒí ??\n?? ?ÇáÇä Şã ÈÇÑÓÇá ÇáÕæÑå ááÊÑÍíÈ \n??' 
+return'ğŸ“­â•¿Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ ğŸ\nğŸŒ„ â•½Ø§Ù„Ø§Ù† Ù‚Ù… Ø¨Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ØµÙˆØ±Ù‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨ \nğŸ› ' 
 end
 
-if MsgText[1] == "ÊÚØíá" and MsgText[2] == "ÇáÈæÊ ÎÏãí" then
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„" and MsgText[2] == "Ø§Ù„Ø¨ÙˆØª Ø®Ø¯Ù…ÙŠ" then
 return lock_service(msg) 
 end
 
-if MsgText[1] == "ÊİÚíá" and MsgText[2] == "ÇáÈæÊ ÎÏãí" then 
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„" and MsgText[2] == "Ø§Ù„Ø¨ÙˆØª Ø®Ø¯Ù…ÙŠ" then 
 return unlock_service(msg) 
 end
 
-if MsgText[1] == "ÕæÑå ÇáÊÑÍíÈ" then
+if MsgText[1] == "ØµÙˆØ±Ù‡ Ø§Ù„ØªØ±Ø­ÙŠØ¨" then
 local Photo_Weloame = redis:get(max..':WELCOME_BOT')
 if Photo_Weloame then
-sendPhoto(msg.chat_id_,msg.id_,Photo_Weloame,[[??ÇåáÇ ÇäÂ ÈæÊ ÂÓÜãÜí ]]..redis:get(max..':NameBot:')..[[ ?
-???????ÂÎÊÕÜÂÕÜí ÍãÜÂíåÀş ÂáãÜÌãÜæÚÂÊ
-???ãÜä ÂáÓÜÈÂã æÂáÊæÌíåÀş æÂáÊÑÂÑ æÂáÎ...
+sendPhoto(msg.chat_id_,msg.id_,Photo_Weloame,[[âšœâ•¿Ø§Ù‡Ù„Ø§ Ø§Ù†Ø¢ Ø¨ÙˆØª Ø¢Ø³Ù€Ù…Ù€ÙŠ ]]..redis:get(max..':NameBot:')..[[ âœ“
+ğŸ‘¨ğŸ»â€âœˆï¸â”‚Ø¢Ø®ØªØµÙ€Ø¢ØµÙ€ÙŠ Ø­Ù…Ù€Ø¢ÙŠÙ‡Ûâ€Œâ€ Ø¢Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ø¢Øª
+ğŸ“›â•½Ù…Ù€Ù† Ø¢Ù„Ø³Ù€Ø¨Ø¢Ù… ÙˆØ¢Ù„ØªÙˆØ¬ÙŠÙ‡Ûâ€Œâ€ ÙˆØ¢Ù„ØªÚ¯Ø±Ø¢Ø± ÙˆØ¢Ù„Ø®...
 
-???ãÜÚÜÑİ ÇáÜãÜØÜæÑ  » ]]..SUDO_USER:gsub([[\_]],'_')..[[ ??
+ğŸ­â”‚Ù…Ù€Ø¹Ù€Ø±Ù Ø§Ù„Ù€Ù…Ù€Ø·Ù€ÙˆØ±  Â» ]]..SUDO_USER:gsub([[\_]],'_')..[[ ğŸŒ¿
 ]])
 
 return false
 else
-return "??| áÇ ÊæÌÏ ÕæÑå ãÖÇİå ááÊÑÍíÈ İí ÇáÈæÊ \n??| áÇÖÇİå ÕæÑå ÇáÊÑÍíÈ ÇÑÓá `ÖÚ ÕæÑå ááÊÑÍíÈ`"
+return "ğŸ“›| Ù„Ø§ ØªÙˆØ¬Ø¯ ØµÙˆØ±Ù‡ Ù…Ø¶Ø§ÙÙ‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨ ÙÙŠ Ø§Ù„Ø¨ÙˆØª \nğŸ“Œ| Ù„Ø§Ø¶Ø§ÙÙ‡ ØµÙˆØ±Ù‡ Ø§Ù„ØªØ±Ø­ÙŠØ¨ Ø§Ø±Ø³Ù„ `Ø¶Ø¹ ØµÙˆØ±Ù‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨`"
 end
 end
 
-if MsgText[1] == "ÖÚ ßáíÔå ÇáãØæÑ" then 
+if MsgText[1] == "Ø¶Ø¹ ÙƒÙ„ÙŠØ´Ù‡ Ø§Ù„Ù…Ø·ÙˆØ±" then 
 redis:setex(max..'text_sudo:witting'..msg.sender_user_id_,1200,true) 
-return '???ÍÓääÇ ÚÒíÒí ??\n???ÇáÇä Şã ÈÇÑÓÇá ÇáßáíÔå \n??' 
+return 'ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ ğŸ\nğŸ’¬â”‚Ø§Ù„Ø§Ù† Ù‚Ù… Ø¨Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ \nğŸ› ' 
 end
 
-if MsgText[1] == "ÖÚ ÔÑØ ÇáÊİÚíá" and MsgText[2] and MsgText[2]:match('^%d+$') then 
+if MsgText[1] == "Ø¶Ø¹ Ø´Ø±Ø· Ø§Ù„ØªÙØ¹ÙŠÙ„" and MsgText[2] and MsgText[2]:match('^%d+$') then 
 redis:set(max..':addnumberusers',MsgText[2]) 
-return '??*?* Êã æÖÜÚ ÔÜÑØ ÂáÊİÚíá ÂáÈæÊ ÂĞÂ ÂäÊ ÂáãÜÌãÜæÚåÀşş ÂËÑ ãÜä *?'..MsgText[2]..'?* ÚÖÜæ  ??\n' 
+return 'ğŸ’±*â”‚* ØªÙ… ÙˆØ¶Ù€Ø¹ Ø´Ù€Ø±Ø· Ø¢Ù„ØªÙØ¹ÙŠÙ„ Ø¢Ù„Ø¨ÙˆØª Ø¢Ø°Ø¢ Ú¯Ø¢Ù†Øª Ø¢Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ù‡Ûâ€â€ Ø¢Ú¯Ø«Ø± Ù…Ù€Ù† *ã€'..MsgText[2]..'ã€‘* Ø¹Ø¶Ù€Ùˆ  ğŸ\n' 
 end
 
-if MsgText[1] == "ÔÑØ ÇáÊİÚíá" then 
-return'??*?* ÔÜÑØ ÂáÊİÚíá ÂáÈæÊ ÂĞÂ ÂäÊ ÂáãÜÌãÜæÚåÀşş ÂËÑ ãÜä *?'..redis:get(max..':addnumberusers')..'?* ÚÖÜæ  ??\n' 
+if MsgText[1] == "Ø´Ø±Ø· Ø§Ù„ØªÙØ¹ÙŠÙ„" then 
+return'ğŸš¸*â”‚* Ø´Ù€Ø±Ø· Ø¢Ù„ØªÙØ¹ÙŠÙ„ Ø¢Ù„Ø¨ÙˆØª Ø¢Ø°Ø¢ Ú¯Ø¢Ù†Øª Ø¢Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ù‡Ûâ€â€ Ø¢Ú¯Ø«Ø± Ù…Ù€Ù† *ã€'..redis:get(max..':addnumberusers')..'ã€‘* Ø¹Ø¶Ù€Ùˆ  ğŸ\n' 
 end 
 end
 
-if MsgText[1] == 'ÇáãÌãæÚÇÊ' or MsgText[1] == "ÇáãÌãæÚÇÊ ??" then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
-return '??*?* ÚÏÏ ÇáãÌãæÚÇÊ ÇáãİÚáÉ » `'..redis:scard(max..'group:ids')..'`  ?' 
+if MsgText[1] == 'Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª' or MsgText[1] == "Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸŒ‹" then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
+return 'ğŸ“®*â”‚* Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„Ù…ÙØ¹Ù„Ø© Â» `'..redis:scard(max..'group:ids')..'`  â¼' 
 end
 
-if MsgText[1] == "ÇáãÔÊÑßíä" or MsgText[1] == "ÇáãÔÊÑßíä ?" then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
-return '?????*?*ÚÏÏ ÇáãÔÊÑßíä İí ÇáÈæÊ : `'..redis:scard(max..'users')..'` \n??'
+if MsgText[1] == "Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ†" or MsgText[1] == "Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† â“‚" then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
+return 'ğŸ™ğŸ»â€â™‚*â”‚*Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ÙÙŠ Ø§Ù„Ø¨ÙˆØª : `'..redis:scard(max..'users')..'` \nğŸ“¡'
 end
 
-if MsgText[1] == 'ŞÇÆãÉ ÇáãÌãæÚÇÊ' then 
-if not msg.SudoBase then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == 'Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª' then 
+if not msg.SudoBase then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return chat_list(msg) 
 end
 
-if MsgText[1] == 'ÊÚØíá' and MsgText[2] and MsgText[2]:match("-100(%d+)") then
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == 'ØªØ¹Ø·ÙŠÙ„' and MsgText[2] and MsgText[2]:match("-100(%d+)") then
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if redis:sismember(max..'group:ids',MsgText[2]) then
 local name_gp = redis:get(max..'group:name'..MsgText[2])
-sendMsg(MsgText[2],0,'??*?* Êã ÊÚØíá ÇáãÌãæÚå ÈÃãÑ ãä ÇáãØæÑ  \n??*?* Óæİ ÇÛÇÏÑ ÌÇææ ???????? ...\n?')
+sendMsg(MsgText[2],0,'ğŸ“›*â”‚* ØªÙ… ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ Ø¨Ø£Ù…Ø± Ù…Ù† Ø§Ù„Ù…Ø·ÙˆØ±  \nğŸš¸*â”‚* Ø³ÙˆÙ Ø§ØºØ§Ø¯Ø± Ø¬Ø§ÙˆÙˆ ğŸš¶ğŸ»ğŸš¶ğŸ» ...\nâœ˜')
 rem_data_group(MsgText[2])
 StatusLeft(MsgText[2],our_id)
-return '??*?* Êã ÊÚØíá ÇáãÌãæÚå æãÛÇÏÑÊåÇ \n??*?* ÇáãÌãæÚÉÉ » ['..name_gp..']\n??*?* ÇáÇíÏí » ( *'..MsgText[2]..'* )\n?'
+return '??*â”‚* ØªÙ… ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ÙˆÙ…ØºØ§Ø¯Ø±ØªÙ‡Ø§ \nğŸ·*â”‚* Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©Ø© Â» ['..name_gp..']\nğŸ«*â”‚* Ø§Ù„Ø§ÙŠØ¯ÙŠ Â» ( *'..MsgText[2]..'* )\nâœ“'
 else 
-return '??*?* áÇ ÊæÌÏ ãÌãæÚå ãİÚáå ÈåĞÇ ÇáÇíÏí !\n ' 
+return 'ğŸ“›*â”‚* Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ø¬Ù…ÙˆØ¹Ù‡ Ù…ÙØ¹Ù„Ù‡ Ø¨Ù‡Ø°Ø§ Ø§Ù„Ø§ÙŠØ¯ÙŠ !\n ' 
 end 
 end 
 
-if MsgText[1] == 'ÇáãØæÑ' then
-return redis:get(max..":TEXT_SUDO") or '???áÇ ÊæÌÏ ßáíÔå ÇáãØæÑ .\n???íãßäß ÇÖÇİå ßáíÔå ãä ÎáÇá ÇáÇãÑ\n       " `ÖÚ ßáíÔå ÇáãØæÑ` " \n??'
+if MsgText[1] == 'Ø§Ù„Ù…Ø·ÙˆØ±' then
+return redis:get(max..":TEXT_SUDO") or 'ğŸ—ƒâ”‚Ù„Ø§ ØªÙˆØ¬Ø¯ ÙƒÙ„ÙŠØ´Ù‡ Ø§Ù„Ù…Ø·ÙˆØ± .\nğŸ“°â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø¶Ø§ÙÙ‡ ÙƒÙ„ÙŠØ´Ù‡ Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„Ø§Ù…Ø±\n       " `Ø¶Ø¹ ÙƒÙ„ÙŠØ´Ù‡ Ø§Ù„Ù…Ø·ÙˆØ±` " \nğŸ“¡'
 end
 
-if MsgText[1] == "ÇĞÇÚå ÚÇã ÈÇáÊæÌíå" or MsgText[1] == "ÇĞÇÚå ÚÇã ÈÇáÊæÌíå ??" then
-if not msg.SudoUser then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… Ø¨Ø§Ù„ØªÙˆØ¬ÙŠÙ‡" or MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… Ø¨Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ ğŸ“£" then
+if not msg.SudoUser then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not msg.SudoBase and not redis:get(max..'lock_brod') then 
-return "??*?* ÇáÇĞÇÚå ãŞİæáå ãä ŞÈá ÇáãØæÑ ÇáÇÓÇÓí  ??" 
+return "ğŸ“¡*â”‚* Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ù…Ù‚ÙÙˆÙ„Ù‡ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ  ğŸš¶" 
 end
 redis:setex(max..'fwd:'..msg.sender_user_id_,300, true) 
-return "???ÍÓääÇ ÇáÇä ÇÑÓá ÇáÊæÌíå ááÇĞÇÚå \n??" 
+return "ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ Ù„Ù„Ø§Ø°Ø§Ø¹Ù‡ \nğŸ”›" 
 end
 
-if MsgText[1] == "ÇĞÇÚå ÚÇã" or MsgText[1] == "ÇĞÇÚå ÚÇã ??" then		
-if not msg.SudoUser then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù…" or MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… ğŸ“¢" then		
+if not msg.SudoUser then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not msg.SudoBase and not redis:get(max..'lock_brod') then 
-return "??*?* ÇáÇĞÇÚå ãŞİæáå ãä ŞÈá ÇáãØæÑ ÇáÇÓÇÓí  ??" 
+return "ğŸ“¡*â”‚* Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ù…Ù‚ÙÙˆÙ„Ù‡ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ  ğŸš¶" 
 end
 redis:setex(max..'fwd:all'..msg.sender_user_id_,300, true) 
-return "???ÍÓääÇ ÇáÇä ÇÑÓá ÇáßáíÔå ááÇĞÇÚå ÚÇã \n??" 
+return "ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ Ù„Ù„Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… \nğŸ”›" 
 end
 
-if MsgText[1] == "ÇĞÇÚå ÎÇÕ" or MsgText[1] == "ÇĞÇÚå ÎÇÕ ??" then		
-if not msg.SudoUser then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ" or MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ ğŸ—£" then		
+if not msg.SudoUser then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not msg.SudoBase and not redis:get(max..'lock_brod') then 
-return "??*?* ÇáÇĞÇÚå ãŞİæáå ãä ŞÈá ÇáãØæÑ ÇáÇÓÇÓí  ??" 
+return "ğŸ“¡*â”‚* Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ù…Ù‚ÙÙˆÙ„Ù‡ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ  ğŸš¶" 
 end
 redis:setex(max..'fwd:pv'..msg.sender_user_id_,300, true) 
-return "???ÍÓääÇ ÇáÇä ÇÑÓá ÇáßáíÔå ááÇĞÇÚå ÎÇÕ \n??"
+return "ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ Ù„Ù„Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ \nğŸ”›"
 end
 
-if MsgText[1] == "ÇĞÇÚå" or MsgText[1] == "ÇĞÇÚå ??" then		
-if not msg.SudoUser then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡" or MsgText[1] == "Ø§Ø°Ø§Ø¹Ù‡ ğŸ—£" then		
+if not msg.SudoUser then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not msg.SudoBase and not redis:get(max..'lock_brod') then 
-return "??*?* ÇáÇĞÇÚå ãŞİæáå ãä ŞÈá ÇáãØæÑ ÇáÇÓÇÓí  ??" 
+return "ğŸ“¡*â”‚* Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ù…Ù‚ÙÙˆÙ„Ù‡ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ  ğŸš¶" 
 end
 redis:setex(max..'fwd:groups'..msg.sender_user_id_,300, true) 
-return "???ÍÓääÇ ÇáÇä ÇÑÓá ÇáßáíÔå ááÇĞÇÚå ááãÌãæÚÇÊ \n??" 
+return "ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ Ù„Ù„Ø§Ø°Ø§Ø¹Ù‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª \nğŸ”›" 
 end
 
-if MsgText[1] == "ÇáãØæÑíä" or MsgText[1] == "ÇáãØæÑíä ??" then
-if not msg.SudoUser then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ†" or MsgText[1] == "Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ† ğŸ”¥" then
+if not msg.SudoUser then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return sudolist(msg) 
 end
  
-if MsgText[1] == "ŞÇÆãÉ ÇáÚÇã" or MsgText[1]=="ŞÇÆãÉ ÇáÚÇã ??" then 
-if not msg.SudoUser then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¹Ø§Ù…" or MsgText[1]=="Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¹Ø§Ù… ğŸ“œ" then 
+if not msg.SudoUser then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return GetListGeneralBanned(msg) 
 end
 
-if MsgText[1] == "ÊÚØíá" and (MsgText[2] == "ÇáÊæÇÕá" or MsgText[2]=="ÇáÊæÇÕá ??") then 
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„" and (MsgText[2] == "Ø§Ù„ØªÙˆØ§ØµÙ„" or MsgText[2]=="Ø§Ù„ØªÙˆØ§ØµÙ„ âœ–ï¸") then 
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 return lock_twasel(msg) 
 end
 
-if MsgText[1] == "ÊİÚíá" and (MsgText[2] == "ÇáÊæÇÕá" or MsgText[2]=="ÇáÊæÇÕá ??") then 
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„" and (MsgText[2] == "Ø§Ù„ØªÙˆØ§ØµÙ„" or MsgText[2]=="Ø§Ù„ØªÙˆØ§ØµÙ„ ğŸ”›") then 
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 return unlock_twasel(msg) 
 end
 
-if MsgText[1] == "ÍÙÑ ÚÇã" then
+if MsgText[1] == "Ø­Ø¸Ø± Ø¹Ø§Ù…" then
 if not msg.SudoBase then 
-return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" 
+return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" 
 end
 
 if not MsgText[2] and msg.reply_id then 
@@ -2235,8 +2235,8 @@ return false
 end 
 end
 
-if MsgText[1] == "ÇáÛÇÁ ÇáÚÇã" or MsgText[1] == "ÇáÛÇÁ ÚÇã" then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø¹Ø§Ù…" or MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ø¹Ø§Ù…" then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="unbanall"}) 
@@ -2252,11 +2252,11 @@ return false
 end 
 end 
 
-if MsgText[1] == "ÑÊÈÊí" then return '??*?* ÑÊÈÊß ? ? '..msg.TheRank..' ?\n?' end
+if MsgText[1] == "Ø±ØªØ¨ØªÙŠ" then return 'ğŸ«*â”‚* Ø±ØªØ¨ØªÙƒ â‡œ âª '..msg.TheRank..' â«\nâ–' end
 
------------------ ÇÓÊŞÈÇá ÇáÑÓÇÆá ---------------
-if MsgText[1] == "ÇáÛÇÁ ÇáÇãÑ ??" or MsgText[1] == "ÇáÛÇÁ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+----------------- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ ---------------
+if MsgText[1] == "Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø§Ù…Ø± âœ–ï¸" or MsgText[1] == "Ø§Ù„ØºØ§Ø¡" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:del(max..'welcom:witting'..msg.sender_user_id_,
 max..'rulse:witting'..msg.sender_user_id_,
 max..'rulse:witting'..msg.sender_user_id_,
@@ -2273,35 +2273,35 @@ max..'delrdall:'..msg.sender_user_id_,
 max..'text_sudo:witting'..msg.sender_user_id_,
 max..'addrd:'..msg.chat_id_..msg.sender_user_id_,
 max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return '??*?* Êã ÂáÛÂÁ ÂáÂãÜÑ ÈäÌÂÍ \n??'
+return 'ğŸ“¬*â”‚* ØªÙ… Ø¢Ù„ØºØ¢Ø¡ Ø¢Ù„Ø¢Ù…Ù€Ø± Ø¨Ù†Ø¬Ø¢Ø­ \nğŸŒ¿'
 end  
 
 
-if MsgText[1] == 'ÇÕÏÇÑ ÇáÓæÑÓ' or MsgText[1] == 'ÇáÇÕÏÇÑ' then
-return '??????? ÇÕÏÇÑ ÓæÑÓ ÇíãÇ : *v'..version..'* \n??'
+if MsgText[1] == 'Ø§ØµØ¯Ø§Ø± Ø§Ù„Ø³ÙˆØ±Ø³' or MsgText[1] == 'Ø§Ù„Ø§ØµØ¯Ø§Ø±' then
+return 'ğŸ‘¨ğŸ¾â€ğŸ”§â”‚ Ø§ØµØ¯Ø§Ø± Ø³ÙˆØ±Ø³ Ù…Ø§Ø³ : *v'..version..'* \nğŸ“¡'
 end
 
-if (MsgText[1] == 'ÊÍÏíË ÇáÓæÑÓ' or MsgText[1] == 'ÊÍÏíË ÇáÓæÑÓ ??') then
-if not msg.SudoBase then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if (MsgText[1] == 'ØªØ­Ø¯ÙŠØ« Ø§Ù„Ø³ÙˆØ±Ø³' or MsgText[1] == 'ØªØ­Ø¯ÙŠØ« Ø§Ù„Ø³ÙˆØ±Ø³ ğŸ”‚') then
+if not msg.SudoBase then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 local GetVerison = https.request('https://github.com/MasSource/MAS.github.io/GetVersion.txt') or 0
 if GetVerison > version then
 UpdateSourceStart = true
-sendMsg(msg.chat_id_,msg.id_,'??*?* íæÌÏ ÊÍÏíË ÌÏíÏ ÇáÇä \n??*?* ÌÇÑí ÊäÒíá æÊËÈíÊ ÇáÊÍÏíË  ...')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ”›*â”‚* ÙŠÙˆØ¬Ø¯ ØªØ­Ø¯ÙŠØ« Ø¬Ø¯ÙŠØ¯ Ø§Ù„Ø§Ù† \nğŸ“¡*â”‚* Ø¬Ø§Ø±ÙŠ ØªÙ†Ø²ÙŠÙ„ ÙˆØªØ«Ø¨ÙŠØª Ø§Ù„ØªØ­Ø¯ÙŠØ«  ...')
 redis:set(max..":VERSION",GetVerison)
 return false
 else
-return "??| ÇáÇÕÏÇÑ ÇáÍÇáí : *v"..version.."* \n??????*?* áÏíÜß ÇÍÏË ÇÕÏÇÑ \n??"
+return "ğŸ”–| Ø§Ù„Ø§ØµØ¯Ø§Ø± Ø§Ù„Ø­Ø§Ù„ÙŠ : *v"..version.."* \nğŸ‘¨ğŸ¾â€ğŸ”§*â”‚* Ù„Ø¯ÙŠÙ€Ùƒ Ø§Ø­Ø¯Ø« Ø§ØµØ¯Ø§Ø± \nğŸ“¦"
 end
 return false
 end
 
-if MsgText[1] == 'äÓÎå ÇÍÊíÇØíå ááãÌãæÚÇÊ' then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == 'Ù†Ø³Ø®Ù‡ Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª' then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 return buck_up_groups(msg)
 end 
 
-if MsgText[1] == 'ÑİÚ äÓÎå ÇáÇÍÊíÇØíå' then
-if not msg.SudoBase then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == 'Ø±ÙØ¹ Ù†Ø³Ø®Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡' then
+if not msg.SudoBase then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 if msg.reply_id then
 GetMsgInfo(msg.chat_id_,msg.reply_id,function(arg, data)
 if data.content_.ID == 'MessageDocument' then
@@ -2318,55 +2318,55 @@ Uploaded_Groups_CH = msg.chat_id_
 Uploaded_Groups_MS = msg.id_
 print(Uploaded_Groups_CH)
 print(Uploaded_Groups_MS)
-sendMsg(msg.chat_id_,msg.id_,'?*?* ÌÇÑí ÑİÚ ÇáäÓÎå ÇäÊÙÑ ŞáíáÇ ... \n??')
+sendMsg(msg.chat_id_,msg.id_,'â³*â”‚* Ø¬Ø§Ø±ÙŠ Ø±ÙØ¹ Ø§Ù„Ù†Ø³Ø®Ù‡ Ø§Ù†ØªØ¸Ø± Ù‚Ù„ÙŠÙ„Ø§ ... \nâŒ›ï¸')
 end
 end,nil)
 else 
-sendMsg(msg.chat_id_,msg.id_,"??*?* ÚĞÑÇ ÇáäÓÎå ÇáÇÍÊíÇØíå åĞÇ áíÓÊ ááÈæÊ » ["..Bot_User.."]  \n??")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ“›*â”‚* Ø¹Ø°Ø±Ø§ Ø§Ù„Ù†Ø³Ø®Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡ Ù‡Ø°Ø§ Ù„ÙŠØ³Øª Ù„Ù„Ø¨ÙˆØª Â» ["..Bot_User.."]  \nğŸ’¥")
 end
 else 
-sendMsg(msg.chat_id_,msg.id_,'??*?* ÚĞÑÇ ÇÓã Çáãáİ ÛíÑ ãÏÚæã ááäÙÇã Çæ áÇ íÊæÇİŞ ãÚ ÓæÑÓ ÇáÒÚíã íÑÌì ÌáÈ Çáãáİ ÇáÇÕáí ÇáĞí ŞãÊ ÈÓÍÈå æÈÏæä ÊÚÏíá Ú ÇáÇÓã\n??')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ø¹Ø°Ø±Ø§ Ø§Ø³Ù… Ø§Ù„Ù…Ù„Ù ØºÙŠØ± Ù…Ø¯Ø¹ÙˆÙ… Ù„Ù„Ù†Ø¸Ø§Ù… Ø§Ùˆ Ù„Ø§ ÙŠØªÙˆØ§ÙÙ‚ Ù…Ø¹ Ø³ÙˆØ±Ø³ Ø§Ù„Ø²Ø¹ÙŠÙ… ÙŠØ±Ø¬Ù‰ Ø¬Ù„Ø¨ Ø§Ù„Ù…Ù„Ù Ø§Ù„Ø§ØµÙ„ÙŠ Ø§Ù„Ø°ÙŠ Ù‚Ù…Øª Ø¨Ø³Ø­Ø¨Ù‡ ÙˆØ¨Ø¯ÙˆÙ† ØªØ¹Ø¯ÙŠÙ„ Ø¹ Ø§Ù„Ø§Ø³Ù…\nğŸ’¥')
 end  
 else
-sendMsg(msg.chat_id_,msg.id_,'??*?* ÚĞÑÇ Çáãáİ áíÓ ÈÕíÛå Json !?\n??')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ø¹Ø°Ø±Ø§ Ø§Ù„Ù…Ù„Ù Ù„ÙŠØ³ Ø¨ØµÙŠØºÙ‡ Json !?\nğŸ’¥')
 end 
 else
-sendMsg(msg.chat_id_,msg.id_,'??*?* ÚĞÑÇ åĞÇ áíÓ ãáİ ÇáäÓÍå ÇáÇÍÊíÇØíå ááãÌãæÚÇÊ\n??')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ø¹Ø°Ø±Ø§ Ù‡Ø°Ø§ Ù„ÙŠØ³ Ù…Ù„Ù Ø§Ù„Ù†Ø³Ø­Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª\nğŸ’¥')
 end 
 end,nil)
 else 
-return "??*?* ÇÑÓá ãáİ ÇáäÓÎå ÇáÇÍÊíÇØíå ÇæáÇ\n??*?* Ëã Şã ÈÇáÑÏ Úáì Çáãáİ æÇÑÓá \" `ÑİÚ äÓÎå ÇáÇÍÊíÇØíå` \" "
+return "ğŸ“¦*â”‚* Ø§Ø±Ø³Ù„ Ù…Ù„Ù Ø§Ù„Ù†Ø³Ø®Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡ Ø§ÙˆÙ„Ø§\nğŸ“‘*â”‚* Ø«Ù… Ù‚Ù… Ø¨Ø§Ù„Ø±Ø¯ Ø¹Ù„Ù‰ Ø§Ù„Ù…Ù„Ù ÙˆØ§Ø±Ø³Ù„ \" `Ø±ÙØ¹ Ù†Ø³Ø®Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡` \" "
 end 
 return false
 end
 
-if (MsgText[1]=="ÊíÓÊ" or MsgText[1]=="test") then 
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
-return "?? ÇáÈæÊ ÔÜÛÜÜÇá ??" 
+if (MsgText[1]=="ØªÙŠØ³Øª" or MsgText[1]=="test") then 
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
+return "ğŸ’¯ Ø§Ù„Ø¨ÙˆØª Ø´Ù€ØºÙ€Ù€Ø§Ù„ ğŸš€" 
 end
 
-if (MsgText[1]== "ÇíÏí" or MsgText[1]=="ÇíÏíí??") and msg.type == "pv" then return  "\n???????Çåáä ÚÒíÒí ÇáãØæÑ ÇíÏíß åæå ?\n\n????"..msg.sender_user_id_.."\n"  end
+if (MsgText[1]== "Ø§ÙŠØ¯ÙŠ" or MsgText[1]=="Ø§ÙŠØ¯ÙŠÙŠğŸ†”") and msg.type == "pv" then return  "\nğŸ‘¨ğŸ»â€ğŸ’»â”‚Ø§Ù‡Ù„Ù† Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± Ø§ÙŠØ¯ÙŠÙƒ Ù‡ÙˆÙ‡ â¬\n\nğŸ§Ÿâ€â™‚â”‚"..msg.sender_user_id_.."\n"  end
 
-if MsgText[1]== "ŞäÇÉ ÇáÓæÑÓ ??" and msg.type == "pv" then
-local inline = {{{text="??ŞäÇå ÇáÓÜæÑÓ ÖÜÛÜØ åäÇ ",url="t.me/MasSource"}}}
-send_key(msg.sender_user_id_,'  [??ŞäÇÉ ÓæÑÓ : ÇíãÇ](t.me/MasSource)',nil,inline,msg.id_)
+if MsgText[1]== "Ù‚Ù†Ø§Ø© Ø§Ù„Ø³ÙˆØ±Ø³ ğŸ“¡" and msg.type == "pv" then
+local inline = {{{text="âšœâ”‚Ù‚Ù†Ø§Ù‡ Ø§Ù„Ø³Ù€ÙˆØ±Ø³ Ø¶Ù€ØºÙ€Ø· Ù‡Ù†Ø§ ",url="t.me/MasSource"}}}
+send_key(msg.sender_user_id_,'  [âšœâ”‚Ù‚Ù†Ø§Ø© Ø³ÙˆØ±Ø³ : Ù…Ø§Ø³](t.me/MasSource)',nil,inline,msg.id_)
 return false
 end
 
-if (MsgText[1]== "ÇáÇÍÕÇÆíÇÊ ??" or MsgText[1]=="ÇáÇÍÕÇÆíÇÊ") then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
-return '???ÇáÇÍÕÇÆíÇÊ ??? \n\n??*?*ÚÏÏ ÇáãÌãæÚÇÊ ÇáãİÚáå : '..redis:scard(max..'group:ids')..'\n?????*?*ÚÏÏ ÇáãÔÊÑßíä İí ÇáÈæÊ : '..redis:scard(max..'users')..'\n??'
+if (MsgText[1]== "Ø§Ù„Ø§Ø­ØµØ§Ø¦ÙŠØ§Øª ğŸ’¥" or MsgText[1]=="Ø§Ù„Ø§Ø­ØµØ§Ø¦ÙŠØ§Øª") then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
+return 'ğŸ­â”‚Ø§Ù„Ø§Ø­ØµØ§Ø¦ÙŠØ§Øª ğŸŒâ€â™‚ \n\nğŸ‘¥*â•¿*Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„Ù…ÙØ¹Ù„Ù‡ : '..redis:scard(max..'group:ids')..'\nğŸ™ğŸ»â€â™‚*â•½*Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ÙÙŠ Ø§Ù„Ø¨ÙˆØª : '..redis:scard(max..'users')..'\nğŸ“¡'
 end
 ---------------[End Function data] -----------------------
-if MsgText[1]=="ÇÖİ ÑÏ ÚÇã" or MsgText[1]=="ÇÖİ ÑÏ ÚÇã ?" then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1]=="Ø§Ø¶Ù Ø±Ø¯ Ø¹Ø§Ù…" or MsgText[1]=="Ø§Ø¶Ù Ø±Ø¯ Ø¹Ø§Ù… â•" then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_,300,true)
 redis:del(max..'allreplay:'..msg.chat_id_..msg.sender_user_id_)
-return "???ÍÓääÇ ÇáÇä ÇÑÓá ßáãÉ ÇáÑÏ ÇáÚÇã ??\n"
+return "ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ ÙƒÙ„Ù…Ø© Ø§Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… ğŸƒ\n"
 end
 
-if MsgText[1]== 'ãÓÍ' and MsgText[2]== 'ÇáÑÏæÏ' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…Ø³Ø­' and MsgText[2]== 'Ø§Ù„Ø±Ø¯ÙˆØ¯' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local names 	= redis:exists(max..'replay:'..msg.chat_id_)
 local photo 	= redis:exists(max..'replay_photo:group:'..msg.chat_id_)
 local voice 	= redis:exists(max..'replay_voice:group:'..msg.chat_id_)
@@ -2377,14 +2377,14 @@ local video 	= redis:exists(max..'replay_video:group:'..msg.chat_id_)
 if names or photo or voice or imation or audio or sticker or video then
 redis:del(max..'replay:'..msg.chat_id_,max..'replay_photo:group:'..msg.chat_id_,max..'replay_voice:group:'..msg.chat_id_,
 max..'replay_animation:group:'..msg.chat_id_,max..'replay_audio:group:'..msg.chat_id_,max..'replay_sticker:group:'..msg.chat_id_,max..'replay_video:group:'..msg.chat_id_)
-return "? Êã ãÓÍ ßá ÇáÑÏæÏ ??"
+return "âœ“ ØªÙ… Ù…Ø³Ø­ ÙƒÙ„ Ø§Ù„Ø±Ø¯ÙˆØ¯ ğŸš€"
 else
-return '??*?* áÇ íæÌÏ ÑÏæÏ áíÊã ãÓÍåÇ \n??'
+return 'ğŸš¸*â”‚* Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø±Ø¯ÙˆØ¯ Ù„ÙŠØªÙ… Ù…Ø³Ø­Ù‡Ø§ \nğŸ’¥'
 end
 end
 
-if MsgText[1]== 'ãÓÍ' and MsgText[2]== 'ÇáÑÏæÏ ÇáÚÇãå' then
-if not msg.SudoBase then return"?? ááãØæÑíä İŞØ ! ??" end
+if MsgText[1]== 'Ù…Ø³Ø­' and MsgText[2]== 'Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡' then
+if not msg.SudoBase then return"â™¨ï¸ Ù„Ù„Ù…Ø·ÙˆØ±ÙŠÙ† ÙÙ‚Ø· ! ğŸ’¯" end
 local names 	= redis:exists(max..'replay:all')
 local photo 	= redis:exists(max..'replay_photo:group:')
 local voice 	= redis:exists(max..'replay_voice:group:')
@@ -2394,26 +2394,26 @@ local sticker 	= redis:exists(max..'replay_sticker:group:')
 local video 	= redis:exists(max..'replay_video:group:')
 if names or photo or voice or imation or audio or sticker or video then
 redis:del(max..'replay:all',max..'replay_photo:group:',max..'replay_voice:group:',max..'replay_animation:group:',max..'replay_audio:group:',max..'replay_sticker:group:',max..'replay_video:group:')
-return "? Êã ãÓÍ ßá ÇáÑÏæÏ ÇáÚÇãå??"
+return "âœ“ ØªÙ… Ù…Ø³Ø­ ÙƒÙ„ Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ğŸš€"
 else
-return "áÇ íæÌÏ ÑÏæÏ ÚÇãå áíÊã ãÓÍåÇ ! ??"
+return "Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø±Ø¯ÙˆØ¯ Ø¹Ø§Ù…Ù‡ Ù„ÙŠØªÙ… Ù…Ø³Ø­Ù‡Ø§ ! ğŸš€"
 end
 end
 
-if MsgText[1]== 'ãÓÍ' and MsgText[2]== 'ÑÏ ÚÇã' then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1]== 'Ù…Ø³Ø­' and MsgText[2]== 'Ø±Ø¯ Ø¹Ø§Ù…' then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:set(max..'delrdall:'..msg.sender_user_id_,true) 
-return "???ÍÓääÇ ÚÒíÒí  ???\n???ÇáÇä ÇÑÓá ÇáÑÏ áãÓÍåÇ ãä  ÇáãÌãæÚÇÊ ??"
+return "ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ  âœ‹ğŸ¿\nğŸ—¯â”‚Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„Ø±Ø¯ Ù„Ù…Ø³Ø­Ù‡Ø§ Ù…Ù†  Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸƒ"
 end
 
-if MsgText[1]== 'ãÓÍ' and MsgText[2]== 'ÑÏ' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…Ø³Ø­' and MsgText[2]== 'Ø±Ø¯' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:set(max..'delrd:'..msg.sender_user_id_,true)
-return "???ÍÓääÇ ÚÒíÒí  ???\n???ÇáÇä ÇÑÓá ÇáÑÏ áãÓÍåÇ ãä  ááãÌãæÚå ??"
+return "ğŸ“­â•¿Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ  âœ‹ğŸ¿\nğŸ—¯â•½Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„Ø±Ø¯ Ù„Ù…Ø³Ø­Ù‡Ø§ Ù…Ù†  Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ğŸƒ"
 end
 
-if MsgText[1]== 'ÇáÑÏæÏ' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ø§Ù„Ø±Ø¯ÙˆØ¯' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local names  	= redis:hkeys(max..'replay:'..msg.chat_id_)
 local photo 	= redis:hkeys(max..'replay_photo:group:'..msg.chat_id_)
 local voice  	= redis:hkeys(max..'replay_voice:group:'..msg.chat_id_)
@@ -2422,22 +2422,22 @@ local audio 	= redis:hkeys(max..'replay_audio:group:'..msg.chat_id_)
 local sticker 	= redis:hkeys(max..'replay_sticker:group:'..msg.chat_id_)
 local video 	= redis:hkeys(max..'replay_video:group:'..msg.chat_id_)
 if #names==0 and #photo==0 and #voice==0 and #imation==0 and #audio==0 and #sticker==0 and #video==0 then 
-return '??*?*áÇ íæÌÏ ÑÏæÏ ãÖÇİå ÍÇáíÇ \n??' 
+return 'ğŸš¸*â”‚*Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø±Ø¯ÙˆØ¯ Ù…Ø¶Ø§ÙÙ‡ Ø­Ø§Ù„ÙŠØ§ \nğŸ’¥' 
 end
 local ii = 1
-local message = '??*?*ÑÏæÏ ÇáÈæÊ İí ÇáãÌãæÚå  :\n\n'
-for i=1, #photo 	do message = message ..ii..' - *{* '..	photo[i]..' *}_*( ÕæÑå ?? ) \n' 	 ii = ii + 1 end
-for i=1, #names 	do message = message ..ii..' - *{* '..	names[i]..' *}_*( äÕ ?? ) \n'  	 ii = ii + 1 end
-for i=1, #voice 	do message = message ..ii..' - *{* '..  voice[i]..' *}_*( ÈÕãå ?? ) \n' 	 ii = ii + 1 end
-for i=1, #imation 	do message = message ..ii..' - *{* '..imation[i]..' *}_*( ãÊÍÑßå ?? ) \n' ii = ii + 1 end
-for i=1, #audio 	do message = message ..ii..' - *{* '..	audio[i]..' *}_*( ÕæÊíå ?? ) \n'  ii = ii + 1 end
-for i=1, #sticker 	do message = message ..ii..' - *{* '..sticker[i]..' *}_*( ãáÕŞ ?? ) \n' 	 ii = ii + 1 end
-for i=1, #video 	do message = message ..ii..' - *{* '..	video[i]..' *}_*( İíÏíæ  ?? ) \n' ii = ii + 1 end
-return message..'\n???'
+local message = 'ğŸ’¬*â”‚*Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¨ÙˆØª ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡  :\n\n'
+for i=1, #photo 	do message = message ..ii..' - *{* '..	photo[i]..' *}_*( ØµÙˆØ±Ù‡ ğŸ ) \n' 	 ii = ii + 1 end
+for i=1, #names 	do message = message ..ii..' - *{* '..	names[i]..' *}_*( Ù†Øµ ğŸ—¯ ) \n'  	 ii = ii + 1 end
+for i=1, #voice 	do message = message ..ii..' - *{* '..  voice[i]..' *}_*( Ø¨ØµÙ…Ù‡ ğŸ™ ) \n' 	 ii = ii + 1 end
+for i=1, #imation 	do message = message ..ii..' - *{* '..imation[i]..' *}_*( Ù…ØªØ­Ø±ÙƒÙ‡ ğŸ­ ) \n' ii = ii + 1 end
+for i=1, #audio 	do message = message ..ii..' - *{* '..	audio[i]..' *}_*( ØµÙˆØªÙŠÙ‡ ğŸ”Š ) \n'  ii = ii + 1 end
+for i=1, #sticker 	do message = message ..ii..' - *{* '..sticker[i]..' *}_*( Ù…Ù„ØµÙ‚ ğŸ—º ) \n' 	 ii = ii + 1 end
+for i=1, #video 	do message = message ..ii..' - *{* '..	video[i]..' *}_*( ÙÙŠØ¯ÙŠÙˆ  ğŸ ) \n' ii = ii + 1 end
+return message..'\nâ–â–â–'
 end
 
-if MsgText[1]== 'ÇáÑÏæÏ ÇáÚÇãå' or MsgText[1]=='ÇáÑÏæÏ ÇáÚÇãå ??' then
-if not msg.SudoBase then return "?? ááãØæÑ İŞØ ! ??" end
+if MsgText[1]== 'Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡' or MsgText[1]=='Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ ğŸ—¨' then
+if not msg.SudoBase then return "â™¨ï¸ Ù„Ù„Ù…Ø·ÙˆØ± ÙÙ‚Ø· ! ğŸ’¯" end
 local names 	= redis:hkeys(max..'replay:all')
 local photo 	= redis:hkeys(max..'replay_photo:group:')
 local voice 	= redis:hkeys(max..'replay_voice:group:')
@@ -2446,32 +2446,32 @@ local audio 	= redis:hkeys(max..'replay_audio:group:')
 local sticker 	= redis:hkeys(max..'replay_sticker:group:')
 local video 	= redis:hkeys(max..'replay_video:group:')
 if #names==0 and #photo==0 and #voice==0 and #imation==0 and #audio==0 and #sticker==0 and #video==0 then 
-return '??*?*áÇ íæÌÏ ÑÏæÏ ãÖÇİå ÍÇáíÇ \n??' 
+return 'ğŸš¸*â”‚*Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø±Ø¯ÙˆØ¯ Ù…Ø¶Ø§ÙÙ‡ Ø­Ø§Ù„ÙŠØ§ \nğŸ’¥' 
 end
 local ii = 1
-local message = '??*?*ÇáÑÏæÏ ÇáÚÇãå İí ÇáÈæÊ :   :\n\n'
-for i=1, #photo 	do message = message ..ii..' - *{* '..	photo[i]..' *}_*( ÕæÑå ?? ) \n' 	ii = ii + 1 end
-for i=1, #names 	do message = message ..ii..' - *{* '..	names[i]..' *}_*( äÕ ?? ) \n'  	ii = ii + 1 end
-for i=1, #voice 	do message = message ..ii..' - *{* '..	voice[i]..' *}_*( ÈÕãå ?? ) \n' 	ii = ii + 1 end
-for i=1, #imation 	do message = message ..ii..' - *{* '..imation[i]..' *}_*( ãÊÍÑßå ?? ) \n'ii = ii + 1 end
-for i=1, #audio 	do message = message ..ii..' - *{* '..	audio[i]..' *}_*( ÕæÊíå ?? ) \n' ii = ii + 1 end
-for i=1, #sticker 	do message = message ..ii..' - *{* '..sticker[i]..' *}_*( ãáÕŞ ?? ) \n' 	ii = ii + 1 end
-for i=1, #video 	do message = message ..ii..' - *{* '..	video[i]..' *}_*( İíÏíæ  ?? ) \n'ii = ii + 1 end
-return message..'\n???'
+local message = 'ğŸ’¬*â”‚*Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ ÙÙŠ Ø§Ù„Ø¨ÙˆØª :   :\n\n'
+for i=1, #photo 	do message = message ..ii..' - *{* '..	photo[i]..' *}_*( ØµÙˆØ±Ù‡ ğŸ ) \n' 	ii = ii + 1 end
+for i=1, #names 	do message = message ..ii..' - *{* '..	names[i]..' *}_*( Ù†Øµ ğŸ—¯ ) \n'  	ii = ii + 1 end
+for i=1, #voice 	do message = message ..ii..' - *{* '..	voice[i]..' *}_*( Ø¨ØµÙ…Ù‡ ğŸ™ ) \n' 	ii = ii + 1 end
+for i=1, #imation 	do message = message ..ii..' - *{* '..imation[i]..' *}_*( Ù…ØªØ­Ø±ÙƒÙ‡ ğŸ­ ) \n'ii = ii + 1 end
+for i=1, #audio 	do message = message ..ii..' - *{* '..	audio[i]..' *}_*( ØµÙˆØªÙŠÙ‡ ğŸ”Š ) \n' ii = ii + 1 end
+for i=1, #sticker 	do message = message ..ii..' - *{* '..sticker[i]..' *}_*( Ù…Ù„ØµÙ‚ ğŸ—º ) \n' 	ii = ii + 1 end
+for i=1, #video 	do message = message ..ii..' - *{* '..	video[i]..' *}_*( ÙÙŠØ¯ÙŠÙˆ  ğŸ ) \n'ii = ii + 1 end
+return message..'\nâ–â–â–'
 end
 
 
-if MsgText[1]=="ÇÖİ ÑÏ" and msg.GroupActive then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1]=="Ø§Ø¶Ù Ø±Ø¯" and msg.GroupActive then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..'addrd:'..msg.chat_id_..msg.sender_user_id_,300,true) 
 redis:del(max..'replay1'..msg.chat_id_..msg.sender_user_id_)
-return "???ÍÓääÇ , ÇáÇä ÇÑÓá ßáãå ÇáÑÏ \n-"
+return "ğŸ“­â”‚Ø­Ø³Ù†Ù†Ø§ , Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ ÙƒÙ„Ù…Ù‡ Ø§Ù„Ø±Ø¯ \n-"
 end
 
-if MsgText[1] == "ÖÚ ÇÓã ááÈæÊ" or MsgText[1]== 'ÖÚ ÇÓã ááÈæÊ ©' then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "Ø¶Ø¹ Ø§Ø³Ù… Ù„Ù„Ø¨ÙˆØª" or MsgText[1]== 'Ø¶Ø¹ Ø§Ø³Ù… Ù„Ù„Ø¨ÙˆØª Â©' then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..'namebot:witting'..msg.sender_user_id_,300,true)
-return"???ÍÓääÇ ÚÒíÒí  ???\n???ÇáÇä ÇÑÓá ÇáÇÓã  ááÈæÊ ??"
+return"ğŸ“­â•¿Ø­Ø³Ù†Ù†Ø§ Ø¹Ø²ÙŠØ²ÙŠ  âœ‹ğŸ¿\nğŸ—¯â•½Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ø§Ù„Ø§Ø³Ù…  Ù„Ù„Ø¨ÙˆØª ğŸƒ"
 end
 
 
@@ -2486,17 +2486,17 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 
-echo '?? ? Seystem ?\n*»» '"$linux_version"'*' 
-echo '*------------------------------\n*?? ? Memory ?\n*»» '"$memUsedPrc"'*'
-echo '*------------------------------\n*?? ? HardDisk ?\n*»» '"$HardDisk"'*'
-echo '*------------------------------\n*?? ? Processor ?\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '*------------------------------\n*?????? ? Server[_]Login ?\n*»» '`whoami`'*'
-echo '*------------------------------\n*?? ? Uptime ?  \n*»» '"$uptime"'*'
+echo 'ğŸ“Ÿ âª Seystem â«\n*Â»Â» '"$linux_version"'*' 
+echo '*------------------------------\n*ğŸ”– âª Memory â«\n*Â»Â» '"$memUsedPrc"'*'
+echo '*------------------------------\n*ğŸ’¾ âª HardDisk â«\n*Â»Â» '"$HardDisk"'*'
+echo '*------------------------------\n*âš™ï¸ âª Processor â«\n*Â»Â» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '*------------------------------\n*ğŸ‘¨ğŸ¾â€ğŸ”§ âª Server[_]Login â«\n*Â»Â» '`whoami`'*'
+echo '*------------------------------\n*ğŸ”Œ âª Uptime â«  \n*Â»Â» '"$uptime"'*'
 ]]):read('*all')
 end
 
 
-if MsgText[1] == 'ÇáÓíÑİÑ' then
+if MsgText[1] == 'Ø§Ù„Ø³ÙŠØ±ÙØ±' then
 if not msg.SudoUser then return "For Sudo Only." end
 return io.popen([[
 
@@ -2506,298 +2506,298 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 
-echo '??l ? äÙÇã ÇáÊÔÛíá ?\n*»» '"$linux_version"'*' 
-echo '*------------------------------\n*??l ? ÇáĞÇßÑå ÇáÚÔæÇÆíå ?\n*»» '"$memUsedPrc"'*'
-echo '*------------------------------\n*??l ? æÍÜÏå ÇáÜÊÜÎÜÒíÜä ?\n*»» '"$HardDisk"'*'
-echo '*------------------------------\n*??l ? ÇáÜãÜÜÚÜÜÇáÜÜÌ ?\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '*------------------------------\n*??????l ? ÇáÜÜÏÎÜÜæá ?\n*»» '`whoami`'*'
-echo '*------------------------------\n*??l ? ãÜÏå ÊÜÔÛíÜá ÇáÜÓÜíÜÑİÜÑ ?  \n*»» '"$uptime"'*'
+echo 'ğŸ“Ÿl âª Ù†Ø¸Ø§Ù… Ø§Ù„ØªØ´ØºÙŠÙ„ â«\n*Â»Â» '"$linux_version"'*' 
+echo '*------------------------------\n*ğŸ”–l âª Ø§Ù„Ø°Ø§ÙƒØ±Ù‡ Ø§Ù„Ø¹Ø´ÙˆØ§Ø¦ÙŠÙ‡ â«\n*Â»Â» '"$memUsedPrc"'*'
+echo '*------------------------------\n*ğŸ’¾l âª ÙˆØ­Ù€Ø¯Ù‡ Ø§Ù„Ù€ØªÙ€Ø®Ù€Ø²ÙŠÙ€Ù† â«\n*Â»Â» '"$HardDisk"'*'
+echo '*------------------------------\n*âš™ï¸l âª Ø§Ù„Ù€Ù…Ù€Ù€Ø¹Ù€Ù€Ø§Ù„Ù€Ù€Ø¬ â«\n*Â»Â» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '*------------------------------\n*ğŸ‘¨ğŸ¾â€ğŸ”§l âª Ø§Ù„Ù€Ù€Ø¯Ø®Ù€Ù€ÙˆÙ„ â«\n*Â»Â» '`whoami`'*'
+echo '*------------------------------\n*ğŸ”Œl âª Ù…Ù€Ø¯Ù‡ ØªÙ€Ø´ØºÙŠÙ€Ù„ Ø§Ù„Ù€Ø³Ù€ÙŠÙ€Ø±ÙÙ€Ø± â«  \n*Â»Â» '"$uptime"'*'
 ]]):read('*all')
 end
 
 
 if msg.type == 'channel' and msg.GroupActive then
-if MsgText[1] == "ÇáÇæÇãÑ" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ø§ÙˆØ§Ù…Ø±" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 return [[
-??ÌãíÚ ÇáÃæÇãÑ ÇáÚÇãåş ?
+â–â”‡Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£ÙˆØ§Ù…Ø± Ø§Ù„Ø¹Ø§Ù…Ù‡â€Œâ€ â‡Š
 
-??ã1 » ÇæÇãÑ ÇáÇÏÇÑå
-??ã2 » ÇæÇãÑ ÇÚÏÇÏÇÊ ÇáãÌãæÚå
-??ã3 » ÇæÇãÑ ÇáÍãÇíå
-??ã4 » ÇæÇãÑ ÂáÎÏãå 
-??ã5 » ÇæÇãÑ ÇáÑÏæÏ
-??ã6 » ÇæÇãÑ ÇáÊÓáíå
-??ã ÇáãØæÑ »  ÇæÇãÑ ÇáãØæÑ
-??ÇáæÓÇÆØ » áãÚÑİå ÇáÇÚÏÇÏÇÊ 
-??ÇáÇÚÏÇÏÇÊ » ÚÏÇÏÇÊ ÇáãÌãæÚå
-??ÓæÑÓ » ÓæÑÓ ÇáÈæÊ
-??ÇáãØæÑ » ãØæÑ ÇáÈæÊ 
+â–â”‡Ù…1 Â» Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø§Ø¯Ø§Ø±Ù‡
+â–â”‡Ù…2 Â» Ø§ÙˆØ§Ù…Ø± Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡
+â–â”‡Ù…3 Â» Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø­Ù…Ø§ÙŠÙ‡
+â–â”‡Ù…4 Â» Ø§ÙˆØ§Ù…Ø± Ø¢Ù„Ø®Ø¯Ù…Ù‡ 
+â–â”‡Ù…5 Â» Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø±Ø¯ÙˆØ¯
+â–â”‡Ù…6 Â» Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡
+â–â”‡Ù… Ø§Ù„Ù…Ø·ÙˆØ± Â»  Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ù…Ø·ÙˆØ±
+â–â”‡Ø§Ù„ÙˆØ³Ø§Ø¦Ø· Â» Ù„Ù…Ø¹Ø±ÙÙ‡ Ø§Ù„Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª 
+â–â”‡Ø§Ù„Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª Â» Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡
+â–â”‡Ø³ÙˆØ±Ø³ Â» Ø³ÙˆØ±Ø³ Ø§Ù„Ø¨ÙˆØª
+â–â”‡Ø§Ù„Ù…Ø·ÙˆØ± Â» Ù…Ø·ÙˆØ± Ø§Ù„Ø¨ÙˆØª 
 
- şış???ÑÂÓÜáäí ááÂÓÜÊİÓÜÂÑ ? { ]]..SUDO_USER..[[ } ? ]]
+ â€â€â€ğŸ’­â”‚Ø±Ø¢Ø³Ù€Ù„Ù†ÙŠ Ù„Ù„Ø¢Ø³Ù€ØªÙØ³Ù€Ø¢Ø± â˜œ { ]]..SUDO_USER..[[ } âœ“ ]]
 end
-if MsgText[1]== 'ã1' then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…1' then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local text =[[
-1-?ÇæÇãÑ ÇáÑİÚ æÇáÊäÒíá ááãäÔÆ ÇáÇÓÇÓí?
+1-â´Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø±ÙØ¹ ÙˆØ§Ù„ØªÙ†Ø²ÙŠÙ„ Ù„Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠâµ
 
-?¦ ÑİÚ ãäÔì+ÊäÒíá ãäÔì 
-?¦ ÑİÚ ÇáãÏíÑ+ÊäÒíá ÇáãÏíÑ
-?¦ ÑİÚ ÇÏãä+ÊäÒíá ÇÏãä 
-?¦ ÑİÚ ããíÒ+ÊäÒíá ããíÒ 
-?¦ ÊäÒíá Çáßá:(ÊäÒíá ÇáããíÒíä æÇáãÏÑÇÁ æÇáÇÏãäíå ÈÇãÑ æÇÍÏ)
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-2- ? ÇæÇãÑ ãÓÍ ááãäÔÆííä  ? 
+â–Â¦ Ø±ÙØ¹ Ù…Ù†Ø´Ù‰+ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰ 
+â–Â¦ Ø±ÙØ¹ Ø§Ù„Ù…Ø¯ÙŠØ±+ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ù…Ø¯ÙŠØ±
+â–Â¦ Ø±ÙØ¹ Ø§Ø¯Ù…Ù†+ØªÙ†Ø²ÙŠÙ„ Ø§Ø¯Ù…Ù† 
+â–Â¦ Ø±ÙØ¹ Ù…Ù…ÙŠØ²+ØªÙ†Ø²ÙŠÙ„ Ù…Ù…ÙŠØ² 
+â–Â¦ ØªÙ†Ø²ÙŠÙ„ Ø§Ù„ÙƒÙ„:(ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ† ÙˆØ§Ù„Ù…Ø¯Ø±Ø§Ø¡ ÙˆØ§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡ Ø¨Ø§Ù…Ø± ÙˆØ§Ø­Ø¯)
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+2- â´ Ø§ÙˆØ§Ù…Ø± Ù…Ø³Ø­ Ù„Ù„Ù…Ù†Ø´Ø¦ÙŠÙŠÙ†  âµ 
 
-?¦ ãÓÍ ÇáãäÔÆííä=áãÓÍ ãäÔÆííä 
-?¦ ãÓÍ ÇáÇÏãäíå =áãÓÍ ÇáÇÏãäíå 
-?¦ ãÓÍ ÇáããíÒíä =áãÓÍ ÇáããíÒíä 
-?¦ ãÓÍ ÇáãÏÑÇÁ = áãÓÍ ÇáãÏÑÇÁ 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-3- ? ÂæÂãÜÑ ÂáÍÙÜÑ æÂáØÜÜÑÏ æÂáÊŞííÏ ?
+â–Â¦ Ù…Ø³Ø­ Ø§Ù„Ù…Ù†Ø´Ø¦ÙŠÙŠÙ†=Ù„Ù…Ø³Ø­ Ù…Ù†Ø´Ø¦ÙŠÙŠÙ† 
+â–Â¦ Ù…Ø³Ø­ Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡ =Ù„Ù…Ø³Ø­ Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡ 
+â–Â¦ Ù…Ø³Ø­ Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ† =Ù„Ù…Ø³Ø­ Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ† 
+â–Â¦ Ù…Ø³Ø­ Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡ = Ù„Ù…Ø³Ø­ Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡ 
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+3- â´ Ø¢ÙˆØ¢Ù…Ù€Ø± Ø¢Ù„Ø­Ø¸Ù€Ø± ÙˆØ¢Ù„Ø·Ù€Ù€Ø±Ø¯ ÙˆØ¢Ù„ØªÙ‚ÙŠÙŠØ¯ âµ
       
-?¦ ÍÙÑ ?ÈÇáÑÏ+ÈÇáãÚÑİ? áÍÙÑ ÇáÚÖæ
-?¦ ÇáÛÇÁ ÇáÍÙÑ ?ÈÇáÑÏ+ÈÇáãÚÑİ? 
-?¦ ØÑÏ ? ÈÇáÑÏ+ÈÇáãÚÑİ ? áØÑÏ ÇáÚÖæ
-?¦ ßÊã ? ÈÇáÑÏ+ÈÇáãÚÑİ ? áßÊã ÇáÚÖæ
-?¦ ÇáÛÇÁ ÇáßÊã ?ÈÇáÑÏ+ÈÇáãÚÑİ?
-?¦ ÊŞííÏ?ÈÇáÑÏ+ÈÇáãÚÑİ?áÊŞííÏ ÇáÚÖæ
-?¦ İß ÇáÊŞííÏ ?ÈÇáÑÏ+ÈÇáãÚÑİ?
-?¦ ãäÚ+Çáßáãå=áãäÚ ßáãå ÈÇáãÌãæÚå
-?¦ ÇáÛÇÁ ãäÚ = áÇáÛÇÁ ãäÚ Çáßáãå 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+â–Â¦ Ø­Ø¸Ø± â´Ø¨Ø§Ù„Ø±Ø¯+Ø¨Ø§Ù„Ù…Ø¹Ø±Ùâµ Ù„Ø­Ø¸Ø± Ø§Ù„Ø¹Ø¶Ùˆ
+â–Â¦ Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø­Ø¸Ø± â´Ø¨Ø§Ù„Ø±Ø¯+Ø¨Ø§Ù„Ù…Ø¹Ø±Ùâµ 
+â–Â¦ Ø·Ø±Ø¯ â´ Ø¨Ø§Ù„Ø±Ø¯+Ø¨Ø§Ù„Ù…Ø¹Ø±Ù âµ Ù„Ø·Ø±Ø¯ Ø§Ù„Ø¹Ø¶Ùˆ
+â–Â¦ ÙƒØªÙ… â´ Ø¨Ø§Ù„Ø±Ø¯+Ø¨Ø§Ù„Ù…Ø¹Ø±Ù âµ Ù„ÙƒØªÙ… Ø§Ù„Ø¹Ø¶Ùˆ
+â–Â¦ Ø§Ù„ØºØ§Ø¡ Ø§Ù„ÙƒØªÙ… â´Ø¨Ø§Ù„Ø±Ø¯+Ø¨Ø§Ù„Ù…Ø¹Ø±Ùâµ
+â–Â¦ ØªÙ‚ÙŠÙŠØ¯â´Ø¨Ø§Ù„Ø±Ø¯+Ø¨Ø§Ù„Ù…Ø¹Ø±ÙâµÙ„ØªÙ‚ÙŠÙŠØ¯ Ø§Ù„Ø¹Ø¶Ùˆ
+â–Â¦ ÙÙƒ Ø§Ù„ØªÙ‚ÙŠÙŠØ¯ â´Ø¨Ø§Ù„Ø±Ø¯+Ø¨Ø§Ù„Ù…Ø¹Ø±Ùâµ
+â–Â¦ Ù…Ù†Ø¹+Ø§Ù„ÙƒÙ„Ù…Ù‡=Ù„Ù…Ù†Ø¹ ÙƒÙ„Ù…Ù‡ Ø¨Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡
+â–Â¦ Ø§Ù„ØºØ§Ø¡ Ù…Ù†Ø¹ = Ù„Ø§Ù„ØºØ§Ø¡ Ù…Ù†Ø¹ Ø§Ù„ÙƒÙ„Ù…Ù‡ 
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
-if MsgText[1]== 'ã2' then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…2' then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local text = [[
-1- ? ÇæÇãÑ ÇáæÖÚ ááãÌãæÚå ?
+1- âª Ø§ÙˆØ§Ù…Ø± Ø§Ù„ÙˆØ¶Ø¹ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ â«
   
-??ÖÚ ÇáÊÑÍíÈ ? áæÖÚ ÊÑÍíÈ  
-??ÖÚ ÇáŞæÇäíä ? áæÖÚ ÇáŞæÇäíä 
-??ÖÚ æÕİ ? áæÖÚ æÕİ  
-??ÖÚ ÑÇÈØ ? áæÖÚ ÇáÑÇÈØ  
-??ÇáÜÑÇÈÜØ ? áÚÑÖ ÇáÑÇÈØ  
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-2- ? ÇæÇãÑ ÑÄíÉ ÇáÇÚÏÇÏÇÊ ?
+â–â”‡Ø¶Ø¹ Ø§Ù„ØªØ±Ø­ÙŠØ¨ â‡œ Ù„ÙˆØ¶Ø¹ ØªØ±Ø­ÙŠØ¨  
+â–â”‡Ø¶Ø¹ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† â‡œ Ù„ÙˆØ¶Ø¹ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† 
+â–â”‡Ø¶Ø¹ ÙˆØµÙ â‡œ Ù„ÙˆØ¶Ø¹ ÙˆØµÙ  
+â–â”‡Ø¶Ø¹ Ø±Ø§Ø¨Ø· â‡œ Ù„ÙˆØ¶Ø¹ Ø§Ù„Ø±Ø§Ø¨Ø·  
+â–â”‡Ø§Ù„Ù€Ø±Ø§Ø¨Ù€Ø· â‡œ Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø±Ø§Ø¨Ø·  
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+2- âª Ø§ÙˆØ§Ù…Ø± Ø±Ø¤ÙŠØ© Ø§Ù„Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª â«
 
-??ÇáãäÔÆííä: áÚÑÖ ÇáãäÔÆííä 
-??ÇáÇÏãäíå: áÚÑÖ  ÇáÇÏãäíå 
-??ÇáãÏÑÇÁ: áÚÑÖ  ÇáÇÏÇÑííä 
-??ÇáãßÊæãíä: áÚÑÖ  ÇáãßÊæãíä 
-??ÇáÍãÇíå: áÚÑÖ ßá ÇáÇÚÏÇÏÇÊ  
-??ÇáæÓÇÆØ: áÚÑÖ ÇÚÏÇÏÇÊ ÇáãíÏíÇ 
-??ÇáŞæÇäíä: áÚÑÖ  ÇáŞæÇäíä 
-??ÇáÇÚÏÇÏÇÊ: áÚÑÖ ÇÚÏÇÏÇÊ ÇáãÌãæÚå 
-??ÇáãÌãæÚå: áÚÑÖ ãÚáæãÇÊ ÇáãÌãæÚå
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+â–â”‡Ø§Ù„Ù…Ù†Ø´Ø¦ÙŠÙŠÙ†: Ù„Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù†Ø´Ø¦ÙŠÙŠÙ† 
+â–â”‡Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡: Ù„Ø¹Ø±Ø¶  Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡ 
+â–â”‡Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡: Ù„Ø¹Ø±Ø¶  Ø§Ù„Ø§Ø¯Ø§Ø±ÙŠÙŠÙ† 
+â–â”‡Ø§Ù„Ù…ÙƒØªÙˆÙ…ÙŠÙ†: Ù„Ø¹Ø±Ø¶  Ø§Ù„Ù…ÙƒØªÙˆÙ…ÙŠÙ† 
+â–â”‡Ø§Ù„Ø­Ù…Ø§ÙŠÙ‡: Ù„Ø¹Ø±Ø¶ ÙƒÙ„ Ø§Ù„Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª  
+â–â”‡Ø§Ù„ÙˆØ³Ø§Ø¦Ø·: Ù„Ø¹Ø±Ø¶ Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ù…ÙŠØ¯ÙŠØ§ 
+â–â”‡Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†: Ù„Ø¹Ø±Ø¶  Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† 
+â–â”‡Ø§Ù„Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª: Ù„Ø¹Ø±Ø¶ Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ 
+â–â”‡Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡: Ù„Ø¹Ø±Ø¶ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
-if MsgText[1]== 'ã3' then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…3' then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local text = [[
-????????
-¹??ÇæÇãÑ ÍãÇíÜå ÇáãÌãæÚå?
-????Ü????     
-???Şİá «» İÊÍ ?ÇáßÜÜÜá?
-????Şİá «» İÊÍ ?ÇáÊÜÇß?
-???Şİá «» İÊÍ ?ÇáİíÜÏíÜÜÜæ?
-???Şİá «» İÊÍ ?ÇáÕÜÜÜÜÜÜÜÜæÑ?
-???Şİá «» İÊÍ ?ÇáãáÕŞÇÊ?
-???Şİá «» İÊÍ ?ÇáãÊÍÑßå?
-???Şİá «» İÊÍ ?ÇáÈÕãÜÜÇÊ?
-???Şİá «» İÊÍ ?ÇáÏÑÏÔÜÜÜå?
-???Şİá «» İÊÍ ?ÇáÜÜÑæÇÈÜÜÜØ?
-???Şİá «» İÊÍ ?ÇáÈÜÜÜæÊÜÜÇÊ?
-???Şİá «» İÊÍ ?ÇáÊÚÜÜÏíÜÜá?
-???Şİá «» İÊÍ ?ÇáãÚÑİÜÜÇÊ?
-???Şİá «» İÊÍ ?ÇáßÜÜÜáÇíÜÔ?
-???Şİá «» İÊÍ ?ÇáÊÜÜÜßÜÜÜÜÜÑÇÑ?
-???Şİá «» İÊÍ ?ÇáÌÜÜåÜÜÜÜÜÇÊ?
-???Şİá «» İÊÍ ?ÇáÇäÜÜÜáÇíÜÜä?
-???Şİá «» İÊÍ ?ÇáÊæÌíÜÜÜÜå?
-???Şİá «» İÊÍ ?ÇáÏÎæá ÈÇáÑÇÈØ?
-????Şİá «» İÊÍ ?ÇáÈæÊÇÊ ÈÇáØÑÏ?
-????Ü????     
-²??ÇáŞİá ÈÇáÊŞííÜÏ?
-????Ü????                                                                                        
-???Şİá «» İÊÍ ?ÇáÜÜÕÜÜÜÜÜÜæÑ ÈÇáÊŞííÜÏ?
-???Şİá «» İÊÍ ?ÇáÜÜÑæÇÈÜÜØ ÈÇáÊŞííÜÏ?
-???Şİá «» İÊÍ ?ÇáãÊÍÑßå ÈÇáÊŞííÜÏ?
-???Şİá «» İÊÍ ?ÇáİíÜÜÜÏíÜÜæ ÈÇáÊŞííÏ?
-???Şİá «» İÊÍ ?ÇáÊæÌíÜÜå ÈÇáÊŞííÜÜÏ? 
-????Ü????
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+â”„â”€â”…â•â•â”…â”€â”„
+Â¹â†«â¬Ø§ÙˆØ§Ù…Ø± Ø­Ù…Ø§ÙŠÙ€Ù‡ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡â­
+â”„â”€â”…â•Ù€â•â”…â”€â”„     
+ğŸ“µâ•¿Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ÙƒÙ€Ù€Ù€Ù„â­
+ğŸ™‹â€â™‚â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ØªÙ€Ø§Ùƒâ­
+ğŸ“½â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ÙÙŠÙ€Ø¯ÙŠÙ€Ù€Ù€Ùˆâ­
+ğŸŒ„â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ØµÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€ÙˆØ±â­
+ğŸš«â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ù…Ù„ØµÙ‚Ø§Øªâ­
+ğŸ­â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡â­
+ğŸ”‡â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ø¨ØµÙ…Ù€Ù€Ø§Øªâ­
+ğŸ¤â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ø¯Ø±Ø¯Ø´Ù€Ù€Ù€Ù‡â­
+ğŸ–‡â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ù€Ù€Ø±ÙˆØ§Ø¨Ù€Ù€Ù€Ø·â­
+ğŸ¤–â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ø¨Ù€Ù€Ù€ÙˆØªÙ€Ù€Ø§Øªâ­
+ğŸ–Šâ”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ØªØ¹Ù€Ù€Ø¯ÙŠÙ€Ù€Ù„â­
+ğŸ«â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ù…Ø¹Ø±ÙÙ€Ù€Ø§Øªâ­
+ğŸ“â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ÙƒÙ€Ù€Ù€Ù„Ø§ÙŠÙ€Ø´â­
+â™»ï¸â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ØªÙ€Ù€Ù€ÙƒÙ€Ù€Ù€Ù€Ù€Ø±Ø§Ø±â­
+ğŸ“â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ø¬Ù€Ù€Ù‡Ù€Ù€Ù€Ù€Ù€Ø§Øªâ­
+ğŸŒâ”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ø§Ù†Ù€Ù€Ù€Ù„Ø§ÙŠÙ€Ù€Ù†â­
+ğŸ”šâ”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ØªÙˆØ¬ÙŠÙ€Ù€Ù€Ù€Ù‡â­
+ğŸš«â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ø§Ù„Ø±Ø§Ø¨Ø·â­
+ğŸŒâ€â™‚â•½Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ø¨ÙˆØªØ§Øª Ø¨Ø§Ù„Ø·Ø±Ø¯â­
+â”„â”€â”…â•Ù€â•â”…â”€â”„     
+Â²â†«â¬Ø§Ù„Ù‚ÙÙ„ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠÙ€Ø¯â­
+â”„â”€â”…â•Ù€â•â”…â”€â”„                                                                                        
+ğŸ“¸â•¿Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ù€Ù€ØµÙ€Ù€Ù€Ù€Ù€Ù€ÙˆØ± Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠÙ€Ø¯â­
+ğŸ”—â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ù€Ù€Ø±ÙˆØ§Ø¨Ù€Ù€Ø· Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠÙ€Ø¯â­
+ğŸ­â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠÙ€Ø¯â­
+ğŸ“½â”‚Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ÙÙŠÙ€Ù€Ù€Ø¯ÙŠÙ€Ù€Ùˆ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠØ¯â­
+ğŸ”’â•½Ù‚ÙÙ„ Â«Â» ÙØªØ­ â¬Ø§Ù„ØªÙˆØ¬ÙŠÙ€Ù€Ù‡ Ø¨Ø§Ù„ØªÙ‚ÙŠÙŠÙ€Ù€Ø¯â­ 
+â”„â”€â”…â•Ù€â•â”…â”€â”„
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
-if MsgText[1]== 'ã4' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…4' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local text = [[
-??ÇæÇãÑ ÇáÎÏãå  ?
+â–â”‡Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø®Ø¯Ù…Ù‡  âœ“
 
-??ÇíÏí ? áÚÑÖ ÕæÑÊß + ãÚáæãÇÊß 
-??ÇíÏíí ? áÚÑÖ ÇíÏíß 
-??ÇíÏí ÈÇáÑÏ ? áÚÑÖ ÇíÏí ÇáÔÎÕ 
-??ÌåÇÊí ? áãÚÑİå ÚÏÏ ÌåÇÊß 
-??ÇáÑÇÈØ ? áÓÎÑÇÌ ÑÇÈØ ÇáãÌãæÚå
-??ãÚáæãÇÊí ? áÚÑÖ ãÚáæãÇÊß 
-??ÇáÇáÚÇÈ ? áÚÑÖ ÇáÚÇÈ ÇáÈæÊ 
-??äŞÇØí ? áãÚÑİå ÚÏÏ äŞÇØß
-??ÈíÚ äŞÇØí + ÇáÚÏÏ ? áÈíÚ äŞÇØß 
-??ÇáÓæÑÓ ? áÚÑÖ ÓæÑÓ ÇáÈæÊ 
-??ÇáÑÊÈå ÈÇáÑÏ ? áãÚÑİå ÑÊÈÉ ÇáÔÎÕ
-??ÇáÊİÇÚá+ÇáãÚÑİ ?ÊİÇÚá ÇáÔÎÕ 
-??ßÔİ ÈÇáÑÏ ? ãÚáæãÇÊ ÍÓÇÈå
-??ßÔİ ÈÇáãÚÑİ ? ãÚáæãÇÊ ÍÓÇÈå 
-??ØÑÏ ÇáÈæÊÇÊ ? áØÑÏ ßá ÇáÈæÊÇÊ
-??ØÑÏ ÇáãÍĞæİíä ? áØÑÏ ÇáãÍĞæİíä
-??ßÔİ ÇáÈæÊÇÊ ? ÚÏÏ ÇáÈæÊÇÊ 
-??ÑÇÈØ ÇáÍĞİ ? áÍĞİ ÍÓÇÈß
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+â–â”‡Ø§ÙŠØ¯ÙŠ â‡œ Ù„Ø¹Ø±Ø¶ ØµÙˆØ±ØªÙƒ + Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙƒ 
+â–â”‡Ø§ÙŠØ¯ÙŠÙŠ â‡œ Ù„Ø¹Ø±Ø¶ Ø§ÙŠØ¯ÙŠÙƒ 
+â–â”‡Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„Ø±Ø¯ â‡œ Ù„Ø¹Ø±Ø¶ Ø§ÙŠØ¯ÙŠ Ø§Ù„Ø´Ø®Øµ 
+â–â”‡Ø¬Ù‡Ø§ØªÙŠ â‡œ Ù„Ù…Ø¹Ø±ÙÙ‡ Ø¹Ø¯Ø¯ Ø¬Ù‡Ø§ØªÙƒ 
+â–â”‡Ø§Ù„Ø±Ø§Ø¨Ø· â‡œ Ù„Ø³Ø®Ø±Ø§Ø¬ Ø±Ø§Ø¨Ø· Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡
+â–â”‡Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ â‡œ Ù„Ø¹Ø±Ø¶ Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙƒ 
+â–â”‡Ø§Ù„Ø§Ù„Ø¹Ø§Ø¨ â‡œ Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø¹Ø§Ø¨ Ø§Ù„Ø¨ÙˆØª 
+â–â”‡Ù†Ù‚Ø§Ø·ÙŠ â‡œ Ù„Ù…Ø¹Ø±ÙÙ‡ Ø¹Ø¯Ø¯ Ù†Ù‚Ø§Ø·Ùƒ
+â–â”‡Ø¨ÙŠØ¹ Ù†Ù‚Ø§Ø·ÙŠ + Ø§Ù„Ø¹Ø¯Ø¯ â‡œ Ù„Ø¨ÙŠØ¹ Ù†Ù‚Ø§Ø·Ùƒ 
+â–â”‡Ø§Ù„Ø³ÙˆØ±Ø³ â‡œ Ù„Ø¹Ø±Ø¶ Ø³ÙˆØ±Ø³ Ø§Ù„Ø¨ÙˆØª 
+â–â”‡Ø§Ù„Ø±ØªØ¨Ù‡ Ø¨Ø§Ù„Ø±Ø¯ â‡œ Ù„Ù…Ø¹Ø±ÙÙ‡ Ø±ØªØ¨Ø© Ø§Ù„Ø´Ø®Øµ
+â–â”‡Ø§Ù„ØªÙØ§Ø¹Ù„+Ø§Ù„Ù…Ø¹Ø±Ù â‡œØªÙØ§Ø¹Ù„ Ø§Ù„Ø´Ø®Øµ 
+â–â”‡ÙƒØ´Ù Ø¨Ø§Ù„Ø±Ø¯ â‡œ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø­Ø³Ø§Ø¨Ù‡
+â–â”‡ÙƒØ´Ù Ø¨Ø§Ù„Ù…Ø¹Ø±Ù â‡œ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø­Ø³Ø§Ø¨Ù‡ 
+â–â”‡Ø·Ø±Ø¯ Ø§Ù„Ø¨ÙˆØªØ§Øª â‡œ Ù„Ø·Ø±Ø¯ ÙƒÙ„ Ø§Ù„Ø¨ÙˆØªØ§Øª
+â–â”‡Ø·Ø±Ø¯ Ø§Ù„Ù…Ø­Ø°ÙˆÙÙŠÙ† â‡œ Ù„Ø·Ø±Ø¯ Ø§Ù„Ù…Ø­Ø°ÙˆÙÙŠÙ†
+â–â”‡ÙƒØ´Ù Ø§Ù„Ø¨ÙˆØªØ§Øª â‡œ Ø¹Ø¯Ø¯ Ø§Ù„Ø¨ÙˆØªØ§Øª 
+â–â”‡Ø±Ø§Ø¨Ø· Ø§Ù„Ø­Ø°Ù â‡œ Ù„Ø­Ø°Ù Ø­Ø³Ø§Ø¨Ùƒ
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
-if MsgText[1]== 'ã5' then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…5' then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local text =[[
-?? ÇæÇãÑ ÇáÑÏæÏ 
+âšœâ”‡ Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø±Ø¯ÙˆØ¯ 
 
-???ÇáÑÏæÏ ? áÚÑÖ ÇáÑÏæÏ ÇáãËÈÊå
-???ÇÖİ ÑÏ ? áÃÖÇİå ÑÏ ÌÏíÏ
-???ãÓÍ ÑÏ  ? ÇáÑÏ ÇáãÑÇÏ ãÓÍå
-???ãÓÍ ÇáÑÏæÏ ? áãÓÍ ßá ÇáÑÏæÏ
-???ÇáÑÏæÏ ÇáÚÇãå ? áãÚÑİ ÇáÑÏæÏ ÇáãËÈÊå ÚÇã 
-???ÇÖİ ÑÏ ÚÇã ? áÇÖÇİå ÑÏ áßá ÇáãÌãæÚÇÊ
-???ãÓÍ ÑÏ ÚÇã ? áãÓÍ ÇáÑÏ ÇáÚÇã 
-???ãÓÍ ÇáÑÏæÏ ÇáÚÇãå ? áãÓÍ ßá ÑÏæÏ ÇáÚÇãå
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-? ÇáÊİÚíá æ ÇáÊÚØíá ?
+ğŸ”»â”‡Ø§Ù„Ø±Ø¯ÙˆØ¯ â‡œ Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ù…Ø«Ø¨ØªÙ‡
+â™¦ï¸â”‡Ø§Ø¶Ù Ø±Ø¯ â‡œ Ù„Ø£Ø¶Ø§ÙÙ‡ Ø±Ø¯ Ø¬Ø¯ÙŠØ¯
+â™¦ï¸â”‡Ù…Ø³Ø­ Ø±Ø¯  â‡œ Ø§Ù„Ø±Ø¯ Ø§Ù„Ù…Ø±Ø§Ø¯ Ù…Ø³Ø­Ù‡
+â™¦ï¸â”‡Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ÙˆØ¯ â‡œ Ù„Ù…Ø³Ø­ ÙƒÙ„ Ø§Ù„Ø±Ø¯ÙˆØ¯
+â™¦ï¸â”‡Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ â‡œ Ù„Ù…Ø¹Ø±Ù Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ù…Ø«Ø¨ØªÙ‡ Ø¹Ø§Ù… 
+â™¦ï¸â”‡Ø§Ø¶Ù Ø±Ø¯ Ø¹Ø§Ù… â‡œ Ù„Ø§Ø¶Ø§ÙÙ‡ Ø±Ø¯ Ù„ÙƒÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª
+â™¦ï¸â”‡Ù…Ø³Ø­ Ø±Ø¯ Ø¹Ø§Ù… â‡œ Ù„Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… 
+ğŸ”ºâ”‡Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ â‡œ Ù„Ù…Ø³Ø­ ÙƒÙ„ Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+â´ Ø§Ù„ØªÙØ¹ÙŠÙ„ Ùˆ Ø§Ù„ØªØ¹Ø·ÙŠÙ„ âµ
 
-???ÊİÚíá «» ÊÚØíá  ? ÇáÑİÜÜÚ ?
-???ÊİÚíá «» ÊÚØíá  ? ÇáÑÏæÏ ?
-???ÊİÚíá «» ÊÚØíá  ?ÇáÇáÚÜÇÈ?
-???ÊİÚíá «» ÊÚØíá  ? ÇáÊÍĞíÑ ?
-???ÊİÚíá «» ÊÚØíá  ? ÇáÊÑÍíÈ ?
-???ÊİÚíá «» ÊÚØíá  ? ÇáÇíÏí ?
-???ÊİÚíá «» ÊÚØíá  ? ÇáÇíÏí ÈÇáÕæÑå ?
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+ğŸ‘¥â•¿ØªÙØ¹ÙŠÙ„ Â«Â» ØªØ¹Ø·ÙŠÙ„  â¬ Ø§Ù„Ø±ÙÙ€Ù€Ø¹ â­
+ğŸ—£â”‚ØªÙØ¹ÙŠÙ„ Â«Â» ØªØ¹Ø·ÙŠÙ„  â¬ Ø§Ù„Ø±Ø¯ÙˆØ¯ â­
+ğŸ•¹â”‚ØªÙØ¹ÙŠÙ„ Â«Â» ØªØ¹Ø·ÙŠÙ„  â¬Ø§Ù„Ø§Ù„Ø¹Ù€Ø§Ø¨â­
+ğŸ“¢â”‚ØªÙØ¹ÙŠÙ„ Â«Â» ØªØ¹Ø·ÙŠÙ„  â¬ Ø§Ù„ØªØ­Ø°ÙŠØ± â­
+ğŸ‘‹â”‚ØªÙØ¹ÙŠÙ„ Â«Â» ØªØ¹Ø·ÙŠÙ„  â¬ Ø§Ù„ØªØ±Ø­ÙŠØ¨ â­
+ğŸ†”â”‚ØªÙØ¹ÙŠÙ„ Â«Â» ØªØ¹Ø·ÙŠÙ„  â¬ Ø§Ù„Ø§ÙŠØ¯ÙŠ â­
+ğŸŒ…â•½ØªÙØ¹ÙŠÙ„ Â«Â» ØªØ¹Ø·ÙŠÙ„  â¬ Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡ â­
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
-if MsgText[1]== 'ã6' then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ù…6' then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local text = [[
-???? ÂæÂãÑ ÇáÊÓáíå?
-??????ãÑÍÈÂ ÚÒíÒí ¡
-???ÅáíÜß ÇæÇãÑ ÇáÊÓáíå ßÜ ÇáÊÇáí
-????Ü????
-???ÑİÚ «» ÊäÒíá ? ÒŞ ?
-???ÑİÚ «» ÊäÒíá ? ÈŞÑå ?
-???ÑİÚ «» ÊäÒíá ? ŞÑÏ ?
-???ÑİÚ «» ÊäÒíá ? ßáÈ ?
-???ÑİÚ «» ÊäÒíá ? ÍãÇÑ ?
-???ÑİÚ «» ÊäÒíá ? ÊíÓ ?
-???ÑİÚ «» ÊäÒíá ? ËæÑ ?
-???ÑİÚ «» ÊäÒíá ? ÏÌÇÌå ?
-?????ÑİÚ «» ÊäÒíá ? ĞÈÇäå ?
-???ÑİÚ «» ÊäÒíá ? ÈÕáå ?
-???ÑİÚ «» ÊäÒíá ? ßíßå ?
-???ÑİÚ «» ÊäÒíá ? ÒÇÍİ ?
-???ÑİÚ «» ÊäÒíá ? ÒæÌÊí ?
-???ÑİÚ «» ÊäÒíá ? ÒæÌí ?
-???ÑİÚ «» ? áŞáÈí ? ÊäÒíá «» ? ãä ŞáÈí?
-???? ØáÇŞ ? «» ? ÒæÇÌ ?
-????Ü????
+ğŸ¡â•¿â¬ Ø¢ÙˆØ¢Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡â­
+ğŸ™‹ğŸ½â€â™‚â”‚Ù…Ø±Ø­Ø¨Ø¢ Ø¹Ø²ÙŠØ²ÙŠ ØŒ
+ğŸ’¯â•½Ø¥Ù„ÙŠÙ€Ùƒ Ø§ÙˆØ§Ù…Ø± Ø§Ù„ØªØ³Ù„ÙŠÙ‡ ÙƒÙ€ Ø§Ù„ØªØ§Ù„ÙŠ
+â”„â”€â”…â•Ù€â•â”…â”€â”„
+??â•¿Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø²Ù‚ â­
+ğŸ„â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø¨Ù‚Ø±Ù‡ â­
+ğŸ’â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ù‚Ø±Ø¯ â­
+ğŸ•â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ ÙƒÙ„Ø¨ â­
+ğŸ¦“â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø­Ù…Ø§Ø± â­
+ğŸâ”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ ØªÙŠØ³ â­
+ğŸƒâ”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø«ÙˆØ± â­
+ğŸ“â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø¯Ø¬Ø§Ø¬Ù‡ â­
+ğŸ§šâ€â™‚ï¸â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø°Ø¨Ø§Ù†Ù‡ â­
+ğŸŒ°â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø¨ØµÙ„Ù‡ â­
+ğŸ°â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ ÙƒÙŠÙƒÙ‡ â­
+ğŸ¦â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø²Ø§Ø­Ù â­
+ğŸ‘°â”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø²ÙˆØ¬ØªÙŠ â­
+ğŸ¤µâ”‚Ø±ÙØ¹ Â«Â» ØªÙ†Ø²ÙŠÙ„ â¬ Ø²ÙˆØ¬ÙŠ â­
+â¤ï¸â”‚Ø±ÙØ¹ Â«Â» â¬ Ù„Ù‚Ù„Ø¨ÙŠ â­ ØªÙ†Ø²ÙŠÙ„ Â«Â» â¬ Ù…Ù† Ù‚Ù„Ø¨ÙŠâ­
+ğŸˆâ•½â¬ Ø·Ù„Ø§Ù‚ â­ Â«Â» â¬ Ø²ÙˆØ§Ø¬ â­
+â”„â”€â”…â•Ù€â•â”…â”€â”„
 
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
-if MsgText[1]== "ã ÇáãØæÑ" then
-if not msg.SudoBase then return "???ááãØæÑ ÇáÇÓÇÓí İŞØ  ??" end
+if MsgText[1]== "Ù… Ø§Ù„Ù…Ø·ÙˆØ±" then
+if not msg.SudoBase then return "ğŸ”…â”‚Ù„Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ ÙÙ‚Ø·  ğŸ–" end
 local text = [[
-???????ÇæÇãÑ ÇáãØæÑ º ˜ ÊÇáí ... ?
+ğŸ‘¨ğŸ»â€âœˆï¸â”‡Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ù…Ø·ÙˆØ± Ø› Ú© ØªØ§Ù„ÙŠ ... â‡“
 
-??ÊİÚíá ? áÊİÚíá ÇáÈæÊ 
-??ÊÚØíá ? áÊÚØíá ÇáÈæÊ 
-??ÇÓã ÈæÊß + ÛÇÏÑ ? áØÑÏ ÇáÈæÊ
-??ãÓÍ ÇáãØæÑíä ? áãÓÍ ÇáãØæÑíä
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-??ÇĞÇÚå ? áäÔÑ ááãÌæÚÇÊ
-??ÇĞÇÚå ÎÇÕ ? áäÔÑ ÑÓÇáå ááÎÇÕ
-??ÇĞÇÚå ÚÇã ? áäÔÑ ÑÓÇáå ááßá 
-??ÇĞÇÚå ÚÇã ÈÇáÊæÌíå ?áäÔÑ ÈÇáÊæÌíå
-??ÊäÙíİ ÇáãÌãæÚÇÊ ? áãÓÍ ÇáãÌãæÚÇÊ Çáæåãíå  
-??ÊäÙíİ ÇáãÔÊÑßíä ? áãÓÍ ÇáãÔÊÑßíä Çáæåãííä 
-??ÊÍÏíË ? áÊÍÏíË ãáİÇÊ ÇáÈæÊ
-??ÊÍÏíË ÇáÓæÑÓ ?ÊÍÏíË ÇáÓæÑÓ 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+â–â”‡ØªÙØ¹ÙŠÙ„ â†­ Ù„ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª 
+â–â”‡ØªØ¹Ø·ÙŠÙ„ â†­ Ù„ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª 
+â–â”‡Ø§Ø³Ù… Ø¨ÙˆØªÙƒ + ØºØ§Ø¯Ø± â†­ Ù„Ø·Ø±Ø¯ Ø§Ù„Ø¨ÙˆØª
+â–â”‡Ù…Ø³Ø­ Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ† â†­ Ù„Ù…Ø³Ø­ Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ†
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+â–â”‡Ø§Ø°Ø§Ø¹Ù‡ â†­ Ù„Ù†Ø´Ø± Ù„Ù„Ù…Ø¬ÙˆØ¹Ø§Øª
+â–â”‡Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ â†­ Ù„Ù†Ø´Ø± Ø±Ø³Ø§Ù„Ù‡ Ù„Ù„Ø®Ø§Øµ
+â–â”‡Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… â†­ Ù„Ù†Ø´Ø± Ø±Ø³Ø§Ù„Ù‡ Ù„Ù„ÙƒÙ„ 
+â–â”‡Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… Ø¨Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ â†­Ù„Ù†Ø´Ø± Ø¨Ø§Ù„ØªÙˆØ¬ÙŠÙ‡
+â–â”‡ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª â†­ Ù„Ù…Ø³Ø­ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Ø§Ù„ÙˆÙ‡Ù…ÙŠÙ‡  
+â–â”‡ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† â†­ Ù„Ù…Ø³Ø­ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† Ø§Ù„ÙˆÙ‡Ù…ÙŠÙŠÙ† 
+â–â”‡ØªØ­Ø¯ÙŠØ« â†­ Ù„ØªØ­Ø¯ÙŠØ« Ù…Ù„ÙØ§Øª Ø§Ù„Ø¨ÙˆØª
+â–â”‡ØªØ­Ø¯ÙŠØ« Ø§Ù„Ø³ÙˆØ±Ø³ â†­ØªØ­Ø¯ÙŠØ« Ø§Ù„Ø³ÙˆØ±Ø³ 
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
 
-if MsgText[1]== 'ÇæÇãÑ ÇáÑÏ' then
-if not msg.Director then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ,ÇáãäÔÆ,ÇáãÏíÑ} İŞØ  \n??" end
+if MsgText[1]== 'Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø±Ø¯' then
+if not msg.Director then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø¯ÙŠØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 local text = [[
-????????     
-??????ÌãíÚ ÇæÇãÑ ÇáÑÏæÏ ?
-????Ü????
-???ÇáÑÏæÏ «» áÚÑÖ ÇáÑÏæÏ ÇáãËÈÊå
-???ÇÖİ ÑÏ «» áÃÖÇİå ÑÏ ÌÏíÏ
-???ãÓÍ ÑÏ «» ÇáÑÏ ÇáãÑÇÏ ãÓÍå
-???ãÓÍ ÇáÑÏæÏ «» áãÓÍ ßá ÇáÑÏæÏ
-???ÇáÑÏæÏ ÇáÚÇãå «» áãÚÑİ ÇáÑÏæÏ ÇáãËÈÊå ÚÇã 
-???ÇÖİ ÑÏ ÚÇã «» áÇÖÇİå ÑÏ áßá ÇáãÌãæÚÇÊ
-???ãÓÍ ÑÏ ÚÇã  «» áãÓÍ ÇáÑÏ ÇáÚÇã 
-???ãÓÍ ÇáÑÏæÏ ÇáÚÇãå «» áãÓÍ ßá ÑÏæÏ ÇáÚÇãå
-????Ü????
-??*?* ÑÇÓáäí ááÇÓÊİÓÇÑ ??? ]]..SUDO_USER
+â”„â”€â”…â•â•â”…â”€â”„     
+ğŸ‘¨â€ğŸ’»â†«â¬Ø¬Ù…ÙŠØ¹ Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø±Ø¯ÙˆØ¯ â­
+â”„â”€â”…â•Ù€â•â”…â”€â”„
+ğŸ”»â•¿Ø§Ù„Ø±Ø¯ÙˆØ¯ Â«Â» Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ù…Ø«Ø¨ØªÙ‡
+â™¦ï¸â”‚Ø§Ø¶Ù Ø±Ø¯ Â«Â» Ù„Ø£Ø¶Ø§ÙÙ‡ Ø±Ø¯ Ø¬Ø¯ÙŠØ¯
+â™¦ï¸â”‚Ù…Ø³Ø­ Ø±Ø¯ Â«Â» Ø§Ù„Ø±Ø¯ Ø§Ù„Ù…Ø±Ø§Ø¯ Ù…Ø³Ø­Ù‡
+â™¦ï¸â”‚Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ÙˆØ¯ Â«Â» Ù„Ù…Ø³Ø­ ÙƒÙ„ Ø§Ù„Ø±Ø¯ÙˆØ¯
+â™¦ï¸â”‚Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ Â«Â» Ù„Ù…Ø¹Ø±Ù Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ù…Ø«Ø¨ØªÙ‡ Ø¹Ø§Ù… 
+â™¦ï¸â”‚Ø§Ø¶Ù Ø±Ø¯ Ø¹Ø§Ù… Â«Â» Ù„Ø§Ø¶Ø§ÙÙ‡ Ø±Ø¯ Ù„ÙƒÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª
+â™¦ï¸â”‚Ù…Ø³Ø­ Ø±Ø¯ Ø¹Ø§Ù…  Â«Â» Ù„Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… 
+ğŸ”ºâ•½Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ Â«Â» Ù„Ù…Ø³Ø­ ÙƒÙ„ Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡
+â”„â”€â”…â•Ù€â•â”…â”€â”„
+ğŸ’­*â”‚* Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ù„Ø§Ø³ØªÙØ³Ø§Ø± ğŸ’¡â†­ ]]..SUDO_USER
 sendMsg(msg.chat_id_,msg.id_,text)
 return false
 end
 
-if MsgText[1] == "ÊİÚíá" and MsgText[2] == "ÇØÑÏäí"  then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„" and MsgText[2] == "Ø§Ø·Ø±Ø¯Ù†ÙŠ"  then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if not redis:get(max..'lave_me'..msg.chat_id_) then 
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇáãÛÇÏÑå ÈÇáÊÇßíÏ Êã ÊİÚíáåÇ\n?" 
+return "ğŸ™‹ğŸ»â€â™‚*â”‚*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â”‚* Ø§Ù„Ù…ØºØ§Ø¯Ø±Ù‡ Ø¨Ø§Ù„ØªØ§ÙƒÙŠØ¯ ØªÙ… ØªÙØ¹ÙŠÙ„Ù‡Ø§\nâœ“" 
 else 
 redis:del(max..'lave_me'..msg.chat_id_) 
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊİÚíá ÇáãÛÇÏÑå \n?" 
+return "ğŸ™‹ğŸ»â€â™‚*â”‚*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â”‚* ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ù…ØºØ§Ø¯Ø±Ù‡ \nâœ“" 
 end 
 end
-if MsgText[1] == "ÊÚØíá" and MsgText[2] == "ÇØÑÏäí" then
-if not msg.Admin then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáÇÏãä,ÇáãÏíÑ,ÇáãäÔÆ,ÇáãØæÑ} İŞØ  \n??" end
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„" and MsgText[2] == "Ø§Ø·Ø±Ø¯Ù†ÙŠ" then
+if not msg.Admin then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ø§Ø¯Ù…Ù†,Ø§Ù„Ù…Ø¯ÙŠØ±,Ø§Ù„Ù…Ù†Ø´Ø¦,Ø§Ù„Ù…Ø·ÙˆØ±} ÙÙ‚Ø·  \nğŸ’¥" end
 if redis:get(max..'lave_me'..msg.chat_id_) then 
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* ÇáãÛÇÏÑå ãä ŞÈá ÇáÈæÊ ÈÇáÊÃßíÏ ãÚØáå\n?" 
+return "ğŸ™‹ğŸ»â€â™‚*â”‚*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â”‚* Ø§Ù„Ù…ØºØ§Ø¯Ø±Ù‡ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ø¨ÙˆØª Ø¨Ø§Ù„ØªØ£ÙƒÙŠØ¯ Ù…Ø¹Ø·Ù„Ù‡\nâœ“" 
 else
 redis:set(max..'lave_me'..msg.chat_id_,true)  
-return "?????*?*ÃåáÇ ÚÒíÒí "..msg.TheRankCmd.."\n??*?* Êã ÊÚØíá ÇáãÛÇÏÑå ãä ŞÈá ÇáÈæÊ\n?" 
+return "ğŸ™‹ğŸ»â€â™‚*â”‚*Ø£Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ "..msg.TheRankCmd.."\nğŸ“¡*â”‚* ØªÙ… ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ù…ØºØ§Ø¯Ø±Ù‡ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ø¨ÙˆØª\nâœ“" 
 end   
 end
 
-if MsgText[1] == "ÇØÑÏäí" or MsgText[1] == "ÇÍÙÑäí" then
+if MsgText[1] == "Ø§Ø·Ø±Ø¯Ù†ÙŠ" or MsgText[1] == "Ø§Ø­Ø¸Ø±Ù†ÙŠ" then
 if not redis:get(max..'lave_me'..msg.chat_id_) then
-if msg.Admin then return "??*?*áÇ ÇÓÊØíÚ ØÑÏ ÇáãÏÑÇÁ æÇáÇÏãäíå æÇáãäÔÆíä  \n??" end
+if msg.Admin then return "â™¦ï¸*â”‚*Ù„Ø§ Ø§Ø³ØªØ·ÙŠØ¹ Ø·Ø±Ø¯ Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡ ÙˆØ§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡ ÙˆØ§Ù„Ù…Ù†Ø´Ø¦ÙŠÙ†  \nğŸ’¥" end
 kick_user(msg.sender_user_id_,msg.chat_id_,function(arg,data)
 if data.ID == "Ok" then
 StatusLeft(msg.chat_id_,msg.sender_user_id_)
-send_msg(msg.sender_user_id_,"??????| ÇåáÇ ÚÒíÒí , áŞÏ Êã ØÑÏß ãä ÇáãÌãæÚå ÈÇãÑ ãäß \n??| ÇĞÇ ßÇä åĞÇ ÈÇáÎØÃ Çæ ÇÑÏÊ ÇáÑÌæÚ ááãÌãæÚå \n\n???İåĞÇ ÑÇÈØ ÇáãÌãæÚå ??\n???"..Flter_Markdown(redis:get(max..'group:name'..msg.chat_id_)).." :\n\n["..redis:get(max..'linkGroup'..msg.chat_id_).."]\n")
-sendMsg(msg.chat_id_,msg.id_,"??| áŞÏ Êã ØÑÏß ÈäÌÇÍ , ÇÑÓáÊ áß ÑÇÈØ ÇáãÌãæÚå İí ÇáÎÇÕ ÇĞÇ æÕáÊ áß ÊÓÊØíÚ ÇáÑÌæÚ ãÊì ÔÆÊ ")
+send_msg(msg.sender_user_id_,"ğŸ‘¨ğŸ¼â€âš•ï¸| Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ , Ù„Ù‚Ø¯ ØªÙ… Ø·Ø±Ø¯Ùƒ Ù…Ù† Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ Ø¨Ø§Ù…Ø± Ù…Ù†Ùƒ \nğŸ”–| Ø§Ø°Ø§ ÙƒØ§Ù† Ù‡Ø°Ø§ Ø¨Ø§Ù„Ø®Ø·Ø£ Ø§Ùˆ Ø§Ø±Ø¯Øª Ø§Ù„Ø±Ø¬ÙˆØ¹ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ \n\nğŸ”–â”‚ÙÙ‡Ø°Ø§ Ø±Ø§Ø¨Ø· Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ğŸ’¯\nğŸŒ¿â”‚"..Flter_Markdown(redis:get(max..'group:name'..msg.chat_id_)).." :\n\n["..redis:get(max..'linkGroup'..msg.chat_id_).."]\n")
+sendMsg(msg.chat_id_,msg.id_,"ğŸš¸| Ù„Ù‚Ø¯ ØªÙ… Ø·Ø±Ø¯Ùƒ Ø¨Ù†Ø¬Ø§Ø­ , Ø§Ø±Ø³Ù„Øª Ù„Ùƒ Ø±Ø§Ø¨Ø· Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ÙÙŠ Ø§Ù„Ø®Ø§Øµ Ø§Ø°Ø§ ÙˆØµÙ„Øª Ù„Ùƒ ØªØ³ØªØ·ÙŠØ¹ Ø§Ù„Ø±Ø¬ÙˆØ¹ Ù…ØªÙ‰ Ø´Ø¦Øª ")
 else
-sendMsg(msg.chat_id_,msg.id_,"??| áÇ ÇÓÊØíÚ ØÑÏß áÇäß ãÔÑİ İí ÇáãÌãæÚå  ")
+sendMsg(msg.chat_id_,msg.id_,"ğŸš¸| Ù„Ø§ Ø§Ø³ØªØ·ÙŠØ¹ Ø·Ø±Ø¯Ùƒ Ù„Ø§Ù†Ùƒ Ù…Ø´Ø±Ù ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡  ")
 end
 end)
 return false
@@ -2806,71 +2806,71 @@ end
 
 end 
 
-if MsgText[1] == "ÓæÑÓ" or MsgText[1]=="ÇáÓæÑÓ" then
+if MsgText[1] == "Ø³ÙˆØ±Ø³" or MsgText[1]=="Ø§Ù„Ø³ÙˆØ±Ø³" then
 return [[
-?
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+â €
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-???????? | ãØæÑ ÇáÓæÑÓ : @MASx92
+â¦ğŸ™‹ğŸ»â€â™‚ï¸â© | Ù…Ø·ÙˆØ± Ø§Ù„Ø³ÙˆØ±Ø³ : @MASx92
 
-?? | ÇáŞäÇÉ ÇáÎÇÕÉ ÈÇáÓæÑÓ : @MasSource
+ğŸ“¡ | Ø§Ù„Ù‚Ù†Ø§Ø© Ø§Ù„Ø®Ø§ØµØ© Ø¨Ø§Ù„Ø³ÙˆØ±Ø³ : @MasSource
 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
 
 ]]
 end
 
 
-if MsgText[1] == "ÇáÊÇÑíÎ" then
-return "?\n??| ÇáÜÊÜÇÑíÜÎ : "..os.date("%Y/%m/%d")
+if MsgText[1] == "Ø§Ù„ØªØ§Ø±ÙŠØ®" then
+return "â–\nğŸ“†| Ø§Ù„Ù€ØªÙ€Ø§Ø±ÙŠÙ€Ø® : "..os.date("%Y/%m/%d")
 end
 
-if MsgText[1]== "ÎÑİÔÊí" then
-return '??*?*ÚÏÏ ÎÑİÔÊß ? ? '..(redis:get(max..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)..' ? \n??'
+if MsgText[1]== "Ø®Ø±ÙØ´ØªÙŠ" then
+return 'ğŸš¸*â”‡*Ø¹Ø¯Ø¯ Ø®Ø±ÙØ´ØªÙƒ â‡œ âª '..(redis:get(max..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)..' â« \nğŸ¾'
 end
 
-if MsgText[1] == 'ãÓÍ' and MsgText[2] == 'ÎÑİÔÊí'  then
+if MsgText[1] == 'Ù…Ø³Ø­' and MsgText[2] == 'Ø®Ø±ÙØ´ØªÙŠ'  then
 local rfih = (redis:get(max..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
-if rfih == 0 then  return "??*?*ÚĞÑÇ áÇ íæÌÏ ÎÑİÔÇÊ áß İí ÇáÈæÊ  ??" end
+if rfih == 0 then  return "âš ï¸*â”‚*Ø¹Ø°Ø±Ø§ Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø®Ø±ÙØ´Ø§Øª Ù„Ùƒ ÙÙŠ Ø§Ù„Ø¨ÙˆØª  âœ–ï¸" end
 redis:del(max..':edited:'..msg.chat_id_..':'..msg.sender_user_id_)
-return "??*?*Êã ãÓÍ {* "..rfih.." *} ãä ÎÑİÔÇÊß ??\n?"
+return "â™¦ï¸*â”‚*ØªÙ… Ù…Ø³Ø­ {* "..rfih.." *} Ù…Ù† Ø®Ø±ÙØ´Ø§ØªÙƒ â˜”ï¸\nâœ“"
 end
 
-if MsgText[1] == "ÊİÚíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí" or MsgText[1] == "ÊİÚíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ?" then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ" or MsgText[1] == "ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ â˜‘" then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 if redis:get(max..":UserNameChaneel") then
-return "???ÇåáÇ ÚÒíÒí ÇáãØæÑ \n???ÇáÇÔÊÑÇß ÈÇáÊÃßíÏ ãİÚá"
+return "ğŸ“‘â”‚Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± \nğŸ”–â”‚Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø¨Ø§Ù„ØªØ£ÙƒÙŠØ¯ Ù…ÙØ¹Ù„"
 else
 redis:setex(max..":ForceSub:"..msg.sender_user_id_,350,true)
-return "???ãÑÍÈÇ ÈÜß İí äÙÇã ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí\n???ÇáÇä ÇÑÓá ãÚÑİ ŞÜäÜÇÊÜß"
+return "ğŸ“‘â”‚Ù…Ø±Ø­Ø¨Ø§ Ø¨Ù€Ùƒ ÙÙŠ Ù†Ø¸Ø§Ù… Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ\nğŸ”–â”‚Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ù…Ø¹Ø±Ù Ù‚Ù€Ù†Ù€Ø§ØªÙ€Ùƒ"
 end
 end
 
-if MsgText[1] == "ÊÚØíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí" or MsgText[1] == "ÊÚØíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??" then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ" or MsgText[1] == "ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ â™»ï¸" then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 local SubDel = redis:del(max..":UserNameChaneel")
 if SubDel == 1 then
-return "???Êã ÊÚØíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí . \n?"
+return "ğŸ”–â”‚ØªÙ… ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ . \nâœ“"
 else
-return "???ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ÈÇáİÚá ãÚØá . \n?"
+return "ğŸ”–â”‚Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ Ø¨Ø§Ù„ÙØ¹Ù„ Ù…Ø¹Ø·Ù„ . \nâœ“"
 end
 end
 
-if MsgText[1] == "ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí" or MsgText[1] == "ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??" then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ" or MsgText[1] == "Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ âš ï¸" then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 local UserChaneel = redis:get(max..":UserNameChaneel")
 if UserChaneel then
-return "???ÇåáÇ ÚÒíÒí ÇáãØæÑ \n???ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ááŞäÇÉ : ["..UserChaneel.."]\n?"
+return "ğŸ”–â”‚Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± \nğŸ”–â”‚Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ Ù„Ù„Ù‚Ù†Ø§Ø© : ["..UserChaneel.."]\nâœ“"
 else
-return "???áÇ íæÌÏ ŞäÇÉ ãİÚáå Ú ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí. \n?"
+return "ğŸ”–â”‚Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù‚Ù†Ø§Ø© Ù…ÙØ¹Ù„Ù‡ Ø¹ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ. \nâœ“"
 end
 end
 
-if MsgText[1] == "ÊÛííÑ ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí" or MsgText[1] == "ÊÛííÑ ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??" then
-if not msg.SudoBase then return"??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if MsgText[1] == "ØªØºÙŠÙŠØ± Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ" or MsgText[1] == "ØªØºÙŠÙŠØ± Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ ğŸ”" then
+if not msg.SudoBase then return"â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:setex(max..":ForceSub:"..msg.sender_user_id_,350,true)
-return "???ãÑÍÈÇ ÈÜß İí äÙÇã ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí\n???ÇáÇä ÇÑÓá ãÚÑİ ŞÜäÜÇÊÜß"
+return "ğŸ“‘â”‚Ù…Ø±Ø­Ø¨Ø§ Ø¨Ù€Ùƒ ÙÙŠ Ù†Ø¸Ø§Ù… Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ\nğŸ”–â”‚Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ù„ Ù…Ø¹Ø±Ù Ù‚Ù€Ù†Ù€Ø§ØªÙ€Ùƒ"
 end
 
 
@@ -2890,45 +2890,45 @@ mmd = redis:get(max..'addcmd'..msg.chat_id_..msg.sender_user_id_)
 if mmd then
 redis:sadd(max..'CmDlist:'..msg.chat_id_,msg.text)
 redis:hset(max..'CmD:'..msg.chat_id_,msg.text,mmd)
-sendMsg(msg.chat_id_,msg.id_,'??????ÇåáÇ ÚÒíÒí \n???Êã ÊËÈíÊ ÇáÇãÑ ÇáÌÏíÏ\n?')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ™‹ğŸ»â€â™‚â•¿Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ \nğŸ“¡â•½ØªÙ… ØªØ«Ø¨ÙŠØª Ø§Ù„Ø§Ù…Ø± Ø§Ù„Ø¬Ø¯ÙŠØ¯\nâœ“')
 redis:del(max..'addcmd'..msg.chat_id_..msg.sender_user_id_)
 end
 
-if Black:match('ÊÛíÑ ÇãÑ (.*)') then
-if not msg.Kara then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãäÔÆ ÇáÇÓÇÓí,ÇáãØæÑ,ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
-local cmd = Black:match('ÊÛíÑ ÇãÑ (.*)') 
+if Black:match('ØªØºÙŠØ± Ø§Ù…Ø± (.*)') then
+if not msg.Kara then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ,Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
+local cmd = Black:match('ØªØºÙŠØ± Ø§Ù…Ø± (.*)') 
 redis:setex(max..'addcmd'..msg.chat_id_..msg.sender_user_id_,120,cmd)
-sendMsg(msg.chat_id_,msg.id_,'??????ÇåáÇ Èß ÚÒíÒí\n???ÇáÇãÑ Çáí ÊÑíÏ ÊÛíÑå Çáí  >'..cmd..'< \n???ÇÑÓáå ÇáÇä\n? ')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ™‹ğŸ»â€â™‚â•¿Ø§Ù‡Ù„Ø§ Ø¨Ùƒ Ø¹Ø²ÙŠØ²ÙŠ\nâ™¦ï¸â”‚Ø§Ù„Ø§Ù…Ø± Ø§Ù„ÙŠ ØªØ±ÙŠØ¯ ØªØºÙŠØ±Ù‡ Ø§Ù„ÙŠ  >'..cmd..'< \nğŸ“¡â•½Ø§Ø±Ø³Ù„Ù‡ Ø§Ù„Ø§Ù†\nâœ“ ')
 end
 
-if Black and (Black:match('^delcmd (.*)') or Black:match('^ãÓÍ ÇãÑ (.*)')) then
-if not msg.Kara then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãäÔÆ ÇáÇÓÇÓí,ÇáãØæÑ,ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
-local cmd = Black:match('^delcmd (.*)') or Black:match('^ãÓÍ ÇãÑ (.*)')
+if Black and (Black:match('^delcmd (.*)') or Black:match('^Ù…Ø³Ø­ Ø§Ù…Ø± (.*)')) then
+if not msg.Kara then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ,Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
+local cmd = Black:match('^delcmd (.*)') or Black:match('^Ù…Ø³Ø­ Ø§Ù…Ø± (.*)')
 redis:hdel(max..'CmD:'..msg.chat_id_,cmd)
 redis:srem(max..'CmDlist:'..msg.chat_id_,cmd)
-sendMsg(msg.chat_id_,msg.id_,"??????ÇåáÇ ÚÒíÒí\nÇáÇãÑ >"..cmd.."\n??? Êã ãÓÍå ãä ŞÇÆãÉ ÇáÇæÇãÑ\n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â•¿Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nØ§Ù„Ø§Ù…Ø± >"..cmd.."\nğŸ“¡â•½ ØªÙ… Ù…Ø³Ø­Ù‡ Ù…Ù† Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§ÙˆØ§Ù…Ø±\nâœ“")
 end
-if Black == 'ãÓÍ ŞÇÆãÉ ÇáÇæÇãÑ' or Black == 'ãÓÍ ŞÇÆãÉ ÇáÇæÇãÑ' then
-if not msg.Kara then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãäÔÆ ÇáÇÓÇÓí,ÇáãØæÑ,ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if Black == 'Ù…Ø³Ø­ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§ÙˆØ§Ù…Ø±' or Black == 'Ù…Ø³Ø­ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§ÙˆØ§Ù…Ø±' then
+if not msg.Kara then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ,Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 redis:del(max..'CmD:'..msg.chat_id_)
 redis:del(max..'CmDlist:'..msg.chat_id_)
-sendMsg(msg.chat_id_,msg.id_,"??| ÇåáÇ ÚÒíÒí Êã ãÓÍ ŞÇÆãÉ ÇáÇæÇãÑ")
+sendMsg(msg.chat_id_,msg.id_,"â™¦ï¸| Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ ØªÙ… Ù…Ø³Ø­ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§ÙˆØ§Ù…Ø±")
 end
-if Black == "ŞÇÆãÉ ÇáÇæÇãÑ" then
-if not msg.Kara then return "??*?*åĞÇ ÇáÇãÑ íÎÕ {ÇáãäÔÆ ÇáÇÓÇÓí,ÇáãØæÑ,ÇáãØæÑ ÇáÇÓÇÓí} İŞØ  \n??" end
+if Black == "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§ÙˆØ§Ù…Ø±" then
+if not msg.Kara then return "â™¦ï¸*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø§Ù…Ø± ÙŠØ®Øµ {Ø§Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ,Ø§Ù„Ù…Ø·ÙˆØ±,Ø§Ù„Ù…Ø·ÙˆØ± Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ} ÙÙ‚Ø·  \nğŸ’¥" end
 local CmDlist = redis:smembers(max..'CmDlist:'..msg.chat_id_)
-local t = '??| ŞÇÆãÉ ÇáÇæÇãÑ : \n'
+local t = 'â™¦ï¸| Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§ÙˆØ§Ù…Ø± : \n'
 for k,v in pairs(CmDlist) do
 mmdi = redis:hget(max..'CmD:'..msg.chat_id_,v)
 t = t..k..") "..v.." > "..mmdi.."\n" 
 end
 if #CmDlist == 0 then
-t = '?| ÚÒíÒí áã ÊŞã È ÇÖÇİå ÇãÑ !'
+t = 'â›”| Ø¹Ø²ÙŠØ²ÙŠ Ù„Ù… ØªÙ‚Ù… Ø¨ Ø§Ø¶Ø§ÙÙ‡ Ø§Ù…Ø± !'
 end
 sendMsg(msg.chat_id_,msg.id_,t)
 end
 
-if Text == 'time' or Text == 'ÇáæŞÊ' and KaraJoinChannel(msg) then
+if Text == 'time' or Text == 'Ø§Ù„ÙˆÙ‚Øª' and KaraJoinChannel(msg) then
 local colors = {'blue','green','yellow','magenta','Orange','DarkOrange','red'}
 local fonts = {'mathbf','mathit','mathfrak','mathrm'}
 local url1 = 'http://latex.codecogs.com/png.download?'..'\\dpi{600}%20\\huge%20\\'..fonts[math.random(#fonts)]..'{{\\color{'..colors[math.random(#colors)]..'}'..os.date("%H:%M")..'}}'	
@@ -2937,7 +2937,7 @@ file = download_to_file(url1,'time.webp')
 print('TIMESSSS')
 sendDocument(msg.chat_id_,msg.id_,file,'',dl_cb,nil)
 end
-if Text:match('^tosticker$') or Text:match('^ÊÍæíá ãáÕŞ$') and tonumber(msg.reply_to_message_id_) > 0 then
+if Text:match('^tosticker$') or Text:match('^ØªØ­ÙˆÙŠÙ„ Ù…Ù„ØµÙ‚$') and tonumber(msg.reply_to_message_id_) > 0 then
 whoami()
 BD = '/home/root/.telegram-cli/data/'
 function tosticker(arg,data)
@@ -2949,19 +2949,19 @@ pathf = BD..'photo/'..data.content_.photo_.id_..'_(1).jpg'
 end
 sendSticker(msg.chat_id_,msg.id_,pathf,'')
 else
-sendMsg(msg.chat_id_,msg.id_,'??????ÚÒíÒí ÇáãÓÊÎÏã?????? \n???ÇáÇãÑ İŞØ ááÕæÑå\n?')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ™‹ğŸ»â€â™‚â•¿Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ğŸ‘¨ğŸ»â€âœˆï¸ \nğŸ“Œâ•½Ø§Ù„Ø§Ù…Ø± ÙÙ‚Ø· Ù„Ù„ØµÙˆØ±Ù‡\nâœ“')
 end
 end
 tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(msg.reply_to_message_id_)},tosticker, nil)
 end
 
-if Text == 'tophoto' or Text == 'ÕæÑå' and tonumber(msg.reply_to_message_id_) > 0 then
+if Text == 'tophoto' or Text == 'ØµÙˆØ±Ù‡' and tonumber(msg.reply_to_message_id_) > 0 then
 function tophoto(kara,max)   
 if max.content_.ID == "MessageSticker" then        
 local bd = max.content_.sticker_.sticker_.path_          
 sendPhoto(msg.chat_id_,msg.id_,bd,'')
 else
-sendMsg(msg.chat_id_,msg.id_,'??????ÚÒíÒí ÇáãÓÊÎÏã?????? \n???ÇáÇãÑ İŞØ ááãáÕŞ\n?')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ™‹ğŸ»â€â™‚â•¿Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ğŸ‘¨ğŸ»â€âœˆï¸ \nğŸ“Œâ•½Ø§Ù„Ø§Ù…Ø± ÙÙ‚Ø· Ù„Ù„Ù…Ù„ØµÙ‚\nâœ“')
 end
 end
 tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(msg.reply_to_message_id_)},tophoto, nil)
@@ -2974,7 +2974,7 @@ if not msg.SudoUser then
 local msg_pv = tonumber(redis:get(max..'user:'..msg.sender_user_id_..':msgs') or 0)
 if msg_pv > 5 then
 redis:setex(max..':mute_pv:'..msg.sender_user_id_,18000,true)   
-return sendMsg(msg.chat_id_,0,'*???* Êã ÍÙÑß ãä ÇáÈæÊ ÈÓÈÈ ÇáÊßÑÇÑ \n??') 
+return sendMsg(msg.chat_id_,0,'*ğŸ“›â”‚* ØªÙ… Ø­Ø¸Ø±Ùƒ Ù…Ù† Ø§Ù„Ø¨ÙˆØª Ø¨Ø³Ø¨Ø¨ Ø§Ù„ØªÙƒØ±Ø§Ø± \nğŸ› ') 
 end
 redis:setex(max..'user:'..msg.sender_user_id_..':msgs',2,msg_pv+1)
 end
@@ -2982,79 +2982,79 @@ end
 if msg.text=="/start" then
 
 if msg.SudoBase then
-local text = '??????ãäæÑ íŞáÈí ?\n???ÂäÊ ÂáãÜØÜæÑ ÂáÂÓÜÂÓÜí åäÂ ??\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\n\n???ÊÓÜÊØÜíÚş ÇáÊÍßã Èßá ÂáÂæÂãÜÑ ÂáãÜãÜæÌæÏåş ÈÇáßíÈæÑÏ ÇáÎÇÕ ÈÇáÈæÊ\n???İŞØ ÇÖÜÛØ Ú ÇáÇãÜÑ ÇáĞí ÊÑíÏ ÊäİíĞå'
+local text = 'ğŸ™‹ğŸ»â€â™‚â”ŠÙ…Ù†ÙˆØ± ÙŠÙ‚Ù„Ø¨ÙŠ â™¥\nğŸ”»â”ŠØ¢Ù†Øª Ø¢Ù„Ù…Ù€Ø·Ù€ÙˆØ± Ø¢Ù„Ø¢Ø³Ù€Ø¢Ø³Ù€ÙŠ Ù‡Ù†Ø¢ ğŸ› \nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\n\nğŸš¸â”ŠØªØ³Ù€ØªØ·Ù€ÙŠØ¹â€Œâ€ Ø§Ù„ØªØ­ÙƒÙ… Ø¨ÙƒÙ„ Ø¢Ù„Ø¢ÙˆØ¢Ù…Ù€Ø± Ø¢Ù„Ù…Ù€Ù…Ù€ÙˆØ¬ÙˆØ¯Ù‡â€Œâ€ Ø¨Ø§Ù„ÙƒÙŠØ¨ÙˆØ±Ø¯ Ø§Ù„Ø®Ø§Øµ Ø¨Ø§Ù„Ø¨ÙˆØª\nğŸ”ºâ”ŠÙÙ‚Ø· Ø§Ø¶Ù€ØºØ· Ø¹ Ø§Ù„Ø§Ù…Ù€Ø± Ø§Ù„Ø°ÙŠ ØªØ±ÙŠØ¯ ØªÙ†ÙÙŠØ°Ù‡'
 local keyboard = {
-{"ÖÚ ÇÓã ááÈæÊ ©","ÖÚ ÕæÑå ááÊÑÍíÈ ??"},
- {"ÊÚØíá ÇáÊæÇÕá ??","ÊİÚíá ÇáÊæÇÕá ??"},
-{"ÊÚØíá ÇáÈæÊ ÎÏãí","ÊİÚíá ÇáÈæÊ ÎÏãí","ÇáãØæÑíä ??"},
- {"ÇáãÔÊÑßíä ?","ÇáãÌãæÚÇÊ ??","ÇáÇÍÕÇÆíÇÊ ??"},
- {"ÇÖİ ÑÏ ÚÇã ?","ÇáÑÏæÏ ÇáÚÇãå ??"},
- {"ÇĞÇÚå ??","ÇĞÇÚå ÎÇÕ ??"},
-{"ÇĞÇÚå ÚÇã ??","ÇĞÇÚå ÚÇã ÈÇáÊæÌíå ??"},
- {"ÊÍÏíË ??","ŞÇÆãå ÇáÚÇã ??","ÇíÏíí??"},
-{"ÊÚØíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??","ÊİÚíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ?"},
-{"ÊÛííÑ ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??","ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??"},
-{"ÊäÙíİ ÇáãÔÊÑßíä ??","ÊäÙíİ ÇáãÌãæÚÇÊ ??"},
- {"äÓÎå ÇÍÊíÇØíå ááãÌãæÚÇÊ"},
- {"ŞäÇÉ ÇáÓæÑÓ ??"},
- {"ÊÍÏíË ÇáÓæÑÓ ??"},
- {"ÇáÛÇÁ ÇáÇãÑ ??"}}
+{"Ø¶Ø¹ Ø§Ø³Ù… Ù„Ù„Ø¨ÙˆØª Â©","Ø¶Ø¹ ØµÙˆØ±Ù‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨ ğŸŒ„"},
+ {"ØªØ¹Ø·ÙŠÙ„ Ø§Ù„ØªÙˆØ§ØµÙ„ âœ–ï¸","ØªÙØ¹ÙŠÙ„ Ø§Ù„ØªÙˆØ§ØµÙ„ ğŸ”›"},
+{"ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª Ø®Ø¯Ù…ÙŠ","ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª Ø®Ø¯Ù…ÙŠ","Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ† ğŸ”¥"},
+ {"Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† â“‚","Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸŒ‹","Ø§Ù„Ø§Ø­ØµØ§Ø¦ÙŠØ§Øª ğŸ’¥"},
+ {"Ø§Ø¶Ù Ø±Ø¯ Ø¹Ø§Ù… â•","Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ ğŸ—¨"},
+ {"Ø§Ø°Ø§Ø¹Ù‡ ğŸ—£","Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ ğŸ—£"},
+{"Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… ğŸ“¢","Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… Ø¨Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ ğŸ“£"},
+ {"ØªØ­Ø¯ÙŠØ« â™»ï¸","Ù‚Ø§Ø¦Ù…Ù‡ Ø§Ù„Ø¹Ø§Ù… ğŸ“œ","Ø§ÙŠØ¯ÙŠÙŠğŸ†”"},
+{"ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ â™»ï¸","ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ â˜‘"},
+{"ØªØºÙŠÙŠØ± Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ ğŸ”","Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ âš ï¸"},
+{"ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ğŸ—‘","ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸ—‘"},
+ {"Ù†Ø³Ø®Ù‡ Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª"},
+ {"Ù‚Ù†Ø§Ø© Ø§Ù„Ø³ÙˆØ±Ø³ ğŸ“¡"},
+ {"ØªØ­Ø¯ÙŠØ« Ø§Ù„Ø³ÙˆØ±Ø³ ğŸ”‚"},
+ {"Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø§Ù…Ø± âœ–ï¸"}}
 return send_key(msg.sender_user_id_,text,keyboard,nil,msg.id_)
 else
 redis:sadd(max..'users',msg.sender_user_id_)
 if redis:get(max..'lock_service') then 
 text = [[ 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-??  ÃåáÇğ ÃäÇ ÈæÊ æÅÓãí   []]..redis:get(max..':NameBot:')..[[] ??
+ğŸ¤–Â Â Ø£Ù‡Ù„Ø§Ù‹ Ø£Ù†Ø§ Ø¨ÙˆØª ÙˆØ¥Ø³Ù…ÙŠ   []]..redis:get(max..':NameBot:')..[[] ğŸ¤–
 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-ÅÎÊÕÇÕí :
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+Ø¥Ø®ØªØµØ§ØµÙŠ :
 
 
-ÇáãÓÇÚÏÉ Úáì ÅÏÇÑÉ ÇáãÌãæÚÇÊ æÍãÇíÊåÇ ãä ÇáÓÈÇã æÇáÊæÌíå æÇáÊßÑÇÑ ÇáÎ..    
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-áÊİÚíá ÇáÈæÊ ÇÊÈÚ ãÇ íáí :
+Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© Ø¹Ù„Ù‰ Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ÙˆØ­Ù…Ø§ÙŠØªÙ‡Ø§ Ù…Ù† Ø§Ù„Ø³Ø¨Ø§Ù… ÙˆØ§Ù„ØªÙˆØ¬ÙŠÙ‡ ÙˆØ§Ù„ØªÙƒØ±Ø§Ø± Ø§Ù„Ø®..Â  Â Â 
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+Ù„ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª Ø§ØªØ¨Ø¹ Ù…Ø§ ÙŠÙ„ÙŠ :
 
-1- ÃÖİ ÇáÈæÊ Åáì ÇáãÌãæÚÉ ÇáÎÇÕÉ Èß.
-2- ÅÑİÚ ÇáÈæÊ ãÔÑİ İí ÇáãÌãæÚÉ.
-3- ÊÍæíá ÓÌá ÇáãÍÇÏËÉ ááÃÚÖÇÁ ÇáÌÏÏ Åáì ÙÇåÑ.
-4- ÃÑÓá ÊİÚíá İí ÇáãÌãæÚÉ æÓíÊã ÊİÚíá ÇáÈæÊ ÈäÌÇÍ.
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-??????? ãÚÑİ ÇáÜãÜØÜæÑ : ]]..SUDO_USER..[[
+1- Ø£Ø¶Ù Ø§Ù„Ø¨ÙˆØª Ø¥Ù„Ù‰ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© Ø§Ù„Ø®Ø§ØµØ© Ø¨Ùƒ.
+2- Ø¥Ø±ÙØ¹ Ø§Ù„Ø¨ÙˆØª Ù…Ø´Ø±Ù ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.
+3- ØªØ­ÙˆÙŠÙ„ Ø³Ø¬Ù„ Ø§Ù„Ù…Ø­Ø§Ø¯Ø«Ø© Ù„Ù„Ø£Ø¹Ø¶Ø§Ø¡ Ø§Ù„Ø¬Ø¯Ø¯ Ø¥Ù„Ù‰ Ø¸Ø§Ù‡Ø±.
+4- Ø£Ø±Ø³Ù„ ØªÙØ¹ÙŠÙ„ ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© ÙˆØ³ÙŠØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª Ø¨Ù†Ø¬Ø§Ø­.
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+ğŸ™‹ğŸ»â€â™‚ï¸â”‚ Ù…Ø¹Ø±Ù Ø§Ù„Ù€Ù…Ù€Ø·Ù€ÙˆØ± : ]]..SUDO_USER..[[
 ]]
 else
 text = [[ 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
 
-??  ÃåáÇğ ÃäÇ ÈæÊ æÅÓãí   []]..redis:get(max..':NameBot:')..[[] ??
+ğŸ¤–Â Â Ø£Ù‡Ù„Ø§Ù‹ Ø£Ù†Ø§ Ø¨ÙˆØª ÙˆØ¥Ø³Ù…ÙŠ   []]..redis:get(max..':NameBot:')..[[] ğŸ¤–
 
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-ÅÎÊÕÇÕí :
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+Ø¥Ø®ØªØµØ§ØµÙŠ :
 
 
-ÇáãÓÇÚÏÉ Úáì ÅÏÇÑÉ ÇáãÌãæÚÇÊ æÍãÇíÊåÇ ãä ÇáÓÈÇã æÇáÊæÌíå æÇáÊßÑÇÑ ÇáÎ..    
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-áÊİÚíá ÇáÈæÊ ÇÊÈÚ ãÇ íáí :
+Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© Ø¹Ù„Ù‰ Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ÙˆØ­Ù…Ø§ÙŠØªÙ‡Ø§ Ù…Ù† Ø§Ù„Ø³Ø¨Ø§Ù… ÙˆØ§Ù„ØªÙˆØ¬ÙŠÙ‡ ÙˆØ§Ù„ØªÙƒØ±Ø§Ø± Ø§Ù„Ø®..Â  Â Â 
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+Ù„ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª Ø§ØªØ¨Ø¹ Ù…Ø§ ÙŠÙ„ÙŠ :
 
-1- ÃÖİ ÇáÈæÊ Åáì ÇáãÌãæÚÉ ÇáÎÇÕÉ Èß.
-2- ÅÑİÚ ÇáÈæÊ ãÔÑİ İí ÇáãÌãæÚÉ.
-3- ÊÍæíá ÓÌá ÇáãÍÇÏËÉ ááÃÚÖÇÁ ÇáÌÏÏ Åáì ÙÇåÑ.
-4- ÃÑÓá ÊİÚíá İí ÇáãÌãæÚÉ æÓíÊã ÊİÚíá ÇáÈæÊ ÈäÌÇÍ.
-ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-??????? ãÚÑİ ÇáÜãÜØÜæÑ : ]]..SUDO_USER..[[
+1- Ø£Ø¶Ù Ø§Ù„Ø¨ÙˆØª Ø¥Ù„Ù‰ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© Ø§Ù„Ø®Ø§ØµØ© Ø¨Ùƒ.
+2- Ø¥Ø±ÙØ¹ Ø§Ù„Ø¨ÙˆØª Ù…Ø´Ø±Ù ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.
+3- ØªØ­ÙˆÙŠÙ„ Ø³Ø¬Ù„ Ø§Ù„Ù…Ø­Ø§Ø¯Ø«Ø© Ù„Ù„Ø£Ø¹Ø¶Ø§Ø¡ Ø§Ù„Ø¬Ø¯Ø¯ Ø¥Ù„Ù‰ Ø¸Ø§Ù‡Ø±.
+4- Ø£Ø±Ø³Ù„ ØªÙØ¹ÙŠÙ„ ÙÙŠ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© ÙˆØ³ÙŠØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø¨ÙˆØª Ø¨Ù†Ø¬Ø§Ø­.
+Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€
+ğŸ™‹ğŸ»â€â™‚ï¸â”‚ Ù…Ø¹Ø±Ù Ø§Ù„Ù€Ù…Ù€Ø·Ù€ÙˆØ± : ]]..SUDO_USER..[[
 ]]
 end
 xsudouser = SUDO_USER:gsub('@','')
 xsudouser = xsudouser:gsub([[\_]],'_')
-local inline = {{{text="ãÜØÜæÑ ÇáÜÈÜæÊ ?",url="t.me/"..xsudouser}}}
+local inline = {{{text="Ù…Ù€Ø·Ù€ÙˆØ± Ø§Ù„Ù€Ø¨Ù€ÙˆØª âœ“",url="t.me/"..xsudouser}}}
 send_key(msg.sender_user_id_,text,nil,inline,msg.id_)
 return false
 end
 end
  
 if msg.SudoBase then
-if msg.reply_id and msg.text ~= "ÑİÚ äÓÎå ÇáÇÍÊíÇØíå" then
+if msg.reply_id and msg.text ~= "Ø±ÙØ¹ Ù†Ø³Ø®Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡" then
 GetMsgInfo(msg.chat_id_,msg.reply_id,function(arg,datainfo)
 if datainfo.forward_info_ then
 local FwdUser = datainfo.forward_info_.sender_user_id_
@@ -3084,7 +3084,7 @@ USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or ""),20)
 end
 USERCAR = utf8.len(USERNAME)
 
-SendMention(msg.sender_user_id_,data.id_,msg.id_,"???Êã ÂÑÓÜÂá ÂáÑÓÜÂáşşåÀ ??\n???Âáì : "..USERNAME.." ????",39,USERCAR) 
+SendMention(msg.sender_user_id_,data.id_,msg.id_,"ğŸ“¬â”‚ØªÙ… Ø¢Ø±Ø³Ù€Ø¢Ù„ Ø¢Ù„Ø±Ø³Ù€Ø¢Ù„â€â€Ù‡Û ğŸŒ¿\nğŸŸâ”‚Ø¢Ù„Ù‰ : "..USERNAME.." ğŸŒğŸ»",39,USERCAR) 
 return false 
 end,nil)
 end  
@@ -3093,11 +3093,11 @@ end
 else
 if not redis:get(max..'lock_twasel') then
 if msg.forward_info_ or msg.sticker or msg.content_.ID == "MessageUnsupported" then
-sendMsg(msg.chat_id_,msg.id_,"???ÚĞÑÂ áÂ íãÜä ÂÑÓÜÂá { ÊæÌíåÀş , ãÜáÕÜŞ , İÏíæ Âã} ??")
+sendMsg(msg.chat_id_,msg.id_,"â™¦ï¸â”‚Ø¹Ø°Ø±Ø¢ Ù„Ø¢ ÙŠÙ…Ù€Ú¯Ù†Ú¯ Ø¢Ø±Ø³Ù€Ø¢Ù„ { ØªÙˆØ¬ÙŠÙ‡Ûâ€Œâ€ , Ù…Ù€Ù„ØµÙ€Ù‚ , ÙØ¯ÙŠÙˆ Ú¯Ø¢Ù…} â—ï¸")
 return false
 end
 redis:setex(max.."USER_MSG_TWASEL"..msg.date_,43200,msg.id_)
-sendMsg(msg.chat_id_,msg.id_,"???Êã ÂÑÓÜÂá ÑÓÜÂáÊ Âáì ÂáãÜØÜæÑ\n???ÓÜÂÑÏ Úáí İí ÂŞÑÈ æŞÊ\n?????ãÚÑİ ÇáãØæÑ "..SUDO_USER)
+sendMsg(msg.chat_id_,msg.id_,"ğŸ—¯â”‚ØªÙ… Ø¢Ø±Ø³Ù€Ø¢Ù„ Ø±Ø³Ù€Ø¢Ù„ØªÚ¯ Ø¢Ù„Ù‰ Ø¢Ù„Ù…Ù€Ø·Ù€ÙˆØ±\nğŸ“¬â”‚Ø³Ù€Ø¢Ø±Ø¯ Ø¹Ù„ÙŠÚ¯ ÙÙŠ Ø¢Ù‚Ø±Ø¨ ÙˆÙ‚Øª\nğŸ‘¨â€âœˆï¸â”‚Ù…Ø¹Ø±Ù Ø§Ù„Ù…Ø·ÙˆØ± "..SUDO_USER)
 tdcli_function({ID='GetChat',chat_id_ = SUDO_ID},function(arg,data)
 fwdMsg(SUDO_ID,msg.chat_id_,msg.id_)
 end,nil)
@@ -3112,31 +3112,31 @@ local klma = redis:get(max..'replay1'..msg.chat_id_..msg.sender_user_id_)
 if msg.text then 
 redis:hset(max..'replay:'..msg.chat_id_,klma,Flter_Markdown(msg.text))
 redis:del(max..'addrd:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'(['..klma..'])\n  ? Êã ÇÖÇİÊ ÇáÑÏ ?? \n-')
+return sendMsg(msg.chat_id_,msg.id_,'(['..klma..'])\n  âœ“ ØªÙ… Ø§Ø¶Ø§ÙØª Ø§Ù„Ø±Ø¯ ğŸš€ \n-')
 elseif msg.photo then 
 redis:hset(max..'replay_photo:group:'..msg.chat_id_,klma,photo_id)
 redis:del(max..'addrd:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ÕæÑå ááÑÏ ÈäÌÇÍ ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáÕæÑå ÇáÇÊíå ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ ØµÙˆØ±Ù‡ Ù„Ù„Ø±Ø¯ Ø¨Ù†Ø¬Ø§Ø­ âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ØµÙˆØ±Ù‡ Ø§Ù„Ø§ØªÙŠÙ‡ ')
 elseif msg.voice then
 redis:hset(max..'replay_voice:group:'..msg.chat_id_,klma,voice_id)
 redis:del(max..'addrd:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ÈÕãå ÕæÊ ááÑÏ ÈäÌÇÍ ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÓãÇÚ ÇáÈÕãå ÇáÇÊíå ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ø¨ØµÙ…Ù‡ ØµÙˆØª Ù„Ù„Ø±Ø¯ Ø¨Ù†Ø¬Ø§Ø­ âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø³Ù…Ø§Ø¹ Ø§Ù„Ø¨ØµÙ…Ù‡ Ø§Ù„Ø§ØªÙŠÙ‡ ')
 elseif msg.animation then
 redis:hset(max..'replay_animation:group:'..msg.chat_id_,klma,animation_id)
 redis:del(max..'addrd:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ãÊÍÑßå ááÑÏ ÈäÌÇÍ ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáÕæÑå ÇáÇÊíå ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ù…ØªØ­Ø±ÙƒÙ‡ Ù„Ù„Ø±Ø¯ Ø¨Ù†Ø¬Ø§Ø­ âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ØµÙˆØ±Ù‡ Ø§Ù„Ø§ØªÙŠÙ‡ ')
 elseif msg.video then
 redis:hset(max..'replay_video:group:'..msg.chat_id_,klma,video_id)
 redis:del(max..'addrd:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå İíÏíæ ááÑÏ ÈäÌÇÍ ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáİíÏíæ ÇáÇÊí ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ ÙÙŠØ¯ÙŠÙˆ Ù„Ù„Ø±Ø¯ Ø¨Ù†Ø¬Ø§Ø­ âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ÙÙŠØ¯ÙŠÙˆ Ø§Ù„Ø§ØªÙŠ ')
 elseif msg.audio then
 redis:hset(max..'replay_audio:group:'..msg.chat_id_,klma,audio_id)
 redis:del(max..'addrd:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ááÕæÊ ááÑÏ ÈäÌÇÍ ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáÕæÊ ÇáÇÊí ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ù„Ù„ØµÙˆØª Ù„Ù„Ø±Ø¯ Ø¨Ù†Ø¬Ø§Ø­ âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ØµÙˆØª Ø§Ù„Ø§ØªÙŠ ')
 elseif msg.sticker then
 redis:hset(max..'replay_sticker:group:'..msg.chat_id_,klma,sticker_id)
 redis:del(max..'addrd:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ãáÕŞ ááÑÏ ÈäÌÇÍ ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáãáÕŞ ÇáÇÊí ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ù…Ù„ØµÙ‚ Ù„Ù„Ø±Ø¯ Ø¨Ù†Ø¬Ø§Ø­ âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„Ù…Ù„ØµÙ‚ Ø§Ù„Ø§ØªÙŠ ')
 end  
 
 end
@@ -3147,31 +3147,31 @@ local klma = redis:get(max..'allreplay:'..msg.chat_id_..msg.sender_user_id_)
 if msg.text then
 redis:hset(max..'replay:all',klma,Flter_Markdown(msg.text))
 redis:del(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'(['..klma..'])\n  ? Êã ÇÖÇİÊ ÇáÑÏ áßá ÇáãÌãæÚÇÊ ?? ')
+return sendMsg(msg.chat_id_,msg.id_,'(['..klma..'])\n  âœ“ ØªÙ… Ø§Ø¶Ø§ÙØª Ø§Ù„Ø±Ø¯ Ù„ÙƒÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸš€ ')
 elseif msg.photo then 
 redis:hset(max..'replay_photo:group:',klma,photo_id)
 redis:del(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ÕæÑå ááÑÏ ÇáÚÇã ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáÕæÑå ÇáÇÊíå ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ ØµÙˆØ±Ù‡ Ù„Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ØµÙˆØ±Ù‡ Ø§Ù„Ø§ØªÙŠÙ‡ ')
 elseif msg.voice then
 redis:hset(max..'replay_voice:group:',klma,voice_id)
 redis:del(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ÈÕãå ÕæÊ ááÑÏ ÇáÚÇã ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÓãÇÚ ÇáÈÕãå ÇáÇÊíå ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ø¨ØµÙ…Ù‡ ØµÙˆØª Ù„Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø³Ù…Ø§Ø¹ Ø§Ù„Ø¨ØµÙ…Ù‡ Ø§Ù„Ø§ØªÙŠÙ‡ ')
 elseif msg.animation then
 redis:hset(max..'replay_animation:group:',klma,animation_id)
 redis:del(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ãÊÍÑßå ááÑÏ ÇáÚÇã ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáÕæÑå ÇáÇÊíå ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ù…ØªØ­Ø±ÙƒÙ‡ Ù„Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ØµÙˆØ±Ù‡ Ø§Ù„Ø§ØªÙŠÙ‡ ')
 elseif msg.video then
 redis:hset(max..'replay_video:group:',klma,video_id)
 redis:del(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå İíÏíæ ááÑÏ ÇáÚÇã ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ?áÇÖåÇÑ ÇáİíÏíæ ÇáÇÊí ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ ÙÙŠØ¯ÙŠÙˆ Ù„Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµÙ„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ÙÙŠØ¯ÙŠÙˆ Ø§Ù„Ø§ØªÙŠ ')
 elseif msg.audio then
 redis:hset(max..'replay_audio:group:',klma,audio_id)
 redis:del(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ááÕæÊ ááÑÏ ÇáÚÇã ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáÕæÊ ÇáÇÊí ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ù„Ù„ØµÙˆØª Ù„Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„ØµÙˆØª Ø§Ù„Ø§ØªÙŠ ')
 elseif msg.sticker then
 redis:hset(max..'replay_sticker:group:',klma,sticker_id)
 redis:del(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_)
-return sendMsg(msg.chat_id_,msg.id_,'???Êã ÇÖÇİå ãáÕŞ ááÑÏ ÇáÚÇã ?\n???íãßäß ÇÑÓÇá ? ['..klma..'] ? áÇÖåÇÑ ÇáãáÕŞ ÇáÇÊí ')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ—‚â”‚ØªÙ… Ø§Ø¶Ø§ÙÙ‡ Ù…Ù„ØµÙ‚ Ù„Ù„Ø±Ø¯ Ø§Ù„Ø¹Ø§Ù… âœ“\nğŸ—‚â”‚ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ø±Ø³Ø§Ù„ â´ ['..klma..'] âµ Ù„Ø§Ø¶Ù‡Ø§Ø± Ø§Ù„Ù…Ù„ØµÙ‚ Ø§Ù„Ø§ØªÙŠ ')
 end  
 
 end
@@ -3185,33 +3185,33 @@ local url , res = https.request(ApiToken..'/getchatmember?chat_id='..msg.text..'
 if res == 400 then
 local Req = JSON.decode(url)
 if Req.description == "Bad Request: chat not found" then 
-sendMsg(msg.chat_id_,msg.id_,"???ÚĞÑÇ , åäÇß ÎØÃ áÏíß \n???ÇáãÚÑİ ÇáĞí ÇÑÓáÊå áíÓ ãÚÑİ ŞäÇÉ.")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ“‘â”‚Ø¹Ø°Ø±Ø§ , Ù‡Ù†Ø§Ùƒ Ø®Ø·Ø£ Ù„Ø¯ÙŠÙƒ \nğŸ”–â”‚Ø§Ù„Ù…Ø¹Ø±Ù Ø§Ù„Ø°ÙŠ Ø§Ø±Ø³Ù„ØªÙ‡ Ù„ÙŠØ³ Ù…Ø¹Ø±Ù Ù‚Ù†Ø§Ø©.")
 return false
 elseif Req.description == "Bad Request: CHAT_ADMIN_REQUIRED" then
-sendMsg(msg.chat_id_,msg.id_,"???ÚĞÑÇ , áŞÏ äÓíÊ ÔíÆÇ \n???íÌÈ ÑİÚ ÇáÈæÊ ãÔÑİ İí ŞäÇÊß áÊÊãßä ãä ÊİÚíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí .")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ“‘â”‚Ø¹Ø°Ø±Ø§ , Ù„Ù‚Ø¯ Ù†Ø³ÙŠØª Ø´ÙŠØ¦Ø§ \nğŸ”–â”‚ÙŠØ¬Ø¨ Ø±ÙØ¹ Ø§Ù„Ø¨ÙˆØª Ù…Ø´Ø±Ù ÙÙŠ Ù‚Ù†Ø§ØªÙƒ Ù„ØªØªÙ…ÙƒÙ† Ù…Ù† ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ .")
 return false
 end
 else
 redis:set(max..":UserNameChaneel",msg.text)
-sendMsg(msg.chat_id_,msg.id_,"???ÌÜíÜÏ , ÇáÇä áŞÏ Êã ÊİÚíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí\n???Úáì ŞäÇÊß ? ["..msg.text.."]")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ”–â”‚Ø¬Ù€ÙŠÙ€Ø¯ , Ø§Ù„Ø§Ù† Ù„Ù‚Ø¯ ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ\nğŸ“®â”‚Ø¹Ù„Ù‰ Ù‚Ù†Ø§ØªÙƒ â‡œ ["..msg.text.."]")
 return false
 end
 else
-sendMsg(msg.chat_id_,msg.id_,"???ÚĞÑÇ , ÚÒíÒí ÇáãØæÑ \n???åĞÇ áíÓ ãÚÑİ ŞäÇÉ , ÍÇæá ãÌÏÏÇ .")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ“‘â”‚Ø¹Ø°Ø±Ø§ , Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± \nğŸ”–â”‚Ù‡Ø°Ø§ Ù„ÙŠØ³ Ù…Ø¹Ø±Ù Ù‚Ù†Ø§Ø© , Ø­Ø§ÙˆÙ„ Ù…Ø¬Ø¯Ø¯Ø§ .")
 return false
 end
 end
 
-if redis:get(max..'namebot:witting'..msg.sender_user_id_) then --- ÇÓÊŞÈÇá ÇÓã ÇáÈæÊ 
+if redis:get(max..'namebot:witting'..msg.sender_user_id_) then --- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ø³Ù… Ø§Ù„Ø¨ÙˆØª 
 redis:del(max..'namebot:witting'..msg.sender_user_id_)
 redis:set(max..':NameBot:',msg.text)
 Start_Bot() 
-sendMsg(msg.chat_id_,msg.id_,"???Êã ÊÛíÑ ÇÓã ÇáÈæÊ  ???\n???ÇáÇä ÇÓãå "..Flter_Markdown(msg.text).." \n?")
+sendMsg(msg.chat_id_,msg.id_,"ğŸ“­â”‚ØªÙ… ØªØºÙŠØ± Ø§Ø³Ù… Ø§Ù„Ø¨ÙˆØª  âœ‹ğŸ¿\nğŸ—¯â”‚Ø§Ù„Ø§Ù† Ø§Ø³Ù…Ù‡ "..Flter_Markdown(msg.text).." \nâœ“")
 return false
 end
 
-if redis:get(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_) then -- ÇÓÊŞÈÇá ÇáÑÏ áßá ÇáãÌãæÚÇÊ
-if not redis:get(max..'allreplay:'..msg.chat_id_..msg.sender_user_id_) then -- ÇÓÊŞÈÇá ßáãå ÇáÑÏ áßá ÇáãÌãæÚÇÊ
+if redis:get(max..'addrd_all:'..msg.chat_id_..msg.sender_user_id_) then -- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø±Ø¯ Ù„ÙƒÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª
+if not redis:get(max..'allreplay:'..msg.chat_id_..msg.sender_user_id_) then -- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙƒÙ„Ù…Ù‡ Ø§Ù„Ø±Ø¯ Ù„ÙƒÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª
 redis:hdel(max..'replay_photo:group:',msg.text)
 redis:hdel(max..'replay_voice:group:',msg.text)
 redis:hdel(max..'replay_animation:group:',msg.text)
@@ -3219,7 +3219,7 @@ redis:hdel(max..'replay_audio:group:',msg.text)
 redis:hdel(max..'replay_sticker:group:',msg.text)
 redis:hdel(max..'replay_video:group:',msg.text)
 redis:setex(max..'allreplay:'..msg.chat_id_..msg.sender_user_id_,300,msg.text)
-return sendMsg(msg.chat_id_,msg.id_,"???ÌíÏ , íãßäß ÇáÇä ÇÑÓÇá ÌæÇ È ÇáÑÏÇáÚÇã \n???[[ äÕ,ÕæÑå,İíÏíæ,ãÊÍÑßå,ÈÕãå,ÇÛäíå ]]\n?")
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“œâ”‚Ø¬ÙŠØ¯ , ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ø§Ù„ Ø¬ÙˆØ§ Ø¨ Ø§Ù„Ø±Ø¯Ø§Ù„Ø¹Ø§Ù… \nğŸ”›â”‚[[ Ù†Øµ,ØµÙˆØ±Ù‡,ÙÙŠØ¯ÙŠÙˆ,Ù…ØªØ­Ø±ÙƒÙ‡,Ø¨ØµÙ…Ù‡,Ø§ØºÙ†ÙŠÙ‡ ]]\nâœ“")
 end
 end
 
@@ -3233,7 +3233,7 @@ local audio = redis:hget(max..'replay_audio:group:',msg.text)
 local sticker = redis:hget(max..'replay_sticker:group:',msg.text)
 local video = redis:hget(max..'replay_video:group:',msg.text)
 if not (names or photo or voice or animation or audio or sticker or video) then
-return sendMsg(msg.chat_id_,msg.id_,'??*?*åĞÇ ÇáÑÏ áíÓ ãÖÇİ İí ŞÇÆãÉ ÇáÑÏæÏ ??')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ’¬*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø±Ø¯ Ù„ÙŠØ³ Ù…Ø¶Ø§Ù ÙÙŠ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø±Ø¯ÙˆØ¯ ğŸ“›')
 else
 redis:hdel(max..'replay:all',msg.text)
 redis:hdel(max..'replay_photo:group:',msg.text)
@@ -3242,52 +3242,52 @@ redis:hdel(max..'replay_audio:group:',msg.text)
 redis:hdel(max..'replay_animation:group:',msg.text)
 redis:hdel(max..'replay_sticker:group:',msg.text)
 redis:hdel(max..'replay_video:group:',msg.text)
-return sendMsg(msg.chat_id_,msg.id_,'('..Flter_Markdown(msg.text)..')\n  ? Êã ãÓÍ ÇáÑÏ ?? ')
+return sendMsg(msg.chat_id_,msg.id_,'('..Flter_Markdown(msg.text)..')\n  âœ“ ØªÙ… Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ ğŸš€ ')
 end 
 end 
 
 
-if redis:get(max..'text_sudo:witting'..msg.sender_user_id_) then -- ÇÓÊŞÈÇá ßáíÔå ÇáãØæÑ
+if redis:get(max..'text_sudo:witting'..msg.sender_user_id_) then -- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙƒÙ„ÙŠØ´Ù‡ Ø§Ù„Ù…Ø·ÙˆØ±
 redis:del(max..'text_sudo:witting'..msg.sender_user_id_) 
 redis:set(max..':TEXT_SUDO',Flter_Markdown(msg.text))
-return sendMsg(msg.chat_id_,msg.id_, "??*?* Êã æÖÚ ÇáßáíÔå ÈäÌÇÍ ßáÇÊí ????\n\n*{*  "..Flter_Markdown(msg.text).."  *}*\n?")
+return sendMsg(msg.chat_id_,msg.id_, "ğŸ“œ*â”‚* ØªÙ… ÙˆØ¶Ø¹ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ Ø¨Ù†Ø¬Ø§Ø­ ÙƒÙ„Ø§ØªÙŠ ğŸ‘‹ğŸ»\n\n*{*  "..Flter_Markdown(msg.text).."  *}*\nâœ“")
 end
-if redis:get(max..'welcom:witting'..msg.sender_user_id_) then -- ÇÓÊŞÈÇá ßáíÔå ÇáÊÑÍíÈ
+if redis:get(max..'welcom:witting'..msg.sender_user_id_) then -- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ ÙƒÙ„ÙŠØ´Ù‡ Ø§Ù„ØªØ±Ø­ÙŠØ¨
 redis:del(max..'welcom:witting'..msg.sender_user_id_) 
 redis:set(max..'welcome:msg'..msg.chat_id_,msg.text)
-return sendMsg(msg.chat_id_,msg.id_,"??*?* Êã æÖÚ ÇáÊÑÍíÈ ÈäÌÇÍ ßáÇÊí ??\n?" )
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“œ*â”‚* ØªÙ… ÙˆØ¶Ø¹ Ø§Ù„ØªØ±Ø­ÙŠØ¨ Ø¨Ù†Ø¬Ø§Ø­ ÙƒÙ„Ø§ØªÙŠ ğŸ‘‹\nâœ“" )
 end
-if redis:get(max..'rulse:witting'..msg.sender_user_id_) then --- ÇÓÊŞÈÇá ÇáŞæÇäíä
+if redis:get(max..'rulse:witting'..msg.sender_user_id_) then --- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†
 redis:del(max..'rulse:witting'..msg.sender_user_id_) 
 redis:set(max..'rulse:msg'..msg.chat_id_,Flter_Markdown(msg.text)) 
-return sendMsg(msg.chat_id_,msg.id_,'??*?* ãÑÍÈÂ ÚÒíÒí\n???Êã ÍİÙ ÇáŞæÇäíä ÈäÌÇÍ ?\n???ÇÑÓá [[ ÇáŞæÇäíä ]] áÚÑÖåÇ \n???')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“œ*â”‚* Ù…Ø±Ø­Ø¨Ø¢ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ“¦â”‚ØªÙ… Ø­ÙØ¸ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† Ø¨Ù†Ø¬Ø§Ø­ âœ“\nğŸ”–â”‚Ø§Ø±Ø³Ù„ [[ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† ]] Ù„Ø¹Ø±Ø¶Ù‡Ø§ \nğŸ’¬âœ“')
 end
-if redis:get(max..'name:witting'..msg.sender_user_id_) then --- ÇÓÊŞÈÇá ÇáÇÓã
+if redis:get(max..'name:witting'..msg.sender_user_id_) then --- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø§Ø³Ù…
 redis:del(max..'name:witting'..msg.sender_user_id_) 
 tdcli_function({ID= "ChangeChatTitle",chat_id_=msg.chat_id_,title_=msg.text},dl_cb,nil)
 end
-if redis:get(max..'linkGroup'..msg.sender_user_id_,link) then --- ÇÓÊŞÈÇá ÇáÑÇÈØ
+if redis:get(max..'linkGroup'..msg.sender_user_id_,link) then --- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø±Ø§Ø¨Ø·
 redis:del(max..'linkGroup'..msg.sender_user_id_,link) 
 redis:set(max..'linkGroup'..msg.chat_id_,Flter_Markdown(msg.text)) 
-return sendMsg(msg.chat_id_,msg.id_,'???Êã æÖÚ ÇáÑÇÈØ ÇáÌÏíÏ ÈäÌÇÍ .. ??')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ–‡â”‚ØªÙ… ÙˆØ¶Ø¹ Ø§Ù„Ø±Ø§Ø¨Ø· Ø§Ù„Ø¬Ø¯ÙŠØ¯ Ø¨Ù†Ø¬Ø§Ø­ .. ğŸ‚')
 end
-if redis:get(max..'about:witting'..msg.sender_user_id_) then --- ÇÓÊŞÈÇá ÇáæÕİ
+if redis:get(max..'about:witting'..msg.sender_user_id_) then --- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„ÙˆØµÙ
 redis:del(max..'about:witting'..msg.sender_user_id_) 
 tdcli_function({ID="ChangeChannelAbout",channel_id_=msg.chat_id_:gsub('-100',''),about_ = msg.text},function(arg,data) 
 if data.ID == "Ok" then 
-return sendMsg(msg.chat_id_,msg.id_,"??*?* Êã æÖÚ ÇáæÕİ ÈäÌÇÍ\n?")
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“œ*â”‚* ØªÙ… ÙˆØ¶Ø¹ Ø§Ù„ÙˆØµÙ Ø¨Ù†Ø¬Ø§Ø­\nâœ“")
 end 
 end,nil)
 end
 
 
-if redis:get(max..'fwd:all'..msg.sender_user_id_) then ---- ÇÓÊŞÈÇá ÑÓÇáå ÇáÇĞÇÚå ÚÇã
+if redis:get(max..'fwd:all'..msg.sender_user_id_) then ---- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù…
 redis:del(max..'fwd:all'..msg.sender_user_id_)
 local pv = redis:smembers(max..'users')  
 local groups = redis:smembers(max..'group:ids')
 local allgp =  #pv + #groups
 if allgp >= 300 then
-sendMsg(msg.chat_id_,msg.id_,'???ÇåáÇ ÚÒíÒí ÇáãØæÑ \n???ÌÇÑí äÔÑ ÇáÊæÌíå ááãÌãæÚÇÊ æááãÔÊÑßíä ...')			
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“‘â”‚Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± \nğŸ”–â”‚Ø¬Ø§Ø±ÙŠ Ù†Ø´Ø± Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ÙˆÙ„Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ...')			
 end
 for i = 1, #pv do 
 sendMsg(pv[i],0,Flter_Markdown(msg.text),nil,function(arg,data)
@@ -3309,14 +3309,14 @@ rem_data_group(groups[i])
 end
 end)
 end
-return sendMsg(msg.chat_id_,msg.id_,'??*?*Êã ÇĞÇÚå ÇáßáíÔå ÈäÌÇÍ ????\n??*?*ááãÜÌãÜæÚÂÊ » ? *'..#groups..'* ? ÑæÈ \n??*?* ááãÜÔÜÊÑíä » ? '..#pv..' ? ãÜÔÜÊÑ \n?')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“œ*â”‚*ØªÙ… Ø§Ø°Ø§Ø¹Ù‡ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ Ø¨Ù†Ø¬Ø§Ø­ ğŸŒğŸ»\nğŸ—£*â”‚*Ù„Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ø¢Øª Â» â´ *'..#groups..'* âµ Ú¯Ø±ÙˆØ¨ \nğŸ‘¥*â”‚* Ù„Ù„Ù…Ù€Ø´Ù€ØªØ±Ú¯ÙŠÙ† Â» â´ '..#pv..' âµ Ù…Ù€Ø´Ù€ØªØ±Ú¯ \nâœ“')
 end
 
-if redis:get(max..'fwd:pv'..msg.sender_user_id_) then ---- ÇÓÊŞÈÇá ÑÓÇáå ÇáÇĞÇÚå ÎÇÕ
+if redis:get(max..'fwd:pv'..msg.sender_user_id_) then ---- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ
 redis:del(max..'fwd:pv'..msg.sender_user_id_)
 local pv = redis:smembers(max..'users')
 if #pv >= 300 then
-sendMsg(msg.chat_id_,msg.id_,'???ÇåáÇ ÚÒíÒí ÇáãØæÑ \n???ÌÇÑí äÔÑ ÇáÑÓÇáå ááãÔÊÑßíä ...')			
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“‘â”‚Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± \nğŸ”–â”‚Ø¬Ø§Ø±ÙŠ Ù†Ø´Ø± Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ù„Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ...')			
 end
 local NumPvDel = 0
 for i = 1, #pv do
@@ -3330,17 +3330,17 @@ NumPvDel = NumPvDel + 1
 end
 if #pv == i then 
 local SenderOk = #pv - NumPvDel
-sendMsg(msg.chat_id_,msg.id_,'?????*?*ÚÏÏ ÇáãÔÊÑßíä : ? '..#pv..' ?\n??*?*Êã ÇáÇĞÇÚå Çáì ? '..SenderOk..'  ? ãÔÊÑß \n ?') 
+sendMsg(msg.chat_id_,msg.id_,'ğŸ™ğŸ»â€â™‚*â”‚*Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† : â´ '..#pv..' âµ\nğŸ—£*â”‚*ØªÙ… Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ø§Ù„Ù‰ â´ '..SenderOk..'  âµ Ù…Ø´ØªØ±Ùƒ \n âœ“') 
 end
 end)
 end
 end
 
-if redis:get(max..'fwd:groups'..msg.sender_user_id_) then ---- ÇÓÊŞÈÇá ÑÓÇáå ÇáÇĞÇÚå ÎÇÕ
+if redis:get(max..'fwd:groups'..msg.sender_user_id_) then ---- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ
 redis:del(max..'fwd:groups'..msg.sender_user_id_)
 local groups = redis:smembers(max..'group:ids')
 if #groups >= 300 then
-sendMsg(msg.chat_id_,msg.id_,'???ÇåáÇ ÚÒíÒí ÇáãØæÑ \n???ÌÇÑí äÔÑ ÇáÑÓÇáå ááãÌãæÚÇÊ ...')			
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“‘â”‚Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± \nğŸ”–â”‚Ø¬Ø§Ø±ÙŠ Ù†Ø´Ø± Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ...')			
 end
 local NumGroupsDel = 0
 for i = 1, #groups do 
@@ -3355,11 +3355,11 @@ end
 if #groups == i then
 local AllGroupSend = #groups - NumGroupsDel
 if NumGroupsDel ~= 0 then
-MsgTDel = '??*?*Êã ÍĞİ ? *'..NumGroupsDel..'* ? ãä ŞÇÆãÉ ÇáÇĞÇÚå áÇäåã ŞÇãæ ÈØÑÏ ÇáÈæÊ ãä ÇáãÌãæÚå'
+MsgTDel = 'ğŸ“›*â”‚*ØªÙ… Ø­Ø°Ù â´ *'..NumGroupsDel..'* âµ Ù…Ù† Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ù„Ø§Ù†Ù‡Ù… Ù‚Ø§Ù…Ùˆ Ø¨Ø·Ø±Ø¯ Ø§Ù„Ø¨ÙˆØª Ù…Ù† Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡'
 else
 MsgTDel = ''
 end
-sendMsg(msg.chat_id_,msg.id_,'??*?*ÚÏÏ ÇáãÌãæÚÇÊ ? *'..#groups..'* ?\n??*?*ÊÜã ÇáÇĞÇÚå Çáì ? *'..AllGroupSend..'* ?\n'..MsgTDel..'?')
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“‘*â”‚*Ø¹Ø¯Ø¯ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª â´ *'..#groups..'* âµ\nğŸ—£*â”‚*ØªÙ€Ù… Ø§Ù„Ø§Ø°Ø§Ø¹Ù‡ Ø§Ù„Ù‰ â´ *'..AllGroupSend..'* âµ\n'..MsgTDel..'âœ“')
 end
 end)
 end
@@ -3367,11 +3367,11 @@ end
 end 
 
 if msg.adduser and msg.adduser == our_id and redis:get(max..':WELCOME_BOT') then
-sendPhoto(msg.chat_id_,msg.id_,redis:get(max..':WELCOME_BOT'),[[??ÇåáÇ ÇäÇ ÈæÊ ÇÓÜãÜí ]]..redis:get(max..':NameBot:')..[[ ?
-???????ÇÎÊÕÜÇÕÜí ÍãÜÇíå ÇáãÜÌãÜæÚÇÊ
-???ãÜä ÇáÓÜÈÇã æÇáÊæÌíåÀş æÇáÊßÑÇÑ æÇáÎ...
+sendPhoto(msg.chat_id_,msg.id_,redis:get(max..':WELCOME_BOT'),[[âšœâ”‚Ø§Ù‡Ù„Ø§ Ø§Ù†Ø§ Ø¨ÙˆØª Ø§Ø³Ù€Ù…Ù€ÙŠ ]]..redis:get(max..':NameBot:')..[[ âœ“
+ğŸ‘¨ğŸ»â€âœˆï¸â”‚Ø§Ø®ØªØµÙ€Ø§ØµÙ€ÙŠ Ø­Ù…Ù€Ø§ÙŠÙ‡ Ø§Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ø§Øª
+ğŸ“›â”‚Ù…Ù€Ù† Ø§Ù„Ø³Ù€Ø¨Ø§Ù… ÙˆØ§Ù„ØªÙˆØ¬ÙŠÙ‡Ûâ€Œâ€ ÙˆØ§Ù„ØªÙƒØ±Ø§Ø± ÙˆØ§Ù„Ø®...
 
-???ãÜÚÜÑİ ÇáÜãÜØÜæÑ  : ]]..SUDO_USER:gsub([[\_]],'_')..[[ ??
+ğŸ­â”‚Ù…Ù€Ø¹Ù€Ø±Ù Ø§Ù„Ù€Ù…Ù€Ø·Ù€ÙˆØ±  : ]]..SUDO_USER:gsub([[\_]],'_')..[[ ğŸŒ¿
 ]])
 return false
 end 
@@ -3382,7 +3382,7 @@ local pv = redis:smembers(max..'users')
 local groups = redis:smembers(max..'group:ids')
 local allgp =  #pv + #groups
 if allgp == 500 then
-sendMsg(msg.chat_id_,msg.id_,'???ÇåáÇ ÚÒíÒí ÇáãØæÑ \n???ÌÇÑí äÔÑ ÇáÊæÌíå ááãÌãæÚÇÊ æááãÔÊÑßíä ...')			
+sendMsg(msg.chat_id_,msg.id_,'ğŸ“‘â”‚Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ± \nğŸ”–â”‚Ø¬Ø§Ø±ÙŠ Ù†Ø´Ø± Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ÙˆÙ„Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ...')			
 end
 local number = 0
 for i = 1, #pv do 
@@ -3391,14 +3391,14 @@ end
 for i = 1, #groups do 
 fwdMsg(groups[i],msg.chat_id_,msg.id_,dl_cb,nil)
 end
-return sendMsg(msg.chat_id_,msg.id_,'??*?*Êã ÇĞÇÚå ÇáÊæÌíå ÈäÌÇÍ ????\n??*?*ááãÜÌãÜæÚÂÊ » ? *'..#groups..'* ?\n??*?*ááÎÂÕ » ? '..#pv..' ?\n?')			
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“œ*â”‚*ØªÙ… Ø§Ø°Ø§Ø¹Ù‡ Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ Ø¨Ù†Ø¬Ø§Ø­ ğŸŒğŸ»\nğŸ—£*â”‚*Ù„Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ø¢Øª Â» â´ *'..#groups..'* âµ\nğŸ‘¥*â”‚*Ù„Ù„Ø®Ø¢Øµ Â» â´ '..#pv..' âµ\nâœ“')			
 end
 
  
 
 if msg.text and msg.type == "channel" then
-if msg.text:match("^"..Bot_Name.." ÛÇÏÑ$") and (msg.SudoBase or msg.SudoBase or msg.Director) then
-sendMsg(msg.chat_id_,msg.id_,'???Çááå íáÚä ãä íŞÚÏ ÚäÏßã ?????')
+if msg.text:match("^"..Bot_Name.." ØºØ§Ø¯Ø±$") and (msg.SudoBase or msg.SudoBase or msg.Director) then
+sendMsg(msg.chat_id_,msg.id_,'ğŸš¦â”‚Ø§Ù„Ù„Ù‡ ÙŠÙ„Ø¹Ù† Ù…Ù† ÙŠÙ‚Ø¹Ø¯ Ø¹Ù†Ø¯ÙƒÙ… ğŸ’”ğŸš¶â€â™‚')
 rem_data_group(msg.chat_id_)
 StatusLeft(msg.chat_id_,our_id)
 return false
@@ -3413,7 +3413,7 @@ else
 photo_id = msg.content_.photo_.sizes_[0].photo_.persistent_id_
 end
 redis:set(max..':WELCOME_BOT',photo_id)
-return sendMsg(msg.chat_id_,msg.id_,'?? ¦ Êã ÊÛííÑ ÕÜæÑåÀşş ÂáÊÑÍíÈ ááÈæÊ ??\n?')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸš¸ Â¦ ØªÙ… ØªØºÙŠÙŠØ± ØµÙ€ÙˆØ±Ù‡Ûâ€â€ Ø¢Ù„ØªØ±Ø­ÙŠØ¨ Ù„Ù„Ø¨ÙˆØª ğŸŒ¿\nâœ“')
 end 
 
 if msg.content_.ID == "MessagePhoto" and msg.type == "channel" and msg.GroupActive then
@@ -3426,7 +3426,7 @@ photo_id = msg.content_.photo_.sizes_[0].photo_.persistent_id_
 end
 tdcli_function({ID="ChangeChatPhoto",chat_id_=msg.chat_id_,photo_=GetInputFile(photo_id)},function(arg,data)
 if data.code_ == 3 then
-sendMsg(arg.chat_id_,arg.id_,'?? ¦ áíÓ áÏí ÕáÇÍíå ÊÛííÑ ÇáÕæÑå \n?? ¦ íÌÈ ÇÚØÇÆí ÕáÇÍíå `ÊÛííÑ ãÚáæãÇÊ ÇáãÌãæÚå ` ?\n?')
+sendMsg(arg.chat_id_,arg.id_,'ğŸš¸ Â¦ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡ ØªØºÙŠÙŠØ± Ø§Ù„ØµÙˆØ±Ù‡ \nğŸ¤– Â¦ ÙŠØ¬Ø¨ Ø§Ø¹Ø·Ø§Ø¦ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡ `ØªØºÙŠÙŠØ± Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ` â €\nâœ“')
 end
 end,{chat_id_=msg.chat_id_,id_=msg.id_})
 return false
@@ -3436,9 +3436,9 @@ end
 if not msg.GroupActive then return false end
 if msg.text then
 
-if redis:get(max..'addrd:'..msg.chat_id_..msg.sender_user_id_) then -- ÇÓÊŞÈÇá ÇáÑÏ ááãÌãæÚå İŞØ
+if redis:get(max..'addrd:'..msg.chat_id_..msg.sender_user_id_) then -- Ø§Ø³ØªÙ‚Ø¨Ø§Ù„ Ø§Ù„Ø±Ø¯ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ÙÙ‚Ø·
 
-if not redis:get(max..'replay1'..msg.chat_id_..msg.sender_user_id_) then  -- ßáãå ÇáÑÏ
+if not redis:get(max..'replay1'..msg.chat_id_..msg.sender_user_id_) then  -- ÙƒÙ„Ù…Ù‡ Ø§Ù„Ø±Ø¯
 redis:hdel(max..'replay:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_photo:group:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_voice:group:'..msg.chat_id_,msg.text)
@@ -3447,7 +3447,7 @@ redis:hdel(max..'replay_audio:group:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_sticker:group:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_video:group:'..msg.chat_id_,msg.text)
 redis:setex(max..'replay1'..msg.chat_id_..msg.sender_user_id_,300,msg.text)
-return sendMsg(msg.chat_id_,msg.id_,"???ÌíÏ , íãßäß ÇáÇä ÇÑÓÇá ÌæÇÈ ÇáÑÏ \n???[[ äÕ,ÕæÑå,İíÏíæ,ãÊÍÑßå,ÈÕãå,ÇÛäíå ]]\n?")
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“œâ”‚Ø¬ÙŠØ¯ , ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø§Ù† Ø§Ø±Ø³Ø§Ù„ Ø¬ÙˆØ§Ø¨ Ø§Ù„Ø±Ø¯ \nğŸ”›â”‚[[ Ù†Øµ,ØµÙˆØ±Ù‡,ÙÙŠØ¯ÙŠÙˆ,Ù…ØªØ­Ø±ÙƒÙ‡,Ø¨ØµÙ…Ù‡,Ø§ØºÙ†ÙŠÙ‡ ]]\nâœ“")
 end
 end
 
@@ -3461,7 +3461,7 @@ local audio 	= redis:hget(max..'replay_audio:group:'..msg.chat_id_,msg.text)
 local sticker 	= redis:hget(max..'replay_sticker:group:'..msg.chat_id_,msg.text)
 local video 	= redis:hget(max..'replay_video:group:'..msg.chat_id_,msg.text)
 if not (names or photo or voice or animation or audio or sticker or video) then
-return sendMsg(msg.chat_id_,msg.id_,'??*?*åĞÇ ÇáÑÏ áíÓ ãÖÇİ İí ŞÇÆãÉ ÇáÑÏæÏ ??')
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ’¬*â”‚*Ù‡Ø°Ø§ Ø§Ù„Ø±Ø¯ Ù„ÙŠØ³ Ù…Ø¶Ø§Ù ÙÙŠ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø±Ø¯ÙˆØ¯ ğŸ“›')
 else
 redis:hdel(max..'replay:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_photo:group:'..msg.chat_id_,msg.text)
@@ -3470,7 +3470,7 @@ redis:hdel(max..'replay_audio:group:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_animation:group:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_sticker:group:'..msg.chat_id_,msg.text)
 redis:hdel(max..'replay_video:group:'..msg.chat_id_,msg.text)
-return sendMsg(msg.chat_id_,msg.id_,'(['..msg.text..'])\n  ? Êã ãÓÍ ÇáÑÏ ?? ')
+return sendMsg(msg.chat_id_,msg.id_,'(['..msg.text..'])\n  âœ“ ØªÙ… Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ ğŸš€ ')
 end 
 end
 
@@ -3488,14 +3488,14 @@ message_id_ = msg_pin_id,
 disable_notification_ = 0},
 function(arg,data)
 if data.ID == "Ok" then
-return sendMsg(msg.chat_id_,msg.id_,"??*?* ÚĞÑÇ ÇáÊËÈíÊ ãŞİá ãä ŞÈá ÇáÇÏÇÑå Êã ÇÑÌÇÚ ÇáÊËÈíÊ ÇáŞÏíã\n")
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“›*â”‚* Ø¹Ø°Ø±Ø§ Ø§Ù„ØªØ«Ø¨ÙŠØª Ù…Ù‚ÙÙ„ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ø§Ø¯Ø§Ø±Ù‡ ØªÙ… Ø§Ø±Ø¬Ø§Ø¹ Ø§Ù„ØªØ«Ø¨ÙŠØª Ø§Ù„Ù‚Ø¯ÙŠÙ…\n")
 end
 end,nil)
 else
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100','')},
 function(arg,data) 
 if data.ID == "Ok" then
-return sendMsg(msg.chat_id_,msg.id_,"??*?* ÚĞÑÇ ÇáÊËÈíÊ ãŞİá ãä ŞÈá ÇáÇÏÇÑå Êã ÇáÛÇÁ ÇáÊËÈíÊ\n?")      
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“›*â”‚* Ø¹Ø°Ø±Ø§ Ø§Ù„ØªØ«Ø¨ÙŠØª Ù…Ù‚ÙÙ„ Ù…Ù† Ù‚Ø¨Ù„ Ø§Ù„Ø§Ø¯Ø§Ø±Ù‡ ØªÙ… Ø§Ù„ØºØ§Ø¡ Ø§Ù„ØªØ«Ø¨ÙŠØª\nâœ“")      
 end
 end,nil)
 end
@@ -3506,17 +3506,17 @@ end
 
 if msg.content_.ID == "MessageChatChangePhoto" then
 GetUserID(msg.sender_user_id_,function(arg,data)
-if data.username_ then UserName = "@"..data.username_ else UserName = "ÇÍÏ ÇáãÔÑİíä" end
-return sendMsg(msg.chat_id_,msg.id_," ŞÇã ["..UserName.."] ÈÊÛíÑ ÕæÑå ÇáãÌãæÚå ?\n")
+if data.username_ then UserName = "@"..data.username_ else UserName = "Ø§Ø­Ø¯ Ø§Ù„Ù…Ø´Ø±ÙÙŠÙ†" end
+return sendMsg(msg.chat_id_,msg.id_," Ù‚Ø§Ù… ["..UserName.."] Ø¨ØªØºÙŠØ± ØµÙˆØ±Ù‡ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ âœ“\n")
 end)
 end
 
 if msg.content_.ID == "MessageChatChangeTitle" then
 GetUserID(msg.sender_user_id_,function(arg,data)
 redis:set(max..'group:name'..msg.chat_id_,msg.content_.title_)
-if data.username_ then UserName = "@"..data.username_ else UserName = "ÇÍÏ ÇáãÔÑİíä" end
+if data.username_ then UserName = "@"..data.username_ else UserName = "Ø§Ø­Ø¯ Ø§Ù„Ù…Ø´Ø±ÙÙŠÙ†" end
 
-return sendMsg(msg.chat_id_,msg.id_,"??| ŞÇã  ["..UserName.."]\n???ÈÊÛíÑ ÇÓã ÇáãÌãæÚå  ?\n???Çáì "..Flter_Markdown(msg.content_.title_).." \n?") 
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“¡| Ù‚Ø§Ù…  ["..UserName.."]\nğŸ“­â”‚Ø¨ØªØºÙŠØ± Ø§Ø³Ù… Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡  âœ‹\nğŸ—¯â”‚Ø§Ù„Ù‰ "..Flter_Markdown(msg.content_.title_).." \nâœ“") 
 end)
 end
 if msg.adduser or msg.joinuser then
@@ -3526,26 +3526,26 @@ else
 if redis:get(max..'welcome:get'..msg.chat_id_) then 
 if not msg.adduserType then
 GetUserID(msg.sender_user_id_,function(arg,data)  
-welcome = (redis:get(max..'welcome:msg'..msg.chat_id_) or "??????Çåáä Èß ÚÒíÒí {ÇáÇÓã}\n???ãÚÑİß » {ÇáãÚÑİ}\n{ÇáŞæÇäíä}\n\nÇáÑÌÇÁ ÇáÇáÊÒÇã ÈÇáŞæÇäíä ?\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\n??ÇÓã ÇáŞÑæÈ » {ÇáãÌãæÚå}")
+welcome = (redis:get(max..'welcome:msg'..msg.chat_id_) or "ğŸ™‹ğŸ»â€â™‚â”‚Ø§Ù‡Ù„Ù† Ø¨Ùƒ Ø¹Ø²ÙŠØ²ÙŠ {Ø§Ù„Ø§Ø³Ù…}\nğŸŸâ”‚Ù…Ø¹Ø±ÙÙƒ Â» {Ø§Ù„Ù…Ø¹Ø±Ù}\n{Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†}\n\nØ§Ù„Ø±Ø¬Ø§Ø¡ Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† â™¥\nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nâšœâ”‚Ø§Ø³Ù… Ø§Ù„Ù‚Ø±ÙˆØ¨ Â» {Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡}")
 if welcome then
-rules = (redis:get(max..'rulse:msg'..msg.chat_id_) or "ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\nÇáŞæÇäíä :\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\n? | ÅÍÊÑÇã ãÏÑÇÁ æÃÏãäíÉ ÇáãÌãæÚÉ.\n? | ÇáÚäÕÑíÉ ÈÌãíÚ ÃÔßÇáåÇ ããäæÚÉ.\n? | íãäÚ äÔÑ ÇáãÍÊæì ÇáÅÈÇÍí Èßá ÃäæÇÚå.\n? | íãäÚ ÇáÊßáã ÈÇáÃÏíÇä Ãæ ÇáãĞÇåÈ Ãæ ÇáÓíÇÓÉ.\n? | íãäÚ äÔÑ ÇáÍÓÇÈÇÊ ÇáÔÎÕíÉ Ïæä ÃÎĞ ÇáãæÇİŞÉ.\n? | íãäÚ äÔÑ ÇáÅÚáÇäÇÊ Èßá ÃäæÇÚåÇ Ïæä ÃÎĞ ÇáãæÇİŞÉ.\n? | íãäÚ ÇáÓÈ Ãæ ÇáÊáİÙ ÈÃáİÇÙ äÇÈíÉ Çæ ÎÇÏÔÉ ááÍíÇÁ.\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ")
-welcome = welcome:gsub("{ÇáŞæÇäíä}", rules)
-if data.username_ then UserName = '@'..data.username_ else UserName = '< áÇ íæÌÏ ãÚÑİ >' end
-welcome = welcome:gsub("{ÇáãÌãæÚå}",Flter_Markdown((redis:get(max..'group:name'..msg.chat_id_) or '')))
-local welcome = welcome:gsub("{ÇáãÚÑİ}",UserName)
-local welcome = welcome:gsub("{ÇáÇÓã}",FlterName(data.first_name_..' '..(data.last_name_ or "" ),20))
+rules = (redis:get(max..'rulse:msg'..msg.chat_id_) or "Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nØ§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† :\nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nâš” | Ø¥Ø­ØªØ±Ø§Ù… Ù…Ø¯Ø±Ø§Ø¡ ÙˆØ£Ø¯Ù…Ù†ÙŠØ© Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.\nâš” | Ø§Ù„Ø¹Ù†ØµØ±ÙŠØ© Ø¨Ø¬Ù…ÙŠØ¹ Ø£Ø´ÙƒØ§Ù„Ù‡Ø§ Ù…Ù…Ù†ÙˆØ¹Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ù†Ø´Ø± Ø§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø¥Ø¨Ø§Ø­ÙŠ Ø¨ÙƒÙ„ Ø£Ù†ÙˆØ§Ø¹Ù‡.\nâš” | ÙŠÙ…Ù†Ø¹ Ø§Ù„ØªÙƒÙ„Ù… Ø¨Ø§Ù„Ø£Ø¯ÙŠØ§Ù†Â Ø£Ùˆ Ø§Ù„Ù…Ø°Ø§Ù‡Ø¨ Ø£Ùˆ Ø§Ù„Ø³ÙŠØ§Ø³Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ù†Ø´Ø± Ø§Ù„Ø­Ø³Ø§Ø¨Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ© Ø¯ÙˆÙ† Ø£Ø®Ø° Ø§Ù„Ù…ÙˆØ§ÙÙ‚Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ù†Ø´Ø± Ø§Ù„Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ø¨ÙƒÙ„ Ø£Ù†ÙˆØ§Ø¹Ù‡Ø§ Ø¯ÙˆÙ† Ø£Ø®Ø° Ø§Ù„Ù…ÙˆØ§ÙÙ‚Ø©.\nâš” | ÙŠÙ…Ù†Ø¹ Ø§Ù„Ø³Ø¨ Ø£Ùˆ Ø§Ù„ØªÙ„ÙØ¸ Ø¨Ø£Ù„ÙØ§Ø¸ Ù†Ø§Ø¨ÙŠØ© Ø§Ùˆ Ø®Ø§Ø¯Ø´Ø© Ù„Ù„Ø­ÙŠØ§Ø¡.\nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€")
+welcome = welcome:gsub("{Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†}", rules)
+if data.username_ then UserName = '@'..data.username_ else UserName = '< Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø¹Ø±Ù >' end
+welcome = welcome:gsub("{Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡}",Flter_Markdown((redis:get(max..'group:name'..msg.chat_id_) or '')))
+local welcome = welcome:gsub("{Ø§Ù„Ù…Ø¹Ø±Ù}",UserName)
+local welcome = welcome:gsub("{Ø§Ù„Ø§Ø³Ù…}",FlterName(data.first_name_..' '..(data.last_name_ or "" ),20))
 sendMsg(msg.chat_id_,msg.id_,Flter_Markdown(welcome))
 end 
 end)
 else
-welcome = (redis:get(max..'welcome:msg'..msg.chat_id_) or "??????Çåáä Èß ÚÒíÒí {ÇáÇÓã}\n???ãÚÑİß » {ÇáãÚÑİ}\n{ÇáŞæÇäíä}\n\nÇáÑÌÇÁ ÇáÇáÊÒÇã ÈÇáŞæÇäíä ?\nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\n??ÇÓã ÇáßÑæÈ » {ÇáãÌãæÚå}")
+welcome = (redis:get(max..'welcome:msg'..msg.chat_id_) or "ğŸ™‹ğŸ»â€â™‚â”‚Ø§Ù‡Ù„Ù† Ø¨Ùƒ Ø¹Ø²ÙŠØ²ÙŠ {Ø§Ù„Ø§Ø³Ù…}\nğŸŸâ”‚Ù…Ø¹Ø±ÙÙƒ Â» {Ø§Ù„Ù…Ø¹Ø±Ù}\n{Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†}\n\nØ§Ù„Ø±Ø¬Ø§Ø¡ Ø§Ù„Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† â™¥\nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nâšœâ”‚Ø§Ø³Ù… Ø§Ù„ÙƒØ±ÙˆØ¨ Â» {Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡}")
 if welcome then
-rules = (redis:get(max..'rulse:msg'..msg.chat_id_) or "???????ãÑÍÈÃ ÚÒíÑí ÇáŞæÇäíä ßáÇÊí ????\n???ããäæÚ äÔÑ ÇáÑæÇÈØ\n???ããäæÚ ÇáÊßáã Çæ äÔÑ ÕæÑ ÇÈÇÍíå\n??ããäæÚ  ÇÚÇÏå ÊæÌíå\n???ããäæÚ ÇáÊßáã ÈáØÇÆİå\n???ÇáÑÌÇÁ ÇÍÊÑÇã ÇáãÏÑÇÁ æÇáÇÏãäíå ??\n")
-welcome = welcome:gsub("{ÇáŞæÇäíä}", rules)
-if msg.addusername then UserName = '@'..msg.addusername else UserName = '< áÇ íæÌÏ ãÚÑİ >' end
-welcome = welcome:gsub("{ÇáãÌãæÚå}",Flter_Markdown((redis:get(max..'group:name'..msg.chat_id_) or '')))
-local welcome = welcome:gsub("{ÇáãÚÑİ}",UserName)
-local welcome = welcome:gsub("{ÇáÇÓã}",FlterName(msg.addname,20))
+rules = (redis:get(max..'rulse:msg'..msg.chat_id_) or "ğŸ‘¨ğŸ»â€ğŸ’»â”‚Ù…Ø±Ø­Ø¨Ø£ Ø¹Ø²ÙŠØ±ÙŠ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ† ÙƒÙ„Ø§ØªÙŠ ğŸ‘‡ğŸ»\nâ™¦ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ù†Ø´Ø± Ø§Ù„Ø±ÙˆØ§Ø¨Ø·\nâš ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ù„ØªÙƒÙ„Ù… Ø§Ùˆ Ù†Ø´Ø± ØµÙˆØ± Ø§Ø¨Ø§Ø­ÙŠÙ‡\nâš”â”‚Ù…Ù…Ù†ÙˆØ¹  Ø§Ø¹Ø§Ø¯Ù‡ ØªÙˆØ¬ÙŠÙ‡\nğŸ’­â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ù„ØªÙƒÙ„Ù… Ø¨Ù„Ø·Ø§Ø¦ÙÙ‡\nâ™¥ï¸â”‚Ø§Ù„Ø±Ø¬Ø§Ø¡ Ø§Ø­ØªØ±Ø§Ù… Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡ ÙˆØ§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡ ??\n")
+welcome = welcome:gsub("{Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†}", rules)
+if msg.addusername then UserName = '@'..msg.addusername else UserName = '< Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ù…Ø¹Ø±Ù >' end
+welcome = welcome:gsub("{Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡}",Flter_Markdown((redis:get(max..'group:name'..msg.chat_id_) or '')))
+local welcome = welcome:gsub("{Ø§Ù„Ù…Ø¹Ø±Ù}",UserName)
+local welcome = welcome:gsub("{Ø§Ù„Ø§Ø³Ù…}",FlterName(msg.addname,20))
 sendMsg(msg.chat_id_,msg.id_,Flter_Markdown(welcome))
 end 
 end
@@ -3563,7 +3563,7 @@ end
 redis:setex(max..'user:'..msg.sender_user_id_..':msgs',3,adduserx+1)
 end
 
-if not msg.Admin and not msg.Special and not (msg.adduser or msg.joinuser or msg.deluser ) then -- ááÇÚÖÇÁ İŞØ   
+if not msg.Admin and not msg.Special and not (msg.adduser or msg.joinuser or msg.deluser ) then -- Ù„Ù„Ø§Ø¹Ø¶Ø§Ø¡ ÙÙ‚Ø·   
 
 if not msg.forward_info and redis:get(max..'lock_flood'..msg.chat_id_)  then
 local msgs = (redis:get(max..'user:'..msg.sender_user_id_..':msgs') or 0)
@@ -3574,55 +3574,55 @@ Restrict(msg.chat_id_,msg.sender_user_id_,1)
 redis:setex(max..'sender:'..msg.sender_user_id_..':flood',30,true)
 if datau.username_ then USERNAME = '@'..datau.username_ else USERNAME = FlterName(datau.first_name_..' '..(datau.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,datau.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME.."\n???ŞãÜÊ ÈÊÑÂÑ ÂËÑ ãÜä "..NUM_MSG_MAX.." ÑÓÜÂáåÀş , áĞÂ Êã ÊŞííÏ ãÜä ÂáãÜÌãÜæÚåÀş ?\n",12,USERCAR) 
+SendMention(msg.chat_id_,datau.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME.."\nğŸš¸â”‚Ù‚Ù…Ù€Øª Ø¨ØªÚ¯Ø±Ø¢Ø± Ø¢Ú¯Ø«Ø± Ù…Ù€Ù† "..NUM_MSG_MAX.." Ø±Ø³Ù€Ø¢Ù„Ù‡Ûâ€Œâ€ , Ù„Ø°Ø¢ ØªÙ… ØªÙ‚ÙŠÙŠØ¯Ú¯ Ù…Ù€Ù† Ø¢Ù„Ù…Ù€Ø¬Ù…Ù€ÙˆØ¹Ù‡Ûâ€Œâ€ âœ“\n",12,USERCAR) 
 return false
 end)
 end 
 redis:setex(max..'user:'..msg.sender_user_id_..':msgs',2,msgs+1)
 end
  
- function Get_Info(msg,chat,user) --// ÇÑÓÇá äÊíÌÉ ÇáÕáÇÍíå
+ function Get_Info(msg,chat,user) --// Ø§Ø±Ø³Ø§Ù„ Ù†ØªÙŠØ¬Ø© Ø§Ù„ØµÙ„Ø§Ø­ÙŠÙ‡
 local Chek_Info = https.request('https://api.telegram.org/bot'..Token..'/getChatMember?chat_id='.. chat ..'&user_id='.. user..'')
 local Json_Info = JSON.decode(Chek_Info)
 if Json_Info.ok == true then
 if Json_Info.result.status == "creator" then
-return sendMsg(msg.chat_id_,msg.id_,'???ÕáÇÍíÇÊå ãäÔÆ ÇáßÑæÈ\n??')   
+return sendMsg(msg.chat_id_,msg.id_,'ğŸš¸â”‚ØµÙ„Ø§Ø­ÙŠØ§ØªÙ‡ Ù…Ù†Ø´Ø¦ Ø§Ù„ÙƒØ±ÙˆØ¨\nğŸƒ')   
 end 
 if Json_Info.result.status == "member" then
-return sendMsg(msg.chat_id_,msg.id_,'???ãÌÑÏ ÚÖæ åäÇ\n??')   
+return sendMsg(msg.chat_id_,msg.id_,'ğŸš¸â”‚Ù…Ø¬Ø±Ø¯ Ø¹Ø¶Ùˆ Ù‡Ù†Ø§\nğŸƒ')   
 end 
 if Json_Info.result.status == "administrator" then
 if Json_Info.result.can_change_info == true then
-info = '?' else info = '?' end
+info = 'êªœ' else info = 'âœ˜' end
 if Json_Info.result.can_delete_messages == true then
-delete = '?' else delete = '?' end
+delete = 'êªœ' else delete = 'âœ˜' end
 if Json_Info.result.can_invite_users == true then
-invite = '?' else invite = '?' end
+invite = 'êªœ' else invite = 'âœ˜' end
 if Json_Info.result.can_pin_messages == true then
-pin = '?' else pin = '?' end
+pin = 'êªœ' else pin = 'âœ˜' end
 if Json_Info.result.can_restrict_members == true then
-restrict = '?' else restrict = '?' end
+restrict = 'êªœ' else restrict = 'âœ˜' end
 if Json_Info.result.can_promote_members == true then
-promote = '?' else promote = '?' end
-return sendMsg(chat,msg.id_,'???ÇáÑÊÈÉ : ãÔÑİ ??\n???æÇáÕáÇÍíÇÊ åí ? \nÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ\n???ÊÛíÑ ãÚáæãÇÊ ÇáãÌãæÚå ? ? '..info..' ?\n???ÍĞİ ÇáÑÓÇÆá ? ? '..delete..' ?\n???ÍÙÑ ÇáãÓÊÎÏãíä ? ? '..restrict..' ?\n??ÏÚæÉ ãÓÊÎÏãíä ? ? '..invite..' ?\n???ÊËÈíÊ ÇáÑÓÇÆá ? ? '..pin..' ?\n???ÇÖÇİÉ ãÔÑİíä ÌÏÏ ? ? '..promote..' ?\n\n???ãáÇÍÖå » ÚáÇãÉ ?  ? ? ÊÚäí áÏíå ÇáÕáÇÍíÉ æÚáÇãÉ ? ? ? ÊÚäí áíÓ áíÏíå ÇáÕáÇÍíå')   
+promote = 'êªœ' else promote = 'âœ˜' end
+return sendMsg(chat,msg.id_,'ğŸ“Œâ”‚Ø§Ù„Ø±ØªØ¨Ø© : Ù…Ø´Ø±Ù ğŸƒ\nğŸ’¢â”‚ÙˆØ§Ù„ØµÙ„Ø§Ø­ÙŠØ§Øª Ù‡ÙŠ â‡“ \nÙ€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€Ù€\nğŸ“â”‚ØªØºÙŠØ± Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ â† âª '..info..' â«\nğŸ“¨â”‚Ø­Ø°Ù Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ â† âª '..delete..' â«\nğŸš·â”‚Ø­Ø¸Ø± Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† â† âª '..restrict..' â«\nâ™»â”‚Ø¯Ø¹ÙˆØ© Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† â† âª '..invite..' â«\nğŸ”˜â”‚ØªØ«Ø¨ÙŠØª Ø§Ù„Ø±Ø³Ø§Ø¦Ù„ â† âª '..pin..' â«\nğŸš¸â”‚Ø§Ø¶Ø§ÙØ© Ù…Ø´Ø±ÙÙŠÙ† Ø¬Ø¯Ø¯ â† âª '..promote..' â«\n\nğŸ’ â”‚Ù…Ù„Ø§Ø­Ø¶Ù‡ Â» Ø¹Ù„Ø§Ù…Ø© âª  êªœ â« ØªØ¹Ù†ÙŠ Ù„Ø¯ÙŠÙ‡ Ø§Ù„ØµÙ„Ø§Ø­ÙŠØ© ÙˆØ¹Ù„Ø§Ù…Ø© âª âœ˜ â« ØªØ¹Ù†ÙŠ Ù„ÙŠØ³ Ù„ÙŠØ¯ÙŠÙ‡ Ø§Ù„ØµÙ„Ø§Ø­ÙŠÙ‡')   
 end
 end
 end
 
 if msg.forward_info_ then
-if redis:get(max..'mute_forward'..msg.chat_id_) then -- Şİá ÇáÊæÌíå
+if redis:get(max..'mute_forward'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„ØªÙˆØ¬ÙŠÙ‡
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del Becuse Send Fwd \27[0m")
 
 if data.ID == "Error" and data.code_ == 6 then 
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) and not redis:get(max..':User_Fwd_Msg:'..msg.sender_user_id_..':flood') then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÚÇÏÉ ÇáÊæÌíå  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø¹Ø§Ø¯Ø© Ø§Ù„ØªÙˆØ¬ÙŠÙ‡  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) 
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) 
 return redis:setex(max..':User_Fwd_Msg:'..msg.sender_user_id_..':flood',15,true)
 end,nil)
 end
@@ -3632,40 +3632,40 @@ elseif redis:get(max..':tqeed_fwd:'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del Becuse Send Fwd tqeed \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 Restrict(msg.chat_id_,msg.sender_user_id_,1)
 end)
 return false 
 end
-elseif tonumber(msg.via_bot_user_id_) ~= 0 and redis:get(max..'mute_inline'..msg.chat_id_) then -- Şİá ÇáÇäáÇíä
+elseif tonumber(msg.via_bot_user_id_) ~= 0 and redis:get(max..'mute_inline'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„Ø§Ù†Ù„Ø§ÙŠÙ†
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send inline \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ÇáÇäáÇíä ãŞİæá  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ø§Ù„Ø§Ù†Ù„Ø§ÙŠÙ† Ù…Ù‚ÙÙˆÙ„  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
-elseif msg.text then -- ÑÓÇíá İŞØ
-if utf8.len(msg.text) > 500 and redis:get(max..'lock_spam'..msg.chat_id_) then -- Şİá ÇáßáíÔå 
+elseif msg.text then -- Ø±Ø³Ø§ÙŠÙ„ ÙÙ‚Ø·
+if utf8.len(msg.text) > 500 and redis:get(max..'lock_spam'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ 
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send long msg \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ããäæÚ ÇÑÓÇá ÇáßáíÔå æÇáÇ Óæİ ÊÌÈÑäí Úáì ØÑÏß  \n??"
+local msgx = "â™¦ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ÙƒÙ„ÙŠØ´Ù‡ ÙˆØ§Ù„Ø§ Ø³ÙˆÙ ØªØ¬Ø¨Ø±Ù†ÙŠ Ø¹Ù„Ù‰ Ø·Ø±Ø¯Ùƒ  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -3682,7 +3682,7 @@ and redis:get(max..':tqeed_link:'..msg.chat_id_)  then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m The user i restricted becuse send link \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 Restrict(msg.chat_id_,msg.sender_user_id_,1)
 end)
@@ -3695,14 +3695,14 @@ and redis:get(max..'lock_link'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send link \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ããäæÚ ÇÑÓÇá ÇáÑæÇÈØ  \n??"
+local msgx = "â™¦ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ø±ÙˆØ§Ø¨Ø·  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -3710,14 +3710,14 @@ elseif (msg.text:match("[Hh][Tt][Tt][Pp][Ss]://") or msg.text:match("[Hh][Tt][Tt
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send web link \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ããäæÚ ÇÑÓÇá ÑæÇÈØ ÇáæíÈ   \n??"
+local msgx = "â™¦ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø±ÙˆØ§Ø¨Ø· Ø§Ù„ÙˆÙŠØ¨   \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -3725,14 +3725,14 @@ elseif msg.text:match("#[%a%d_]+") and redis:get(max..'lock_tag'..msg.chat_id_) 
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send tag \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ããäæÚ ÇÑÓÇá ÇáÊÇß  \n??"
+local msgx = "â™¦ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ØªØ§Ùƒ  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -3740,14 +3740,14 @@ elseif msg.text:match("@[%a%d_]+")  and redis:get(max..'lock_username'..msg.chat
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send username \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ããäæÚ ÇÑÓÇá ÇáãÚÑİ   \n??"
+local msgx = "â™¦ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ù…Ø¹Ø±Ù   \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) 
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) 
 end,nil)
 end
 end)
@@ -3756,14 +3756,14 @@ elseif not msg.textEntityTypeBold and (msg.textEntityTypeBold or msg.textEntityT
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send markdown \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ããäæÚ ÇÑÓÇá ÇáãÇÑßÏæÇä  \n??"
+local msgx = "â™¦ï¸â”‚Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ù…Ø§Ø±ÙƒØ¯ÙˆØ§Ù†  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -3771,62 +3771,62 @@ elseif msg.textEntityTypeTextUrl and redis:get(max..'lock_webpage'..msg.chat_id_
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send web page \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "??? .ããäæÚ ÇÑÓÇá ÑæÇÈØ ÇáæíÈ   \n??"
+local msgx = "â™¦ï¸â”‚ .Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø±ÙˆØ§Ø¨Ø· Ø§Ù„ÙˆÙŠØ¨   \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
  
-elseif msg.edited and redis:get(max..'lock_edit'..msg.chat_id_) then -- Şİá ÇáÊÚÏíá
+elseif msg.edited and redis:get(max..'lock_edit'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send Edit \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇğ ããäæÚ ÇáÊÚÏíá Êã ÇáãÓÍ \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§Ù‹ Ù…Ù…Ù†ÙˆØ¹ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„ ØªÙ… Ø§Ù„Ù…Ø³Ø­ \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
 end 
-elseif msg.content_.ID == "MessageUnsupported" and redis:get(max..'mute_video'..msg.chat_id_) then -- Şİá ÇáİíÏíæ
+elseif msg.content_.ID == "MessageUnsupported" and redis:get(max..'mute_video'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send video \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáİíÏíæ ßÇã \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ ÙƒØ§Ù… \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
 elseif msg.photo then
-if redis:get(max..'mute_photo'..msg.chat_id_)  then -- Şİá ÇáÕæÑ
+if redis:get(max..'mute_photo'..msg.chat_id_)  then -- Ù‚ÙÙ„ Ø§Ù„ØµÙˆØ±
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send photo \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáÕæÑ  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ØµÙˆØ±  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -3834,25 +3834,25 @@ elseif redis:get(max..':tqeed_photo:'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m The user resctricted becuse send photo \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 Restrict(msg.chat_id_,msg.sender_user_id_,3)
 end)
 return false
 end
 elseif msg.video then
-if redis:get(max..'mute_video'..msg.chat_id_) then -- Şİá ÇáİíÏíæ
+if redis:get(max..'mute_video'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send vedio \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáİíÏíæ  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
 end
 end)
 return false
@@ -3860,55 +3860,55 @@ elseif redis:get(max..':tqeed_video:'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m The user restricted becuse send video \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 Restrict(msg.chat_id_,msg.sender_user_id_,3)
 end)
 return false
 end
-elseif msg.document and redis:get(max..'mute_document'..msg.chat_id_) then -- Şİá ÇáãáİÇÊ
+elseif msg.document and redis:get(max..'mute_document'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„Ù…Ù„ÙØ§Øª
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send file \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
  if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáãáİÇÊ  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ù…Ù„ÙØ§Øª  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
-elseif msg.sticker and redis:get(max..'mute_sticker'..msg.chat_id_) then --Şİá ÇáãáÕŞÇÊ
+elseif msg.sticker and redis:get(max..'mute_sticker'..msg.chat_id_) then --Ù‚ÙÙ„ Ø§Ù„Ù…Ù„ØµÙ‚Ø§Øª
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send sticker \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáãáÕŞÇÊ  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ù…Ù„ØµÙ‚Ø§Øª  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
 end
 end)
 return false
 elseif msg.animation then
-if redis:get(max..'mute_gif'..msg.chat_id_) then -- Şİá ÇáãÊÍÑßå
+if redis:get(max..'mute_gif'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send gif \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáÕæÑ ÇáãÊÍÑßå  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ØµÙˆØ± Ø§Ù„Ù…ØªØ­Ø±ÙƒÙ‡  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
 end
 end)
 return false
@@ -3916,105 +3916,105 @@ elseif redis:get(max..':tqeed_gif:'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m The user restricted becuse send gif \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 Restrict(msg.chat_id_,msg.sender_user_id_,3)
 end)
 return false
 end
-elseif msg.contact and redis:get(max..'mute_contact'..msg.chat_id_) then -- Şİá ÇáÌåÇÊ
+elseif msg.contact and redis:get(max..'mute_contact'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„Ø¬Ù‡Ø§Øª
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send Contact \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
  if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÌåÇÊ ÇáÇÊÕÇá  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø¬Ù‡Ø§Øª Ø§Ù„Ø§ØªØµØ§Ù„  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
-elseif msg.location and redis:get(max..'mute_location'..msg.chat_id_) then -- Şİá ÇáãæŞÚ
+elseif msg.location and redis:get(max..'mute_location'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„Ù…ÙˆÙ‚Ø¹
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send location \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â”‚* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â”‚* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
  if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáãæŞÚ  \n??"
+local msgx = "â™¦ï¸â”‚Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ù…ÙˆÙ‚Ø¹  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â”‚Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
-elseif msg.voice and redis:get(max..'mute_voice'..msg.chat_id_) then -- Şİá ÇáÈÕãÇÊ
+elseif msg.voice and redis:get(max..'mute_voice'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„Ø¨ØµÙ…Ø§Øª
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send voice \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
  if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáÈÕãÇÊ  \n??"
+local msgx = "â™¦ï¸â•¿Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ø¨ØµÙ…Ø§Øª  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â•½Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)   
 end
 end)
 return false
-elseif msg.game and redis:get(max..'mute_game'..msg.chat_id_) then -- Şİá ÇáÇáÚÇÈ
+elseif msg.game and redis:get(max..'mute_game'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„Ø§Ù„Ø¹Ø§Ø¨
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send game \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "??ÚĞÑÇ ããäæÚ áÚÈ ÇáÇáÚÇÈ  \n??"
+local msgx = "â”‚â•¿Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ù„Ø¹Ø¨ Ø§Ù„Ø§Ù„Ø¹Ø§Ø¨  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â•½Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
-elseif msg.audio and redis:get(max..'mute_audio'..msg.chat_id_) then -- Şİá ÇáÕæÊ
+elseif msg.audio and redis:get(max..'mute_audio'..msg.chat_id_) then -- Ù‚ÙÙ„ Ø§Ù„ØµÙˆØª
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send audio \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáÕæÊ  \n??"
+local msgx = "â™¦ï¸â•¿Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ØµÙˆØª  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â•½Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
-elseif msg.replyMarkupInlineKeyboard and redis:get(max..'mute_keyboard'..msg.chat_id_) then -- ßíÈæÑÏ
+elseif msg.replyMarkupInlineKeyboard and redis:get(max..'mute_keyboard'..msg.chat_id_) then -- ÙƒÙŠØ¨ÙˆØ±Ø¯
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send keyboard \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ÇáßíÈæÑÏ ãŞİæá  \n??"
+local msgx = "â™¦ï¸â•¿Ø¹Ø°Ø±Ø§ Ø§Ù„ÙƒÙŠØ¨ÙˆØ±Ø¯ Ù…Ù‚ÙÙˆÙ„  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â•½Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
 end
 
-if msg.content_ and msg.content_.caption_ then -- ÇáÑÓÇíá Çáí ÈÇáßÇÈÔä
+if msg.content_ and msg.content_.caption_ then -- Ø§Ù„Ø±Ø³Ø§ÙŠÙ„ Ø§Ù„ÙŠ Ø¨Ø§Ù„ÙƒØ§Ø¨Ø´Ù†
 print("sdfsd     f- ---------- ")
 if (msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/") 
 or msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]/") 
@@ -4025,14 +4025,14 @@ and redis:get(max..'lock_link'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send link caption \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ??')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáÑæÇÈØ  \n??"
+local msgx = "â™¦ï¸â•¿Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ø±ÙˆØ§Ø¨Ø·  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â•½Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -4044,14 +4044,14 @@ and redis:get(max..'lock_webpage'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send webpage caption \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
 GetUserID(msg.sender_user_id_,function(arg,data)
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÑæÇÈØ ÇáæíÈ  \n??"
+local msgx = "â™¦ï¸â•¿Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø±ÙˆØ§Ø¨Ø· Ø§Ù„ÙˆÙŠØ¨  \nğŸ“›"
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â•½Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end
 end)
 return false
@@ -4059,14 +4059,14 @@ elseif msg.content_.caption_:match("@[%a%d_]+") and redis:get(max..'lock_usernam
 Del_msg(msg.chat_id_,msg.id_,function(arg,data)
 print("\27[1;31m Msg Del becuse send username caption \27[0m")
 if data.ID == "Error" and data.code_ == 6 then
-return sendMsg(msg.chat_id_,msg.id_,'??*?* áÇ íãßääí ãÓÍ ÇáÑÓÇáå ÇáãÎÇáİå .\n??*?* áÓÊ ãÔÑİ Çæ áíÓ áÏí ÕáÇÍíå  ÇáÍĞİ \n ??')    
+return sendMsg(msg.chat_id_,msg.id_,'ğŸ“›*â•¿* Ù„Ø§ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ù…Ø³Ø­ Ø§Ù„Ø±Ø³Ø§Ù„Ù‡ Ø§Ù„Ù…Ø®Ø§Ù„ÙÙ‡ .\nğŸŸ*â•½* Ù„Ø³Øª Ù…Ø´Ø±Ù Ø§Ùˆ Ù„ÙŠØ³ Ù„Ø¯ÙŠ ØµÙ„Ø§Ø­ÙŠÙ‡  Ø§Ù„Ø­Ø°Ù \n ğŸ’¥')    
 end
 if redis:get(max..'lock_woring'..msg.chat_id_) then
-local msgx = "???ÚĞÑÇ ããäæÚ ÇÑÓÇá ÇáÊÇß Çæ ÇáãÚÑİ  \n??"
+local msgx = "â™¦ï¸â•¿Ø¹Ø°Ø±Ø§ Ù…Ù…Ù†ÙˆØ¹ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„ØªØ§Ùƒ Ø§Ùˆ Ø§Ù„Ù…Ø¹Ø±Ù  \nğŸ“›"
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"??????ÇáÚÖæ » "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ™ğŸ»â€â™‚â•½Ø§Ù„Ø¹Ø¶Ùˆ Â» "..USERNAME..'\n'..msgx,12,USERCAR) end,nil)
 end 
 end)
 return false
@@ -4171,134 +4171,134 @@ if not Replay then
 --================================{{  Reply Bot  }} ===================================
 
 local mrr = {
-"ãÑÍÈÊíä",
-"ÇåáÇ",
+"Ù…Ø±Ø­Ø¨ØªÙŠÙ†",
+"Ø§Ù‡Ù„Ø§",
 }
 local amr = {
-"íÇÚãÑí????",
-"íÇŞáÈí????",
-"íÇÍíÇÊí????",
-"äÊíßä¿",
+"ÙŠØ§Ø¹Ù…Ø±ÙŠâ™¥ï¸ğŸ™ˆ",
+"ÙŠØ§Ù‚Ù„Ø¨ÙŠâ™¥ï¸ğŸ™ˆ",
+"ÙŠØ§Ø­ÙŠØ§ØªÙŠâ™¥ï¸ğŸ™ˆ",
+"Ù†ØªÙŠÙƒÙ†ØŸ",
 }
 local nmf = {
-"İíå ÇÍÏ ãÇÓßß¿",
-"äæã ÇáÚÇİíå",
-"Úáì İÑÇÔß íÇááå",
-"äæã ÇáÙÇáã ÚÈÇÏå",
+"ÙÙŠÙ‡ Ø§Ø­Ø¯ Ù…Ø§Ø³ÙƒÙƒØŸ",
+"Ù†ÙˆÙ… Ø§Ù„Ø¹Ø§ÙÙŠÙ‡",
+"Ø¹Ù„Ù‰ ÙØ±Ø§Ø´Ùƒ ÙŠØ§Ù„Ù„Ù‡",
+"Ù†ÙˆÙ… Ø§Ù„Ø¸Ø§Ù„Ù… Ø¹Ø¨Ø§Ø¯Ù‡",
 }
 local nor = {
-" äæÑß",
-"ÇÚÑİß¿",
-"ÇáäæÑ äæÑß",
-"ÇÏÑí??-¡",
+" Ù†ÙˆØ±Ùƒ",
+"Ø§Ø¹Ø±ÙÙƒØŸ",
+"Ø§Ù„Ù†ÙˆØ± Ù†ÙˆØ±Ùƒ",
+"Ø§Ø¯Ø±ÙŠğŸŒš-ØŒ",
 }
 local smx = {
-"ÕÈÇÍ ÇáäæÑ",
-"ÕÈÇÍäÇ ÇäÊ/í",
-"ÇááÍíä ÇŞÏÑ ÇÑæŞ",
+"ØµØ¨Ø§Ø­ Ø§Ù„Ù†ÙˆØ±",
+"ØµØ¨Ø§Ø­Ù†Ø§ Ø§Ù†Øª/ÙŠ",
+"Ø§Ù„Ù„Ø­ÙŠÙ† Ø§Ù‚Ø¯Ø± Ø§Ø±ÙˆÙ‚",
 }
 local msx = {
-"ãÓÇÁ ÇáäæÑ",
-"ãÓÇÆí ÇäÊ/í",
-"ÇááÍíä ÇŞÏÑ ÇÑæŞ",
+"Ù…Ø³Ø§Ø¡ Ø§Ù„Ù†ÙˆØ±",
+"Ù…Ø³Ø§Ø¦ÙŠ Ø§Ù†Øª/ÙŠ",
+"Ø§Ù„Ù„Ø­ÙŠÙ† Ø§Ù‚Ø¯Ø± Ø§Ø±ÙˆÙ‚",
 }
 local nm = {
-"ÏÌÇÌ ãÇÍæáß ÇÍÏ??",
-"ÔÏÎáß",
-"Çíå",
-"ÇÒÚÌÊäÇ",
-"ÇäÊ ãÇÊäÇã¿ ",
+"Ø¯Ø¬Ø§Ø¬ Ù…Ø§Ø­ÙˆÙ„Ùƒ Ø§Ø­Ø¯ğŸŒš",
+"Ø´Ø¯Ø®Ù„Ùƒ",
+"Ø§ÙŠÙ‡",
+"Ø§Ø²Ø¹Ø¬ØªÙ†Ø§",
+"Ø§Ù†Øª Ù…Ø§ØªÙ†Ø§Ù…ØŸ ",
 }
 local wk1 = {
-"äÇíã/å",
-"æÔ ÚäÏß ¿",
-"åÇÌÑÊ",
-"ÇãÑäí",
-"æÔ ÏÎáß",
-"ÈŞáÈß",
+"Ù†Ø§ÙŠÙ…/Ù‡",
+"ÙˆØ´ Ø¹Ù†Ø¯Ùƒ ØŸ",
+"Ù‡Ø§Ø¬Ø±Øª",
+"Ø§Ù…Ø±Ù†ÙŠ",
+"ÙˆØ´ Ø¯Ø®Ù„Ùƒ",
+"Ø¨Ù‚Ù„Ø¨Ùƒ",
 }
 local wk = {
-"äÇíãíä",
-"æÔ ÚäÏß ",
-"åÇÌÑäÇ",
-"ÇãÑäí",
-"æÔ ÏÎáß",
-"ÈŞáÈß",
+"Ù†Ø§ÙŠÙ…ÙŠÙ†",
+"ÙˆØ´ Ø¹Ù†Ø¯Ùƒ ",
+"Ù‡Ø§Ø¬Ø±Ù†Ø§",
+"Ø§Ù…Ø±Ù†ÙŠ",
+"ÙˆØ´ Ø¯Ø®Ù„Ùƒ",
+"Ø¨Ù‚Ù„Ø¨Ùƒ",
 }
 local su = {
- "Úíæäí",
-"ÇãÑäí íäÈÖí",
-"Úíæä ["..Bot_Name.."] ",
-"áÈíå íÑæÍí"}
+ "Ø¹ÙŠÙˆÙ†ÙŠ",
+"Ø§Ù…Ø±Ù†ÙŠ ÙŠÙ†Ø¨Ø¶ÙŠ",
+"Ø¹ÙŠÙˆÙ† ["..Bot_Name.."] ",
+"Ù„Ø¨ÙŠÙ‡ ÙŠØ±ÙˆØ­ÙŠ"}
 local ss97 = {
-"áÚäå ÔÚäÏß","åÇå",
-"ÇãÑ ÔÊÈí","áÈíå","åáÇ",
-"Úíæäí",
-"Úíæä ["..Bot_Name.."] ",
-"ÇãÑäí ŞáÈí áß ", 
-"ÑæÍ ["..Bot_Name.."] ",
+"Ù„Ø¹Ù†Ù‡ Ø´Ø¹Ù†Ø¯Ùƒ","Ù‡Ø§Ù‡",
+"Ø§Ù…Ø± Ø´ØªØ¨ÙŠ","Ù„Ø¨ÙŠÙ‡","Ù‡Ù„Ø§",
+"Ø¹ÙŠÙˆÙ†ÙŠ",
+"Ø¹ÙŠÙˆÙ† ["..Bot_Name.."] ",
+"Ø§Ù…Ø±Ù†ÙŠ Ù‚Ù„Ø¨ÙŠ Ù„Ùƒ ", 
+"Ø±ÙˆØ­ ["..Bot_Name.."] ",
 }
 local ns = {
-"ÃÓãí ["..Bot_Name.."] íŞáÈí",
-"äÇÏäí È ["..Bot_Name.."] íÊÈä",
-"ãßÊæÈ ÇÓãí ["..Bot_Name.."] ãÊÚÑİ ÊŞÑÇ ",
-"ÈæÊ ÈÚíäß íÊÈä ",
-"ÇÓãí ["..Bot_Name.."] ",
-"ÇäÊ ÇáÈæÊ ",
- "ÔÚäÏß ÊäÇÏíäí ÈæÊ ",
+"Ø£Ø³Ù…ÙŠ ["..Bot_Name.."] ÙŠÙ‚Ù„Ø¨ÙŠ",
+"Ù†Ø§Ø¯Ù†ÙŠ Ø¨ ["..Bot_Name.."] ÙŠØªØ¨Ù†",
+"Ù…ÙƒØªÙˆØ¨ Ø§Ø³Ù…ÙŠ ["..Bot_Name.."] Ù…ØªØ¹Ø±Ù ØªÙ‚Ø±Ø§ ",
+"Ø¨ÙˆØª Ø¨Ø¹ÙŠÙ†Ùƒ ÙŠØªØ¨Ù† ",
+"Ø§Ø³Ù…ÙŠ ["..Bot_Name.."] ",
+"Ø§Ù†Øª Ø§Ù„Ø¨ÙˆØª ",
+ "Ø´Ø¹Ù†Ø¯Ùƒ ØªÙ†Ø§Ø¯ÙŠÙ†ÙŠ Ø¨ÙˆØª ",
 }
 local na = {
-"ÇäÊÍÑ",
-"Çááå íÑÒŞß ÈÓÇáİå",
-"ÒŞ ÓÇáİå",
-"åÈ áäÇ ÓÇáİå",
+"Ø§Ù†ØªØ­Ø±",
+"Ø§Ù„Ù„Ù‡ ÙŠØ±Ø²Ù‚Ùƒ Ø¨Ø³Ø§Ù„ÙÙ‡",
+"Ø²Ù‚ Ø³Ø§Ù„ÙÙ‡",
+"Ù‡Ø¨ Ù„Ù†Ø§ Ø³Ø§Ù„ÙÙ‡",
 }
 local nb = {
-"ÇãÍÍÇÊ",
-"ãÍÍ",
-"ÕããåÇ",
-"íÚ",
-"ÇãããÎÊİæ",
+"Ø§Ù…Ø­Ø­Ø§Øª",
+"Ù…Ø­Ø­",
+"ØµÙ…Ù…Ù‡Ø§",
+"ÙŠØ¹",
+"Ø§Ù…Ù…Ù…Ø®ØªÙÙˆ",
 }
 local nf = {
-"ãæ ßËÑí",
-"äİÓ ÇáÔÚæÑ",
-"æäÇ ÇßËÑ",
- "ÊŞáÚ",
+"Ù…Ùˆ ÙƒØ«Ø±ÙŠ",
+"Ù†ÙØ³ Ø§Ù„Ø´Ø¹ÙˆØ±",
+"ÙˆÙ†Ø§ Ø§ÙƒØ«Ø±",
+ "ØªÙ‚Ù„Ø¹",
 }
 local nl = {
-"ÇØáŞ ãäÌÇ",
-"ÇÑÍÈ äæÑÊ",
-"íÚ æÔ ÌÇÈß",
+"Ø§Ø·Ù„Ù‚ Ù…Ù†Ø¬Ø§",
+"Ø§Ø±Ø­Ø¨ Ù†ÙˆØ±Øª",
+"ÙŠØ¹ ÙˆØ´ Ø¬Ø§Ø¨Ùƒ",
 }
 local np = {
-"íäÈÇÓ ÇáåÇí",
-"åÇíÇÊ",
-"ÌÈÑ ãæ åÇí",
+"ÙŠÙ†Ø¨Ø§Ø³ Ø§Ù„Ù‡Ø§ÙŠ",
+"Ù‡Ø§ÙŠØ§Øª",
+"Ø¬Ø¨Ø± Ù…Ùˆ Ù‡Ø§ÙŠ",
 }
 local sh = {
-"æäÇ ÇßËÑ íÑæÍí",
-"ÇÍÈäß",
-"ÇÚÔŞäß",
-"ÇãæÊ İíß íÑæÍí",
+"ÙˆÙ†Ø§ Ø§ÙƒØ«Ø± ÙŠØ±ÙˆØ­ÙŠ",
+"Ø§Ø­Ø¨Ù†Ùƒ",
+"Ø§Ø¹Ø´Ù‚Ù†Ùƒ",
+"Ø§Ù…ÙˆØª ÙÙŠÙƒ ÙŠØ±ÙˆØ­ÙŠ",
 }
 local lovm = {
-"ÇßÑåß",
-"ÇÚÔŞßß",
-"ÇÍÈäß",
-"Çåíã Èß",
-"áÇÊÍÊß",
-"íÚ ÌÈÊ áí ÛËíÇä",
-"æÇäÇ ÇÍÈß",
+"Ø§ÙƒØ±Ù‡Ùƒ",
+"Ø§Ø¹Ø´Ù‚ÙƒÙƒ",
+"Ø§Ø­Ø¨Ù†Ùƒ",
+"Ø§Ù‡ÙŠÙ… Ø¨Ùƒ",
+"Ù„Ø§ØªØ­ØªÙƒ",
+"ÙŠØ¹ Ø¬Ø¨Øª Ù„ÙŠ ØºØ«ÙŠØ§Ù†",
+"ÙˆØ§Ù†Ø§ Ø§Ø­Ø¨Ùƒ",
 }
 local bay = {
-"ÈÇíÇÊ",
-"ÇäÊÈåáß",
-"ÇäÊÈå áß íŞáÈí",
-"ÓÑÏÈ",
-"İßå",
-"ØÓ",
-"ãĞáİå",
+"Ø¨Ø§ÙŠØ§Øª",
+"Ø§Ù†ØªØ¨Ù‡Ù„Ùƒ",
+"Ø§Ù†ØªØ¨Ù‡ Ù„Ùƒ ÙŠÙ‚Ù„Ø¨ÙŠ",
+"Ø³Ø±Ø¯Ø¨",
+"ÙÙƒÙ‡",
+"Ø·Ø³",
+"Ù…Ø°Ù„ÙÙ‡",
 }
 
 local Text = msg.text
@@ -4308,167 +4308,167 @@ if msg.SudoUser and Text == Bot_Name and not Text2 then
 return sendMsg(msg.chat_id_,msg.id_,su[math.random(#su)])
 elseif not msg.SudoUser and Text== Bot_Name and not Text2 then  
 return sendMsg(msg.chat_id_,msg.id_,ss97[math.random(#ss97)])
-elseif Text:match("^Şæá (.*)$") then
-if utf8.len(Text:match("^Şæá (.*)$")) > 500 then 
-return sendMsg(msg.chat_id_,msg.id_,"??| ãÇ ÇßÏÑ ÇŞæá ÇßËÑ ãä 500 ÍÑİ ????")
+elseif Text:match("^Ù‚ÙˆÙ„ (.*)$") then
+if utf8.len(Text:match("^Ù‚ÙˆÙ„ (.*)$")) > 500 then 
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“›| Ù…Ø§ Ø§ÙƒØ¯Ø± Ø§Ù‚ÙˆÙ„ Ø§ÙƒØ«Ø± Ù…Ù† 500 Ø­Ø±Ù ğŸ™ŒğŸ¾")
 end
-local callback_Text = FlterName(Text:match("^Şæá (.*)$"),50)
-if callback_Text and callback_Text == 'ÇáÇÓã ÓÈÇã ??' then
-return sendMsg(msg.chat_id_,msg.id_,"??| ááÇÓİ ÇáäÕ åĞÇ ãÎÇáİ ")
+local callback_Text = FlterName(Text:match("^Ù‚ÙˆÙ„ (.*)$"),50)
+if callback_Text and callback_Text == 'Ø§Ù„Ø§Ø³Ù… Ø³Ø¨Ø§Ù… ğŸ“›' then
+return sendMsg(msg.chat_id_,msg.id_,"ğŸ“›| Ù„Ù„Ø§Ø³Ù Ø§Ù„Ù†Øµ Ù‡Ø°Ø§ Ù…Ø®Ø§Ù„Ù ")
 else
 return sendMsg(msg.chat_id_,0,callback_Text) 
 end
-elseif Text:match("^"..Bot_Name.." ÇÊİá (.*)$") then
+elseif Text:match("^"..Bot_Name.." Ø§ØªÙÙ„ (.*)$") then
 if msg.reply_id then
-sendMsg(msg.chat_id_,msg.id_,'Çæß ÓíÏí ????')
-sendMsg(msg.chat_id_,msg.reply_id,'áß Ôäæ åÇĞå æíåß ÎÊİææææææææææ?????? ÈäÕ æíåß ??')
+sendMsg(msg.chat_id_,msg.id_,'Ø§ÙˆÙƒ Ø³ÙŠØ¯ÙŠ ğŸŒğŸƒ')
+sendMsg(msg.chat_id_,msg.reply_id,'Ù„Ùƒ Ø´Ù†Ùˆ Ù‡Ø§Ø°Ù‡ ÙˆÙŠÙ‡Ùƒ Ø®ØªÙÙˆÙˆÙˆÙˆÙˆÙˆÙˆÙˆÙˆÙˆğŸ’¦ğŸ’¦ï¸ï¸ Ø¨Ù†Øµ ÙˆÙŠÙ‡Ùƒ ğŸ˜¹')
 else 
-return sendMsg(msg.chat_id_,msg.id_,"  ???? æíäå Èáå Óæíáå ÑÏ ??")
+return sendMsg(msg.chat_id_,msg.id_,"  ğŸ•µğŸ» ÙˆÙŠÙ†Ù‡ Ø¨Ù„Ù‡ Ø³ÙˆÙŠÙ„Ù‡ Ø±Ø¯ ğŸ™„")
 end
-elseif msg.SudoUser and Text=="ÇÍÈß" then 
+elseif msg.SudoUser and Text=="Ø§Ø­Ø¨Ùƒ" then 
 return sendMsg(msg.chat_id_,msg.id_,sh[math.random(#sh)])
-elseif Text=="ÈæÊ" then 
+elseif Text=="Ø¨ÙˆØª" then 
 return sendMsg(msg.chat_id_,msg.id_,ns[math.random(#ns)])
-elseif Text=="ØİÔ" then 
+elseif Text=="Ø·ÙØ´" then 
 return sendMsg(msg.chat_id_,msg.id_,na[math.random(#na)])
-elseif Text=="ãÍ" then 
+elseif Text=="Ù…Ø­" then 
 return sendMsg(msg.chat_id_,msg.id_,nb[math.random(#nb)])
-elseif Text=="ÇßÑåß" then 
+elseif Text=="Ø§ÙƒØ±Ù‡Ùƒ" then 
 return sendMsg(msg.chat_id_,msg.id_,nf[math.random(#nf)])
-elseif Text=="ÌíÊ" then 
+elseif Text=="Ø¬ÙŠØª" then 
 return sendMsg(msg.chat_id_,msg.id_,nl[math.random(#nl)])
-elseif Text=="åÇí" then 
+elseif Text=="Ù‡Ø§ÙŠ" then 
 return sendMsg(msg.chat_id_,msg.id_,np[math.random(#np)])
-elseif Text=="ÈÇí" then 
+elseif Text=="Ø¨Ø§ÙŠ" then 
 return sendMsg(msg.chat_id_,msg.id_,bay[math.random(#bay)])
-elseif Text=="æíäßã" then 
+elseif Text=="ÙˆÙŠÙ†ÙƒÙ…" then 
 return sendMsg(msg.chat_id_,msg.id_,wk[math.random(#wk)])
-elseif Text=="æíäßã¿" then 
+elseif Text=="ÙˆÙŠÙ†ÙƒÙ…ØŸ" then 
 return sendMsg(msg.chat_id_,msg.id_,wk[math.random(#wk)])
-elseif Text=="æíäß¿" then 
+elseif Text=="ÙˆÙŠÙ†ÙƒØŸ" then 
 return sendMsg(msg.chat_id_,msg.id_,wk1[math.random(#wk1)])
-elseif Text=="æíäß" then 
+elseif Text=="ÙˆÙŠÙ†Ùƒ" then 
 return sendMsg(msg.chat_id_,msg.id_,wk1[math.random(#wk1)])
-elseif Text=="äÇíãíä" then 
+elseif Text=="Ù†Ø§ÙŠÙ…ÙŠÙ†" then 
 return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="äÇíãíä¿" then 
+elseif Text=="Ù†Ø§ÙŠÙ…ÙŠÙ†ØŸ" then 
 return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="äãÊæ" then 
+elseif Text=="Ù†Ù…ØªÙˆ" then 
 return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="äãÊæ¿" then 
+elseif Text=="Ù†Ù…ØªÙˆØŸ" then 
 return sendMsg(msg.chat_id_,msg.id_,nm[math.random(#nm)])
-elseif Text=="ãÓÇÁ ÇáÎíÑ" then 
+elseif Text=="Ù…Ø³Ø§Ø¡ Ø§Ù„Ø®ÙŠØ±" then 
 return sendMsg(msg.chat_id_,msg.id_,msx[math.random(#msx)])
-elseif Text=="ÕÈÇÍ ÇáÎíÑ" then 
+elseif Text=="ØµØ¨Ø§Ø­ Ø§Ù„Ø®ÙŠØ±" then 
 return sendMsg(msg.chat_id_,msg.id_,smx[math.random(#smx)])
-elseif Text=="ãäæÑ" then 
+elseif Text=="Ù…Ù†ÙˆØ±" then 
 return sendMsg(msg.chat_id_,msg.id_,nor[math.random(#nor)])
-elseif Text=="ãäæÑå" then 
+elseif Text=="Ù…Ù†ÙˆØ±Ù‡" then 
 return sendMsg(msg.chat_id_,msg.id_,nor[math.random(#nor)])
-elseif Text=="ÈäÇã" then 
+elseif Text=="Ø¨Ù†Ø§Ù…" then 
 return sendMsg(msg.chat_id_,msg.id_,nmf[math.random(#nmf)])
-elseif Text=="íÇÍíÇÊí" then 
+elseif Text=="ÙŠØ§Ø­ÙŠØ§ØªÙŠ" then 
 return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="íÇÚãÑí" then 
+elseif Text=="ÙŠØ§Ø¹Ù…Ø±ÙŠ" then 
 return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="íÇŞáÈí" then 
+elseif Text=="ÙŠØ§Ù‚Ù„Ø¨ÙŠ" then 
 return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="ÇÚÔŞß" then 
+elseif Text=="Ø§Ø¹Ø´Ù‚Ùƒ" then 
 return sendMsg(msg.chat_id_,msg.id_,amr[math.random(#amr)])
-elseif Text=="ãÑÍÈÇ" then 
+elseif Text=="Ù…Ø±Ø­Ø¨Ø§" then 
 return sendMsg(msg.chat_id_,msg.id_,mrr[math.random(#mrr)])
-elseif msg.SudoUser and Text== "ÊÍÈäí" or Text=="ÍÈß" then 
-return sendMsg(msg.chat_id_,msg.id_,"ÇÚÔŞäß ")
-elseif not msg.SudoUser and Text== "ÇÍÈß" or Text=="ÍÈß" then 
+elseif msg.SudoUser and Text== "ØªØ­Ø¨Ù†ÙŠ" or Text=="Ø­Ø¨Ùƒ" then 
+return sendMsg(msg.chat_id_,msg.id_,"Ø§Ø¹Ø´Ù‚Ù†Ùƒ ")
+elseif not msg.SudoUser and Text== "Ø§Ø­Ø¨Ùƒ" or Text=="Ø­Ø¨Ùƒ" then 
 return sendMsg(msg.chat_id_,msg.id_,lovm[math.random(#lovm)])
-elseif not msg.SudoUser and Text== "ÊÍÈäí" then
+elseif not msg.SudoUser and Text== "ØªØ­Ø¨Ù†ÙŠ" then
 return sendMsg(msg.chat_id_,msg.id_,lovm[math.random(#lovm)])
-elseif Text== "Êİ" then return sendMsg(msg.chat_id_,msg.id_,"Êİ ? æÌåß ÇáÎÇíÓ.")
-elseif Text== "ÇÎÈÇÑßã¿" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ÇÎÈÇÑß ÇäÊ/í")
-elseif Text== "Ôáæäßã" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã Ôáæäß ÇäÊ/í")
-elseif Text== "Ôáæäßã¿" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã Ôáæäß ÇäÊ/í")
-elseif Text== "ßíİßã" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ßíİß ÇäÊ/í")
-elseif Text== "ßíİßã¿" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ßíİß ÇäÊ/í")
-elseif Text== "Ôáæäß" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã Ôáæäß ÇäÊ/í")
-elseif Text== "Ôáæäß¿" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã Ôáæäß ÇäÊ/í")
-elseif Text== "ßíİß" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ßíİß ÇäÊ/í")
-elseif Text== "ßíİß¿" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ßíİß ÇäÊ/í")
-elseif Text== "ÇÎÈÇÑß" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ÇÎÈÇÑß ÇäÊ/í")
-elseif Text== "ÇÎÈÇÑß¿" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ÇÎÈÇÑß ÇäÊ/í")
-elseif Text== "ÇÎÈÇÑßã" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ÇÎÈÇÑß ÇäÊ/í")
-elseif Text== "ßíİ ÍÇáßã" then return sendMsg(msg.chat_id_,msg.id_,"ÈÎíÑ ÍãÏááå æÇäÊ/í ")
-elseif Text== "ÇÎÈÇÑß¿" then return sendMsg(msg.chat_id_,msg.id_,"ÊãÇã ÇÎÈÇÑß ÇäÊ/í")
-elseif Text== "ßíİ ÍÇáß" then return sendMsg(msg.chat_id_,msg.id_,"ÈÎíÑ ÍãÏááå æÇäÊ/í ")
-elseif Text== "ßíİ ÍÇáßã¿" then return sendMsg(msg.chat_id_,msg.id_,"ÈÎíÑ ÍãÏááå æÇäÊ/í ")
-elseif Text== "ßíİ ÍÇáß¿" then return sendMsg(msg.chat_id_,msg.id_,"ÈÎíÑ ÍãÏááå æÇäÊ/í ")
-elseif Text== "ßİæ" then return sendMsg(msg.chat_id_,msg.id_,"ßİæß ÇáØíÈ??")
-elseif Text== "Ôßæ" then return sendMsg(msg.chat_id_,msg.id_,"Ôßæ ãÇßæ??")
-elseif Text== "ÈÑÈ" then return sendMsg(msg.chat_id_,msg.id_,"ÊíÊ ÈäÔÊÇŞ ááß áÇÊØæá/íä??")
-elseif Text== "ÈÇß" then return sendMsg(msg.chat_id_,msg.id_,"æáßã ÈÇß ãä Çáíæã ãäÊÙÑíäß??")
-elseif Text== "ÇÔÊŞÊ ááß" then return sendMsg(msg.chat_id_,msg.id_,"ÇÔÊŞÊ áß ÇßËÑ??")
-elseif Text== "ÇÔÊŞÊáß" then return sendMsg(msg.chat_id_,msg.id_,"ÇÔÊŞÊáß ÇßËÑ??")
-elseif Text== "ÇãÒÍ" then return sendMsg(msg.chat_id_,msg.id_,"áÇÊÚíÏåÇ??")
-elseif Text== "ÇÔİíä" then return sendMsg(msg.chat_id_,msg.id_,"áÇÊÚíÏåÇ??")
-elseif Text== "ÇÔİíä ÇÔİíä" then return sendMsg(msg.chat_id_,msg.id_,"áÇÊÚíÏåÇ??")
-elseif Text== "ÇÓİíä" then return sendMsg(msg.chat_id_,msg.id_,"áÇÊÚíÏåÇ??")
-elseif Text== "ÇÓİíä ÇÓİíä" then return sendMsg(msg.chat_id_,msg.id_,"áÇÊÚíÏåÇ??")
-elseif Text== "??" then return sendMsg(msg.chat_id_,msg.id_,"ÏÎá áÓÇäß ÚíÈ??")
-elseif Text== "??" then return sendMsg(msg.chat_id_,msg.id_,"ÏÎá áÓÇäß ÚíÈ??")
-elseif Text== "ÌÈ" then return sendMsg(msg.chat_id_,msg.id_,"ÌÈ ÇäÊ/í íÇááí ãÇÊÓÊÍí/ä")
-elseif Text== "ÊÔÈ" then return sendMsg(msg.chat_id_,msg.id_,"ÊÔÈ ÇäÊ/í íÇááí ãÇÊÓÊÍí/ä")
-elseif Text== "ÔÈ" then return sendMsg(msg.chat_id_,msg.id_,"ÔÈ ÇäÊ/í íÇááí ãÇÊÓÊÍí/ä")
-elseif Text== "ÇáÒÈÏå" then return sendMsg(msg.chat_id_,msg.id_,"ÇÓáã")
-elseif Text== "Çáãåã" then return sendMsg(msg.chat_id_,msg.id_,"ÚØäí ÇáÒÈÏå¿")
-elseif Text== "ßáÎÑÇ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ßáÒŞ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ßá ÎÑÇ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ßá ÒŞ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ßáíÎÑÇ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ßáí ÎÑÇ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ßáíÒŞ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ßáí ÒŞ" then return sendMsg(msg.chat_id_,msg.id_,"ÚíÈ Úáíß ãäÊ/í ãÊÑÈí/å")
-elseif Text== "ÊÕÈÍæä Úáì ÎíÑ" then return sendMsg(msg.chat_id_,msg.id_,"ÊáŞì ÇáÎíÑ")
-elseif Text== "ÊãÓæä Úáì ÎíÑ" then return sendMsg(msg.chat_id_,msg.id_,"ÊáŞì ÇáÎíÑ")
-elseif Text== "áÈíå" then return sendMsg(msg.chat_id_,msg.id_,"áÈíÊ/í İí ãßå ")
-elseif Text== "æáßã" then return sendMsg(msg.chat_id_,msg.id_,"íÓáãæ????")
-elseif Text== "íÇáÈíå" then return sendMsg(msg.chat_id_,msg.id_,"íÇáÈíå ÇäÊ/í æÇááå??")
-elseif Text== "íÇ áÈíå" then return sendMsg(msg.chat_id_,msg.id_,"íÇáÈíå ÇäÊ/í æÇááå??")
-elseif Text== "ÓáÇã" or Text== "ÇáÓáÇã Úáíßã" or Text== "ÓáÇã Úáíßã" or Text=="ÓáÇãä Úáíßã" or Text=="ÇáÓáÇãä Úáíßã" then 
-return sendMsg(msg.chat_id_,msg.id_,"æÚáíßã ÇáÓáÇã")
-elseif Text== "ãÓÇÚÏÉ"  then return sendMsg(msg.chat_id_,msg.id_,"áÚÑÖ ŞÇÆãÉ ÇáãÓÇÚÏÉ ÇßÊÈ ÇáÇæÇãÑ ????")
-elseif Text== "ÑİÚ áŞáÈí" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ÑİÚ ÇáÚÖæ ÏÇÎá ŞáÈß??\n???ÊãÊ ÊÑŞíÊå ÈäÌÇÍ ????????\n??")
-elseif Text== "ÑİÚ ÒæÌÊí" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ÑİÚ ÇáÚÖæ ÒæÌÊß ÈäÌÇÍ??\nÇáÂä íãßäßã ÃÎĞ ÑÇÍÊßã????\n??")
-elseif Text== "ØáÇŞ" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ØáÇŞ ÇáÚÖæ ÈäÌÇÍ??\n???ÇáÂä åæ ãØáŞ íáå ÇäŞáÚ ÈÑÇ ????\n??")
-elseif Text== "ÊäÒíá ãä ŞáÈí" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ÊäÒíá ãä ÏÇÎá ŞáÈß??\n???ÊãÊ ÇÒÇáÊå ãä ŞÇÆãÉ ÇáŞáæÈ ????\n??")
-elseif Text== "ÊäÒíá ÒæÌÊí" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ÊäÒíá ÇáÑãå ÒæÌÊß ÈäÌÇÍ??\nÇáÂä ÇäÊã ãİÊÑŞÇä????\n??")
-elseif Text== "ÒæÇÌ" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ÒæÇÌßã ÇáÇËäíä ÈäÌÇÍ??\n???ÇáÂä íãßäßã ÃÎĞ ÑÇÍÊßã????\n??")
-elseif Text== "ÑİÚ ÒæÌí" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ÑİÚ ÇáÚÖæ ÒæÌß ÈäÌÇÍ??\nÇáÂä íãßäßã ÃÎĞ ÑÇÍÊßã????\n??")
-elseif Text== "ÊäÒíá ÒæÌí" then return sendMsg(msg.chat_id_,msg.id_,"??????ÇåÜÜáÇ ÚÒíÒí\n???Êã ÊäÒíá ÇáÑã ÒæÌß ÈäÌÇÍ??\nÇáÂä ÇäÊã ãİÊÑŞÇä????\n??")
+elseif Text== "ØªÙ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ Ø ÙˆØ¬Ù‡Ùƒ Ø§Ù„Ø®Ø§ÙŠØ³.")
+elseif Text== "Ø§Ø®Ø¨Ø§Ø±ÙƒÙ…ØŸ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø§Ø®Ø¨Ø§Ø±Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "Ø´Ù„ÙˆÙ†ÙƒÙ…" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø´Ù„ÙˆÙ†Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "Ø´Ù„ÙˆÙ†ÙƒÙ…ØŸ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø´Ù„ÙˆÙ†Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "ÙƒÙŠÙÙƒÙ…" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… ÙƒÙŠÙÙƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "ÙƒÙŠÙÙƒÙ…ØŸ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… ÙƒÙŠÙÙƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "Ø´Ù„ÙˆÙ†Ùƒ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø´Ù„ÙˆÙ†Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "Ø´Ù„ÙˆÙ†ÙƒØŸ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø´Ù„ÙˆÙ†Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "ÙƒÙŠÙÙƒ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… ÙƒÙŠÙÙƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "ÙƒÙŠÙÙƒØŸ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… ÙƒÙŠÙÙƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "Ø§Ø®Ø¨Ø§Ø±Ùƒ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø§Ø®Ø¨Ø§Ø±Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "Ø§Ø®Ø¨Ø§Ø±ÙƒØŸ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø§Ø®Ø¨Ø§Ø±Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "Ø§Ø®Ø¨Ø§Ø±ÙƒÙ…" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø§Ø®Ø¨Ø§Ø±Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "ÙƒÙŠÙ Ø­Ø§Ù„ÙƒÙ…" then return sendMsg(msg.chat_id_,msg.id_,"Ø¨Ø®ÙŠØ± Ø­Ù…Ø¯Ù„Ù„Ù‡ ÙˆØ§Ù†Øª/ÙŠ ")
+elseif Text== "Ø§Ø®Ø¨Ø§Ø±ÙƒØŸ" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ…Ø§Ù… Ø§Ø®Ø¨Ø§Ø±Ùƒ Ø§Ù†Øª/ÙŠ")
+elseif Text== "ÙƒÙŠÙ Ø­Ø§Ù„Ùƒ" then return sendMsg(msg.chat_id_,msg.id_,"Ø¨Ø®ÙŠØ± Ø­Ù…Ø¯Ù„Ù„Ù‡ ÙˆØ§Ù†Øª/ÙŠ ")
+elseif Text== "ÙƒÙŠÙ Ø­Ø§Ù„ÙƒÙ…ØŸ" then return sendMsg(msg.chat_id_,msg.id_,"Ø¨Ø®ÙŠØ± Ø­Ù…Ø¯Ù„Ù„Ù‡ ÙˆØ§Ù†Øª/ÙŠ ")
+elseif Text== "ÙƒÙŠÙ Ø­Ø§Ù„ÙƒØŸ" then return sendMsg(msg.chat_id_,msg.id_,"Ø¨Ø®ÙŠØ± Ø­Ù…Ø¯Ù„Ù„Ù‡ ÙˆØ§Ù†Øª/ÙŠ ")
+elseif Text== "ÙƒÙÙˆ" then return sendMsg(msg.chat_id_,msg.id_,"ÙƒÙÙˆÙƒ Ø§Ù„Ø·ÙŠØ¨ğŸ˜")
+elseif Text== "Ø´ÙƒÙˆ" then return sendMsg(msg.chat_id_,msg.id_,"Ø´ÙƒÙˆ Ù…Ø§ÙƒÙˆğŸ¤ª")
+elseif Text== "Ø¨Ø±Ø¨" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙŠØª Ø¨Ù†Ø´ØªØ§Ù‚ Ù„Ù„Ùƒ Ù„Ø§ØªØ·ÙˆÙ„/ÙŠÙ†â™¥ï¸")
+elseif Text== "Ø¨Ø§Ùƒ" then return sendMsg(msg.chat_id_,msg.id_,"ÙˆÙ„ÙƒÙ… Ø¨Ø§Ùƒ Ù…Ù† Ø§Ù„ÙŠÙˆÙ… Ù…Ù†ØªØ¸Ø±ÙŠÙ†ÙƒğŸ™ˆ")
+elseif Text== "Ø§Ø´ØªÙ‚Øª Ù„Ù„Ùƒ" then return sendMsg(msg.chat_id_,msg.id_,"Ø§Ø´ØªÙ‚Øª Ù„Ùƒ Ø§ÙƒØ«Ø±â™¥ï¸")
+elseif Text== "Ø§Ø´ØªÙ‚ØªÙ„Ùƒ" then return sendMsg(msg.chat_id_,msg.id_,"Ø§Ø´ØªÙ‚ØªÙ„Ùƒ Ø§ÙƒØ«Ø±â™¥ï¸")
+elseif Text== "Ø§Ù…Ø²Ø­" then return sendMsg(msg.chat_id_,msg.id_,"Ù„Ø§ØªØ¹ÙŠØ¯Ù‡Ø§ğŸ˜’")
+elseif Text== "Ø§Ø´ÙÙŠÙ†" then return sendMsg(msg.chat_id_,msg.id_,"Ù„Ø§ØªØ¹ÙŠØ¯Ù‡Ø§ğŸ˜’")
+elseif Text== "Ø§Ø´ÙÙŠÙ† Ø§Ø´ÙÙŠÙ†" then return sendMsg(msg.chat_id_,msg.id_,"Ù„Ø§ØªØ¹ÙŠØ¯Ù‡Ø§ğŸ˜’")
+elseif Text== "Ø§Ø³ÙÙŠÙ†" then return sendMsg(msg.chat_id_,msg.id_,"Ù„Ø§ØªØ¹ÙŠØ¯Ù‡Ø§ğŸ˜’")
+elseif Text== "Ø§Ø³ÙÙŠÙ† Ø§Ø³ÙÙŠÙ†" then return sendMsg(msg.chat_id_,msg.id_,"Ù„Ø§ØªØ¹ÙŠØ¯Ù‡Ø§ğŸ˜’")
+elseif Text== "ğŸ¤ª" then return sendMsg(msg.chat_id_,msg.id_,"Ø¯Ø®Ù„ Ù„Ø³Ø§Ù†Ùƒ Ø¹ÙŠØ¨ğŸ˜’")
+elseif Text== "ğŸ˜œ" then return sendMsg(msg.chat_id_,msg.id_,"Ø¯Ø®Ù„ Ù„Ø³Ø§Ù†Ùƒ Ø¹ÙŠØ¨ğŸ˜’")
+elseif Text== "Ø¬Ø¨" then return sendMsg(msg.chat_id_,msg.id_,"Ø¬Ø¨ Ø§Ù†Øª/ÙŠ ÙŠØ§Ù„Ù„ÙŠ Ù…Ø§ØªØ³ØªØ­ÙŠ/Ù†")
+elseif Text== "ØªØ´Ø¨" then return sendMsg(msg.chat_id_,msg.id_,"ØªØ´Ø¨ Ø§Ù†Øª/ÙŠ ÙŠØ§Ù„Ù„ÙŠ Ù…Ø§ØªØ³ØªØ­ÙŠ/Ù†")
+elseif Text== "Ø´Ø¨" then return sendMsg(msg.chat_id_,msg.id_,"Ø´Ø¨ Ø§Ù†Øª/ÙŠ ÙŠØ§Ù„Ù„ÙŠ Ù…Ø§ØªØ³ØªØ­ÙŠ/Ù†")
+elseif Text== "Ø§Ù„Ø²Ø¨Ø¯Ù‡" then return sendMsg(msg.chat_id_,msg.id_,"Ø§Ø³Ù„Ù…")
+elseif Text== "Ø§Ù„Ù…Ù‡Ù…" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹Ø·Ù†ÙŠ Ø§Ù„Ø²Ø¨Ø¯Ù‡ØŸ")
+elseif Text== "ÙƒÙ„Ø®Ø±Ø§" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ÙƒÙ„Ø²Ù‚" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ÙƒÙ„ Ø®Ø±Ø§" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ÙƒÙ„ Ø²Ù‚" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ÙƒÙ„ÙŠØ®Ø±Ø§" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ÙƒÙ„ÙŠ Ø®Ø±Ø§" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ÙƒÙ„ÙŠØ²Ù‚" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ÙƒÙ„ÙŠ Ø²Ù‚" then return sendMsg(msg.chat_id_,msg.id_,"Ø¹ÙŠØ¨ Ø¹Ù„ÙŠÙƒ Ù…Ù†Øª/ÙŠ Ù…ØªØ±Ø¨ÙŠ/Ù‡")
+elseif Text== "ØªØµØ¨Ø­ÙˆÙ† Ø¹Ù„Ù‰ Ø®ÙŠØ±" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ„Ù‚Ù‰ Ø§Ù„Ø®ÙŠØ±")
+elseif Text== "ØªÙ…Ø³ÙˆÙ† Ø¹Ù„Ù‰ Ø®ÙŠØ±" then return sendMsg(msg.chat_id_,msg.id_,"ØªÙ„Ù‚Ù‰ Ø§Ù„Ø®ÙŠØ±")
+elseif Text== "Ù„Ø¨ÙŠÙ‡" then return sendMsg(msg.chat_id_,msg.id_,"Ù„Ø¨ÙŠØª/ÙŠ ÙÙŠ Ù…ÙƒÙ‡ ")
+elseif Text== "ÙˆÙ„ÙƒÙ…" then return sendMsg(msg.chat_id_,msg.id_,"ÙŠØ³Ù„Ù…Ùˆâ™¥ï¸ğŸ™ˆ")
+elseif Text== "ÙŠØ§Ù„Ø¨ÙŠÙ‡" then return sendMsg(msg.chat_id_,msg.id_,"ÙŠØ§Ù„Ø¨ÙŠÙ‡ Ø§Ù†Øª/ÙŠ ÙˆØ§Ù„Ù„Ù‡ğŸ˜")
+elseif Text== "ÙŠØ§ Ù„Ø¨ÙŠÙ‡" then return sendMsg(msg.chat_id_,msg.id_,"ÙŠØ§Ù„Ø¨ÙŠÙ‡ Ø§Ù†Øª/ÙŠ ÙˆØ§Ù„Ù„Ù‡ğŸ˜")
+elseif Text== "Ø³Ù„Ø§Ù…" or Text== "Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…" or Text== "Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…" or Text=="Ø³Ù„Ø§Ù…Ù† Ø¹Ù„ÙŠÙƒÙ…" or Text=="Ø§Ù„Ø³Ù„Ø§Ù…Ù† Ø¹Ù„ÙŠÙƒÙ…" then 
+return sendMsg(msg.chat_id_,msg.id_,"ÙˆØ¹Ù„ÙŠÙƒÙ… Ø§Ù„Ø³Ù„Ø§Ù…")
+elseif Text== "Ù…Ø³Ø§Ø¹Ø¯Ø©"  then return sendMsg(msg.chat_id_,msg.id_,"Ù„Ø¹Ø±Ø¶ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§ÙƒØªØ¨ Ø§Ù„Ø§ÙˆØ§Ù…Ø± ğŸŒšâ¤ï¸")
+elseif Text== "Ø±ÙØ¹ Ù„Ù‚Ù„Ø¨ÙŠ" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… Ø±ÙØ¹ Ø§Ù„Ø¹Ø¶Ùˆ Ø¯Ø§Ø®Ù„ Ù‚Ù„Ø¨Ùƒâœ”ï¸\nğŸ› â”‡ØªÙ…Øª ØªØ±Ù‚ÙŠØªÙ‡ Ø¨Ù†Ø¬Ø§Ø­ ğŸ˜»ğŸ˜¹ğŸ‘‹ğŸ»\nâœ“ï¸")
+elseif Text== "Ø±ÙØ¹ Ø²ÙˆØ¬ØªÙŠ" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… Ø±ÙØ¹ Ø§Ù„Ø¹Ø¶Ùˆ Ø²ÙˆØ¬ØªÙƒ Ø¨Ù†Ø¬Ø§Ø­âœ”ï¸\nØ§Ù„Ø¢Ù† ÙŠÙ…ÙƒÙ†ÙƒÙ… Ø£Ø®Ø° Ø±Ø§Ø­ØªÙƒÙ…ğŸ¤¤??\nâœ“ï¸")
+elseif Text== "Ø·Ù„Ø§Ù‚" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… Ø·Ù„Ø§Ù‚ Ø§Ù„Ø¹Ø¶Ùˆ Ø¨Ù†Ø¬Ø§Ø­âœ”ï¸\nğŸ› â”‡Ø§Ù„Ø¢Ù† Ù‡Ùˆ Ù…Ø·Ù„Ù‚ ÙŠÙ„Ù‡ Ø§Ù†Ù‚Ù„Ø¹ Ø¨Ø±Ø§ ğŸ˜¹ğŸ’”\nâœ“ï¸")
+elseif Text== "ØªÙ†Ø²ÙŠÙ„ Ù…Ù† Ù‚Ù„Ø¨ÙŠ" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… ØªÙ†Ø²ÙŠÙ„ Ù…Ù† Ø¯Ø§Ø®Ù„ Ù‚Ù„Ø¨Ùƒâœ”ï¸\nğŸ› â”‡ØªÙ…Øª Ø§Ø²Ø§Ù„ØªÙ‡ Ù…Ù† Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù‚Ù„ÙˆØ¨ ğŸ˜¹ğŸ’”\nâœ“ï¸")
+elseif Text== "ØªÙ†Ø²ÙŠÙ„ Ø²ÙˆØ¬ØªÙŠ" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ø±Ù…Ù‡ Ø²ÙˆØ¬ØªÙƒ Ø¨Ù†Ø¬Ø§Ø­âœ”ï¸\nØ§Ù„Ø¢Ù† Ø§Ù†ØªÙ… Ù…ÙØªØ±Ù‚Ø§Ù†â˜¹ï¸ğŸ’”\nâœ“ï¸")
+elseif Text== "Ø²ÙˆØ§Ø¬" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… Ø²ÙˆØ§Ø¬ÙƒÙ… Ø§Ù„Ø§Ø«Ù†ÙŠÙ† Ø¨Ù†Ø¬Ø§Ø­âœ”ï¸\nğŸ› â”‡Ø§Ù„Ø¢Ù† ÙŠÙ…ÙƒÙ†ÙƒÙ… Ø£Ø®Ø° Ø±Ø§Ø­ØªÙƒÙ…ğŸ¤¤ğŸ˜‰\nâœ“ï¸")
+elseif Text== "Ø±ÙØ¹ Ø²ÙˆØ¬ÙŠ" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… Ø±ÙØ¹ Ø§Ù„Ø¹Ø¶Ùˆ Ø²ÙˆØ¬Ùƒ Ø¨Ù†Ø¬Ø§Ø­âœ”ï¸\nØ§Ù„Ø¢Ù† ÙŠÙ…ÙƒÙ†ÙƒÙ… Ø£Ø®Ø° Ø±Ø§Ø­ØªÙƒÙ…ğŸ¤¤ğŸ˜‰\nâœ“ï¸")
+elseif Text== "ØªÙ†Ø²ÙŠÙ„ Ø²ÙˆØ¬ÙŠ" then return sendMsg(msg.chat_id_,msg.id_,"ğŸ™‹ğŸ»â€â™‚â”‡Ø§Ù‡Ù€Ù€Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ\nğŸ«â”‡ØªÙ… ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ø±Ù… Ø²ÙˆØ¬Ùƒ Ø¨Ù†Ø¬Ø§Ø­âœ”ï¸\nØ§Ù„Ø¢Ù† Ø§Ù†ØªÙ… Ù…ÙØªØ±Ù‚Ø§Ù†â˜¹ï¸ğŸ’”\nâœ“ï¸")
 
-elseif Text== "ÇíÏíí" or Text=="ÇíÏí ??" then 
+elseif Text== "Ø§ÙŠØ¯ÙŠÙŠ" or Text=="Ø§ÙŠØ¯ÙŠ ğŸ†”" then 
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
 local USERCAR = utf8.len(USERNAME)
-SendMention(msg.chat_id_,data.id_,msg.id_,"????ÂÖÜÛØ Úáì ÂáÂíÏí áíÊã ÂáäÓÜÎ\n\n "..USERNAME.." ~? ( "..data.id_.." )",37,USERCAR)  
+SendMention(msg.chat_id_,data.id_,msg.id_,"ğŸ§Ÿâ€â™‚â”‡Ø¢Ø¶Ù€ØºØ· Ø¹Ù„Ù‰ Ø¢Ù„Ø¢ÙŠØ¯ÙŠ Ù„ÙŠØªÙ… Ø¢Ù„Ù†Ø³Ù€Ø®\n\n "..USERNAME.." ~âª¼ ( "..data.id_.." )",37,USERCAR)  
 return false
 end)
-elseif Text=="ÇÑíÏ ÑÇÈØ ÇáÍĞİ" or Text=="ÇÑíÏ ÑÇÈØ ÍĞİ" or Text=="ÑÇÈØ ÍĞİ" or Text=="ÑÇÈØ ÇáÍĞİ" then
+elseif Text=="Ø§Ø±ÙŠØ¯ Ø±Ø§Ø¨Ø· Ø§Ù„Ø­Ø°Ù" or Text=="Ø§Ø±ÙŠØ¯ Ø±Ø§Ø¨Ø· Ø­Ø°Ù" or Text=="Ø±Ø§Ø¨Ø· Ø­Ø°Ù" or Text=="Ø±Ø§Ø¨Ø· Ø§Ù„Ø­Ø°Ù" then
 return sendMsg(msg.chat_id_,msg.id_,[[
-??*?* ÑÇÈØ ÍĞİ ÍÜÓÇÈ ÇáÊíáí ?
-???[ÇÖÛØ åäÇ áÜÍÜĞİ ÇáÜÍÜÓÜÇÈ](https://telegram.org/deactivate)
+ğŸ’­*â”‡* Ø±Ø§Ø¨Ø· Ø­Ø°Ù Ø­Ù€Ø³Ø§Ø¨ Ø§Ù„ØªÙŠÙ„ÙŠ â†¯
+ğŸš¸â”‡[Ø§Ø¶ØºØ· Ù‡Ù†Ø§ Ù„Ù€Ø­Ù€Ø°Ù Ø§Ù„Ù€Ø­Ù€Ø³Ù€Ø§Ø¨](https://telegram.org/deactivate)
 ]] )
 --=====================================
-elseif Text== "ÇäÇ ãíä" or Text== "Çäí ãäæ" or Text=="ÇäÇ ãäæ" then
+elseif Text== "Ø§Ù†Ø§ Ù…ÙŠÙ†" or Text== "Ø§Ù†ÙŠ Ù…Ù†Ùˆ" or Text=="Ø§Ù†Ø§ Ù…Ù†Ùˆ" then
 if msg.SudoUser then  
-return sendMsg(msg.chat_id_,msg.id_,"ÇäÊ ÍÈíÈí ÇáãØæÑ")
+return sendMsg(msg.chat_id_,msg.id_,"Ø§Ù†Øª Ø­Ø¨ÙŠØ¨ÙŠ Ø§Ù„Ù…Ø·ÙˆØ±")
 elseif msg.Creator then 
-return sendMsg(msg.chat_id_,msg.id_,"ÇäÊ ŞáÈí ÇáãäÔÆ")
+return sendMsg(msg.chat_id_,msg.id_,"Ø§Ù†Øª Ù‚Ù„Ø¨ÙŠ Ø§Ù„Ù…Ù†Ø´Ø¦")
 elseif msg.Director then 
-return sendMsg(msg.chat_id_,msg.id_,"ãÏíÑ æáÇÊÓÊÇåá")
+return sendMsg(msg.chat_id_,msg.id_,"Ù…Ø¯ÙŠØ± ÙˆÙ„Ø§ØªØ³ØªØ§Ù‡Ù„")
 elseif msg.Admin then 
-return sendMsg(msg.chat_id_,msg.id_,"ÃÏãä æíÎÈ Úáíß")
+return sendMsg(msg.chat_id_,msg.id_,"Ø£Ø¯Ù…Ù† ÙˆÙŠØ®Ø¨ Ø¹Ù„ÙŠÙƒ")
 else 
-return sendMsg(msg.chat_id_,msg.id_,"ÚÖæ İŞØ")
+return sendMsg(msg.chat_id_,msg.id_,"Ø¹Ø¶Ùˆ ÙÙ‚Ø·")
 end 
 end
 
@@ -4491,10 +4491,10 @@ end
 if not redis:get(max..'2DaySleep') and redis:sismember(max..'kara','Start') and not redis:sismember(max..'kara','End') then
 redis:setex(max..'4DaySleep',345600,'mohammad')
 redis:sadd(max..'kara','End')
-sendMsg(SUDO_ID,0,"????? ÇåáÇ ÚÒíÒí ÇáãØæÑ\n????Ü????\n? ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí Úáì ŞäÇÉ ÇáÓæÑÓ\n?ãÏÉ ÇáÇÔÊÑÇß 4 ÇíÇã İŞØ\n?ÓíÊã ÇÒÇáå ÇáÇÔÊÑÇß ÊáŞÇÆíÇ")
+sendMsg(SUDO_ID,0,"ğŸ‘¨â€ğŸ’»â†« Ø§Ù‡Ù„Ø§ Ø¹Ø²ÙŠØ²ÙŠ Ø§Ù„Ù…Ø·ÙˆØ±\nâ”„â”€â”…â•Ù€â•â”…â”€â”„\nâ•¿ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ Ø¹Ù„Ù‰ Ù‚Ù†Ø§Ø© Ø§Ù„Ø³ÙˆØ±Ø³\nâ”‚Ù…Ø¯Ø© Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ 4 Ø§ÙŠØ§Ù… ÙÙ‚Ø·\nâ•½Ø³ÙŠØªÙ… Ø§Ø²Ø§Ù„Ù‡ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ØªÙ„Ù‚Ø§Ø¦ÙŠØ§")
 end
 if not redis:get(max..'4DaySleep') and not redis:sismember(max..'kara','End2') then
-sendMsg(SUDO_ID,0,"??????ÇåáÇ íŞáÈí \n???Êã ÇäÊåÇÁ 4 ÇíÇã ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí")
+sendMsg(SUDO_ID,0,"ğŸ™‹ğŸ»â€â™‚â•¿Ø§Ù‡Ù„Ø§ ÙŠÙ‚Ù„Ø¨ÙŠ \nğŸâ•½ØªÙ… Ø§Ù†ØªÙ‡Ø§Ø¡ 4 Ø§ÙŠØ§Ù… Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ")
 redis:sadd(max..'kara','End2')
 end
 if not redis:get('kar') then
@@ -4570,20 +4570,20 @@ end
 local Save_Data = io.open("./inc/"..Bot_User..".json","w+")
 Save_Data:write(json_data..'}}')
 Save_Data:close()
-sendDocument(SUDO_ID,0,"./inc/"..Bot_User..".json","??| ãáİ ÇáäÓÎå ÇáÇÍÊíÇØíå ...\n??| ÇáãÌãæÚÇÊ » { "..#All_Groups_ID.." }\n??| ááÈæÊ » "..Bot_User.."\n??| ÇáÊÇÑíÎ » "..os.date("%Y/%m/%d").."\n",dl_cb,nil)
+sendDocument(SUDO_ID,0,"./inc/"..Bot_User..".json","ğŸš¸| Ù…Ù„Ù Ø§Ù„Ù†Ø³Ø®Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡ ...\nğŸ”–| Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª Â» { "..#All_Groups_ID.." }\nğŸ“‹| Ù„Ù„Ø¨ÙˆØª Â» "..Bot_User.."\nğŸ“†| Ø§Ù„ØªØ§Ø±ÙŠØ® Â» "..os.date("%Y/%m/%d").."\n",dl_cb,nil)
 end
 if redis:get(max..'CheckExpire::'..msg.chat_id_) then
 local ExpireDate = redis:ttl(max..'ExpireDate:'..msg.chat_id_)
 if not ExpireDate and not msg.SudoUser then
 rem_data_group(msg.chat_id_)
-sendMsg(SUDO_ID,0,'????????ÇäÊåì ÇáÇÔÊÑÇß İí ÇÍÏ ÇáãÌãæÚÇÊ ???\n???????ÇáãÌãæÚå : '..FlterName(redis:get(max..'group:name'..msg.chat_id_))..'??\n???????ÇíÏí : '..msg.chat_id_)
-sendMsg(msg.chat_id_,0,'????????ÇäÊåì ÇáÇÔÊÑÇß ÇáÈæÊ???\n???????Óæİ ÇÛÇÏÑ ÇáãÌãæÚå İÑÕå ÓÚíÏå ????\n???????Çæ ÑÇÓá ÇáãØæÑ ááÊÌÏíÏ '..SUDO_USER..' ??')
+sendMsg(SUDO_ID,0,'ğŸ•µğŸ¼ï¸â€â™€ï¸â•¿Ø§Ù†ØªÙ‡Ù‰ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ ÙÙŠ Ø§Ø­Ø¯ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª âœ‹ğŸ¿\nğŸ‘¨ğŸ¾â€ğŸ”§â”‚Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ : '..FlterName(redis:get(max..'group:name'..msg.chat_id_))..'ğŸƒ\nğŸ’‚ğŸ»â€â™€ï¸â•½Ø§ÙŠØ¯ÙŠ : '..msg.chat_id_)
+sendMsg(msg.chat_id_,0,'ğŸ•µğŸ¼ï¸â€â™€ï¸â•¿Ø§Ù†ØªÙ‡Ù‰ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø¨ÙˆØªâœ‹??\nğŸ’‚ğŸ»â€â™€ï¸â”‚Ø³ÙˆÙ Ø§ØºØ§Ø¯Ø± Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡ ÙØ±ØµÙ‡ Ø³Ø¹ÙŠØ¯Ù‡ ğŸ‘‹ğŸ¿\nğŸ‘¨ğŸ¾â€ğŸ”§â•½Ø§Ùˆ Ø±Ø§Ø³Ù„ Ø§Ù„Ù…Ø·ÙˆØ± Ù„Ù„ØªØ¬Ø¯ÙŠØ¯ '..SUDO_USER..' ğŸƒ')
 return StatusLeft(msg.chat_id_,our_id)
 else
 local DaysEx = (redis:ttl(max..'ExpireDate:'..msg.chat_id_) / 86400)
 if tonumber(DaysEx) > 0.208 and ExpireDate ~= -1 and msg.Admin then
 if tonumber(DaysEx + 1) == 1 and not msg.SudoUser then
-sendMsg(msg.chat_id_,'????????ÈÇŞí íæã æÇÍÏ æíäÊåí ÇáÇÔÊÑÇß ???\n???????ÑÇÓá ÇáãØæÑ ááÊÌÏíÏ '..SUDO_USER..'\n??')
+sendMsg(msg.chat_id_,'ğŸ•µğŸ¼ï¸â€â™€ï¸â•¿Ø¨Ø§Ù‚ÙŠ ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯ ÙˆÙŠÙ†ØªÙ‡ÙŠ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ âœ‹ğŸ¿\nğŸ‘¨ğŸ¾â€ğŸ”§â•½Ø±Ø§Ø³Ù„ Ø§Ù„Ù…Ø·ÙˆØ± Ù„Ù„ØªØ¬Ø¯ÙŠØ¯ '..SUDO_USER..'\nğŸ“›')
 end 
 end 
 end
@@ -4597,290 +4597,290 @@ end
 
 return {
 max = {
-"^(ÊŞííÏ)$",
-"^(ÊŞííÏ) (%d+)$",
-"^(ÊŞííÏ) (@[%a%d_]+)$",
-"^(İß ÇáÊŞííÏ)$",
-"^(İß ÇáÊŞííÏ) (%d+)$",
-"^(İß ÇáÊŞííÏ) (@[%a%d_]+)$",
-"^(İß ÊŞííÏ)$",
-"^(İß ÊŞííÏ) (%d+)$",
-"^(İß ÊŞííÏ) (@[%a%d_]+)$",
-"^(ÖÚ ÔÑØ ÇáÊİÚíá) (%d+)$",
-"^(ÇáÊİÇÚá)$",
-"^(ÇáÊİÇÚá) (@[%a%d_]+)$",
+"^(ØªÙ‚ÙŠÙŠØ¯)$",
+"^(ØªÙ‚ÙŠÙŠØ¯) (%d+)$",
+"^(ØªÙ‚ÙŠÙŠØ¯) (@[%a%d_]+)$",
+"^(ÙÙƒ Ø§Ù„ØªÙ‚ÙŠÙŠØ¯)$",
+"^(ÙÙƒ Ø§Ù„ØªÙ‚ÙŠÙŠØ¯) (%d+)$",
+"^(ÙÙƒ Ø§Ù„ØªÙ‚ÙŠÙŠØ¯) (@[%a%d_]+)$",
+"^(ÙÙƒ ØªÙ‚ÙŠÙŠØ¯)$",
+"^(ÙÙƒ ØªÙ‚ÙŠÙŠØ¯) (%d+)$",
+"^(ÙÙƒ ØªÙ‚ÙŠÙŠØ¯) (@[%a%d_]+)$",
+"^(Ø¶Ø¹ Ø´Ø±Ø· Ø§Ù„ØªÙØ¹ÙŠÙ„) (%d+)$",
+"^(Ø§Ù„ØªÙØ§Ø¹Ù„)$",
+"^(Ø§Ù„ØªÙØ§Ø¹Ù„) (@[%a%d_]+)$",
 "^([iI][dD])$",
-"^(ÊİÚíá ÇáÇíÏí ÈÇáÕæÑå)$",
-"^(ÊÚØíá ÇáÇíÏí ÈÇáÕæÑå)$",
-"^(ÊÚØíá ÇáÑİÚ)$",
-"^(ÊİÚíá ÇáÑİÚ)$",
-"^(ÊÚØíá ÇáÊÓáíå)$",
-"^(ÊİÚíá ÇáÊÓáíå)$",
-"^(Şİá ÇáÏÎæá ÈÇáÑÇÈØ)$",
-"^(İÊÍ ÇáÏÎæá ÈÇáÑÇÈØ)$", 
-"^(ÇíÏí)$",
-"^(ÇíÏí) (@[%a%d_]+)$",
-"^(ßÔİ)$",
-"^(ßÔİ) (%d+)$",
-"^(ßÔİ) (@[%a%d_]+)$",
-'^(ÑİÚ ããíÒ)$',
-'^(ÑİÚ ããíÒ) (@[%a%d_]+)$',
-'^(ÑİÚ ããíÒ) (%d+)$',
-'^(ÊäÒíá ããíÒ)$',
-'^(ÊäÒíá ããíÒ) (@[%a%d_]+)$',
-'^(ÊäÒíá ããíÒ) (%d+)$',
-'^(ÑİÚ ÇÏãä)$',
-'^(ÑİÚ ÇÏãä) (@[%a%d_]+)$',
-'^(ÑİÚ ÇÏãä) (%d+)$',
-'^(ÊäÒíá ÇÏãä)$',
-'^(ÊäÒíá ÇÏãä) (@[%a%d_]+)$',
-'^(ÊäÒíá ÇÏãä) (%d+)$', 
-"^(ÑİÚ ËæÑ)$",
-"^(ÊäÒíá ËæÑ)$",
-"^(ÑİÚ ßíßå)$",
-"^(ÊäÒíá ßíßå)$",
-"^(ÑİÚ ÈÕáå)$",
-"^(ÊäÒíá ÈÕáå)$",
-"^(ÑİÚ ĞÈÇäå)$",
-"^(ÊäÒíá ĞÈÇäå)$",
-"^(ÑİÚ ßáíÌå)$",
-"^(ÊäÒíá ßáíÌå)$",
-"^(ÑİÚ ÒŞ)$",
-"^(ÊäÒíá ÒŞ)$",
-"^(ÑİÚ ÏÌÇÌå)$",
-"^(ÊäÒíá ÏÌÇÌå)$",
-"^(ÑİÚ ÍãÇÑ)$",
-"^(ÊäÒíá ÍãÇÑ)$",
-"^(ÑİÚ ŞÑÏ)$",
-"^(ÊäÒíá ŞÑÏ)$",
-"^(ÑİÚ ÈŞÑå)$",
-"^(ÊäÒíá ÈŞÑå)$",
-"^(ÑİÚ ÊíÓ)$",
-"^(ÊäÒíá ÊíÓ)$",
-"^(ÑİÚ ßáÈ)$",
-"^(ÊäÒíá ßáÈ)$",
-"^(ÑİÚ ÒÇÍİ)$",
-"^(ÊäÒíá ÒÇÍİ)$",
-'^(ÑİÚ ÇáãÏíÑ)$',
-'^(ÑİÚ ãÏíÑ)$', 
-'^(ÑİÚ ãÏíÑ) (@[%a%d_]+)$',
-'^(ÑİÚ ÇáãÏíÑ) (@[%a%d_]+)$',
-'^(ÑİÚ ÇáãÏíÑ) (%d+)$',
-'^(ÑİÚ ãÏíÑ) (%d+)$',
-'^(ÑİÚ ãäÔì ÇÓÇÓí)$',
-'^(ÑİÚ ãäÔÆ ÇÓÇÓí)$',
-'^(ÑİÚ ãäÔÆ ÇÓÇÓí) (@[%a%d_]+)$',
-'^(ÑİÚ ãäÔì ÇÓÇÓí) (@[%a%d_]+)$',
-'^(ÊäÒíá ãäÔÆ ÇÓÇÓí)$',
-'^(ÊäÒíá ãäÔì ÇÓÇÓí)$',
-'^(ÊäÒíá ãäÔÆ ÇÓÇÓí) (%d+)$',
-'^(ÊäÒíá ãäÔì ÇÓÇÓí) (%d+)$',
-'^(ÊäÒíá ãäÔì ÇÓÇÓí) (@[%a%d_]+)$',
-'^(ÊäÒíá ãäÔÆ ÇÓÇÓí) (@[%a%d_]+)$',
-'^(ÑİÚ ãäÔì)$',
-'^(ÑİÚ ãäÔÆ)$',
-'^(ÑİÚ ãäÔÆ) (@[%a%d_]+)$',
-'^(ÑİÚ ãäÔì) (@[%a%d_]+)$',
-'^(ÊäÒíá ãäÔÆ)$',
-'^(ÊäÒíá ãäÔì)$',
-'^(ÊäÒíá ãäÔÆ) (%d+)$',
-'^(ÊäÒíá ãäÔì) (%d+)$',
-'^(ÊäÒíá ãäÔì) (@[%a%d_]+)$',
-'^(ÊäÒíá ãäÔÆ) (@[%a%d_]+)$',
-'^(ÊäÒíá ÇáãÏíÑ)$',
-'^(ÊäÒíá ãÏíÑ)$',
-'^(ÊäÒíá ãÏíÑ) (@[%a%d_]+)$',
-'^(ÊäÒíá ÇáãÏíÑ) (@[%a%d_]+)$',
-'^(ÊäÒíá ÇáãÏíÑ) (%d+)$',
-'^(ÊäÒíá ãÏíÑ) (%d+)$',
- '^(ÕáÇÍíÇÊå)$',
- '^(ÕáÇÍíÇÊí)$',
-'^(ÕáÇÍíÇÊå) (@[%a%d_]+)$',
-'^(Şİá) (.+)$',
-'^(İÊÍ) (.+)$',
-'^(ÊİÚíá)$',
-'^(ÊİÚíá) (.+)$',
-'^(ÊÚØíá)$',
-'^(ÊÚØíá) (.+)$',
-'^(ÖÚ ÊßÑÇÑ) (%d+)$',
-"^(ãÓÍ)$",
-"^(ãÓÍ) (.+)$",
-'^(ãäÚ) (.+)$',
-'^(ÇáÛÇÁ ãäÚ) (.+)$',
-"^(ÍÙÑ ÚÇã)$",
-"^(ÍÙÑ ÚÇã) (@[%a%d_]+)$",
-"^(ÍÙÑ ÚÇã) (%d+)$",
-"^(ÇáÛÇÁ ÇáÚÇã)$",
-"^(ÇáÛÇÁ ÇáÚÇã) (@[%a%d_]+)$",
-"^(ÇáÛÇÁ ÇáÚÇã) (%d+)$",
-"^(ÇáÛÇÁ ÚÇã)$",
-"^(ÇáÛÇÁ ÚÇã) (@[%a%d_]+)$",
-"^(ÇáÛÇÁ ÚÇã) (%d+)$",
-"^(ÍÙÑ)$",
-"^(ÍÙÑ) (@[%a%d_]+)$",
-"^(ÍÙÑ) (%d+)$",
-"^(ÇáÛÇÁ ÇáÍÙÑ)$", 
-"^(ÇáÛÇÁ ÇáÍÙÑ) (@[%a%d_]+)$",
-"^(ÇáÛÇÁ ÇáÍÙÑ) (%d+)$",
-"^(ÇáÛÇÁ ÍÙÑ)$", 
-"^(ÇáÛÇÁ ÍÙÑ) (@[%a%d_]+)$",
-"^(ÇáÛÇÁ ÍÙÑ) (%d+)$",
-"^(ØÑÏ)$",
-"^(ØÑÏ) (@[%a%d_]+)$",
-"^(ØÑÏ) (%d+)$",
-"^(ßÊã)$",
-"^(ßÊã) (@[%a%d_]+)$",
-"^(ßÊã) (%d+)$",
-"^(ÇáÛÇÁ ÇáßÊã)$",
-"^(ÇáÛÇÁ ÇáßÊã) (@[%a%d_]+)$",
-"^(ÇáÛÇÁ ÇáßÊã) (%d+)$",
-"^(ÇáÛÇÁ ßÊã)$",
-"^(ÇáÛÇÁ ßÊã) (@[%a%d_]+)$",
-"^(ÇáÛÇÁ ßÊã) (%d+)$",
-"^(ÑİÚ ãØæÑ)$",
-"^(ÑİÚ ãØæÑ) (@[%a%d_]+)$",
-"^(ÑİÚ ãØæÑ) (%d+)$",
-"^(ÊäÒíá ãØæÑ)$",
-"^(ÊäÒíá ãØæÑ) (%d+)$",
-"^(ÊäÒíá ãØæÑ) (@[%a%d_]+)$",
-"^(ÊÚØíá) (-%d+)$",
-"^(ÇáÇÔÊÑÇß) ([123])$",
-"^(ÇáÇÔÊÑÇß)$",
-"^(ÊäÒíá Çáßá)$", 
-"^(ÔÍä) (%d+)$",
-"^(ÇáãÌãæÚå)$",
-"^(ßÔİ ÇáÈæÊ)$",
-"^(ÇäÔÇÁ ÑÇÈØ)$",
-"^(ÖÚ ÇáÑÇÈØ)$",
-"^(ÊËÈíÊ)$",
-"^(ÇáÛÇÁ ÇáÊËÈíÊ)$",
-"^(ÇáÛÇÁ ÊËÈíÊ)$",
-"^(ÑÇÈØ)$",
-"^(ÇáÑÇÈØ)$",
-"^(ÖÚ ÑÇÈØ)$",
-"^(ÑÇÈØ ÎÇÕ)$",
-"^(ÇáÑÇÈØ ÎÇÕ)$",
-"^(ÇáŞæÇäíä)$",
-"^(ÖÚ ÇáŞæÇäíä)$",
-"^(ÖÚ ŞæÇäíä)$",
-"^(ÖÚ ÊßÑÇÑ)$",
-"^(ÖÚ ÇáÊßÑÇÑ)$",
-"^(ÇáÇÏãäíå)$",
-"^(ÊÇß ááßá)$",
-"^(äĞÇÑ)$",
-"^(ÊÇß)$",
-"^(ŞÇÆãÉ ÇáãäÚ)$",
-"^(ÇáãÏÑÇÁ)$",
-"^(ÇáããíÒíä)$",
-"^(ÇáãßÊæãíä)$",
-"^(ÖÚ ÇáÊÑÍíÈ)$",
-"^(ÇáÊÑÍíÈ)$",
-"^(ÇáãäÔì ÇáÇÓÇÓí)$",
-"^(ÇáãäÔÆ ÇáÇÓÇÓí)$",
-"^(ÇáãÍÙæÑíä)$",
-"^(ŞÇÆãÉ ÇáĞÈÇä)$",
-"^(ŞÇÆãÉ ÇáËæÑ)$",
-"^(ŞÇÆãÉ ÇáÈÕá)$",
-"^(ŞÇÆãÉ ÇáßáíÌå)$",
-"^(ŞÇÆãÉ ÇáÒŞ)$",
-"^(ŞÇÆãÉ ÇáÏÌÇÌ)$",
-"^(ŞÇÆãÉ ÇáÍãÇÑ)$",
-"^(ŞÇÆãÉ ÇáŞÑæÏ)$",
-"^(ŞÇÆãÉ ÇáÈŞÑ)$",
-"^(ŞÇÆãÉ ÇáÊíÓ)$",
-"^(ŞÇÆãÉ ÇáßáÇÈ)$",
-"^(ŞÇÆãÉ ÇáÒæÇÍİ)$",
-"^(ŞÇÆãÉ Çáßíß)$",
-"^(ÖÚ ÇÓã)$",
-"^(ÖÚ ÕæÑå)$",
-"^(ÖÚ æÕİ)$",
-"^(ØÑÏ ÇáÈæÊÇÊ)$",
-"^(ßÔİ ÇáÈæÊÇÊ)$",
-"^(ØÑÏ ÇáãÍĞæİíä)$",
-"^(ÑÓÇÆáí)$",
-"^(ÑÓÇíáí)$",
-"^(ÇÍÕÇÆíÇÊí)$",
-"^(ãÚáæãÇÊí)$",
-"^(ãÓÍ ãÚáæãÇÊí)$",
-"^(ãæŞÚí)$",
-"^(ÑİÚ ÇáÇÏãäíå)$",
-"^(ÕæÑå ÇáÊÑÍíÈ)$",
-"^(ÖÚ ßáíÔå ÇáãØæÑ)$",
-"^(ÇáãØæÑ)$",
-"^(ÔÑØ ÇáÊİÚíá)$",
-"^(ŞÇÆãÉ ÇáãÌãæÚÇÊ)$",
-"^(ÇáãÌãæÚÇÊ)$",
-"^(ÇáãÌãæÚÇÊ ??)$",
-"^(ÇáãÔÊÑßíä)$",
-"^(ÇáãÔÊÑßíä ?)$",
-"^(ÇĞÇÚå)$",
-"^(ÇĞÇÚå ÚÇã)$",
-"^(ÇĞÇÚå ÎÇÕ)$",
-"^(ÇĞÇÚå ÚÇã ÈÇáÊæÌíå)$",
-"^(ÇĞÇÚå ÚÇã ÈÇáÊæÌíå ??)$", 
-"^(ÇĞÇÚå ÎÇÕ ??)$", 
-"^(ÇĞÇÚå ÚÇã ??)$", 
-"^(ÇĞÇÚå ??)$", 
-"^(ŞÇÆãÉ ÇáÚÇã)$",
-"^(ŞÇÆãÉ ÇáÚÇã ??)$",
-"^(ÇáãØæÑíä)$",
-"^(ÇáãØæÑíä ??)$",
-"^(ÊíÓÊ)$",
+"^(ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡)$",
+"^(ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§ÙŠØ¯ÙŠ Ø¨Ø§Ù„ØµÙˆØ±Ù‡)$",
+"^(ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø±ÙØ¹)$",
+"^(ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø±ÙØ¹)$",
+"^(ØªØ¹Ø·ÙŠÙ„ Ø§Ù„ØªØ³Ù„ÙŠÙ‡)$",
+"^(ØªÙØ¹ÙŠÙ„ Ø§Ù„ØªØ³Ù„ÙŠÙ‡)$",
+"^(Ù‚ÙÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ø§Ù„Ø±Ø§Ø¨Ø·)$",
+"^(ÙØªØ­ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ø§Ù„Ø±Ø§Ø¨Ø·)$", 
+"^(Ø§ÙŠØ¯ÙŠ)$",
+"^(Ø§ÙŠØ¯ÙŠ) (@[%a%d_]+)$",
+"^(ÙƒØ´Ù)$",
+"^(ÙƒØ´Ù) (%d+)$",
+"^(ÙƒØ´Ù) (@[%a%d_]+)$",
+'^(Ø±ÙØ¹ Ù…Ù…ÙŠØ²)$',
+'^(Ø±ÙØ¹ Ù…Ù…ÙŠØ²) (@[%a%d_]+)$',
+'^(Ø±ÙØ¹ Ù…Ù…ÙŠØ²) (%d+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù…ÙŠØ²)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù…ÙŠØ²) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù…ÙŠØ²) (%d+)$',
+'^(Ø±ÙØ¹ Ø§Ø¯Ù…Ù†)$',
+'^(Ø±ÙØ¹ Ø§Ø¯Ù…Ù†) (@[%a%d_]+)$',
+'^(Ø±ÙØ¹ Ø§Ø¯Ù…Ù†) (%d+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ø§Ø¯Ù…Ù†)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ø§Ø¯Ù…Ù†) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ø§Ø¯Ù…Ù†) (%d+)$', 
+"^(Ø±ÙØ¹ Ø«ÙˆØ±)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø«ÙˆØ±)$",
+"^(Ø±ÙØ¹ ÙƒÙŠÙƒÙ‡)$",
+"^(ØªÙ†Ø²ÙŠÙ„ ÙƒÙŠÙƒÙ‡)$",
+"^(Ø±ÙØ¹ Ø¨ØµÙ„Ù‡)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø¨ØµÙ„Ù‡)$",
+"^(Ø±ÙØ¹ Ø°Ø¨Ø§Ù†Ù‡)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø°Ø¨Ø§Ù†Ù‡)$",
+"^(Ø±ÙØ¹ ÙƒÙ„ÙŠØ¬Ù‡)$",
+"^(ØªÙ†Ø²ÙŠÙ„ ÙƒÙ„ÙŠØ¬Ù‡)$",
+"^(Ø±ÙØ¹ Ø²Ù‚)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø²Ù‚)$",
+"^(Ø±ÙØ¹ Ø¯Ø¬Ø§Ø¬Ù‡)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø¯Ø¬Ø§Ø¬Ù‡)$",
+"^(Ø±ÙØ¹ Ø­Ù…Ø§Ø±)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø­Ù…Ø§Ø±)$",
+"^(Ø±ÙØ¹ Ù‚Ø±Ø¯)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ù‚Ø±Ø¯)$",
+"^(Ø±ÙØ¹ Ø¨Ù‚Ø±Ù‡)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø¨Ù‚Ø±Ù‡)$",
+"^(Ø±ÙØ¹ ØªÙŠØ³)$",
+"^(ØªÙ†Ø²ÙŠÙ„ ØªÙŠØ³)$",
+"^(Ø±ÙØ¹ ÙƒÙ„Ø¨)$",
+"^(ØªÙ†Ø²ÙŠÙ„ ÙƒÙ„Ø¨)$",
+"^(Ø±ÙØ¹ Ø²Ø§Ø­Ù)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø²Ø§Ø­Ù)$",
+'^(Ø±ÙØ¹ Ø§Ù„Ù…Ø¯ÙŠØ±)$',
+'^(Ø±ÙØ¹ Ù…Ø¯ÙŠØ±)$', 
+'^(Ø±ÙØ¹ Ù…Ø¯ÙŠØ±) (@[%a%d_]+)$',
+'^(Ø±ÙØ¹ Ø§Ù„Ù…Ø¯ÙŠØ±) (@[%a%d_]+)$',
+'^(Ø±ÙØ¹ Ø§Ù„Ù…Ø¯ÙŠØ±) (%d+)$',
+'^(Ø±ÙØ¹ Ù…Ø¯ÙŠØ±) (%d+)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ø¦ Ø§Ø³Ø§Ø³ÙŠ)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ø¦ Ø§Ø³Ø§Ø³ÙŠ) (@[%a%d_]+)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ø¦ Ø§Ø³Ø§Ø³ÙŠ)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ø¦ Ø§Ø³Ø§Ø³ÙŠ) (%d+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ) (%d+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰ Ø§Ø³Ø§Ø³ÙŠ) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ø¦ Ø§Ø³Ø§Ø³ÙŠ) (@[%a%d_]+)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ù‰)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ø¦)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ø¦) (@[%a%d_]+)$',
+'^(Ø±ÙØ¹ Ù…Ù†Ø´Ù‰) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ø¦)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ø¦) (%d+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰) (%d+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ù‰) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ù†Ø´Ø¦) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ù…Ø¯ÙŠØ±)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ø¯ÙŠØ±)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ø¯ÙŠØ±) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ù…Ø¯ÙŠØ±) (@[%a%d_]+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ø§Ù„Ù…Ø¯ÙŠØ±) (%d+)$',
+'^(ØªÙ†Ø²ÙŠÙ„ Ù…Ø¯ÙŠØ±) (%d+)$',
+ '^(ØµÙ„Ø§Ø­ÙŠØ§ØªÙ‡)$',
+ '^(ØµÙ„Ø§Ø­ÙŠØ§ØªÙŠ)$',
+'^(ØµÙ„Ø§Ø­ÙŠØ§ØªÙ‡) (@[%a%d_]+)$',
+'^(Ù‚ÙÙ„) (.+)$',
+'^(ÙØªØ­) (.+)$',
+'^(ØªÙØ¹ÙŠÙ„)$',
+'^(ØªÙØ¹ÙŠÙ„) (.+)$',
+'^(ØªØ¹Ø·ÙŠÙ„)$',
+'^(ØªØ¹Ø·ÙŠÙ„) (.+)$',
+'^(Ø¶Ø¹ ØªÙƒØ±Ø§Ø±) (%d+)$',
+"^(Ù…Ø³Ø­)$",
+"^(Ù…Ø³Ø­) (.+)$",
+'^(Ù…Ù†Ø¹) (.+)$',
+'^(Ø§Ù„ØºØ§Ø¡ Ù…Ù†Ø¹) (.+)$',
+"^(Ø­Ø¸Ø± Ø¹Ø§Ù…)$",
+"^(Ø­Ø¸Ø± Ø¹Ø§Ù…) (@[%a%d_]+)$",
+"^(Ø­Ø¸Ø± Ø¹Ø§Ù…) (%d+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø¹Ø§Ù…)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø¹Ø§Ù…) (@[%a%d_]+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø¹Ø§Ù…) (%d+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø¹Ø§Ù…)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø¹Ø§Ù…) (@[%a%d_]+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø¹Ø§Ù…) (%d+)$",
+"^(Ø­Ø¸Ø±)$",
+"^(Ø­Ø¸Ø±) (@[%a%d_]+)$",
+"^(Ø­Ø¸Ø±) (%d+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø­Ø¸Ø±)$", 
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø­Ø¸Ø±) (@[%a%d_]+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø­Ø¸Ø±) (%d+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø­Ø¸Ø±)$", 
+"^(Ø§Ù„ØºØ§Ø¡ Ø­Ø¸Ø±) (@[%a%d_]+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø­Ø¸Ø±) (%d+)$",
+"^(Ø·Ø±Ø¯)$",
+"^(Ø·Ø±Ø¯) (@[%a%d_]+)$",
+"^(Ø·Ø±Ø¯) (%d+)$",
+"^(ÙƒØªÙ…)$",
+"^(ÙƒØªÙ…) (@[%a%d_]+)$",
+"^(ÙƒØªÙ…) (%d+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„ÙƒØªÙ…)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„ÙƒØªÙ…) (@[%a%d_]+)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„ÙƒØªÙ…) (%d+)$",
+"^(Ø§Ù„ØºØ§Ø¡ ÙƒØªÙ…)$",
+"^(Ø§Ù„ØºØ§Ø¡ ÙƒØªÙ…) (@[%a%d_]+)$",
+"^(Ø§Ù„ØºØ§Ø¡ ÙƒØªÙ…) (%d+)$",
+"^(Ø±ÙØ¹ Ù…Ø·ÙˆØ±)$",
+"^(Ø±ÙØ¹ Ù…Ø·ÙˆØ±) (@[%a%d_]+)$",
+"^(Ø±ÙØ¹ Ù…Ø·ÙˆØ±) (%d+)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ù…Ø·ÙˆØ±)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ù…Ø·ÙˆØ±) (%d+)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ù…Ø·ÙˆØ±) (@[%a%d_]+)$",
+"^(ØªØ¹Ø·ÙŠÙ„) (-%d+)$",
+"^(Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ) ([123])$",
+"^(Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ)$",
+"^(ØªÙ†Ø²ÙŠÙ„ Ø§Ù„ÙƒÙ„)$", 
+"^(Ø´Ø­Ù†) (%d+)$",
+"^(Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ù‡)$",
+"^(ÙƒØ´Ù Ø§Ù„Ø¨ÙˆØª)$",
+"^(Ø§Ù†Ø´Ø§Ø¡ Ø±Ø§Ø¨Ø·)$",
+"^(Ø¶Ø¹ Ø§Ù„Ø±Ø§Ø¨Ø·)$",
+"^(ØªØ«Ø¨ÙŠØª)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„ØªØ«Ø¨ÙŠØª)$",
+"^(Ø§Ù„ØºØ§Ø¡ ØªØ«Ø¨ÙŠØª)$",
+"^(Ø±Ø§Ø¨Ø·)$",
+"^(Ø§Ù„Ø±Ø§Ø¨Ø·)$",
+"^(Ø¶Ø¹ Ø±Ø§Ø¨Ø·)$",
+"^(Ø±Ø§Ø¨Ø· Ø®Ø§Øµ)$",
+"^(Ø§Ù„Ø±Ø§Ø¨Ø· Ø®Ø§Øµ)$",
+"^(Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†)$",
+"^(Ø¶Ø¹ Ø§Ù„Ù‚ÙˆØ§Ù†ÙŠÙ†)$",
+"^(Ø¶Ø¹ Ù‚ÙˆØ§Ù†ÙŠÙ†)$",
+"^(Ø¶Ø¹ ØªÙƒØ±Ø§Ø±)$",
+"^(Ø¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø±)$",
+"^(Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡)$",
+"^(ØªØ§Ùƒ Ù„Ù„ÙƒÙ„)$",
+"^(Ù†Ø°Ø§Ø±)$",
+"^(ØªØ§Ùƒ)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù…Ù†Ø¹)$",
+"^(Ø§Ù„Ù…Ø¯Ø±Ø§Ø¡)$",
+"^(Ø§Ù„Ù…Ù…ÙŠØ²ÙŠÙ†)$",
+"^(Ø§Ù„Ù…ÙƒØªÙˆÙ…ÙŠÙ†)$",
+"^(Ø¶Ø¹ Ø§Ù„ØªØ±Ø­ÙŠØ¨)$",
+"^(Ø§Ù„ØªØ±Ø­ÙŠØ¨)$",
+"^(Ø§Ù„Ù…Ù†Ø´Ù‰ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ)$",
+"^(Ø§Ù„Ù…Ù†Ø´Ø¦ Ø§Ù„Ø§Ø³Ø§Ø³ÙŠ)$",
+"^(Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø°Ø¨Ø§Ù†)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø«ÙˆØ±)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¨ØµÙ„)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙ„ÙŠØ¬Ù‡)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø²Ù‚)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¯Ø¬Ø§Ø¬)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ù…Ø§Ø±)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù‚Ø±ÙˆØ¯)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¨Ù‚Ø±)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ØªÙŠØ³)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙ„Ø§Ø¨)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø²ÙˆØ§Ø­Ù)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ÙƒÙŠÙƒ)$",
+"^(Ø¶Ø¹ Ø§Ø³Ù…)$",
+"^(Ø¶Ø¹ ØµÙˆØ±Ù‡)$",
+"^(Ø¶Ø¹ ÙˆØµÙ)$",
+"^(Ø·Ø±Ø¯ Ø§Ù„Ø¨ÙˆØªØ§Øª)$",
+"^(ÙƒØ´Ù Ø§Ù„Ø¨ÙˆØªØ§Øª)$",
+"^(Ø·Ø±Ø¯ Ø§Ù„Ù…Ø­Ø°ÙˆÙÙŠÙ†)$",
+"^(Ø±Ø³Ø§Ø¦Ù„ÙŠ)$",
+"^(Ø±Ø³Ø§ÙŠÙ„ÙŠ)$",
+"^(Ø§Ø­ØµØ§Ø¦ÙŠØ§ØªÙŠ)$",
+"^(Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ)$",
+"^(Ù…Ø³Ø­ Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ)$",
+"^(Ù…ÙˆÙ‚Ø¹ÙŠ)$",
+"^(Ø±ÙØ¹ Ø§Ù„Ø§Ø¯Ù…Ù†ÙŠÙ‡)$",
+"^(ØµÙˆØ±Ù‡ Ø§Ù„ØªØ±Ø­ÙŠØ¨)$",
+"^(Ø¶Ø¹ ÙƒÙ„ÙŠØ´Ù‡ Ø§Ù„Ù…Ø·ÙˆØ±)$",
+"^(Ø§Ù„Ù…Ø·ÙˆØ±)$",
+"^(Ø´Ø±Ø· Ø§Ù„ØªÙØ¹ÙŠÙ„)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª)$",
+"^(Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª)$",
+"^(Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸŒ‹)$",
+"^(Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ†)$",
+"^(Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† â“‚)$",
+"^(Ø§Ø°Ø§Ø¹Ù‡)$",
+"^(Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù…)$",
+"^(Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ)$",
+"^(Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… Ø¨Ø§Ù„ØªÙˆØ¬ÙŠÙ‡)$",
+"^(Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… Ø¨Ø§Ù„ØªÙˆØ¬ÙŠÙ‡ ğŸ“£)$", 
+"^(Ø§Ø°Ø§Ø¹Ù‡ Ø®Ø§Øµ ğŸ—£)$", 
+"^(Ø§Ø°Ø§Ø¹Ù‡ Ø¹Ø§Ù… ğŸ“¢)$", 
+"^(Ø§Ø°Ø§Ø¹Ù‡ ğŸ—£)$", 
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¹Ø§Ù…)$",
+"^(Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¹Ø§Ù… ğŸ“œ)$",
+"^(Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ†)$",
+"^(Ø§Ù„Ù…Ø·ÙˆØ±ÙŠÙ† ğŸ”¥)$",
+"^(ØªÙŠØ³Øª)$",
 "^(test)$",
-"^(ÇíÏíí??)$",
-"^(ŞäÇÉ ÇáÓæÑÓ ??)$",
-"^(ÇáÇÍÕÇÆíÇÊ)$",
-"^(ÇáÇÍÕÇÆíÇÊ ??)$",
-"^(ÇÖİ ÑÏ ÚÇã)$",
-"^(ÇÖİ ÑÏ ÚÇã ?)$",
-"^(ãÓÍ ÇáÑÏæÏ)$",
-"^(ãÓÍ ÇáÑÏæÏ ÇáÚÇãå)$",
-"^(ÖÚ ÇÓã ááÈæÊ)$",
-"^(ãÓÍ ÇáÕæÑå)$",
-"^(ãÓÍ ÑÏ)$",
-"^(ÇáÑÏæÏ)$",
-"^(ÇáÑÏæÏ ÇáÚÇãå)$",
-"^(ÇáÑÏæÏ ÇáÚÇãå ??)$",
-"^(ÇÖİ ÑÏ)$",
+"^(Ø§ÙŠØ¯ÙŠÙŠğŸ†”)$",
+"^(Ù‚Ù†Ø§Ø© Ø§Ù„Ø³ÙˆØ±Ø³ ğŸ“¡)$",
+"^(Ø§Ù„Ø§Ø­ØµØ§Ø¦ÙŠØ§Øª)$",
+"^(Ø§Ù„Ø§Ø­ØµØ§Ø¦ÙŠØ§Øª ğŸ’¥)$",
+"^(Ø§Ø¶Ù Ø±Ø¯ Ø¹Ø§Ù…)$",
+"^(Ø§Ø¶Ù Ø±Ø¯ Ø¹Ø§Ù… â•)$",
+"^(Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ÙˆØ¯)$",
+"^(Ù…Ø³Ø­ Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡)$",
+"^(Ø¶Ø¹ Ø§Ø³Ù… Ù„Ù„Ø¨ÙˆØª)$",
+"^(Ù…Ø³Ø­ Ø§Ù„ØµÙˆØ±Ù‡)$",
+"^(Ù…Ø³Ø­ Ø±Ø¯)$",
+"^(Ø§Ù„Ø±Ø¯ÙˆØ¯)$",
+"^(Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡)$",
+"^(Ø§Ù„Ø±Ø¯ÙˆØ¯ Ø§Ù„Ø¹Ø§Ù…Ù‡ ğŸ—¨)$",
+"^(Ø§Ø¶Ù Ø±Ø¯)$",
 "^(/UpdateSource)$",
-"^(ÊÍÏíË ÇáÓæÑÓ ??)$",
-"^(ÊÍÏíË ÇáÓæÑÓ)$",
-"^(ÊäÙíİ ÇáãÌãæÚÇÊ)$",
-"^(ÊäÙíİ ÇáãÔÊÑßíä)$",
-"^(ÊäÙíİ ÇáãÌãæÚÇÊ ??)$",
-"^(ÊäÙíİ ÇáãÔÊÑßíä ??)$",
-"^(ÑÊÈÊí)$",
-"^(ÖÚ ÇÓã ááÈæÊ ©)$",
-"^(ÖÚ ÕæÑå ááÊÑÍíÈ ??)$",
-"^(ÖÚ ÕæÑå ááÊÑÍíÈ)$",
-"^(ÇáÍãÇíå)$",
-"^(ÇáÇÚÏÇÏÇÊ)$",
-"^(ÇáæÓÇÆØ)$",
-"^(ÇáÛÇÁ ÇáÇãÑ ??)$",
-"^(ÇáÑÊÈå)$",
-"^(ÇáÛÇÁ)$",
-"^(ÎÑİÔÊí)$",
-"^(ÇÓãí)$",
-"^(ÇáÊÇÑíÎ)$",
+"^(ØªØ­Ø¯ÙŠØ« Ø§Ù„Ø³ÙˆØ±Ø³ ğŸ”‚)$",
+"^(ØªØ­Ø¯ÙŠØ« Ø§Ù„Ø³ÙˆØ±Ø³)$",
+"^(ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª)$",
+"^(ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ†)$",
+"^(ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª ğŸ—‘)$",
+"^(ØªÙ†Ø¸ÙŠÙ Ø§Ù„Ù…Ø´ØªØ±ÙƒÙŠÙ† ğŸ—‘)$",
+"^(Ø±ØªØ¨ØªÙŠ)$",
+"^(Ø¶Ø¹ Ø§Ø³Ù… Ù„Ù„Ø¨ÙˆØª Â©)$",
+"^(Ø¶Ø¹ ØµÙˆØ±Ù‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨ ğŸŒ„)$",
+"^(Ø¶Ø¹ ØµÙˆØ±Ù‡ Ù„Ù„ØªØ±Ø­ÙŠØ¨)$",
+"^(Ø§Ù„Ø­Ù…Ø§ÙŠÙ‡)$",
+"^(Ø§Ù„Ø§Ø¹Ø¯Ø§Ø¯Ø§Øª)$",
+"^(Ø§Ù„ÙˆØ³Ø§Ø¦Ø·)$",
+"^(Ø§Ù„ØºØ§Ø¡ Ø§Ù„Ø§Ù…Ø± âœ–ï¸)$",
+"^(Ø§Ù„Ø±ØªØ¨Ù‡)$",
+"^(Ø§Ù„ØºØ§Ø¡)$",
+"^(Ø®Ø±ÙØ´ØªÙŠ)$",
+"^(Ø§Ø³Ù…ÙŠ)$",
+"^(Ø§Ù„ØªØ§Ø±ÙŠØ®)$",
 "^(/[Ss]tore)$",
-"^(ÇÕÏÇÑ ÇáÓæÑÓ)$",
-"^(ÇáÇÕÏÇÑ)$",
+"^(Ø§ØµØ¯Ø§Ø± Ø§Ù„Ø³ÙˆØ±Ø³)$",
+"^(Ø§Ù„Ø§ØµØ¯Ø§Ø±)$",
 "^(server)$",
-"^(ÇáÓíÑİÑ)$",
-"^(İÍÕ ÇáÈæÊ)$", 
-"^(äÓÎå ÇÍÊíÇØíå ááãÌãæÚÇÊ)$",
-"^(ÑİÚ äÓÎå ÇáÇÍÊíÇØíå)$", 
-"^(ÊİÚíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí)$", 
-"^(ÊÚØíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí)$", 
-"^(ÊÛííÑ ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí)$", 
-"^(ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí)$", 
-"^(ÊİÚíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ?)$", 
-"^(ÊÚØíá ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??)$", 
-"^(ÊÛííÑ ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??)$", 
-"^(ÇáÇÔÊÑÇß ÇáÇÌÈÇÑí ??)$", 
-"^(ÇÍÙÑäí)$", 
-"^(ÇØÑÏäí)$", 
-"^(ÌåÇÊí)$", 
+"^(Ø§Ù„Ø³ÙŠØ±ÙØ±)$",
+"^(ÙØ­Øµ Ø§Ù„Ø¨ÙˆØª)$", 
+"^(Ù†Ø³Ø®Ù‡ Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡ Ù„Ù„Ù…Ø¬Ù…ÙˆØ¹Ø§Øª)$",
+"^(Ø±ÙØ¹ Ù†Ø³Ø®Ù‡ Ø§Ù„Ø§Ø­ØªÙŠØ§Ø·ÙŠÙ‡)$", 
+"^(ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ)$", 
+"^(ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ)$", 
+"^(ØªØºÙŠÙŠØ± Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ)$", 
+"^(Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ)$", 
+"^(ØªÙØ¹ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ â˜‘)$", 
+"^(ØªØ¹Ø·ÙŠÙ„ Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ â™»ï¸)$", 
+"^(ØªØºÙŠÙŠØ± Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ ğŸ”)$", 
+"^(Ø§Ù„Ø§Ø´ØªØ±Ø§Ùƒ Ø§Ù„Ø§Ø¬Ø¨Ø§Ø±ÙŠ âš ï¸)$", 
+"^(Ø§Ø­Ø¸Ø±Ù†ÙŠ)$", 
+"^(Ø§Ø·Ø±Ø¯Ù†ÙŠ)$", 
+"^(Ø¬Ù‡Ø§ØªÙŠ)$", 
 
 
 
@@ -4891,18 +4891,18 @@ max = {
 
 
 
-"^(ÇáÓæÑÓ)$",
-"^(ÓæÑÓ)$",
-"^(ã ÇáãØæÑ)$", 
-"^(ÇæÇãÑ ÇáÑÏ)$",
-"^(ÇáÇæÇãÑ)$",
-"^(ã1)$",
-"^(ã2)$",
-"^(ã3)$",
-"^(ã4)$",
-"^(ã5)$",
-"^(ã6)$",
-"^(ã7)$",
+"^(Ø§Ù„Ø³ÙˆØ±Ø³)$",
+"^(Ø³ÙˆØ±Ø³)$",
+"^(Ù… Ø§Ù„Ù…Ø·ÙˆØ±)$", 
+"^(Ø§ÙˆØ§Ù…Ø± Ø§Ù„Ø±Ø¯)$",
+"^(Ø§Ù„Ø§ÙˆØ§Ù…Ø±)$",
+"^(Ù…1)$",
+"^(Ù…2)$",
+"^(Ù…3)$",
+"^(Ù…4)$",
+"^(Ù…5)$",
+"^(Ù…6)$",
+"^(Ù…7)$",
  
  
  },

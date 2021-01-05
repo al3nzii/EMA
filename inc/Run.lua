@@ -1,7 +1,7 @@
 --[[
 ▇▇▇▇▇▇
 ▇
-▇┊Dev : @a_l3nzi
+▇┊Dev : @MASx92
 ▇▇▇▇▇▇
 ▇
 ▇┊Dev : اهلا بك في اقوة سورس ايما
@@ -124,10 +124,10 @@ if not TokenBot then
 print('\27[0;33m>>'..[[
 ▇▇▇▇▇▇
 ▇
-▇┊Dev : @a_l3nzi
+▇┊Dev : @MASx92
 ▇▇▇▇▇▇
 ▇
-▇┊Dev : @a_l3nzi
+▇┊Dev : @MASx92
 ▇
 #---------------------------------------------------------
 ]]..'\027[0;32m')
@@ -160,10 +160,10 @@ end
 print('\27[0;33m>>'..[[
 ▇▇▇▇▇▇
 ▇
-▇┊Dev : @a_l3nzi
+▇┊Dev : @MASx92
 ▇▇▇▇▇▇
 ▇
-▇┊Dev : @a_l3nzi
+▇┊Dev : @MASx92
 ▇
 #---------------------------------------------------------
 ]]..'\027[0;32m'
@@ -472,15 +472,15 @@ function tdcli_update_callback(data)
 	UpdateSourceStart = false
 	EditMsg(data.message_.chat_id_,data.message_.id_,'10% - |█          |')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'20% - |███         |')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/Run.lua','./inc/Run.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/Run.lua','./inc/Run.lua')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'40% - |█████       |')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/locks.lua','./inc/locks.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/locks.lua','./inc/locks.lua')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'60% - |███████     |')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/Script.lua','./inc/Script.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/Script.lua','./inc/Script.lua')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'80% - |█████████   |')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/functions.lua','./inc/functions.lua')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/plugins/zhrfa.lua','./plugins/zhrfa.lua')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/plugins/Games.lua','./plugins/Games.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/functions.lua','./inc/functions.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/plugins/zhrfa.lua','./plugins/zhrfa.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/plugins/games.lua','./plugins/games.lua')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'100% - |█████████████|\n\n🔝*¦* السورس الى اصدار \n📟*¦* تم اعاده تشغيل السورس بنجاح')
 	dofile("./inc/Run.lua")
 	print("Update Source And Reload ~ ./inc/Run.lua")
@@ -516,12 +516,12 @@ end
 	end)
 	end 
 	if msg.text== 'Update Source' and msg.sender_user_id_ == SUDO_ID then
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/Run.lua','./inc/Run.lua')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/Script.lua','./inc/Script.lua')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/functions.lua','./inc/functions.lua')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/inc/locks.lua','./inc/locks.lua')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/plugins/zhrfa.lua','./plugins/zhrfa.lua')
-	download_file('https://raw.githubusercontent.com/al3nzii/EMA/master/plugins/Games.lua','./plugins/Games.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/Run.lua','./inc/Run.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/Script.lua','./inc/Script.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/functions.lua','./inc/functions.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/inc/locks.lua','./inc/locks.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/plugins/zhrfa.lua','./plugins/zhrfa.lua')
+	download_file('https://raw.githubusercontent.com/al3nzii/EMA/plugins/games.lua','./plugins/games.lua')
 	sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم تحديث وتثبيت السورس  *} 📡.\n\n👨🏼‍💼| { Bot is Update » }👍🏿',nil,function(arg,data)
 	dofile("./inc/Run.lua")
 	print("Reload ~ ./inc/Run.lua")
