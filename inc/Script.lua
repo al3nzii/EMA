@@ -4366,9 +4366,9 @@ return sendMsg(msg.chat_id_,msg.id_,na[math.random(#na)])
 elseif Text=="مح" then 
 return sendMsg(msg.chat_id_,msg.id_,nb[math.random(#nb)])
 elseif Text=="اكرهك" then 
-return sendMsg(msg.chat_id_,msg.id_,cat[math.random(#cat)])
-elseif Text=="كت تويت" then 
 return sendMsg(msg.chat_id_,msg.id_,nf[math.random(#nf)])
+elseif Text=="كت تويت" then 
+return sendMsg(msg.chat_id_,msg.id_,cat[math.random(#cat)])
 elseif Text=="جيت" then 
 return sendMsg(msg.chat_id_,msg.id_,nl[math.random(#nl)])
 elseif Text=="هاي" then 
